@@ -3,7 +3,7 @@ import { esc, digits } from './util.js';
 import { icon } from './icons.js';
 
 export const waLink = (settings, text) =>
-  `https://wa.me/${digits(settings.whatsapp)}${text ? `?text=${encodeURIComponent(text)}` : ''}`;
+  `https://wa.me/${digits(settings.phone)}${text ? `?text=${encodeURIComponent(text)}` : ''}`;
 export const telLink = (phone) => `tel:+${digits(phone)}`;
 
 export function organizationLd(settings) {
@@ -17,7 +17,7 @@ export function organizationLd(settings) {
     url: `${settings.siteUrl}${BASE}/`,
     logo: settings.siteUrl + asset('logo.svg'),
     email: settings.email,
-    telephone: settings.phoneOffice,
+    telephone: settings.phone,
     address: { '@type': 'PostalAddress', streetAddress: a.street, postalCode: a.postal, addressLocality: a.city, addressCountry: a.country },
     sameAs: Object.values(settings.social),
   };
@@ -46,8 +46,8 @@ export function contactButtons(ctx, { waText, compact = false } = {}) {
   return `<div class="contact-btns${compact ? ' compact' : ''}">
     <a class="btn btn-wa" href="${waLink(settings, waText)}" rel="noopener" target="_blank">${icon('chat')}<span>WhatsApp</span></a>
     <a class="btn btn-ghost" href="${esc(settings.telegram)}" rel="noopener" target="_blank">${icon('chat')}<span>Telegram</span></a>
-    <a class="btn btn-ghost" href="viber://chat?number=%2B${digits(settings.viber)}">${icon('chat')}<span>Viber</span></a>
-    <a class="btn btn-ghost" href="${telLink(settings.phoneCandidates)}">${icon('phone')}<span>${esc(t('cta_call'))}</span></a>
+    <a class="btn btn-ghost" href="viber://chat?number=%2B${digits(settings.phone)}">${icon('chat')}<span>Viber</span></a>
+    <a class="btn btn-ghost" href="${telLink(settings.phone)}">${icon('phone')}<span>${esc(t('cta_call'))}</span></a>
   </div>`;
 }
 
@@ -122,8 +122,7 @@ function footer(ctx) {
     <div>
       <h2 class="f-h">${esc(t('nav_contact'))}</h2>
       <ul class="f-list">
-        <li>${esc(t('c_candidates'))}: <a href="${telLink(settings.phoneCandidates)}">${esc(settings.phoneCandidates)}</a></li>
-        <li>${esc(t('c_office'))}: <a href="${telLink(settings.phoneOffice)}">${esc(settings.phoneOffice)}</a></li>
+        <li><a href="${telLink(settings.phone)}">${esc(settings.phone)}</a> · WhatsApp</li>
         <li><a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></li>
         <li><address>${esc(a.street)}, ${esc(a.postal)} ${esc(a.city)}</address></li>
       </ul>

@@ -21,15 +21,14 @@ export function renderContact(ctx) {
 <div class="wrap contact-grid">
   <div class="contact-cards">
     <section class="c-card">
-      <h2>${icon('user')}${esc(t('c_candidates'))}</h2>
-      <p><a class="big-link" href="${telLink(settings.phoneCandidates)}">${esc(settings.phoneCandidates)}</a></p>
-      <p class="small">WhatsApp · Viber · Telegram</p>
+      <h2>${icon('phone')}${esc(t('cta_call'))}</h2>
+      <p><a class="big-link" href="${telLink(settings.phone)}">${esc(settings.phone)}</a></p>
+      <p class="small">WhatsApp · Viber</p>
       ${contactButtons(ctx)}
     </section>
     <section class="c-card">
-      <h2>${icon('phone')}${esc(t('c_office'))}</h2>
-      <p><a class="big-link" href="${telLink(settings.phoneOffice)}">${esc(settings.phoneOffice)}</a></p>
-      <p>${icon('mail')}<a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></p>
+      <h2>${icon('mail')}E-mail</h2>
+      <p><a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></p>
     </section>
     <section class="c-card">
       <h2>${icon('pin')}${esc(t('c_address'))}</h2>

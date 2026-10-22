@@ -8,7 +8,7 @@ export function formShell(ctx, { type, fieldsHtml, submitLabel }) {
   const { lang, t, settings } = ctx;
   const consent = esc(t('f_consent')).replace('{privacy}', `<a href="${esc(settings.privacyUrl)}" target="_blank" rel="noopener">${esc(t('f_privacy_link'))}</a>`);
   return `<form class="form" data-form="${type}" action="${esc(settings.formEndpoint)}" method="post" enctype="multipart/form-data" novalidate
-  data-wa="${digits(settings.whatsapp)}" data-msg-ok="${esc(t('f_ok'))}" data-msg-err="${esc(t('f_err'))}" data-msg-invalid="${esc(t('f_invalid'))}" data-msg-file="${esc(t('f_file_big'))}" data-msg-sending="${esc(t('f_sending'))}" data-msg-wa="${esc(t('f_wa_fallback'))}">
+  data-wa="${digits(settings.phone)}" data-msg-ok="${esc(t('f_ok'))}" data-msg-err="${esc(t('f_err'))}" data-msg-invalid="${esc(t('f_invalid'))}" data-msg-file="${esc(t('f_file_big'))}" data-msg-sending="${esc(t('f_sending'))}" data-msg-wa="${esc(t('f_wa_fallback'))}">
   <input type="hidden" name="form_type" value="${type}">
   <input type="hidden" name="lang" value="${lang}">
   <input type="hidden" name="page" value="">

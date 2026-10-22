@@ -97,10 +97,7 @@ collections:
           - { label: Marka, name: brand, widget: string }
           - { label: Firma (pełna nazwa), name: company, widget: string }
           - { label: E-mail, name: email, widget: string }
-          - { label: Telefon dla kandydatów, name: phoneCandidates, widget: string }
-          - { label: Telefon biura, name: phoneOffice, widget: string }
-          - { label: WhatsApp (numer), name: whatsapp, widget: string }
-          - { label: Viber (numer), name: viber, widget: string }
+          - { label: "Telefon (WhatsApp, Viber, połączenia)", name: phone, widget: string }
           - { label: Telegram (link), name: telegram, widget: string }
           - label: Adres
             name: address
