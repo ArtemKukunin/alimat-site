@@ -20,7 +20,7 @@ export function renderEmployers(ctx) {
   ${breadcrumbs(crumbs)}
   <h1>${esc(t('emp_h1'))}</h1>
   <p class="lead">${esc(t('emp_lead'))}</p>
-  <div class="hero-cta"><a class="btn btn-primary btn-lg" href="#inquiry">${esc(t('emp_form_t'))}</a></div>
+  <div class="hero-cta"><a class="btn btn-pill btn-blue" href="#inquiry">${esc(t('emp_form_t'))}</a></div>
 </div></section>
 <section class="wrap block">
   <ul class="perks services">${SERVICES.map(([k, ic]) => `<li>${icon(ic, 'ic ic-lg')}<h2>${esc(t(`${k}_t`))}</h2><p>${esc(t(`${k}_d`))}</p></li>`).join('')}</ul>

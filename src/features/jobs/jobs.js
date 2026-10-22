@@ -96,7 +96,7 @@ export function jobPostingLd(ctx, job) {
     description: parts.join(''),
     datePosted: job.datePosted,
     employmentType: 'FULL_TIME',
-    hiringOrganization: { '@type': 'Organization', name: settings.brand, sameAs: `${settings.siteUrl}${BASE}/`, logo: settings.siteUrl + asset('logo.svg') },
+    hiringOrganization: { '@type': 'Organization', name: settings.brand, sameAs: `${settings.siteUrl}${BASE}/`, logo: settings.siteUrl + asset('img/logo.webp') },
     jobLocation: { '@type': 'Place', address: { '@type': 'PostalAddress', addressLocality: job.city, ...(job.region && { addressRegion: job.region }), addressCountry: job.country } },
     baseSalary: {
       '@type': 'MonetaryAmount', currency: 'PLN',

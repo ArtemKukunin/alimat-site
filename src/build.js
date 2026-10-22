@@ -52,7 +52,7 @@ ${alt}
 </head>
 <body class="page-root" data-autolang>
 <main class="lang-choice">
-  <img src="${asset('logo.svg')}" alt="Alimat Group" width="64" height="64">
+  <img src="${asset('img/logo.webp')}" alt="Alimat Group" width="220" height="53">
   <h1>Alimat Group</h1>
   <p>${LANG_CODES.map((l) => esc(ui[l].choose_lang)).join(' · ')}</p>
   <ul>${links}</ul>
@@ -68,7 +68,7 @@ function notFoundPage(ui) {
 <html lang="${DEFAULT_LANG}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>404 — Alimat Group</title><meta name="robots" content="noindex">
 <link rel="stylesheet" href="${asset('style.css')}"></head>
-<body class="page-root"><main class="lang-choice"><img src="${asset('logo.svg')}" alt="Alimat Group" width="64" height="64"><h1>404</h1><ul class="nf-list">${items}</ul></main></body></html>
+<body class="page-root"><main class="lang-choice"><img src="${asset('img/logo.webp')}" alt="Alimat Group" width="220" height="53"><h1>404</h1><ul class="nf-list">${items}</ul></main></body></html>
 `;
 }
 

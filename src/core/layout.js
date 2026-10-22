@@ -15,7 +15,7 @@ export function organizationLd(settings) {
     name: settings.brand,
     legalName: settings.company,
     url: `${settings.siteUrl}${BASE}/`,
-    logo: settings.siteUrl + asset('logo.svg'),
+    logo: settings.siteUrl + asset('img/logo.webp'),
     email: settings.email,
     telephone: settings.phone,
     address: { '@type': 'PostalAddress', streetAddress: a.street, postalCode: a.postal, addressLocality: a.city, addressCountry: a.country },
@@ -75,8 +75,10 @@ ${alt}
 <meta property="og:locale" content="${LANGS[lang].og}">
 <meta property="og:image" content="${settings.siteUrl}${asset('og.png')}">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0b3b4a">
+<meta name="theme-color" content="#0199DD">
 <link rel="icon" href="${asset('favicon.svg')}" type="image/svg+xml">
+<link rel="preload" href="${asset('fonts/titillium-web-400.woff')}" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="${asset('fonts/roboto-slab-900.woff')}" as="font" type="font/woff" crossorigin>
 <link rel="stylesheet" href="${asset('style.css')}">
 <script src="${asset('app.js')}" defer></script>
 ${ld}
@@ -84,7 +86,7 @@ ${ld}
 }
 
 function header(ctx, page, sub) {
-  const { lang, t } = ctx;
+  const { lang, t, settings } = ctx;
   const nav = ['jobs', 'candidates', 'employers', 'contact']
     .map((p) => `<li><a href="${pageUrl(lang, p)}"${p === page ? ' aria-current="page"' : ''}>${esc(t(`nav_${p}`))}</a></li>`)
     .join('');
@@ -92,18 +94,28 @@ function header(ctx, page, sub) {
     .map((a) => `<li><a href="${a.href}" hreflang="${a.lang}" lang="${a.lang}"${a.lang === lang ? ' aria-current="true"' : ''} data-lang="${a.lang}">${esc(LANGS[a.lang].name)}</a></li>`)
     .join('');
   return `<a class="skip" href="#main">${esc(t('skip'))}</a>
+<div class="topbar">
+  <div class="wrap topbar-row">
+    <a href="${telLink(settings.phone)}">${icon('phone')}${esc(settings.phone)}</a>
+    <a href="mailto:${esc(settings.email)}">${icon('mail')}${esc(settings.email)}</a>
+    <ul class="topbar-social">${Object.entries(settings.social).map(([n, h]) => `<li><a href="${esc(h)}" rel="noopener" target="_blank">${esc(n)}</a></li>`).join('')}</ul>
+  </div>
+</div>
 <header class="site-header">
   <div class="wrap header-row">
-    <a class="logo" href="${pageUrl(lang, 'home')}" aria-label="Alimat Group">
-      <img src="${asset('logo.svg')}" alt="" width="34" height="34"><span>Alimat<b>Group</b></span>
+    <a class="logo" href="${pageUrl(lang, 'home')}">
+      <img src="${asset('img/logo.webp')}" alt="Alimat Group — International employment" width="183" height="44">
     </a>
     <nav class="main-nav" id="main-nav" aria-label="${esc(t('menu'))}"><ul>${nav}</ul></nav>
-    <details class="lang-switch">
-      <summary aria-label="${esc(t('lang_label'))}">${icon('globe')}<span>${LANGS[lang].short}</span></summary>
-      <ul>${langs}</ul>
-    </details>
-    <a class="btn btn-primary header-cta" href="${pageUrl(lang, 'apply')}">${esc(t('cta_apply'))}</a>
-    <button class="menu-btn" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="${esc(t('menu'))}">${icon('menu')}</button>
+    <div class="header-actions">
+      <a class="btn btn-pill btn-outline-orange header-cta" href="${pageUrl(lang, 'apply')}">${icon('doc')}<span>${esc(t('cta_apply'))}</span></a>
+      <a class="btn btn-pill btn-outline-blue header-cta" href="${pageUrl(lang, 'employers')}#inquiry">${icon('menu')}<span>${esc(t('emp_form_t'))}</span></a>
+      <details class="lang-switch">
+        <summary aria-label="${esc(t('lang_label'))}">${icon('globe')}<span>${LANGS[lang].short}</span></summary>
+        <ul>${langs}</ul>
+      </details>
+      <button class="menu-btn" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="${esc(t('menu'))}">${icon('menu')}</button>
+    </div>
   </div>
 </header>`;
 }
@@ -113,24 +125,41 @@ function footer(ctx) {
   const a = settings.address;
   const social = Object.entries(settings.social)
     .map(([name, href]) => `<li><a href="${esc(href)}" rel="noopener" target="_blank">${esc(name)}</a></li>`).join('');
-  return `<footer class="site-footer">
+  return `<section class="help-band">
+  <div class="wrap help-band-grid">
+    <div>
+      <h2>${esc(t('help_t'))}</h2>
+      <p>${esc(t('help_d'))}</p>
+    </div>
+    <ul class="help-band-list">
+      <li>${icon('phone')}<a href="${telLink(settings.phone)}">${esc(settings.phone)}</a> · WhatsApp · Viber</li>
+      <li>${icon('mail')}<a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></li>
+      <li>${icon('pin')}<a href="${esc(settings.mapUrl)}" rel="noopener" target="_blank">${esc(a.street)}, ${esc(a.postal)} ${esc(a.city)}</a></li>
+    </ul>
+    <div class="help-band-cta">
+      <a class="btn btn-pill btn-orange" href="${pageUrl(lang, 'apply')}">${esc(t('cta_apply_long'))} ${icon('arrow')}</a>
+      <a class="btn btn-pill btn-outline-light" href="${pageUrl(lang, 'contact')}">${esc(t('nav_contact'))}</a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer">
   <div class="wrap footer-grid">
     <div>
-      <a class="logo logo-light" href="${pageUrl(lang, 'home')}"><img src="${asset('logo.svg')}" alt="" width="30" height="30"><span>Alimat<b>Group</b></span></a>
+      <a class="logo" href="${pageUrl(lang, 'home')}"><img src="${asset('img/logo.webp')}" alt="Alimat Group" width="183" height="44" loading="lazy"></a>
       <p>${esc(t('footer_tagline'))}</p>
-    </div>
-    <div>
-      <h2 class="f-h">${esc(t('nav_contact'))}</h2>
-      <ul class="f-list">
-        <li><a href="${telLink(settings.phone)}">${esc(settings.phone)}</a> · WhatsApp</li>
-        <li><a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></li>
-        <li><address>${esc(a.street)}, ${esc(a.postal)} ${esc(a.city)}</address></li>
-      </ul>
     </div>
     <div>
       <h2 class="f-h">Alimat Group</h2>
       <ul class="f-list">
         ${['jobs', 'candidates', 'apply', 'employers', 'contact'].map((p) => `<li><a href="${pageUrl(lang, p)}">${esc(t(p === 'apply' ? 'cta_apply_long' : `nav_${p}`))}</a></li>`).join('')}
+      </ul>
+    </div>
+    <div>
+      <h2 class="f-h">${esc(t('nav_contact'))}</h2>
+      <ul class="f-list">
+        <li><a href="${telLink(settings.phone)}">${esc(settings.phone)}</a></li>
+        <li><a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></li>
+        <li><address>${esc(a.street)}<br>${esc(a.postal)} ${esc(a.city)}</address></li>
       </ul>
     </div>
     <div>
