@@ -49,3 +49,15 @@ Decap CMS: редагування вакансій (всіма 7 мовами) �
 - JobPosting (Google for Jobs), EmploymentAgency, FAQPage, BreadcrumbList
 - 301-редиректи зі старих адрес WordPress (`_redirects`), щоб не втратити позиції
 - неактивна вакансія: сторінка лишається з `noindex`, зникає зі списку й sitemap
+
+## Деплой на GitHub Pages
+
+Workflow `.github/workflows/pages.yml` збирає й перевіряє сайт при кожному пуші в `main` і публікує `dist/`.
+1. Settings → Pages → Source: **GitHub Actions**.
+2. Без власного домену сайт відкривається за адресою `https://<owner>.github.io/<repo>/`
+   (шлях задають `SITE_BASE` і `SITE_URL` у workflow).
+3. З доменом alimatgroup.com: Settings → Pages → Custom domain, у DNS — записи для GitHub Pages,
+   потім видаліть `SITE_BASE` і `SITE_URL` з workflow.
+
+На GitHub Pages старі адреси WordPress перенаправляються HTML-заглушками (meta refresh), бо `_redirects` там не працює.
+Адмінці на GitHub Pages потрібен `backend: github` + OAuth-проксі; простіше тримати адмінку через Netlify.
