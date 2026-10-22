@@ -1,0 +1,172 @@
+{
+  "pl": {
+    "active": true,
+    "category": "meat",
+    "city": "Końskowola",
+    "region": "lubelskie",
+    "country": "PL",
+    "datePosted": "2026-03-05",
+    "salary": { "min": 8400, "max": 9600, "unit": "month" },
+    "contract": "",
+    "tags": ["housing", "transport", "meals", "coordinator"],
+    "title": "Pracownik linii ubojowej (wołowina)",
+    "summary": "Stabilna praca w renomowanym zakładzie mięsnym. Bezpłatne posiłki i dojazd, zakwaterowanie z dopłatą pracodawcy.",
+    "duties": [
+      "Podstawowe czynności na kluczowych etapach uboju bydła",
+      "Wstępna obróbka tusz wołowych zgodnie z procesem technologicznym",
+      "Obsługa wyznaczonego stanowiska na linii",
+      "Kontrola jakości wykonywanej pracy i produktu",
+      "Praca w tempie linii produkcyjnej",
+      "Przestrzeganie zasad BHP i higieny"
+    ],
+    "requirements": [],
+    "offer": [
+      "Stabilne zatrudnienie w renomowanym zakładzie mięsnym",
+      "Wynagrodzenie od 8 400 zł netto",
+      "Sprzęt i odzież robocza",
+      "Zakwaterowanie z dopłatą pracodawcy",
+      "Codzienne bezpłatne posiłki w pracy",
+      "Bezpłatny dojazd do pracy i z pracy",
+      "Opieka i wsparcie koordynatora"
+    ],
+    "conditions": []
+  },
+  "uk": {
+    "title": "Працівник лінії забою (яловичина)",
+    "summary": "Стабільна робота на відомому м'ясокомбінаті. Безкоштовне харчування й доїзд, житло з доплатою роботодавця.",
+    "duties": [
+      "Базові операції на ключових етапах забою великої рогатої худоби",
+      "Первинна обробка яловичих туш згідно з технологічним процесом",
+      "Робота на закріпленій позиції на лінії",
+      "Контроль якості виконаної роботи та продукції",
+      "Робота в темпі виробничої лінії",
+      "Дотримання правил охорони праці та гігієни"
+    ],
+    "requirements": [],
+    "offer": [
+      "Стабільна робота на відомому м'ясокомбінаті",
+      "Зарплата від 8 400 зл нетто",
+      "Робочий інструмент і спецодяг",
+      "Житло з доплатою роботодавця",
+      "Щоденне безкоштовне харчування на роботі",
+      "Безкоштовний доїзд на роботу й назад",
+      "Супровід і підтримка координатора"
+    ],
+    "conditions": []
+  },
+  "ru": {
+    "title": "Работник линии убоя (говядина)",
+    "summary": "Стабильная работа на известном мясокомбинате. Бесплатное питание и доезд, жильё с доплатой работодателя.",
+    "duties": [
+      "Базовые операции на ключевых этапах убоя крупного рогатого скота",
+      "Первичная обработка говяжьих туш согласно технологическому процессу",
+      "Работа на закреплённой позиции на линии",
+      "Контроль качества выполненной работы и продукции",
+      "Работа в темпе производственной линии",
+      "Соблюдение правил охраны труда и гигиены"
+    ],
+    "requirements": [],
+    "offer": [
+      "Стабильная работа на известном мясокомбинате",
+      "Зарплата от 8 400 зл нетто",
+      "Рабочий инструмент и спецодежда",
+      "Жильё с доплатой работодателя",
+      "Ежедневное бесплатное питание на работе",
+      "Бесплатный доезд на работу и обратно",
+      "Сопровождение и поддержка координатора"
+    ],
+    "conditions": []
+  },
+  "en": {
+    "title": "Slaughter Line Worker (Beef)",
+    "summary": "Stable work at a well-known meat plant. Free meals and transport, accommodation subsidised by the employer.",
+    "duties": [
+      "Basic tasks at key stages of cattle slaughter",
+      "Initial processing of beef carcasses according to the production process",
+      "Working at an assigned station on the line",
+      "Checking the quality of your work and the product",
+      "Keeping pace with the production line",
+      "Following health, safety and hygiene rules"
+    ],
+    "requirements": [],
+    "offer": [
+      "Stable employment at a well-known meat plant",
+      "Pay from PLN 8,400 net",
+      "Work equipment and clothing provided",
+      "Accommodation subsidised by the employer",
+      "Free meals at work every day",
+      "Free transport to and from work",
+      "Support from a dedicated coordinator"
+    ],
+    "conditions": []
+  },
+  "es": {
+    "title": "Operario/a de línea de sacrificio (vacuno)",
+    "summary": "Empleo estable en una conocida planta cárnica. Comidas y transporte gratuitos, alojamiento subvencionado por la empresa.",
+    "duties": [
+      "Tareas básicas en las etapas clave del sacrificio de ganado vacuno",
+      "Procesado inicial de canales de vacuno según el proceso de producción",
+      "Trabajo en el puesto asignado de la línea",
+      "Control de la calidad del trabajo y del producto",
+      "Mantener el ritmo de la línea de producción",
+      "Cumplimiento de las normas de seguridad e higiene"
+    ],
+    "requirements": [],
+    "offer": [
+      "Empleo estable en una conocida planta cárnica",
+      "Salario desde 8400 PLN netos",
+      "Equipo y ropa de trabajo",
+      "Alojamiento subvencionado por la empresa",
+      "Comida gratuita todos los días en el trabajo",
+      "Transporte gratuito de ida y vuelta al trabajo",
+      "Apoyo de un coordinador"
+    ],
+    "conditions": []
+  },
+  "pt": {
+    "title": "Trabalhador(a) de linha de abate (bovinos)",
+    "summary": "Trabalho estável em um frigorífico conceituado. Refeições e transporte gratuitos, moradia subsidiada pelo empregador.",
+    "duties": [
+      "Tarefas básicas nas etapas principais do abate de bovinos",
+      "Processamento inicial de carcaças bovinas conforme o processo de produção",
+      "Trabalho no posto designado da linha",
+      "Controle da qualidade do trabalho e do produto",
+      "Acompanhar o ritmo da linha de produção",
+      "Seguir as normas de segurança e higiene"
+    ],
+    "requirements": [],
+    "offer": [
+      "Emprego estável em um frigorífico conceituado",
+      "Salário a partir de 8.400 PLN líquidos",
+      "Equipamentos e uniforme de trabalho",
+      "Moradia subsidiada pelo empregador",
+      "Refeições gratuitas todos os dias no trabalho",
+      "Transporte gratuito de ida e volta ao trabalho",
+      "Apoio e acompanhamento de um coordenador"
+    ],
+    "conditions": []
+  },
+  "ro": {
+    "title": "Lucrător pe linia de abatorizare (carne de vită)",
+    "summary": "Loc de muncă stabil într-un abator cunoscut. Masă și transport gratuite, cazare subvenționată de angajator.",
+    "duties": [
+      "Operațiuni de bază în etapele principale ale sacrificării bovinelor",
+      "Prelucrarea inițială a carcaselor de vită conform procesului tehnologic",
+      "Lucru la postul alocat pe linie",
+      "Verificarea calității muncii și a produsului",
+      "Menținerea ritmului liniei de producție",
+      "Respectarea normelor de securitate și igienă"
+    ],
+    "requirements": [],
+    "offer": [
+      "Loc de muncă stabil într-un abator cunoscut",
+      "Salariu de la 8.400 PLN net",
+      "Echipament și îmbrăcăminte de lucru",
+      "Cazare subvenționată de angajator",
+      "Masă gratuită zilnic la locul de muncă",
+      "Transport gratuit dus-întors la locul de muncă",
+      "Sprijinul unui coordonator"
+    ],
+    "conditions": []
+  }
+}

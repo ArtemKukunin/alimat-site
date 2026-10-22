@@ -1,0 +1,126 @@
+# Decap CMS — content admin at /admin/
+# Saves edits as commits to the Git repo; the host rebuilds the site (node src/build.js).
+backend:
+  name: git-gateway        # Netlify Identity + Git Gateway
+  branch: main
+# For local editing: run `npx decap-server` and open http://localhost:8080/admin/
+local_backend: true
+publish_mode: editorial_workflow   # drafts → review → publish
+media_folder: public/assets/uploads
+public_folder: /assets/uploads
+locale: pl
+
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+i18n:
+  structure: single_file
+  locales: [pl, uk, ru, en, es, pt, ro]
+  default_locale: pl
+
+collections:
+  - name: jobs
+    label: Oferty pracy
+    label_singular: Oferta
+    folder: data/jobs
+    extension: json
+    format: json
+    create: true
+    delete: true
+    slug: "{{title}}"
+    identifier_field: title
+    summary: "{{title}} — {{city}}"
+    i18n: true
+    fields:
+      - { label: "Aktywna", name: active, widget: boolean, default: true, hint: "Wyłącz, gdy oferta jest nieaktualna (strona zostaje, ale znika z listy i Google)." }
+      - label: Branża
+        name: category
+        widget: select
+        options:
+          - { label: Produkcja, value: production }
+          - { label: Zakłady mięsne, value: meat }
+          - { label: Magazyn i logistyka, value: logistics }
+          - { label: Kierowcy, value: drivers }
+          - { label: Szklarnie i rolnictwo, value: agriculture }
+      - { label: Miasto, name: city, widget: string }
+      - { label: "Województwo / region", name: region, widget: string, required: false }
+      - { label: "Kraj (kod, np. PL, DE)", name: country, widget: string, default: PL, pattern: ["^[A-Z]{2}$", "Dwie wielkie litery, np. PL"] }
+      - { label: Data publikacji, name: datePosted, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Ważna do (opcjonalnie)", name: validThrough, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - label: Wynagrodzenie netto (PLN)
+        name: salary
+        widget: object
+        fields:
+          - { label: Od, name: min, widget: number, value_type: float, min: 1 }
+          - { label: "Do (opcjonalnie)", name: max, widget: number, value_type: float, required: false }
+          - label: Za
+            name: unit
+            widget: select
+            options: [{ label: godzinę, value: hour }, { label: miesiąc, value: month }]
+      - label: Umowa
+        name: contract
+        widget: select
+        required: false
+        options:
+          - { label: "— nie podawaj —", value: "" }
+          - { label: Umowa o pracę, value: employment }
+          - { label: Umowa zlecenie, value: mandate }
+          - { label: B2B, value: b2b }
+      - label: Benefity (ikonki)
+        name: tags
+        widget: select
+        multiple: true
+        required: false
+        options:
+          - { label: Zakwaterowanie, value: housing }
+          - { label: Dojazd, value: transport }
+          - { label: Posiłki, value: meals }
+          - { label: Koordynator, value: coordinator }
+      - { label: Tytuł, name: title, widget: string, i18n: true }
+      - { label: "Krótki opis (1–2 zdania)", name: summary, widget: text, i18n: true }
+      - { label: Obowiązki, name: duties, widget: list, i18n: true, required: false, field: { label: Punkt, name: item, widget: string } }
+      - { label: Wymagania, name: requirements, widget: list, i18n: true, required: false, field: { label: Punkt, name: item, widget: string } }
+      - { label: Oferujemy, name: offer, widget: list, i18n: true, required: false, field: { label: Punkt, name: item, widget: string } }
+      - { label: Warunki pracy, name: conditions, widget: list, i18n: true, required: false, field: { label: Punkt, name: item, widget: string } }
+
+  - name: settings
+    label: Ustawienia
+    files:
+      - name: settings
+        label: Kontakty i ustawienia
+        file: data/settings.json
+        format: json
+        fields:
+          - { label: Adres strony, name: siteUrl, widget: string }
+          - { label: Marka, name: brand, widget: string }
+          - { label: Firma (pełna nazwa), name: company, widget: string }
+          - { label: E-mail, name: email, widget: string }
+          - { label: Telefon dla kandydatów, name: phoneCandidates, widget: string }
+          - { label: Telefon biura, name: phoneOffice, widget: string }
+          - { label: WhatsApp (numer), name: whatsapp, widget: string }
+          - { label: Viber (numer), name: viber, widget: string }
+          - { label: Telegram (link), name: telegram, widget: string }
+          - label: Adres
+            name: address
+            widget: object
+            fields:
+              - { label: Ulica, name: street, widget: string }
+              - { label: Kod, name: postal, widget: string }
+              - { label: Miasto, name: city, widget: string }
+              - { label: Kraj (kod), name: country, widget: string }
+          - { label: Link do mapy, name: mapUrl, widget: string }
+          - { label: Link do polityki prywatności, name: privacyUrl, widget: string }
+          - { label: "Adres obsługi formularzy (np. Formspree/Web3Forms). Puste = wysyłka przez WhatsApp", name: formEndpoint, widget: string, required: false }
+          - { label: Premia za polecenie (zł), name: referralBonus, widget: number }
+          - label: Media społecznościowe
+            name: social
+            widget: object
+            fields:
+              - { label: Facebook, name: Facebook, widget: string }
+              - { label: Instagram, name: Instagram, widget: string }
+              - { label: TikTok, name: TikTok, widget: string }
+              - { label: YouTube, name: YouTube, widget: string }
+              - { label: LinkedIn, name: LinkedIn, widget: string }
+              - { label: Telegram, name: Telegram, widget: string }

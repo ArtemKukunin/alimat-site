@@ -1,0 +1,123 @@
+{
+  "pl": {
+    "active": true,
+    "category": "production",
+    "city": "Kutno",
+    "region": "łódzkie",
+    "country": "PL",
+    "datePosted": "2026-09-29",
+    "salary": { "min": 28, "unit": "hour" },
+    "contract": "",
+    "tags": [],
+    "title": "Operator pakowni",
+    "summary": "Obsługa linii pakującej i systemów etykietowania w zakładzie produkcyjnym w Kutnie. Praca stała, pełny etat.",
+    "duties": [
+      "Obsługa i nadzór nad linią produkcyjną oraz urządzeniami pakującymi",
+      "Obsługa drukarek i systemów etykietowania, kontrola danych na etykietach",
+      "Kontrola poprawności pakowania, oznaczeń i ilości produktu",
+      "Monitorowanie realizacji zamówień i planu produkcji",
+      "Reagowanie na nieprawidłowości i zgłaszanie awarii",
+      "Współpraca z produkcją, magazynem, kontrolą jakości i utrzymaniem ruchu",
+      "Przestrzeganie zasad BHP, HACCP i standardów jakości"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  },
+  "uk": {
+    "title": "Оператор пакувальної дільниці",
+    "summary": "Обслуговування пакувальної лінії та систем маркування на виробництві в Кутно. Постійна робота, повна зайнятість.",
+    "duties": [
+      "Обслуговування та контроль виробничої лінії й пакувального обладнання",
+      "Робота з принтерами та системами маркування, перевірка даних на етикетках",
+      "Контроль правильності пакування, маркування та кількості продукції",
+      "Відстеження виконання замовлень і виробничого плану",
+      "Реагування на відхилення та повідомлення про несправності",
+      "Співпраця з виробництвом, складом, контролем якості та технічною службою",
+      "Дотримання правил охорони праці, HACCP і стандартів якості"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  },
+  "ru": {
+    "title": "Оператор упаковочного участка",
+    "summary": "Обслуживание упаковочной линии и систем маркировки на производстве в Кутно. Постоянная работа, полная занятость.",
+    "duties": [
+      "Обслуживание и контроль производственной линии и упаковочного оборудования",
+      "Работа с принтерами и системами маркировки, проверка данных на этикетках",
+      "Контроль правильности упаковки, маркировки и количества продукции",
+      "Отслеживание выполнения заказов и производственного плана",
+      "Реагирование на отклонения и сообщение о неисправностях",
+      "Взаимодействие с производством, складом, контролем качества и технической службой",
+      "Соблюдение правил охраны труда, HACCP и стандартов качества"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  },
+  "en": {
+    "title": "Packing Line Operator",
+    "summary": "Operating a packing line and labelling systems at a production plant in Kutno. Permanent, full-time job.",
+    "duties": [
+      "Operating and monitoring the production line and packing machines",
+      "Operating printers and labelling systems, checking label data",
+      "Checking packing, labelling and product quantities",
+      "Tracking orders and the production plan",
+      "Responding to issues and reporting breakdowns",
+      "Working with production, warehouse, quality control and maintenance teams",
+      "Following health and safety, HACCP and quality standards"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  },
+  "es": {
+    "title": "Operario/a de línea de envasado",
+    "summary": "Manejo de la línea de envasado y de los sistemas de etiquetado en una planta de producción en Kutno. Empleo estable a jornada completa.",
+    "duties": [
+      "Manejo y supervisión de la línea de producción y de las máquinas de envasado",
+      "Manejo de impresoras y sistemas de etiquetado, control de los datos de las etiquetas",
+      "Control del envasado, el etiquetado y las cantidades de producto",
+      "Seguimiento de los pedidos y del plan de producción",
+      "Reacción ante incidencias y aviso de averías",
+      "Colaboración con producción, almacén, control de calidad y mantenimiento",
+      "Cumplimiento de las normas de seguridad laboral, APPCC (HACCP) y calidad"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  },
+  "pt": {
+    "title": "Operador(a) de linha de embalagem",
+    "summary": "Operação da linha de embalagem e dos sistemas de etiquetagem em uma fábrica em Kutno. Trabalho fixo, tempo integral.",
+    "duties": [
+      "Operar e acompanhar a linha de produção e as máquinas de embalagem",
+      "Operar impressoras e sistemas de etiquetagem, conferindo os dados das etiquetas",
+      "Conferir a embalagem, a etiquetagem e a quantidade de produto",
+      "Acompanhar os pedidos e o plano de produção",
+      "Reagir a irregularidades e comunicar falhas",
+      "Trabalhar em conjunto com produção, armazém, controle de qualidade e manutenção",
+      "Seguir as normas de segurança do trabalho, APPCC (HACCP) e qualidade"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  },
+  "ro": {
+    "title": "Operator linie de ambalare",
+    "summary": "Deservirea liniei de ambalare și a sistemelor de etichetare într-o fabrică din Kutno. Loc de muncă stabil, normă întreagă.",
+    "duties": [
+      "Deservirea și supravegherea liniei de producție și a mașinilor de ambalare",
+      "Lucrul cu imprimantele și sistemele de etichetare, verificarea datelor de pe etichete",
+      "Verificarea ambalării, a marcajelor și a cantității de produs",
+      "Urmărirea comenzilor și a planului de producție",
+      "Reacția la nereguli și raportarea defecțiunilor",
+      "Colaborarea cu producția, depozitul, controlul calității și mentenanța",
+      "Respectarea normelor de securitate a muncii, HACCP și a standardelor de calitate"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  }
+}

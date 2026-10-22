@@ -1,0 +1,29 @@
+{
+  "siteUrl": "https://alimatgroup.com",
+  "brand": "Alimat Group",
+  "company": "Alimat Group Sp. z o.o.",
+  "email": "kontakt@alimatgroup.com",
+  "phoneCandidates": "+48 780 425 047",
+  "phoneOffice": "+48 453 444 562",
+  "whatsapp": "+48 780 425 047",
+  "viber": "+48 780 425 047",
+  "telegram": "https://t.me/rabota_w_polsce_alimat_group",
+  "address": {
+    "street": "Aleja Płk. Władysława Beliny-Prażmowskiego 6A/9",
+    "postal": "31-514",
+    "city": "Kraków",
+    "country": "PL"
+  },
+  "mapUrl": "https://maps.app.goo.gl/nfUV94BuS91ZC7dE7",
+  "privacyUrl": "https://alimatgroup.com/polityka-prywatnosci/",
+  "formEndpoint": "",
+  "referralBonus": 600,
+  "social": {
+    "Facebook": "https://www.facebook.com/profile.php?id=61583032692745",
+    "Instagram": "https://www.instagram.com/alimat_group",
+    "TikTok": "https://www.tiktok.com/@alimat_group",
+    "YouTube": "https://www.youtube.com/@alimat_group",
+    "LinkedIn": "https://www.linkedin.com/company/alimat-group/",
+    "Telegram": "https://t.me/rabota_w_polsce_alimat_group"
+  }
+}

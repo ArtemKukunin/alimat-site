@@ -1,0 +1,207 @@
+{
+  "pl": {
+    "active": true,
+    "category": "drivers",
+    "city": "Wustermark",
+    "region": "Brandenburg",
+    "country": "DE",
+    "datePosted": "2026-03-05",
+    "salary": { "min": 12000, "max": 13000, "unit": "month" },
+    "contract": "employment",
+    "tags": ["coordinator"],
+    "title": "Kierowca C+E – cysterna paliwowa ADR (Niemcy – Polska – Benelux)",
+    "summary": "Stałe trasy cysterną paliwową z bazy w Wustermark (Niemcy). Umowa o pracę, możliwy system 3 tygodnie pracy / 1 tydzień w domu.",
+    "duties": [
+      "Transport paliwa cysterną na trasach międzynarodowych",
+      "Wyjazd z bazy w Wustermark (Niemcy) pustą cysterną",
+      "Załadunek paliwa w Polsce (Rzeszów) lub w portach Belgii i Holandii",
+      "Dostawa do odbiorcy w Berlinie lub powrót na bazę",
+      "Przestrzeganie zasad przewozu materiałów niebezpiecznych (ADR)",
+      "Prowadzenie dokumentacji transportowej (CMR)",
+      "Kontrola pojazdu i dbałość o powierzony sprzęt"
+    ],
+    "requirements": [
+      "Prawo jazdy kat. C+E",
+      "Aktualny kod 95",
+      "Aktualne badania lekarskie i psychotechniczne",
+      "Uprawnienia ADR (przewóz paliw)",
+      "Doświadczenie w transporcie międzynarodowym — duży atut",
+      "Znajomość dokumentacji transportowej (CMR)"
+    ],
+    "offer": [],
+    "conditions": [
+      "Praca zgodnie z przepisami o czasie pracy kierowców i tachografem",
+      "Zwykle 5–6 dni pracy w tygodniu",
+      "Możliwy system 3 tygodnie pracy / 1 tydzień w domu",
+      "Wsparcie organizacyjne i opieka koordynatora"
+    ]
+  },
+  "uk": {
+    "title": "Водій C+E – паливна цистерна ADR (Німеччина – Польща – Бенілюкс)",
+    "summary": "Постійні маршрути на паливній цистерні з бази у Вустермарку (Німеччина). Трудовий договір, можливий графік 3 тижні роботи / 1 тиждень удома.",
+    "duties": [
+      "Перевезення пального цистерною на міжнародних маршрутах",
+      "Виїзд з бази у Вустермарку (Німеччина) з порожньою цистерною",
+      "Завантаження пального в Польщі (Жешув) або в портах Бельгії та Нідерландів",
+      "Доставка одержувачу в Берліні або повернення на базу",
+      "Дотримання правил перевезення небезпечних вантажів (ADR)",
+      "Ведення транспортної документації (CMR)",
+      "Контроль технічного стану авто та відповідальність за довірене обладнання"
+    ],
+    "requirements": [
+      "Посвідчення водія категорії C+E",
+      "Чинний код 95",
+      "Чинні медичний і психотехнічний огляди",
+      "Допуск ADR (перевезення пального)",
+      "Досвід міжнародних перевезень — велика перевага",
+      "Знання транспортної документації (CMR)"
+    ],
+    "offer": [],
+    "conditions": [
+      "Робота відповідно до норм робочого часу водіїв і тахографа",
+      "Зазвичай 5–6 робочих днів на тиждень",
+      "Можливий графік 3 тижні роботи / 1 тиждень удома",
+      "Організаційна підтримка та супровід координатора"
+    ]
+  },
+  "ru": {
+    "title": "Водитель C+E – топливная цистерна ADR (Германия – Польша – Бенилюкс)",
+    "summary": "Постоянные маршруты на топливной цистерне с базы в Вустермарке (Германия). Трудовой договор, возможен график 3 недели работы / 1 неделя дома.",
+    "duties": [
+      "Перевозка топлива цистерной на международных маршрутах",
+      "Выезд с базы в Вустермарке (Германия) с пустой цистерной",
+      "Загрузка топлива в Польше (Жешув) или в портах Бельгии и Нидерландов",
+      "Доставка получателю в Берлине или возвращение на базу",
+      "Соблюдение правил перевозки опасных грузов (ADR)",
+      "Ведение транспортной документации (CMR)",
+      "Контроль технического состояния автомобиля и ответственность за вверенное оборудование"
+    ],
+    "requirements": [
+      "Водительские права категории C+E",
+      "Действующий код 95",
+      "Действующие медицинский и психотехнический осмотры",
+      "Допуск ADR (перевозка топлива)",
+      "Опыт международных перевозок — большое преимущество",
+      "Знание транспортной документации (CMR)"
+    ],
+    "offer": [],
+    "conditions": [
+      "Работа по нормам рабочего времени водителей и тахографу",
+      "Обычно 5–6 рабочих дней в неделю",
+      "Возможен график 3 недели работы / 1 неделя дома",
+      "Организационная поддержка и сопровождение координатора"
+    ]
+  },
+  "en": {
+    "title": "C+E Driver – ADR Fuel Tanker (Germany – Poland – Benelux)",
+    "summary": "Regular routes driving a fuel tanker from a base in Wustermark, Germany. Employment contract; a 3-weeks-on / 1-week-home rota is available.",
+    "duties": [
+      "Transporting fuel by tanker on international routes",
+      "Leaving the Wustermark base (Germany) with an empty tanker",
+      "Loading fuel in Poland (Rzeszów) or at ports in Belgium and the Netherlands",
+      "Delivering to customers in Berlin or returning to base",
+      "Following the rules for carrying dangerous goods (ADR)",
+      "Keeping transport documents (CMR)",
+      "Checking the vehicle and looking after the equipment entrusted to you"
+    ],
+    "requirements": [
+      "C+E driving licence",
+      "Valid Code 95 (driver CPC)",
+      "Valid medical and psychotechnical tests",
+      "ADR certificate (fuel transport)",
+      "International haulage experience — a strong advantage",
+      "Familiarity with transport documents (CMR)"
+    ],
+    "offer": [],
+    "conditions": [
+      "Work in line with drivers' hours rules and the tachograph",
+      "Usually 5–6 working days a week",
+      "3-weeks-on / 1-week-home rota available",
+      "Organisational support and a dedicated coordinator"
+    ]
+  },
+  "es": {
+    "title": "Conductor/a C+E – cisterna de combustible ADR (Alemania – Polonia – Benelux)",
+    "summary": "Rutas fijas con cisterna de combustible desde una base en Wustermark (Alemania). Contrato laboral; posibilidad de 3 semanas de trabajo y 1 semana en casa.",
+    "duties": [
+      "Transporte de combustible en cisterna en rutas internacionales",
+      "Salida de la base de Wustermark (Alemania) con la cisterna vacía",
+      "Carga de combustible en Polonia (Rzeszów) o en puertos de Bélgica y Países Bajos",
+      "Entrega al cliente en Berlín o regreso a la base",
+      "Cumplimiento de las normas de transporte de mercancías peligrosas (ADR)",
+      "Gestión de la documentación de transporte (CMR)",
+      "Revisión del vehículo y cuidado del equipo asignado"
+    ],
+    "requirements": [
+      "Permiso de conducir C+E",
+      "Código 95 (CAP) vigente",
+      "Reconocimiento médico y psicotécnico vigentes",
+      "Certificado ADR (transporte de combustible)",
+      "Experiencia en transporte internacional (muy valorada)",
+      "Conocimiento de la documentación de transporte (CMR)"
+    ],
+    "offer": [],
+    "conditions": [
+      "Trabajo conforme a la normativa de tiempos de conducción y el tacógrafo",
+      "Normalmente de 5 a 6 días de trabajo a la semana",
+      "Posibilidad de 3 semanas de trabajo y 1 semana en casa",
+      "Apoyo organizativo y coordinador asignado"
+    ]
+  },
+  "pt": {
+    "title": "Motorista C+E – caminhão-tanque de combustível ADR (Alemanha – Polônia – Benelux)",
+    "summary": "Rotas fixas com caminhão-tanque de combustível a partir da base em Wustermark (Alemanha). Contrato de trabalho; possível escala de 3 semanas de trabalho / 1 semana em casa.",
+    "duties": [
+      "Transportar combustível em caminhão-tanque em rotas internacionais",
+      "Sair da base em Wustermark (Alemanha) com o tanque vazio",
+      "Carregar combustível na Polônia (Rzeszów) ou em portos da Bélgica e da Holanda",
+      "Entregar ao cliente em Berlim ou retornar à base",
+      "Seguir as normas de transporte de cargas perigosas (ADR)",
+      "Cuidar da documentação de transporte (CMR)",
+      "Verificar o veículo e zelar pelo equipamento sob sua responsabilidade"
+    ],
+    "requirements": [
+      "Carteira de motorista categoria C+E (padrão europeu)",
+      "Código 95 válido",
+      "Exames médico e psicotécnico em dia",
+      "Certificado ADR (transporte de combustível)",
+      "Experiência em transporte internacional — grande diferencial",
+      "Conhecimento da documentação de transporte (CMR)"
+    ],
+    "offer": [],
+    "conditions": [
+      "Trabalho conforme as regras de jornada dos motoristas e o tacógrafo",
+      "Normalmente 5 a 6 dias de trabalho por semana",
+      "Possível escala de 3 semanas de trabalho / 1 semana em casa",
+      "Apoio organizacional e acompanhamento de um coordenador"
+    ]
+  },
+  "ro": {
+    "title": "Șofer C+E – cisternă de combustibil ADR (Germania – Polonia – Benelux)",
+    "summary": "Rute fixe cu cisterna de combustibil, cu baza în Wustermark (Germania). Contract de muncă; posibil program 3 săptămâni de muncă / 1 săptămână acasă.",
+    "duties": [
+      "Transportul combustibilului cu cisterna pe rute internaționale",
+      "Plecarea din baza din Wustermark (Germania) cu cisterna goală",
+      "Încărcarea combustibilului în Polonia (Rzeszów) sau în porturile din Belgia și Țările de Jos",
+      "Livrarea la client în Berlin sau întoarcerea la bază",
+      "Respectarea regulilor de transport al mărfurilor periculoase (ADR)",
+      "Completarea documentelor de transport (CMR)",
+      "Verificarea vehiculului și grija pentru echipamentul încredințat"
+    ],
+    "requirements": [
+      "Permis de conducere categoria C+E",
+      "Cod 95 valabil",
+      "Analize medicale și psihologice valabile",
+      "Atestat ADR (transport de combustibil)",
+      "Experiența în transportul internațional este un mare avantaj",
+      "Cunoașterea documentelor de transport (CMR)"
+    ],
+    "offer": [],
+    "conditions": [
+      "Muncă conform regulilor privind timpul de condus și tahograful",
+      "De obicei 5–6 zile de muncă pe săptămână",
+      "Posibil program 3 săptămâni de muncă / 1 săptămână acasă",
+      "Sprijin organizatoric și un coordonator dedicat"
+    ]
+  }
+}

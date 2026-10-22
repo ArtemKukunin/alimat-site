@@ -1,0 +1,193 @@
+{
+  "pl": {
+    "active": true,
+    "category": "logistics",
+    "city": "Końskowola",
+    "region": "lubelskie",
+    "country": "PL",
+    "datePosted": "2025-10-13",
+    "salary": { "min": 25, "unit": "hour" },
+    "contract": "",
+    "tags": ["housing", "transport", "meals"],
+    "title": "Magazynier",
+    "summary": "Praca w magazynie w Końskowoli. Ciepłe posiłki, bezpłatny dojazd i zakwaterowanie blisko pracy w razie potrzeby.",
+    "duties": [
+      "Skanowanie i ewidencja palet",
+      "Foliowanie (streczowanie) i przygotowanie towaru do wysyłki",
+      "Układanie towaru na regałach",
+      "Załadunek i rozładunek samochodów dostawczych i ciężarowych",
+      "Kompletacja zamówień zgodnie z dokumentacją magazynową"
+    ],
+    "requirements": [
+      "Gotowość do pracy fizycznej",
+      "Odpowiedzialność, dokładność i rzetelność",
+      "Znajomość języka polskiego w stopniu komunikatywnym",
+      "Obsługa wózka widłowego — mile widziana",
+      "Uprawnienia UDT — mile widziane"
+    ],
+    "offer": [
+      "Stabilne zatrudnienie w rozwijającej się firmie",
+      "Ciepłe posiłki regeneracyjne",
+      "Zakwaterowanie blisko miejsca pracy (w razie potrzeby)",
+      "Bezpłatny dojazd do pracy i z pracy",
+      "Praca w międzynarodowym zespole"
+    ],
+    "conditions": []
+  },
+  "uk": {
+    "title": "Комірник (працівник складу)",
+    "summary": "Робота на складі в Коньськоволі. Гаряче харчування, безкоштовний доїзд і, за потреби, житло поруч із роботою.",
+    "duties": [
+      "Сканування та облік палет",
+      "Обмотування стретч-плівкою та підготовка товару до відвантаження",
+      "Розкладання товару на стелажах",
+      "Завантаження й розвантаження фургонів і вантажівок",
+      "Комплектування замовлень згідно зі складською документацією"
+    ],
+    "requirements": [
+      "Готовність до фізичної роботи",
+      "Відповідальність, уважність і сумлінність",
+      "Знання польської мови на розмовному рівні",
+      "Вміння керувати навантажувачем — буде перевагою",
+      "Посвідчення UDT — буде перевагою"
+    ],
+    "offer": [
+      "Стабільна робота в компанії, що розвивається",
+      "Гаряче харчування",
+      "Житло поруч із місцем роботи (за потреби)",
+      "Безкоштовний доїзд на роботу й назад",
+      "Робота в міжнародній команді"
+    ],
+    "conditions": []
+  },
+  "ru": {
+    "title": "Кладовщик (работник склада)",
+    "summary": "Работа на складе в Коньсковоле. Горячее питание, бесплатный доезд и при необходимости жильё рядом с работой.",
+    "duties": [
+      "Сканирование и учёт паллет",
+      "Обмотка стретч-плёнкой и подготовка товара к отгрузке",
+      "Раскладка товара на стеллажах",
+      "Погрузка и разгрузка фургонов и грузовиков",
+      "Комплектация заказов по складской документации"
+    ],
+    "requirements": [
+      "Готовность к физической работе",
+      "Ответственность, внимательность и добросовестность",
+      "Знание польского языка на разговорном уровне",
+      "Умение управлять погрузчиком — будет преимуществом",
+      "Удостоверение UDT — будет преимуществом"
+    ],
+    "offer": [
+      "Стабильная работа в развивающейся компании",
+      "Горячее питание",
+      "Жильё рядом с местом работы (при необходимости)",
+      "Бесплатный доезд на работу и обратно",
+      "Работа в международной команде"
+    ],
+    "conditions": []
+  },
+  "en": {
+    "title": "Warehouse Worker",
+    "summary": "Warehouse work in Końskowola. Hot meals, free transport and accommodation near work if needed.",
+    "duties": [
+      "Scanning and recording pallets",
+      "Stretch-wrapping and preparing goods for dispatch",
+      "Putting stock away on racks",
+      "Loading and unloading vans and trucks",
+      "Picking orders according to warehouse documents"
+    ],
+    "requirements": [
+      "Ready for physical work",
+      "Responsible, accurate and reliable",
+      "Conversational Polish",
+      "Forklift experience — an advantage",
+      "UDT forklift licence — an advantage"
+    ],
+    "offer": [
+      "Stable employment in a growing company",
+      "Hot meals",
+      "Accommodation near work (if needed)",
+      "Free transport to and from work",
+      "International team"
+    ],
+    "conditions": []
+  },
+  "es": {
+    "title": "Mozo/a de almacén",
+    "summary": "Trabajo en un almacén en Końskowola. Comida caliente, transporte gratuito y alojamiento cerca del trabajo si lo necesitas.",
+    "duties": [
+      "Escaneo y registro de palés",
+      "Enfilmado de palés y preparación de mercancía para envío",
+      "Colocación de mercancía en estanterías",
+      "Carga y descarga de furgonetas y camiones",
+      "Preparación de pedidos según la documentación del almacén"
+    ],
+    "requirements": [
+      "Disposición para el trabajo físico",
+      "Responsabilidad, precisión y seriedad",
+      "Polaco a nivel conversacional",
+      "Manejo de carretilla elevadora (se valorará)",
+      "Certificado UDT de carretillero (se valorará)"
+    ],
+    "offer": [
+      "Empleo estable en una empresa en crecimiento",
+      "Comida caliente",
+      "Alojamiento cerca del trabajo (si lo necesitas)",
+      "Transporte gratuito de ida y vuelta al trabajo",
+      "Equipo internacional"
+    ],
+    "conditions": []
+  },
+  "pt": {
+    "title": "Auxiliar de armazém",
+    "summary": "Trabalho em armazém em Końskowola. Refeição quente, transporte gratuito e moradia perto do trabalho, se necessário.",
+    "duties": [
+      "Escanear e registrar paletes",
+      "Envolver paletes com filme stretch e preparar mercadorias para envio",
+      "Organizar mercadorias nas prateleiras",
+      "Carregar e descarregar vans e caminhões",
+      "Separar pedidos conforme a documentação do armazém"
+    ],
+    "requirements": [
+      "Disposição para trabalho físico",
+      "Responsabilidade, atenção e comprometimento",
+      "Polonês em nível de conversação",
+      "Saber operar empilhadeira — diferencial",
+      "Certificado UDT de empilhadeira — diferencial"
+    ],
+    "offer": [
+      "Emprego estável em uma empresa em crescimento",
+      "Refeição quente",
+      "Moradia perto do trabalho (se necessário)",
+      "Transporte gratuito de ida e volta ao trabalho",
+      "Equipe internacional"
+    ],
+    "conditions": []
+  },
+  "ro": {
+    "title": "Lucrător în depozit",
+    "summary": "Muncă într-un depozit din Końskowola. Masă caldă, transport gratuit și, la nevoie, cazare aproape de locul de muncă.",
+    "duties": [
+      "Scanarea și evidența paleților",
+      "Înfolierea și pregătirea mărfii pentru expediere",
+      "Așezarea mărfii pe rafturi",
+      "Încărcarea și descărcarea dubelor și camioanelor",
+      "Pregătirea comenzilor conform documentelor de depozit"
+    ],
+    "requirements": [
+      "Disponibilitate pentru muncă fizică",
+      "Responsabilitate, atenție și seriozitate",
+      "Limba polonă la nivel de conversație",
+      "Experiența pe stivuitor reprezintă un avantaj",
+      "Atestatul UDT de stivuitorist reprezintă un avantaj"
+    ],
+    "offer": [
+      "Loc de muncă stabil într-o firmă în dezvoltare",
+      "Masă caldă",
+      "Cazare aproape de locul de muncă (la nevoie)",
+      "Transport gratuit dus-întors la locul de muncă",
+      "Echipă internațională"
+    ],
+    "conditions": []
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "pl": {
+    "active": true,
+    "category": "drivers",
+    "city": "Końskowola",
+    "region": "lubelskie",
+    "country": "PL",
+    "datePosted": "2026-03-05",
+    "salary": { "min": 11000, "max": 12000, "unit": "month" },
+    "contract": "employment",
+    "tags": ["coordinator"],
+    "title": "Kierowca TIR – trasa Polska – Turcja",
+    "summary": "Stała, powtarzalna trasa z Końskowoli do Turcji (transport mięsa). Umowa o pracę i opieka koordynatora.",
+    "duties": [
+      "Transport międzynarodowy na trasie Polska – Turcja",
+      "Załadunek w zakładzie w Końskowoli (transport mięsa)",
+      "Rozładunek u klienta w Turcji i dalsza realizacja planu transportowego",
+      "Prowadzenie dokumentacji transportowej (CMR)",
+      "Przestrzeganie czasu pracy kierowców i przepisów transportowych"
+    ],
+    "requirements": [
+      "Doświadczenie w transporcie międzynarodowym"
+    ],
+    "offer": [],
+    "conditions": [
+      "Stała, powtarzalna trasa i stabilny harmonogram",
+      "Praca zgodnie z tachografem i przepisami o czasie pracy",
+      "Wsparcie organizacyjne i opieka koordynatora",
+      "Możliwość długoterminowej współpracy"
+    ]
+  },
+  "uk": {
+    "title": "Водій вантажівки (TIR) – маршрут Польща – Туреччина",
+    "summary": "Постійний повторюваний маршрут з Коньськоволі до Туреччини (перевезення м'яса). Трудовий договір і супровід координатора.",
+    "duties": [
+      "Міжнародні перевезення за маршрутом Польща – Туреччина",
+      "Завантаження на підприємстві в Коньськоволі (перевезення м'яса)",
+      "Розвантаження в клієнта в Туреччині та подальше виконання транспортного плану",
+      "Ведення транспортної документації (CMR)",
+      "Дотримання норм робочого часу водіїв і транспортних правил"
+    ],
+    "requirements": [
+      "Досвід міжнародних перевезень"
+    ],
+    "offer": [],
+    "conditions": [
+      "Постійний повторюваний маршрут і стабільний графік",
+      "Робота за тахографом і нормами робочого часу",
+      "Організаційна підтримка та супровід координатора",
+      "Можливість довгострокової співпраці"
+    ]
+  },
+  "ru": {
+    "title": "Водитель грузовика (TIR) – маршрут Польша – Турция",
+    "summary": "Постоянный повторяющийся маршрут из Коньсковоли в Турцию (перевозка мяса). Трудовой договор и сопровождение координатора.",
+    "duties": [
+      "Международные перевозки по маршруту Польша – Турция",
+      "Загрузка на предприятии в Коньсковоле (перевозка мяса)",
+      "Разгрузка у клиента в Турции и дальнейшее выполнение транспортного плана",
+      "Ведение транспортной документации (CMR)",
+      "Соблюдение норм рабочего времени водителей и транспортных правил"
+    ],
+    "requirements": [
+      "Опыт международных перевозок"
+    ],
+    "offer": [],
+    "conditions": [
+      "Постоянный повторяющийся маршрут и стабильный график",
+      "Работа по тахографу и нормам рабочего времени",
+      "Организационная поддержка и сопровождение координатора",
+      "Возможность долгосрочного сотрудничества"
+    ]
+  },
+  "en": {
+    "title": "HGV Driver – Poland to Turkey Route",
+    "summary": "A fixed, regular route from Końskowola to Turkey (meat transport). Employment contract and a dedicated coordinator.",
+    "duties": [
+      "International haulage on the Poland – Turkey route",
+      "Loading at the plant in Końskowola (meat transport)",
+      "Unloading at the customer in Turkey and following the transport plan",
+      "Keeping transport documents (CMR)",
+      "Following drivers' hours and transport regulations"
+    ],
+    "requirements": [
+      "Experience in international haulage"
+    ],
+    "offer": [],
+    "conditions": [
+      "Fixed, regular route and a stable schedule",
+      "Work in line with the tachograph and drivers' hours rules",
+      "Organisational support and a dedicated coordinator",
+      "Long-term cooperation possible"
+    ]
+  },
+  "es": {
+    "title": "Conductor/a de camión (tráiler) – ruta Polonia – Turquía",
+    "summary": "Ruta fija y regular desde Końskowola hasta Turquía (transporte de carne). Contrato laboral y coordinador asignado.",
+    "duties": [
+      "Transporte internacional en la ruta Polonia – Turquía",
+      "Carga en la planta de Końskowola (transporte de carne)",
+      "Descarga en el cliente en Turquía y continuación del plan de transporte",
+      "Gestión de la documentación de transporte (CMR)",
+      "Cumplimiento de los tiempos de conducción y de la normativa de transporte"
+    ],
+    "requirements": [
+      "Experiencia en transporte internacional"
+    ],
+    "offer": [],
+    "conditions": [
+      "Ruta fija y regular con horario estable",
+      "Trabajo conforme al tacógrafo y a la normativa de tiempos de conducción",
+      "Apoyo organizativo y coordinador asignado",
+      "Posibilidad de colaboración a largo plazo"
+    ]
+  },
+  "pt": {
+    "title": "Motorista de carreta – rota Polônia – Turquia",
+    "summary": "Rota fixa e regular de Końskowola até a Turquia (transporte de carne). Contrato de trabalho e acompanhamento de um coordenador.",
+    "duties": [
+      "Transporte internacional na rota Polônia – Turquia",
+      "Carregamento na fábrica em Końskowola (transporte de carne)",
+      "Descarga no cliente na Turquia e continuidade do plano de transporte",
+      "Cuidar da documentação de transporte (CMR)",
+      "Respeitar a jornada dos motoristas e as normas de transporte"
+    ],
+    "requirements": [
+      "Experiência em transporte internacional"
+    ],
+    "offer": [],
+    "conditions": [
+      "Rota fixa e regular, com cronograma estável",
+      "Trabalho conforme o tacógrafo e as regras de jornada",
+      "Apoio organizacional e acompanhamento de um coordenador",
+      "Possibilidade de parceria de longo prazo"
+    ]
+  },
+  "ro": {
+    "title": "Șofer TIR – ruta Polonia – Turcia",
+    "summary": "Rută fixă și regulată din Końskowola până în Turcia (transport de carne). Contract de muncă și coordonator dedicat.",
+    "duties": [
+      "Transport internațional pe ruta Polonia – Turcia",
+      "Încărcarea la fabrica din Końskowola (transport de carne)",
+      "Descărcarea la client în Turcia și continuarea planului de transport",
+      "Completarea documentelor de transport (CMR)",
+      "Respectarea timpului de condus și a regulilor de transport"
+    ],
+    "requirements": [
+      "Experiență în transportul internațional"
+    ],
+    "offer": [],
+    "conditions": [
+      "Rută fixă și regulată, cu program stabil",
+      "Muncă conform tahografului și regulilor privind timpul de condus",
+      "Sprijin organizatoric și coordonator dedicat",
+      "Posibilitate de colaborare pe termen lung"
+    ]
+  }
+}

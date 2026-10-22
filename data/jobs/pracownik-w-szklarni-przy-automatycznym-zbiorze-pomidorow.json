@@ -1,0 +1,123 @@
+{
+  "pl": {
+    "active": true,
+    "category": "agriculture",
+    "city": "Kozienice",
+    "region": "mazowieckie",
+    "country": "PL",
+    "datePosted": "2026-09-28",
+    "salary": { "min": 24, "unit": "hour" },
+    "contract": "",
+    "tags": [],
+    "title": "Pracownik szklarni – automatyczny zbiór pomidorów",
+    "summary": "Zbiór pomidorów na zautomatyzowanej linii w szklarni pod Kozienicami. Bez dźwigania ciężarów, w komfortowej temperaturze.",
+    "duties": [
+      "Zbiór pomidorów na zautomatyzowanej linii, po której przesuwają się skrzynki",
+      "Kontrola i ważenie skrzynek",
+      "Dbanie o porządek na stanowisku pracy"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": [
+      "Skrzynki ważą do 6 kg — wszystko jest zautomatyzowane, nie trzeba nosić ciężarów",
+      "Praca w pozycji stojącej, w komfortowej temperaturze",
+      "Praca stała, pełny etat"
+    ]
+  },
+  "uk": {
+    "title": "Працівник теплиці – автоматизований збір томатів",
+    "summary": "Збір томатів на автоматизованій лінії в теплиці біля Козеніце. Без перенесення важкого, при комфортній температурі.",
+    "duties": [
+      "Збір томатів на автоматизованій лінії, по якій рухаються ящики",
+      "Перевірка та зважування ящиків",
+      "Підтримання порядку на робочому місці"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": [
+      "Ящики важать до 6 кг — усе автоматизовано, носити важке не потрібно",
+      "Робота стоячи, при комфортній температурі",
+      "Постійна робота, повна зайнятість"
+    ]
+  },
+  "ru": {
+    "title": "Работник теплицы – автоматизированный сбор томатов",
+    "summary": "Сбор томатов на автоматизированной линии в теплице под Козенице. Без переноски тяжестей, при комфортной температуре.",
+    "duties": [
+      "Сбор томатов на автоматизированной линии, по которой движутся ящики",
+      "Проверка и взвешивание ящиков",
+      "Поддержание порядка на рабочем месте"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": [
+      "Ящики весят до 6 кг — всё автоматизировано, носить тяжести не нужно",
+      "Работа стоя, при комфортной температуре",
+      "Постоянная работа, полная занятость"
+    ]
+  },
+  "en": {
+    "title": "Greenhouse Worker – Automated Tomato Harvesting",
+    "summary": "Harvesting tomatoes on an automated line in a greenhouse near Kozienice. No heavy lifting, comfortable temperature.",
+    "duties": [
+      "Picking tomatoes on an automated line that moves the crates",
+      "Checking and weighing crates",
+      "Keeping your workstation clean and tidy"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": [
+      "Crates weigh up to 6 kg — everything is automated, no heavy lifting",
+      "Standing work at a comfortable temperature",
+      "Permanent, full-time job"
+    ]
+  },
+  "es": {
+    "title": "Trabajador/a de invernadero – cosecha automatizada de tomates",
+    "summary": "Cosecha de tomates en una línea automatizada en un invernadero cerca de Kozienice. Sin cargar peso y a una temperatura agradable.",
+    "duties": [
+      "Recolección de tomates en una línea automatizada por la que circulan las cajas",
+      "Control y pesaje de las cajas",
+      "Mantener el puesto de trabajo limpio y ordenado"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": [
+      "Las cajas pesan hasta 6 kg: todo está automatizado, no hay que cargar peso",
+      "Trabajo de pie, a una temperatura agradable",
+      "Empleo estable a jornada completa"
+    ]
+  },
+  "pt": {
+    "title": "Trabalhador(a) de estufa – colheita automatizada de tomates",
+    "summary": "Colheita de tomates em uma linha automatizada em uma estufa perto de Kozienice. Sem carregar peso, em temperatura agradável.",
+    "duties": [
+      "Colher tomates em uma linha automatizada por onde passam as caixas",
+      "Conferir e pesar as caixas",
+      "Manter o posto de trabalho limpo e organizado"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": [
+      "As caixas pesam até 6 kg — tudo é automatizado, sem carregar peso",
+      "Trabalho em pé, em temperatura agradável",
+      "Trabalho fixo, tempo integral"
+    ]
+  },
+  "ro": {
+    "title": "Lucrător în seră – recoltare automatizată a roșiilor",
+    "summary": "Recoltarea roșiilor pe o linie automatizată într-o seră de lângă Kozienice. Fără ridicarea greutăților, la o temperatură plăcută.",
+    "duties": [
+      "Recoltarea roșiilor pe o linie automatizată pe care circulă lăzile",
+      "Verificarea și cântărirea lăzilor",
+      "Menținerea ordinii la locul de muncă"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": [
+      "Lăzile cântăresc până la 6 kg — totul este automatizat, nu trebuie cărate greutăți",
+      "Muncă în picioare, la o temperatură plăcută",
+      "Loc de muncă stabil, normă întreagă"
+    ]
+  }
+}
