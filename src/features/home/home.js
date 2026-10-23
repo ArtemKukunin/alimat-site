@@ -1,4 +1,4 @@
-import { pageUrl, asset } from '../../core/i18n.js';
+import { pageUrl, asset, BASE } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
 import { layout, contactButtons } from '../../core/layout.js';
@@ -14,7 +14,7 @@ export const perksGrid = (t) => `<ul class="perks">${PERKS.map(([k, ic]) => `<li
 /** Alternating photo + text rows with a large faint index (0.1 … 0.5), as on the original site. */
 const WHY = [['legal', 'home-2'], ['docs', 'home-1'], ['transport', 'home-3'], ['pay', 'home-4'], ['coord', 'home-5']];
 const perkRows = (t) => WHY.map(([k, img], i) => `<article class="why-row${i % 2 ? ' why-row-rev' : ''}">
-  <div class="why-img"><img src="${asset(`img/${img}.webp`)}" alt="" width="800" height="533" loading="lazy" decoding="async"></div>
+  <div class="why-img"><img src="${asset(`img/${img}-800.webp`)}" srcset="${asset(`img/${img}-800.webp`)} 800w, ${asset(`img/${img}.webp`)} 1200w" sizes="(min-width: 1024px) 600px, 100vw" alt="${esc(t(`alt_${k}`))}" width="800" height="533" loading="lazy" decoding="async"></div>
   <div class="why-text"><span class="why-n" aria-hidden="true">0.${i + 1}</span><h3>${esc(t(`perk_${k}_t`))}</h3><p>${esc(t(`perk_${k}_d`))}</p></div>
 </article>`).join('');
 
@@ -39,7 +39,7 @@ export function renderHome(ctx) {
     </div>
     <picture class="hero-img">
       <source media="(max-width: 767px)" srcset="${asset('img/hero-mobile.webp')}">
-      <img src="${asset('img/hero-desktop.webp')}" alt="" width="818" height="684" fetchpriority="high">
+      <img src="${asset('img/hero-desktop-900.webp')}" srcset="${asset('img/hero-desktop-900.webp')} 900w, ${asset('img/hero-desktop.webp')} 1636w" sizes="(min-width: 1024px) 600px, 100vw" alt="${esc(t('alt_hero'))}" width="900" height="753" fetchpriority="high">
     </picture>
   </div>
   <div class="wrap">
@@ -87,7 +87,7 @@ export function renderHome(ctx) {
       <a class="btn btn-pill btn-outline-orange" href="${pageUrl(lang, 'apply')}">${esc(t('cta_apply'))}</a>
     </div>
   </div>
-  <div class="here-img"><img src="${asset('img/home-6.webp')}" alt="" width="710" height="619" loading="lazy" decoding="async"></div>
+  <div class="here-img"><img src="${asset('img/home-6-800.webp')}" srcset="${asset('img/home-6-800.webp')} 800w, ${asset('img/home-6.webp')} 1420w" sizes="(min-width: 1024px) 600px, 100vw" alt="${esc(t('alt_here'))}" width="800" height="697" loading="lazy" decoding="async"></div>
 </section>
 
 <section class="band"><div class="wrap block">
@@ -100,5 +100,15 @@ export function renderHome(ctx) {
   <div class="referral">${icon('gift', 'ic ic-lg')}<div><h2>${esc(t('referral_t', { bonus: settings.referralBonus }))}</h2><p>${esc(t('referral_d', { bonus: settings.referralBonus, half: settings.referralBonus / 2 }))}</p></div></div>
   <div class="help-box"><h2>${esc(t('f_fast'))}</h2>${contactButtons(ctx)}</div>
 </section>`;
-  return layout(ctx, { page: 'home', title: t('home_title'), description: t('home_desc'), body });
+  const websiteLd = {
+    '@context': 'https://schema.org', '@type': 'WebSite', name: settings.brand, inLanguage: lang,
+    url: settings.siteUrl + pageUrl(lang, 'home'), publisher: { '@id': `${settings.siteUrl}${BASE}/#org` },
+  };
+  return layout(ctx, {
+    page: 'home', title: t('home_title'), description: t('home_desc'), body, jsonld: [websiteLd],
+    og: { preloadImages: [
+      { src: asset('img/hero-mobile.webp'), media: '(max-width: 767px)' },
+      { src: asset('img/hero-desktop-900.webp'), srcset: `${asset('img/hero-desktop-900.webp')} 900w, ${asset('img/hero-desktop.webp')} 1636w`, sizes: '(min-width: 1024px) 600px, 100vw', media: '(min-width: 768px)' },
+    ] },
+  });
 }

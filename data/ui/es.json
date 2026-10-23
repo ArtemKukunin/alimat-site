@@ -182,5 +182,14 @@
   "here_d1": "Cada año ayudamos a miles de personas a encontrar un empleo legal y estable en Polonia y apoyamos a cientos de empresas a formar sus equipos.",
   "here_d2": "Te buscamos un puesto acorde a tus habilidades, te ayudamos con los trámites y el alojamiento, y nuestro coordinador te apoya en el lugar de trabajo.",
   "unit_hour_any": "PLN/hora",
-  "unit_month_any": "PLN/mes"
+  "unit_month_any": "PLN/mes",
+  "nav_blog": "Blog (PL)",
+  "alt_hero": "Trabajadores de distintos sectores: producción, almacén, hostelería, industria cárnica",
+  "alt_legal": "Trabajador de almacén con documentos",
+  "alt_docs": "Reunión de equipo en la oficina",
+  "alt_transport": "Trabajador cargando una furgoneta",
+  "alt_pay": "Trabajador de una planta cárnica",
+  "alt_coord": "Operario con casco en la planta de producción",
+  "alt_here": "Jóvenes trabajadores charlando en un descanso",
+  "alt_cand": "Candidata revisando ofertas de empleo en el portátil"
 }

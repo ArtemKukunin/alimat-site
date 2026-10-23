@@ -77,21 +77,29 @@ if (fs.existsSync(DIST)) {
     const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((m) => m[1]);
     const dup = ids.filter((id, i) => ids.indexOf(id) !== i);
     if (dup.length) err(`${rel}: duplicate id(s) ${[...new Set(dup)].join(', ')}`);
-    if (!isLangPage) continue;
-    const lang = rel.slice(0, 2);
-    if (!html.includes(`<html lang="${lang}">`)) err(`${rel}: wrong <html lang>`);
+    // Content pages: translated (/xx/…) or single-language (blog, legal) — everything with a canonical except root/404.
+    if (rel === 'index.html' || rel === '404.html' || !html.includes('<link rel="canonical"')) continue;
+    const lang = html.match(/<html lang="([a-z]{2})">/)?.[1];
+    if (!lang || (isLangPage && lang !== rel.slice(0, 2))) err(`${rel}: wrong <html lang>`);
+    for (const m of html.matchAll(/<img\b[^>]*>/g)) if (!/\salt="/.test(m[0])) err(`${rel}: <img> without alt`);
+    for (const m of html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)) {
+      if (/aria-hidden="true"/.test(m[1])) continue;
+      const text = m[2].replace(/<svg[\s\S]*?<\/svg>/g, '').replace(/<[^>]+>/g, '').trim();
+      if (!text && !/aria-label="[^"]+"/.test(m[1]) && !/<img[^>]*alt="[^"]+"/.test(m[2])) err(`${rel}: link without text ${m[1].slice(0, 60)}`);
+    }
     const h1 = (html.match(/<h1[\s>]/g) || []).length;
     if (h1 !== 1) err(`${rel}: ${h1} <h1> (expected 1)`);
     const title = html.match(/<title>([^<]*)<\/title>/)?.[1];
     const desc = html.match(/<meta name="description" content="([^"]*)"/)?.[1];
     if (!title) err(`${rel}: no <title>`);
     if (!desc) err(`${rel}: no meta description`);
-    if (title && title.length > 75) warnings.push(`${rel}: title ${title.length} chars`);
-    if (desc && desc.length > 170) warnings.push(`${rel}: description ${desc.length} chars`);
+    if (title && title.length > 70) warnings.push(`${rel}: title ${title.length} chars`);
+    if (desc && (desc.length > 165 || desc.length < 70)) warnings.push(`${rel}: description ${desc.length} chars`);
     if (title) titles.set(title, [...(titles.get(title) || []), rel]);
     if (!/<link rel="canonical" href="https:\/\/[^"]+">/.test(html)) err(`${rel}: no canonical`);
     const hreflangs = (html.match(/<link rel="alternate" hreflang=/g) || []).length;
-    if (hreflangs !== LANG_CODES.length + 1) err(`${rel}: ${hreflangs} hreflang links (expected ${LANG_CODES.length + 1})`);
+    const expected = isLangPage ? LANG_CODES.length + 1 : 2;
+    if (hreflangs !== expected) err(`${rel}: ${hreflangs} hreflang links (expected ${expected})`);
     if (/\{\w+\}/.test(html.replace(/<script[\s\S]*?<\/script>/g, '').replace(/data-template="[^"]*"/g, ''))) err(`${rel}: unfilled {placeholder}`);
   }
   for (const [title, files] of titles) if (files.length > 1) err(`duplicate <title> "${title}" in ${files.join(', ')}`);

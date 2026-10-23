@@ -1,0 +1,203 @@
+{
+  "pl": {
+    "active": true,
+    "category": "production",
+    "city": "Końskowola",
+    "region": "lubelskie",
+    "country": "PL",
+    "datePosted": "2025-05-29",
+    "salary": {
+      "min": 5000,
+      "unit": "month"
+    },
+    "contract": "",
+    "tags": [],
+    "title": "Koordynator pracowników",
+    "summary": "Opieka nad pracownikami zakładów w Końskowoli i okolicach: dokumenty, dojazdy, zakwaterowanie. Od 5 000 zł netto, auto służbowe.",
+    "duties": [
+      "Koordynowanie pracy zatrudnionych: dokumenty, obecność, wsparcie w codziennych sprawach",
+      "Transport pracowników do zakładu i z powrotem",
+      "Współpraca z działami firmy: kadry, brygadziści, rekrutacja",
+      "Zakwaterowanie pracowników w hostelach i nadzór nad nim",
+      "Prowadzenie dokumentacji w Excelu"
+    ],
+    "requirements": [
+      "Min. 1 rok doświadczenia w podobnej roli",
+      "Prawo jazdy kat. B – warunek konieczny",
+      "Bardzo dobra znajomość Excela",
+      "Dyspozycyjność w ciągu dnia",
+      "Komunikatywność i samodzielność",
+      "Język polski w stopniu komunikatywnym (ukraiński i angielski mile widziane)"
+    ],
+    "offer": [
+      "Auto służbowe, telefon i laptop",
+      "Odpłatny nocleg dla osób planujących relokację",
+      "Umowa zlecenie lub B2B – elastyczna forma współpracy"
+    ],
+    "conditions": [
+      "Praca od poniedziałku do soboty, do 8 godzin dziennie"
+    ]
+  },
+  "uk": {
+    "title": "Координатор працівників",
+    "summary": "Супровід працівників підприємств у Коньськоволі та околицях: документи, доїзд, житло. Від 5 000 зл нетто, службове авто.",
+    "duties": [
+      "Координація роботи працівників: документи, присутність, допомога в побутових питаннях",
+      "Доставка працівників на підприємство й назад",
+      "Співпраця з відділами компанії: кадри, бригадири, рекрутинг",
+      "Поселення працівників у хостелах і нагляд",
+      "Ведення документації в Excel"
+    ],
+    "requirements": [
+      "Щонайменше 1 рік досвіду на подібній посаді",
+      "Посвідчення водія категорії B — обов'язково",
+      "Дуже добре знання Excel",
+      "Доступність протягом дня",
+      "Комунікабельність і самостійність",
+      "Польська на розмовному рівні (українська й англійська — перевага)"
+    ],
+    "offer": [
+      "Службове авто, телефон і ноутбук",
+      "Платне житло для тих, хто планує переїзд",
+      "Договір доручення або B2B — гнучка форма співпраці"
+    ],
+    "conditions": [
+      "Робота з понеділка до суботи, до 8 годин на день"
+    ]
+  },
+  "ru": {
+    "title": "Координатор работников",
+    "summary": "Сопровождение работников предприятий в Коньсковоле и окрестностях: документы, доезд, жильё. От 5 000 зл нетто, служебный автомобиль.",
+    "duties": [
+      "Координация работы сотрудников: документы, присутствие, помощь в бытовых вопросах",
+      "Доставка работников на предприятие и обратно",
+      "Взаимодействие с отделами компании: кадры, бригадиры, рекрутинг",
+      "Заселение работников в хостелы и надзор",
+      "Ведение документации в Excel"
+    ],
+    "requirements": [
+      "Минимум 1 год опыта на похожей должности",
+      "Водительские права категории B — обязательно",
+      "Очень хорошее знание Excel",
+      "Доступность в течение дня",
+      "Коммуникабельность и самостоятельность",
+      "Польский на разговорном уровне (украинский и английский — преимущество)"
+    ],
+    "offer": [
+      "Служебный автомобиль, телефон и ноутбук",
+      "Платное жильё для тех, кто планирует переезд",
+      "Договор поручения или B2B — гибкая форма сотрудничества"
+    ],
+    "conditions": [
+      "Работа с понедельника по субботу, до 8 часов в день"
+    ]
+  },
+  "en": {
+    "title": "Workforce Coordinator",
+    "summary": "Looking after plant workers in and around Końskowola: documents, transport, accommodation. From PLN 5,000 net, company car.",
+    "duties": [
+      "Coordinating staff: documents, attendance, help with everyday matters",
+      "Driving workers to the plant and back",
+      "Working with company departments: HR, foremen, recruitment",
+      "Housing workers in hostels and overseeing their stay",
+      "Keeping records in Excel"
+    ],
+    "requirements": [
+      "At least 1 year of experience in a similar role",
+      "Category B driving licence — required",
+      "Very good Excel skills",
+      "Available during the day",
+      "Good communication, able to work independently",
+      "Conversational Polish (Ukrainian and English welcome)"
+    ],
+    "offer": [
+      "Company car, phone and laptop",
+      "Paid accommodation if you plan to relocate",
+      "Contract of mandate or B2B — flexible terms"
+    ],
+    "conditions": [
+      "Monday to Saturday, up to 8 hours a day"
+    ]
+  },
+  "es": {
+    "title": "Coordinador/a de trabajadores",
+    "summary": "Atención a los trabajadores de plantas en Końskowola y alrededores: documentos, transporte, alojamiento. Desde 5000 PLN netos, coche de empresa.",
+    "duties": [
+      "Coordinar al personal: documentos, asistencia, ayuda en el día a día",
+      "Transporte de trabajadores a la planta y de vuelta",
+      "Colaboración con los departamentos: RR. HH., encargados, selección",
+      "Alojamiento de trabajadores en hostales y supervisión",
+      "Registro de la documentación en Excel"
+    ],
+    "requirements": [
+      "Al menos 1 año de experiencia en un puesto similar",
+      "Permiso de conducir B (imprescindible)",
+      "Muy buen manejo de Excel",
+      "Disponibilidad durante el día",
+      "Buena comunicación y autonomía",
+      "Polaco a nivel conversacional (se valoran ucraniano e inglés)"
+    ],
+    "offer": [
+      "Coche de empresa, teléfono y portátil",
+      "Alojamiento de pago si planeas trasladarte",
+      "Contrato de mandato o B2B, colaboración flexible"
+    ],
+    "conditions": [
+      "De lunes a sábado, hasta 8 horas al día"
+    ]
+  },
+  "pt": {
+    "title": "Coordenador(a) de trabalhadores",
+    "summary": "Acompanhamento dos trabalhadores de fábricas em Końskowola e arredores: documentos, transporte, moradia. A partir de 5.000 PLN líquidos, carro da empresa.",
+    "duties": [
+      "Coordenar os trabalhadores: documentos, presença, ajuda no dia a dia",
+      "Transporte dos trabalhadores até a fábrica e de volta",
+      "Trabalho com os setores da empresa: RH, encarregados, recrutamento",
+      "Hospedagem dos trabalhadores em hostels e supervisão",
+      "Registro da documentação no Excel"
+    ],
+    "requirements": [
+      "Pelo menos 1 ano de experiência em função semelhante",
+      "Carteira de motorista categoria B — obrigatória",
+      "Excel em nível muito bom",
+      "Disponibilidade durante o dia",
+      "Boa comunicação e autonomia",
+      "Polonês em nível de conversação (ucraniano e inglês são diferenciais)"
+    ],
+    "offer": [
+      "Carro da empresa, telefone e notebook",
+      "Moradia paga para quem planeja se mudar",
+      "Contrato de prestação de serviços ou B2B, colaboração flexível"
+    ],
+    "conditions": [
+      "De segunda a sábado, até 8 horas por dia"
+    ]
+  },
+  "ro": {
+    "title": "Coordonator de lucrători",
+    "summary": "Sprijin pentru lucrătorii fabricilor din Końskowola și împrejurimi: documente, transport, cazare. De la 5.000 PLN net, mașină de serviciu.",
+    "duties": [
+      "Coordonarea angajaților: documente, prezență, ajutor în problemele de zi cu zi",
+      "Transportul lucrătorilor la fabrică și înapoi",
+      "Colaborarea cu departamentele firmei: HR, maiștri, recrutare",
+      "Cazarea lucrătorilor în hosteluri și supravegherea acesteia",
+      "Ținerea evidențelor în Excel"
+    ],
+    "requirements": [
+      "Minimum 1 an de experiență într-un rol similar",
+      "Permis de conducere categoria B — obligatoriu",
+      "Excel la nivel foarte bun",
+      "Disponibilitate în timpul zilei",
+      "Comunicare bună și autonomie",
+      "Limba polonă la nivel de conversație (ucraineana și engleza sunt un avantaj)"
+    ],
+    "offer": [
+      "Mașină de serviciu, telefon și laptop",
+      "Cazare contra cost pentru cei care se mută",
+      "Contract de mandat sau B2B, colaborare flexibilă"
+    ],
+    "conditions": [
+      "De luni până sâmbătă, până la 8 ore pe zi"
+    ]
+  }
+}

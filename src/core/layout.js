@@ -1,5 +1,5 @@
 import { LANGS, LANG_CODES, pageUrl, alternates, asset, BASE } from './i18n.js';
-import { esc, digits } from './util.js';
+import { esc, digits, sitePath, fitTitle } from './util.js';
 import { icon } from './icons.js';
 
 export const waLink = (settings, text) =>
@@ -18,6 +18,10 @@ export function organizationLd(settings) {
     logo: settings.siteUrl + asset('img/logo.webp'),
     email: settings.email,
     telephone: settings.phone,
+    image: settings.siteUrl + asset('img/hero-desktop-900.webp'),
+    areaServed: { '@type': 'Country', name: 'Poland' },
+    knowsLanguage: LANG_CODES,
+    contactPoint: { '@type': 'ContactPoint', contactType: 'recruitment', telephone: settings.phone, email: settings.email, availableLanguage: ['Polish', 'Ukrainian', 'Russian', 'English', 'Spanish', 'Portuguese', 'Romanian'] },
     address: { '@type': 'PostalAddress', streetAddress: a.street, postalCode: a.postal, addressLocality: a.city, addressCountry: a.country },
     sameAs: Object.values(settings.social),
   };
@@ -51,46 +55,50 @@ export function contactButtons(ctx, { waText, compact = false } = {}) {
   </div>`;
 }
 
-function head(ctx, { title, description, path, page, sub, jsonld, noindex }) {
+function head(ctx, { title, description, path, alts, jsonld, noindex, og = {} }) {
   const { lang, settings } = ctx;
   const url = settings.siteUrl + path;
-  const alt = alternates(page, sub)
+  const alt = alts
     .map((a) => `<link rel="alternate" hreflang="${a.lang}" href="${settings.siteUrl}${a.href}">`).join('\n');
+  const ogImage = og.image || { url: asset('og.png'), width: 1200, height: 630 };
   const ld = [organizationLd(settings), ...(jsonld || [])]
     .map((o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`).join('\n');
   return `<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>${esc(title)}</title>
+<title>${esc(fitTitle(title, title.replace(/\s*\|\s*Alimat Group$/, '')))}</title>
 <meta name="description" content="${esc(description)}">
 ${process.env.SITE_NOINDEX ? '<meta name="robots" content="noindex, nofollow">' : noindex ? '<meta name="robots" content="noindex, follow">' : ''}
 <link rel="canonical" href="${url}">
 ${alt}
 <link rel="alternate" hreflang="x-default" href="${settings.siteUrl}${BASE}/">
-<meta property="og:type" content="website">
+<meta property="og:type" content="${og.type || 'website'}">
 <meta property="og:site_name" content="${esc(settings.brand)}">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(description)}">
 <meta property="og:url" content="${url}">
 <meta property="og:locale" content="${LANGS[lang].og}">
-<meta property="og:image" content="${settings.siteUrl}${asset('og.png')}">
+<meta property="og:image" content="${settings.siteUrl}${ogImage.url}">
+${ogImage.width ? `<meta property="og:image:width" content="${ogImage.width}">\n<meta property="og:image:height" content="${ogImage.height}">` : ''}
+${og.published ? `<meta property="article:published_time" content="${og.published}">\n<meta property="article:modified_time" content="${og.modified || og.published}">` : ''}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0199DD">
 <link rel="icon" href="${asset('favicon.svg')}" type="image/svg+xml">
 <link rel="preload" href="${asset('fonts/titillium-web-400.woff')}" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="${asset('fonts/roboto-slab-900.woff')}" as="font" type="font/woff" crossorigin>
+${[...(og.preloadImages || []), ...(og.preloadImage ? [og.preloadImage] : [])].map((im) => `<link rel="preload" as="image" href="${im.src}"${im.srcset ? ` imagesrcset="${im.srcset}" imagesizes="${im.sizes}"` : ''}${im.media ? ` media="${im.media}"` : ''} fetchpriority="high">`).join('\n')}
 <link rel="stylesheet" href="${asset('style.css')}">
 <script src="${asset('app.js')}" defer></script>
 ${ld}
 </head>`;
 }
 
-function header(ctx, page, sub) {
+function header(ctx, page, langLinks) {
   const { lang, t, settings } = ctx;
   const nav = ['jobs', 'candidates', 'employers', 'contact']
     .map((p) => `<li><a href="${pageUrl(lang, p)}"${p === page ? ' aria-current="page"' : ''}>${esc(t(`nav_${p}`))}</a></li>`)
-    .join('');
-  const langs = alternates(page, sub)
+    .join('') + `<li><a href="${BASE}/blog/"${page === 'blog' ? ' aria-current="page"' : ''}${lang === 'pl' ? '' : ' hreflang="pl"'}>${esc(t('nav_blog'))}</a></li>`;
+  const langs = langLinks
     .map((a) => `<li><a href="${a.href}" hreflang="${a.lang}" lang="${a.lang}"${a.lang === lang ? ' aria-current="true"' : ''} data-lang="${a.lang}">${esc(LANGS[a.lang].name)}</a></li>`)
     .join('');
   return `<a class="skip" href="#main">${esc(t('skip'))}</a>
@@ -175,7 +183,7 @@ function footer(ctx) {
   </div>
   <div class="wrap footer-bottom">
     <span>© ${new Date().getFullYear()} ${esc(settings.company)}. ${esc(t('footer_rights'))}</span>
-    <a href="${esc(settings.privacyUrl)}">${esc(t('footer_privacy'))}</a>
+    <span class="footer-legal"><a href="${esc(sitePath(settings.privacyUrl, BASE))}">${esc(t('footer_privacy'))}</a> · <a href="${esc(sitePath(settings.cookiesUrl, BASE))}">Cookies</a> · <a href="${BASE}/blog/">Blog</a></span>
   </div>
 </footer>`;
 }
@@ -189,14 +197,25 @@ function mobileBar(ctx) {
 }
 
 /** Full HTML document. */
+/**
+ * Full HTML document.
+ * Translated pages: page + sub → URL and hreflang for all languages.
+ * Single-language pages (blog, legal): pass `path`; hreflang lists only that page,
+ * and the language switcher leads to each language's home page.
+ */
 export function layout(ctx, opts) {
   const { lang } = ctx;
   const { page, sub, body, hideMobileBar } = opts;
+  const path = opts.path || pageUrl(lang, page, sub);
+  const alts = opts.path ? [{ lang, href: path }] : alternates(page, sub);
+  const langLinks = opts.path
+    ? LANG_CODES.map((l) => ({ lang: l, href: l === lang ? path : pageUrl(l, 'home') }))
+    : alts;
   return `<!doctype html>
 <html lang="${lang}">
-${head(ctx, { ...opts, path: pageUrl(lang, page, sub) })}
+${head(ctx, { ...opts, path, alts })}
 <body class="page-${page}">
-${header(ctx, page, sub)}
+${header(ctx, page, langLinks)}
 <main id="main">
 ${body}
 </main>

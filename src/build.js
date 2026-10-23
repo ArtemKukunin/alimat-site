@@ -13,6 +13,7 @@ import { renderCandidates } from './features/candidates/candidates.js';
 import { renderApply } from './features/apply/apply.js';
 import { renderEmployers } from './features/employers/employers.js';
 import { renderContact } from './features/contact/contact.js';
+import { loadContent, makeLinkResolver, renderBlogIndex, renderPost, renderLegalPage, blogSitemapEntries, BLOG_LANG } from './features/blog/blog.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.resolve(ROOT, process.env.OUT_DIR || 'dist');
@@ -24,7 +25,28 @@ export function loadData() {
   const ui = Object.fromEntries(LANG_CODES.map((l) => [l, readJson(path.join(DATA, 'ui', `${l}.json`))]));
   const jobs = loadJobs(path.join(DATA, 'jobs'));
   const categories = loadCategories(path.join(DATA, 'categories.json'), jobs);
-  return { settings, ui, jobs, categories };
+  const { posts, pages } = loadContent(DATA);
+  const legacy = readJson(path.join(DATA, 'legacy.json'));
+  return { settings, ui, jobs, categories, posts, pages, legacy };
+}
+
+/** Small CSS minifier: drops comments and whitespace outside quoted strings. */
+export function minifyCss(css) {
+  let out = '';
+  for (let i = 0; i < css.length; i++) {
+    const c = css[i];
+    if (c === '"' || c === "'") { const j = css.indexOf(c, i + 1); out += css.slice(i, j + 1); i = j; continue; }
+    if (c === '/' && css[i + 1] === '*') { i = css.indexOf('*/', i + 2) + 1; continue; }
+    if (/\s/.test(c)) {
+      while (/\s/.test(css[i + 1] || '')) i++;
+      const prev = out[out.length - 1]; const next = css[i + 1];
+      if (prev && next && !/[{};:,>]/.test(prev) && !/[{};:,>)]/.test(next)) out += ' ';
+      continue;
+    }
+    if (c === ';' && css[i + 1] === '}') continue;
+    out += c;
+  }
+  return out;
 }
 
 /** File location inside dist for a page URL (drops the sub-path base and preview suffix). */
@@ -76,11 +98,16 @@ function notFoundPage(ui) {
 }
 
 function sitemap(settings, entries) {
-  const urls = entries.map(({ page, sub }) => alternates(page, sub).map(({ href }) => `  <url>
-    <loc>${settings.siteUrl}${href}</loc>
-${alternates(page, sub).map((a) => `    <xhtml:link rel="alternate" hreflang="${a.lang}" href="${settings.siteUrl}${a.href}"/>`).join('\n')}
+  const lm = (d) => (d ? `\n    <lastmod>${d}</lastmod>` : '');
+  const urls = entries.map((e) => {
+    if (e.path) return `  <url>\n    <loc>${settings.siteUrl}${e.path}</loc>${lm(e.lastmod)}\n  </url>`;
+    const alts = alternates(e.page, e.sub);
+    return alts.map(({ href }) => `  <url>
+    <loc>${settings.siteUrl}${href}</loc>${lm(e.lastmod)}
+${alts.map((a) => `    <xhtml:link rel="alternate" hreflang="${a.lang}" href="${settings.siteUrl}${a.href}"/>`).join('\n')}
     <xhtml:link rel="alternate" hreflang="x-default" href="${settings.siteUrl}${BASE}/"/>
-  </url>`).join('\n')).join('\n');
+  </url>`).join('\n');
+  }).join('\n');
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${urls}
@@ -89,7 +116,7 @@ ${urls}
 }
 
 /** 301s from the old WordPress URLs so existing Google rankings and links keep working. */
-function redirects(jobs) {
+function redirects(jobs, legacy) {
   const pl = (p, s) => pageUrl('pl', p, s);
   const map = [
     ['/dla-kandydatow/*', pl('candidates')],
@@ -100,7 +127,11 @@ function redirects(jobs) {
     ['/kontakt/*', pl('contact')],
     ['/o-nas/*', pl('contact')],
     ...jobs.map((j) => [`/oferta/${j.id}/*`, pl('jobs', j.id)]),
+    // Duplicate ads on the old site, merged into one page each
+    ...Object.entries(legacy.jobAliases || {}).filter(([from]) => !jobs.some((j) => j.id === from)).map(([from, to]) => [`/oferta/${from}/*`, pl('jobs', to)]),
     ['/oferta/*', pl('jobs')],
+    ...Object.entries(legacy.removedPages).map(([slug, page]) => [`/${slug}/*`, pl(page)]),
+    ...legacy.tags.map((tag) => [`/tag/${tag}/*`, `${BASE}/blog/`]),
   ];
   return map;
 }
@@ -124,8 +155,7 @@ function securityHeaders(settings) {
   const common = `  X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()`;
-  const sitePaths = ['/', ...LANG_CODES.map((l) => `/${l}/*`)];
-  return `${sitePaths.map((p) => `${p}\n${common}\n  X-Frame-Options: DENY\n  Content-Security-Policy: ${csp}`).join('\n')}
+  return `/*\n${common}\n  X-Frame-Options: DENY\n  Content-Security-Policy: ${csp}
 /assets/*
   Cache-Control: public, max-age=604800
 /admin/*
@@ -135,9 +165,16 @@ ${common}
 }
 
 export function build() {
-  const { settings, ui, jobs, categories } = loadData();
+  const { settings, ui, jobs, categories, posts, pages, legacy } = loadData();
+  const redirectMap = redirects(jobs, legacy);
+  // Old WordPress paths inside imported articles → new URLs (same table as the redirects).
+  const legacyMap = (oldPath) => redirectMap.find(([from]) => from.replace(/\*$/, '') === oldPath)?.[1];
+  const reserved = new Set([...LANG_CODES, 'assets', 'admin', 'blog', 'category', 'tag', 'oferta', 'wp-content']);
+  for (const s of [...posts, ...pages].map((p) => p.slug)) if (reserved.has(s)) throw new Error(`Slug "${s}" is reserved`);
   fs.rmSync(DIST, { recursive: true, force: true });
   fs.cpSync(path.join(ROOT, 'public'), DIST, { recursive: true });
+  const cssFile = path.join(DIST, 'assets', 'style.css');
+  fs.writeFileSync(cssFile, minifyCss(fs.readFileSync(cssFile, 'utf8')));
 
   const indexable = [];
   let count = 0;
@@ -156,8 +193,19 @@ export function build() {
       count++;
     }
   }
+  // Blog + legal pages: Polish only, same URLs as on the old site.
+  {
+    const ctx = { lang: BLOG_LANG, t: translator(ui, BLOG_LANG), settings, jobs, categories };
+    const resolve = makeLinkResolver(ctx, { posts, pages, jobs, legacyMap });
+    writeFile(outFile(`${BASE}/blog/`), renderBlogIndex(ctx, posts));
+    for (const sec of ['candidates', 'employers']) writeFile(outFile(`${BASE}/category/${sec === 'candidates' ? 'dla-kandydatow' : 'dla-firm'}/`), renderBlogIndex(ctx, posts, sec));
+    for (const post of posts) writeFile(outFile(`${BASE}/${post.slug}/`), renderPost(ctx, post, posts, resolve));
+    for (const page of pages) writeFile(outFile(`${BASE}/${page.slug}/`), renderLegalPage(ctx, page, resolve));
+    count += 3 + posts.length + pages.length;
+  }
   for (const page of Object.keys(STATIC_PAGES)) indexable.push({ page });
-  for (const job of jobs.filter((j) => j.active)) indexable.push({ page: 'jobs', sub: job.id });
+  for (const job of jobs.filter((j) => j.active)) indexable.push({ page: 'jobs', sub: job.id, lastmod: job.datePosted });
+  indexable.push(...blogSitemapEntries(posts, pages));
   // Sections are listed only while they have active jobs (empty ones are noindex).
   for (const cat of Object.keys(categories)) {
     if (jobs.some((j) => j.active && j.category === cat)) {
@@ -171,10 +219,11 @@ export function build() {
   writeFile(path.join(DIST, 'robots.txt'), process.env.SITE_NOINDEX
     ? 'User-agent: *\nDisallow: /\n'
     : `User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: ${settings.siteUrl}${BASE}/sitemap.xml\n`);
-  const redirectMap = redirects(jobs);
   writeFile(path.join(DIST, '_redirects'), netlifyRedirects(redirectMap));
   for (const [from, to] of redirectMap) {
-    writeFile(path.join(DIST, from.replace(/\/\*$/, ''), 'index.html'), redirectStub(to, settings.siteUrl));
+    const file = path.join(DIST, from.replace(/\/\*$/, ''), 'index.html');
+    if (fs.existsSync(file)) throw new Error(`Redirect ${from} would overwrite a real page`);
+    writeFile(file, redirectStub(to, settings.siteUrl));
   }
   writeFile(path.join(DIST, '_headers'), securityHeaders(settings));
   return { pages: count, jobs: jobs.length, langs: LANG_CODES.length };

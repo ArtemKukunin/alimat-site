@@ -182,5 +182,14 @@
   "here_d1": "Every year we help thousands of people find stable, legal work in Poland, and we support hundreds of companies in building their teams.",
   "here_d2": "We match you with a job that fits your skills, help with paperwork and accommodation, and our coordinator supports you on site.",
   "unit_hour_any": "PLN/hour",
-  "unit_month_any": "PLN/month"
+  "unit_month_any": "PLN/month",
+  "nav_blog": "Blog (PL)",
+  "alt_hero": "Workers from different sectors: production, warehouse, catering, meat plants",
+  "alt_legal": "Warehouse worker holding documents",
+  "alt_docs": "Team meeting in the office",
+  "alt_transport": "Worker loading a delivery van",
+  "alt_pay": "Meat plant worker at work",
+  "alt_coord": "Production worker in a hard hat on the factory floor",
+  "alt_here": "Young workers chatting during a break",
+  "alt_cand": "Candidate browsing job offers on a laptop"
 }

@@ -25,7 +25,7 @@ export function renderCandidates(ctx) {
         <a class="btn btn-pill btn-outline-orange" href="${pageUrl(lang, 'apply')}">${esc(t('cta_apply_long'))}</a>
       </div>
     </div>
-    <div class="page-hero-img"><img src="${asset('img/candidates.webp')}" alt="" width="626" height="417"></div>
+    <div class="page-hero-img"><img src="${asset('img/candidates.webp')}" alt="${esc(t('alt_cand'))}" width="626" height="417" fetchpriority="high"></div>
   </div>
 </div></section>
 <section class="wrap block"><h2>${esc(t('perks_title'))}</h2>${perksGrid(t)}</section>

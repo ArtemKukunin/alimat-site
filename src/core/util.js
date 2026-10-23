@@ -48,5 +48,31 @@ export function formatDate(iso, lang) {
     .format(new Date(`${iso}T12:00:00Z`));
 }
 
+const MAX_TITLE = 65;
+const MAX_DESC = 158;
+
+/** Cut text at a word boundary to `max` chars, adding "…" when cut. */
+export function clip(text, max) {
+  const s = String(text).replace(/\s+/g, ' ').trim();
+  if (s.length <= max) return s;
+  const cut = s.slice(0, max - 1);
+  return `${cut.slice(0, Math.max(cut.lastIndexOf(' '), max * 0.6)).replace(/[\s,.;:–-]+$/, '')}…`;
+}
+
+/** Longest variant that fits Google's title width (~65 chars); the last resort is a clipped first variant. */
+export function fitTitle(...variants) {
+  return variants.find((v) => v && v.length <= MAX_TITLE) || clip(variants.find(Boolean), MAX_TITLE);
+}
+
+/** Meta description 70–158 chars: clip long ones, top up short ones from `extra` (e.g. the first paragraph). */
+export function fitDesc(desc, extra = '') {
+  let s = String(desc || '').replace(/\s+/g, ' ').trim();
+  if (s.length < 70 && extra) s = `${s}${s && !/[.!?]$/.test(s) ? '.' : ''} ${String(extra).replace(/\s+/g, ' ').trim()}`.trim();
+  return clip(s, MAX_DESC);
+}
+
+/** Site-relative settings URL ("/x/") → with sub-path base; absolute URLs pass through. */
+export const sitePath = (u, base) => (u && u.startsWith('/') ? `${base}${u}` : u);
+
 /** Digits only, for tel:/wa.me links. */
 export const digits = (phone) => String(phone).replace(/\D/g, '');

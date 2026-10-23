@@ -182,5 +182,14 @@
   "here_d1": "Todos os anos ajudamos milhares de pessoas a encontrar um emprego legal e estável na Polônia e apoiamos centenas de empresas a montar suas equipes.",
   "here_d2": "Encontramos uma vaga de acordo com suas habilidades, ajudamos com documentos e moradia, e nosso coordenador apoia você no local de trabalho.",
   "unit_hour_any": "PLN/hora",
-  "unit_month_any": "PLN/mês"
+  "unit_month_any": "PLN/mês",
+  "nav_blog": "Blog (PL)",
+  "alt_hero": "Trabalhadores de diversos setores: produção, armazém, restaurantes, frigoríficos",
+  "alt_legal": "Trabalhador de armazém com documentos",
+  "alt_docs": "Reunião de equipe no escritório",
+  "alt_transport": "Trabalhador carregando uma van",
+  "alt_pay": "Trabalhador de frigorífico em serviço",
+  "alt_coord": "Operário de capacete na fábrica",
+  "alt_here": "Jovens trabalhadores conversando no intervalo",
+  "alt_cand": "Candidata vendo vagas no notebook"
 }

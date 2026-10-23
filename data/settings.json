@@ -12,7 +12,7 @@
     "country": "PL"
   },
   "mapUrl": "https://maps.app.goo.gl/nfUV94BuS91ZC7dE7",
-  "privacyUrl": "https://alimatgroup.com/polityka-prywatnosci/",
+  "privacyUrl": "/polityka-prywatnosci/",
   "formEndpoint": "",
   "referralBonus": 600,
   "social": {
@@ -28,5 +28,6 @@
     "+400",
     "+3 000",
     "+40 000"
-  ]
+  ],
+  "cookiesUrl": "/polityka-plikow-cookie/"
 }

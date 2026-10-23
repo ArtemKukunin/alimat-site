@@ -1,0 +1,188 @@
+{
+  "pl": {
+    "active": true,
+    "category": "meat",
+    "city": "Kutno",
+    "region": "łódzkie",
+    "country": "PL",
+    "datePosted": "2025-07-29",
+    "salary": {
+      "min": 4500,
+      "max": 6500,
+      "unit": "month"
+    },
+    "contract": "",
+    "tags": [
+      "housing",
+      "transport",
+      "meals",
+      "coordinator"
+    ],
+    "title": "Pracownik produkcji w zakładzie drobiowym",
+    "summary": "Praca przy rozbiorze, krojeniu i pakowaniu drobiu w Kutnie. Bezpłatne posiłki i dojazd, zakwaterowanie z dopłatą pracodawcy.",
+    "duties": [
+      "Sortowanie i segregacja elementów kurczaka na linii",
+      "Krojenie elementów drobiu: filety, uda, podudzia, ćwiartki",
+      "Obsługa maszyn do filetowania",
+      "Obsługa maszyn do krojenia mięsa i dbanie o precyzję cięcia",
+      "Ważenie elementów przed dalszym etapem produkcji",
+      "Pakowanie i oznaczanie gotowych porcji zgodnie z normami",
+      "Inne prace produkcyjne zlecone przez kierownika"
+    ],
+    "requirements": [],
+    "offer": [
+      "Stabilna praca w renomowanym zakładzie mięsnym",
+      "Wynagrodzenie od 4 500 zł netto",
+      "Sprzęt i odzież robocza",
+      "Zakwaterowanie z dopłatą pracodawcy",
+      "Codzienne bezpłatne posiłki w pracy",
+      "Bezpłatny dojazd do pracy i z pracy",
+      "Opieka i wsparcie koordynatora"
+    ],
+    "conditions": []
+  },
+  "uk": {
+    "title": "Працівник птахофабрики",
+    "summary": "Робота на розбиранні, нарізанні та пакуванні птиці в Кутно. Безкоштовне харчування й доїзд, житло з доплатою роботодавця.",
+    "duties": [
+      "Сортування частин курятини на лінії",
+      "Розрізання частин птиці: філе, стегна, гомілки, четвертинки",
+      "Робота на машинах для філетування",
+      "Робота на машинах для нарізання м'яса, контроль точності нарізки",
+      "Зважування частин перед наступним етапом виробництва",
+      "Пакування й маркування готових порцій за стандартами",
+      "Інші виробничі завдання від керівника"
+    ],
+    "requirements": [],
+    "offer": [
+      "Стабільна робота на відомому м'ясокомбінаті",
+      "Зарплата від 4 500 зл нетто",
+      "Робочий інструмент і спецодяг",
+      "Житло з доплатою роботодавця",
+      "Щоденне безкоштовне харчування на роботі",
+      "Безкоштовний доїзд на роботу й назад",
+      "Супровід і підтримка координатора"
+    ],
+    "conditions": []
+  },
+  "ru": {
+    "title": "Работник птицефабрики",
+    "summary": "Работа на разделке, нарезке и упаковке птицы в Кутно. Бесплатное питание и доезд, жильё с доплатой работодателя.",
+    "duties": [
+      "Сортировка частей курицы на линии",
+      "Разделка птицы: филе, бёдра, голени, четвертины",
+      "Работа на машинах для филетирования",
+      "Работа на машинах для нарезки мяса, контроль точности нарезки",
+      "Взвешивание частей перед следующим этапом производства",
+      "Упаковка и маркировка готовых порций по стандартам",
+      "Другие производственные задачи от руководителя"
+    ],
+    "requirements": [],
+    "offer": [
+      "Стабильная работа на известном мясокомбинате",
+      "Зарплата от 4 500 зл нетто",
+      "Рабочий инструмент и спецодежда",
+      "Жильё с доплатой работодателя",
+      "Ежедневное бесплатное питание на работе",
+      "Бесплатный доезд на работу и обратно",
+      "Сопровождение и поддержка координатора"
+    ],
+    "conditions": []
+  },
+  "en": {
+    "title": "Poultry Plant Production Worker",
+    "summary": "Cutting, portioning and packing poultry in Kutno. Free meals and transport, accommodation subsidised by the employer.",
+    "duties": [
+      "Sorting chicken parts on the line",
+      "Cutting poultry: fillets, thighs, drumsticks, quarters",
+      "Operating filleting machines",
+      "Operating meat-cutting machines and keeping cuts precise",
+      "Weighing parts before the next production stage",
+      "Packing and labelling portions to standard",
+      "Other production tasks set by the supervisor"
+    ],
+    "requirements": [],
+    "offer": [
+      "Stable employment at a well-known meat plant",
+      "Pay from PLN 4,500 net",
+      "Work equipment and clothing provided",
+      "Accommodation subsidised by the employer",
+      "Free meals at work every day",
+      "Free transport to and from work",
+      "Support from a dedicated coordinator"
+    ],
+    "conditions": []
+  },
+  "es": {
+    "title": "Operario/a en planta avícola",
+    "summary": "Despiece, corte y envasado de aves en Kutno. Comidas y transporte gratuitos, alojamiento subvencionado.",
+    "duties": [
+      "Clasificación de piezas de pollo en la línea",
+      "Corte de piezas de ave: filetes, muslos, contramuslos, cuartos",
+      "Manejo de máquinas fileteadoras",
+      "Manejo de máquinas de corte y control de la precisión",
+      "Pesaje de piezas antes de la siguiente fase",
+      "Envasado y etiquetado de porciones según normas",
+      "Otras tareas de producción asignadas por el encargado"
+    ],
+    "requirements": [],
+    "offer": [
+      "Empleo estable en una conocida planta cárnica",
+      "Salario desde 4500 PLN netos",
+      "Equipo y ropa de trabajo",
+      "Alojamiento subvencionado por la empresa",
+      "Comida gratuita todos los días en el trabajo",
+      "Transporte gratuito de ida y vuelta al trabajo",
+      "Apoyo de un coordinador"
+    ],
+    "conditions": []
+  },
+  "pt": {
+    "title": "Trabalhador(a) em frigorífico de aves",
+    "summary": "Corte, porcionamento e embalagem de aves em Kutno. Refeições e transporte gratuitos, moradia subsidiada.",
+    "duties": [
+      "Separação de partes de frango na linha",
+      "Corte de aves: filés, coxas, sobrecoxas, quartos",
+      "Operação de máquinas de filetagem",
+      "Operação de máquinas de corte, com precisão no corte",
+      "Pesagem das partes antes da próxima etapa",
+      "Embalagem e etiquetagem das porções conforme normas",
+      "Outras tarefas de produção definidas pelo supervisor"
+    ],
+    "requirements": [],
+    "offer": [
+      "Emprego estável em um frigorífico conceituado",
+      "Salário a partir de 4.500 PLN líquidos",
+      "Equipamentos e uniforme de trabalho",
+      "Moradia subsidiada pelo empregador",
+      "Refeições gratuitas todos os dias no trabalho",
+      "Transporte gratuito de ida e volta ao trabalho",
+      "Apoio e acompanhamento de um coordenador"
+    ],
+    "conditions": []
+  },
+  "ro": {
+    "title": "Lucrător în fabrica de procesare a păsărilor",
+    "summary": "Tranșarea, porționarea și ambalarea păsării în Kutno. Masă și transport gratuite, cazare subvenționată.",
+    "duties": [
+      "Sortarea bucăților de pui pe linie",
+      "Tranșarea păsării: file, pulpe, copane, sferturi",
+      "Lucrul la mașinile de filetat",
+      "Lucrul la mașinile de tăiat carne, cu tăieri precise",
+      "Cântărirea bucăților înainte de etapa următoare",
+      "Ambalarea și etichetarea porțiilor conform normelor",
+      "Alte sarcini de producție date de șef"
+    ],
+    "requirements": [],
+    "offer": [
+      "Loc de muncă stabil într-o fabrică de carne cunoscută",
+      "Salariu de la 4.500 PLN net",
+      "Echipament și îmbrăcăminte de lucru",
+      "Cazare subvenționată de angajator",
+      "Masă gratuită zilnic la locul de muncă",
+      "Transport gratuit dus-întors la locul de muncă",
+      "Sprijinul unui coordonator"
+    ],
+    "conditions": []
+  }
+}

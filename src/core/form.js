@@ -1,4 +1,5 @@
-import { esc, digits } from './util.js';
+import { esc, digits, sitePath } from './util.js';
+import { BASE } from './i18n.js';
 
 /**
  * Form shell shared by apply / employers / contact.
@@ -6,7 +7,7 @@ import { esc, digits } from './util.js';
  */
 export function formShell(ctx, { type, fieldsHtml, submitLabel }) {
   const { lang, t, settings } = ctx;
-  const consent = esc(t('f_consent')).replace('{privacy}', `<a href="${esc(settings.privacyUrl)}" target="_blank" rel="noopener">${esc(t('f_privacy_link'))}</a>`);
+  const consent = esc(t('f_consent')).replace('{privacy}', `<a href="${esc(sitePath(settings.privacyUrl, BASE))}" target="_blank" rel="noopener">${esc(t('f_privacy_link'))}</a>`);
   return `<form class="form" data-form="${type}" action="${esc(settings.formEndpoint)}" method="post" enctype="multipart/form-data" novalidate
   data-wa="${digits(settings.phone)}" data-msg-ok="${esc(t('f_ok'))}" data-msg-err="${esc(t('f_err'))}" data-msg-invalid="${esc(t('f_invalid'))}" data-msg-file="${esc(t('f_file_big'))}" data-msg-sending="${esc(t('f_sending'))}" data-msg-wa="${esc(t('f_wa_fallback'))}">
   <input type="hidden" name="form_type" value="${type}">

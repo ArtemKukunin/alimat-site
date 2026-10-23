@@ -1,5 +1,5 @@
 import { pageUrl, asset, BASE, LANG_CODES } from '../../core/i18n.js';
-import { esc, formatSalary, formatDate } from '../../core/util.js';
+import { esc, formatSalary, formatDate, fitTitle, fitDesc } from '../../core/util.js';
 import { icon, TAG_ICONS } from '../../core/icons.js';
 import { layout, breadcrumbs, breadcrumbLd, contactButtons, waLink } from '../../core/layout.js';
 import { CATEGORIES } from './model.js';
@@ -30,7 +30,7 @@ export function jobCard(ctx, job) {
   <p class="job-loc">${icon('pin')}${esc(locationLabel(job, t))}</p>
   <p class="job-pay">${esc(formatSalary(job.salary, lang, t))}</p>
   ${tagList(job, t)}
-  <a class="job-more" href="${href}" aria-hidden="true" tabindex="-1">${esc(t('job_view'))} ${icon('arrow')}</a>
+  <span class="job-more" aria-hidden="true">${esc(t('job_view'))} ${icon('arrow')}</span>
 </article>`;
 }
 
@@ -137,7 +137,7 @@ export function renderJobSection(ctx, cat) {
 </section>`;
   return layout(ctx, {
     page: 'jobs', sub: catSlugs(ctx, cat),
-    title: `${c.h1} | Alimat Group`, description: c.desc, body,
+    title: fitTitle(`${c.h1} | Alimat Group`, c.h1), description: fitDesc(c.desc), body,
     noindex: list.length === 0,
     jsonld: [breadcrumbLd(ctx.settings, crumbs), ...(list.length ? [itemListLd(ctx, list)] : [])],
   });
@@ -175,7 +175,12 @@ export function jobPostingLd(ctx, job) {
     identifier: { '@type': 'PropertyValue', name: settings.brand, value: job.id },
     url: settings.siteUrl + pageUrl(lang, 'jobs', job.id),
   };
-  if (job.validThrough) ld.validThrough = `${job.validThrough}T23:59:59+01:00`;
+  // Active offers without an end date stay valid 30 days past each build (the site is rebuilt on every change).
+  const until = job.validThrough || new Date(Date.now() + 30 * 864e5).toISOString().slice(0, 10);
+  ld.validThrough = `${until}T23:59:59+01:00`;
+  ld.directApply = true;
+  ld.industry = catText(ctx, job.category).name;
+  if (job.tags.length) ld.jobBenefits = job.tags.map((tag) => ctx.t(`tag_${tag}`)).join(', ');
   return ld;
 }
 
@@ -231,8 +236,8 @@ export function renderJobDetail(ctx, job) {
 ${similar.length ? `<section class="wrap similar"><h2>${esc(t('similar'))}</h2><div class="job-grid">${similar.map((j) => jobCard(ctx, j)).join('')}</div></section>` : ''}`;
   return layout(ctx, {
     page: 'jobs', sub: job.id,
-    title: t('job_meta_title', { title: tx.title, city: loc }),
-    description: t('job_meta_desc', { title: tx.title, city: loc, salary }),
+    title: fitTitle(t('job_meta_title', { title: tx.title, city: loc }), `${tx.title} – ${loc}`, tx.title),
+    description: fitDesc(t('job_meta_desc', { title: tx.title, city: loc, salary })),
     body, noindex: !job.active,
     jsonld: [breadcrumbLd(settings, crumbs), ...(job.active ? [jobPostingLd(ctx, job)] : [])],
   });
