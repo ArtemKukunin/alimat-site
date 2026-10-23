@@ -24,6 +24,8 @@ jobs:
           # After attaching a custom domain (e.g. alimatgroup.com), delete these two lines.
           SITE_BASE: /${{ github.event.repository.name }}
           SITE_URL: https://${{ github.repository_owner }}.github.io
+          # Test copy on github.io must not be indexed (avoids duplicate content after moving to alimatgroup.com).
+          SITE_NOINDEX: "1"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
