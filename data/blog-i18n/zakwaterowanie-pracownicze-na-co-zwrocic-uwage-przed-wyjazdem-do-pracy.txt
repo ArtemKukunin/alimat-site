@@ -1,0 +1,102 @@
+=== uk
+slug: zhytlo-dlya-pratsivnykiv-na-shcho-zvernuty-uvahu
+title: Житло для працівників: на що звернути увагу перед поїздкою на роботу?
+description: Плануєте поїздку на тимчасову роботу? Дізнайтеся, яким буває житло для працівників, на що звернути увагу і що забезпечує агенція праці Alimat Group.
+---
+<p><strong>Плануєте поїздку на тимчасову роботу? Дізнайтеся, яким буває житло для працівників, на що звернути увагу і що забезпечує Alimat Group.</strong></p>
+<figure>[img0]</figure>
+<p><strong>Організація житла</strong> — одне з найважливіших питань, про які запитують кандидати, що вирішили піти на тимчасову роботу або переїхати. Комфортні умови проживання безпосередньо впливають на відпочинок після роботи, відновлення сил і загальне задоволення від роботи.</p>
+<figure>[img1]</figure>
+<p>Перед виїздом з’ясуйте, що забезпечує агенція. В Alimat Group ми гарантуємо належні санітарні й побутові стандарти.</p>
+<p>Перед підписанням договору запитайте про:</p>
+<ul><li><strong>Розташування і транспорт</strong> — відстань до підприємства і спосіб доїзду (службовий автобус, пішки).</li>
+<li><strong>Облаштування</strong> — стандарт кімнати, кухні та доступ до Wi-Fi.</li>
+<li><strong>Оплату</strong> — чи комунальні послуги входять у вартість, чи їх утримують із зарплати.</li>
+</ul>
+<figure>[img2]</figure>
+<p><strong>Добре організоване житло</strong> для працівників дає змогу уникнути додаткового стресу через самостійний пошук квартири й мовний бар’єр. Обираючи пропозицію, підготовлену агенцією, ви отримуєте готове рішення з першого дня. Прозорі правила проживання дають змогу зосередитися на професійних і фінансових цілях.</p>
+=== ru
+slug: zhilyo-dlya-rabotnikov-na-chto-obratit-vnimanie
+title: Жильё для работников: на что обратить внимание перед поездкой на работу?
+description: Планируете поездку на временную работу? Узнайте, каким бывает жильё для работников, на что обратить внимание и что обеспечивает агентство труда Alimat Group.
+---
+<p><strong>Планируете поездку на временную работу? Узнайте, каким бывает жильё для работников, на что обратить внимание и что обеспечивает Alimat Group.</strong></p>
+<figure>[img0]</figure>
+<p><strong>Организация жилья</strong> — один из самых важных вопросов, о которых спрашивают кандидаты, решившие пойти на временную работу или переехать. Комфортные условия проживания напрямую влияют на отдых после работы, восстановление сил и общее удовлетворение от работы.</p>
+<figure>[img1]</figure>
+<p>Перед отъездом выясните, что обеспечивает агентство. В Alimat Group мы гарантируем надлежащие санитарные и бытовые стандарты.</p>
+<p>Перед подписанием договора спросите о:</p>
+<ul><li><strong>Расположении и транспорте</strong> — расстояние до предприятия и способ доставки (служебный автобус, пешком).</li>
+<li><strong>Обустройстве</strong> — стандарт комнаты, кухни и доступ к Wi-Fi.</li>
+<li><strong>Оплате</strong> — входят ли коммунальные услуги в стоимость или удерживаются из зарплаты.</li>
+</ul>
+<figure>[img2]</figure>
+<p><strong>Хорошо организованное жильё</strong> для работников позволяет избежать дополнительного стресса из-за самостоятельного поиска квартиры и языкового барьера. Выбирая предложение, подготовленное агентством, вы получаете готовое решение с первого дня. Прозрачные правила проживания позволяют сосредоточиться на профессиональных и финансовых целях.</p>
+=== en
+slug: worker-accommodation-what-to-check-before-you-go
+title: Worker accommodation: what to check before you travel for work
+description: Planning to go abroad for temporary work? See what worker accommodation looks like, what to look out for and what the Alimat Group agency provides.
+---
+<p><strong>Planning to go abroad for temporary work? See what worker accommodation looks like, what to look out for and what Alimat Group provides.</strong></p>
+<figure>[img0]</figure>
+<p><strong>Accommodation</strong> is one of the most important things candidates ask about when they decide to take up temporary work or relocate. Comfortable living conditions have a direct impact on rest after work, recovery and overall job satisfaction.</p>
+<figure>[img1]</figure>
+<p>Before you travel, make sure you know what the agency provides. At Alimat Group we guarantee proper sanitary and living standards.</p>
+<p>Before signing the contract, ask about:</p>
+<ul><li><strong>Location and transport</strong> – the distance from the plant and how you get there (staff bus, on foot).</li>
+<li><strong>Furnishings</strong> – the standard of the room and kitchen and access to Wi-Fi.</li>
+<li><strong>Fees</strong> – whether utilities are included in the rent or deducted from your pay.</li>
+</ul>
+<figure>[img2]</figure>
+<p><strong>Well-organised worker accommodation</strong> spares you the extra stress of looking for a flat on your own and of the language barrier. By choosing an option prepared by the agency, you get a ready-made solution from your first day. Clear accommodation rules let you focus on your career and financial goals.</p>
+=== es
+slug: alojamiento-para-trabajadores-que-revisar-antes-de-viajar
+title: Alojamiento para trabajadores: ¿en qué fijarse antes de viajar para trabajar?
+description: ¿Piensas irte a trabajar temporalmente? Descubre cómo es el alojamiento para trabajadores, en qué fijarte y qué ofrece la agencia de empleo Alimat Group.
+---
+<p><strong>¿Piensas irte a trabajar temporalmente? Descubre cómo es el alojamiento para trabajadores, en qué fijarte y qué ofrece Alimat Group.</strong></p>
+<figure>[img0]</figure>
+<p><strong>La organización del alojamiento</strong> es una de las cuestiones que más preguntan los candidatos que deciden aceptar un trabajo temporal o mudarse. Unas condiciones de vivienda cómodas influyen directamente en el descanso después del trabajo, la recuperación y la satisfacción general con el empleo.</p>
+<figure>[img1]</figure>
+<p>Antes de viajar, asegúrate de qué ofrece la agencia. En Alimat Group garantizamos unos estándares sanitarios y de habitabilidad adecuados.</p>
+<p>Antes de firmar el contrato, pregunta por:</p>
+<ul><li><strong>Ubicación y transporte</strong>: la distancia a la planta y cómo se llega (autobús de empresa, a pie).</li>
+<li><strong>Equipamiento</strong>: el estándar de la habitación y la cocina y el acceso a wifi.</li>
+<li><strong>Gastos</strong>: si los suministros están incluidos en el alquiler o se descuentan del sueldo.</li>
+</ul>
+<figure>[img2]</figure>
+<p><strong>Un alojamiento para trabajadores bien organizado</strong> te ahorra el estrés añadido de buscar piso por tu cuenta y de la barrera del idioma. Al elegir las opciones que prepara la agencia, tienes una solución lista desde el primer día. Unas normas de alojamiento claras te permiten centrarte en tus objetivos profesionales y económicos.</p>
+=== pt
+slug: alojamento-para-trabalhadores-o-que-verificar-antes-de-viajar
+title: Alojamento para trabalhadores: a que prestar atenção antes de ir trabalhar?
+description: Estás a planear um trabalho temporário? Vê como é o alojamento para trabalhadores, a que prestar atenção e o que garante a agência de emprego Alimat Group.
+---
+<p><strong>Estás a planear um trabalho temporário? Vê como é o alojamento para trabalhadores, a que prestar atenção e o que garante a Alimat Group.</strong></p>
+<figure>[img0]</figure>
+<p><strong>A organização do alojamento</strong> é uma das questões mais colocadas pelos candidatos que decidem aceitar um trabalho temporário ou mudar-se. Condições de alojamento confortáveis influenciam diretamente o descanso depois do trabalho, a recuperação e a satisfação geral com o emprego.</p>
+<figure>[img1]</figure>
+<p>Antes de viajares, confirma o que a agência garante. Na Alimat Group garantimos padrões sanitários e de habitabilidade adequados.</p>
+<p>Antes de assinares o contrato, pergunta por:</p>
+<ul><li><strong>Localização e transporte</strong> – a distância até à fábrica e como lá chegar (autocarro da empresa, a pé).</li>
+<li><strong>Equipamento</strong> – o padrão do quarto e da cozinha e o acesso a Wi-Fi.</li>
+<li><strong>Custos</strong> – se as despesas de água, luz e gás estão incluídas na renda ou são descontadas do salário.</li>
+</ul>
+<figure>[img2]</figure>
+<p><strong>Um alojamento para trabalhadores bem organizado</strong> poupa-te o stress adicional de procurar casa sozinho e da barreira da língua. Ao escolheres as propostas preparadas pela agência, tens uma solução pronta desde o primeiro dia. Regras de alojamento claras permitem-te concentrar nos teus objetivos profissionais e financeiros.</p>
+=== ro
+slug: cazarea-pentru-angajati-la-ce-sa-fii-atent
+title: Cazarea pentru angajați – la ce să fii atent înainte de plecarea la muncă?
+description: Plănuiești să pleci la muncă temporară? Află cum arată cazarea pentru angajați, la ce să fii atent și ce asigură agenția de muncă Alimat Group.
+---
+<p><strong>Plănuiești să pleci la muncă temporară? Află cum arată cazarea pentru angajați, la ce să fii atent și ce asigură Alimat Group.</strong></p>
+<figure>[img0]</figure>
+<p><strong>Organizarea cazării</strong> este unul dintre cele mai importante aspecte despre care întreabă candidații care decid să accepte o muncă temporară sau să se mute. Condițiile confortabile de locuit influențează direct odihna după muncă, refacerea forțelor și satisfacția generală față de job.</p>
+<figure>[img1]</figure>
+<p>Înainte de plecare, asigură-te ce oferă agenția. La Alimat Group garantăm standarde sanitare și de trai corespunzătoare.</p>
+<p>Înainte de a semna contractul, întreabă despre:</p>
+<ul><li><strong>Locație și transport</strong> – distanța până la fabrică și modul în care ajungi (autobuz pentru angajați, pe jos).</li>
+<li><strong>Dotări</strong> – standardul camerei și al bucătăriei și accesul la Wi-Fi.</li>
+<li><strong>Costuri</strong> – dacă utilitățile sunt incluse în chirie sau se rețin din salariu.</li>
+</ul>
+<figure>[img2]</figure>
+<p><strong>O cazare bine organizată</strong> pentru angajați te scutește de stresul suplimentar al căutării unei locuințe pe cont propriu și de bariera lingvistică. Alegând variantele pregătite de agenție, primești o soluție gata făcută din prima zi. Regulile clare privind cazarea îți permit să te concentrezi pe obiectivele profesionale și financiare.</p>
