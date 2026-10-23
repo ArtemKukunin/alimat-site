@@ -13,7 +13,7 @@ import { renderCandidates } from './features/candidates/candidates.js';
 import { renderApply } from './features/apply/apply.js';
 import { renderEmployers } from './features/employers/employers.js';
 import { renderContact } from './features/contact/contact.js';
-import { loadContent, makeLinkResolver, renderBlogIndex, renderPost, renderLegalPage, blogSitemapEntries, BLOG_LANG } from './features/blog/blog.js';
+import { loadContent, buildBlog, postsIn, blogPath, legalUrl } from './features/blog/blog.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.resolve(ROOT, process.env.OUT_DIR || 'dist');
@@ -100,7 +100,13 @@ function notFoundPage(ui) {
 function sitemap(settings, entries) {
   const lm = (d) => (d ? `\n    <lastmod>${d}</lastmod>` : '');
   const urls = entries.map((e) => {
-    if (e.path) return `  <url>\n    <loc>${settings.siteUrl}${e.path}</loc>${lm(e.lastmod)}\n  </url>`;
+    if (e.path && !(e.alts?.length > 1)) return `  <url>\n    <loc>${settings.siteUrl}${e.path}</loc>${lm(e.lastmod)}\n  </url>`;
+    if (e.path) {
+      return `  <url>
+    <loc>${settings.siteUrl}${e.path}</loc>${lm(e.lastmod)}
+${e.alts.map((a) => `    <xhtml:link rel="alternate" hreflang="${a.lang}" href="${settings.siteUrl}${a.href}"/>`).join('\n')}
+  </url>`;
+    }
     const alts = alternates(e.page, e.sub);
     return alts.map(({ href }) => `  <url>
     <loc>${settings.siteUrl}${href}</loc>${lm(e.lastmod)}
@@ -178,8 +184,15 @@ export function build() {
 
   const indexable = [];
   let count = 0;
+  const slugOf = (u) => u.replace(/^\/+|\/+$/g, '');
+  const makeCtx = (lang) => ({
+    lang, t: translator(ui, lang), settings, jobs, categories,
+    blogUrl: blogPath(postsIn(posts, lang).length ? lang : 'pl'),
+    privacyUrl: legalUrl(pages, slugOf(settings.privacyUrl), lang),
+    cookiesUrl: legalUrl(pages, slugOf(settings.cookiesUrl), lang),
+  });
   for (const lang of LANG_CODES) {
-    const ctx = { lang, t: translator(ui, lang), settings, jobs, categories };
+    const ctx = makeCtx(lang);
     for (const [page, render] of Object.entries(STATIC_PAGES)) {
       writeFile(outFile(pageUrl(lang, page)), render(ctx));
       count++;
@@ -193,19 +206,16 @@ export function build() {
       count++;
     }
   }
-  // Blog + legal pages: Polish only, same URLs as on the old site.
-  {
-    const ctx = { lang: BLOG_LANG, t: translator(ui, BLOG_LANG), settings, jobs, categories };
-    const resolve = makeLinkResolver(ctx, { posts, pages, jobs, legacyMap });
-    writeFile(outFile(`${BASE}/blog/`), renderBlogIndex(ctx, posts));
-    for (const sec of ['candidates', 'employers']) writeFile(outFile(`${BASE}/category/${sec === 'candidates' ? 'dla-kandydatow' : 'dla-firm'}/`), renderBlogIndex(ctx, posts, sec));
-    for (const post of posts) writeFile(outFile(`${BASE}/${post.slug}/`), renderPost(ctx, post, posts, resolve));
-    for (const page of pages) writeFile(outFile(`${BASE}/${page.slug}/`), renderLegalPage(ctx, page, resolve));
-    count += 3 + posts.length + pages.length;
+  // Blog + legal pages: Polish on the old WordPress URLs, translations under /{lang}/.
+  const blog = buildBlog({ posts, pages, jobs, legacyMap, makeCtx });
+  for (const { path: p, html } of blog.out) {
+    if (fs.existsSync(outFile(p))) throw new Error(`Blog/legal page ${p} would overwrite another page`);
+    writeFile(outFile(p), html);
   }
+  count += blog.out.length;
   for (const page of Object.keys(STATIC_PAGES)) indexable.push({ page });
   for (const job of jobs.filter((j) => j.active)) indexable.push({ page: 'jobs', sub: job.id, lastmod: job.datePosted });
-  indexable.push(...blogSitemapEntries(posts, pages));
+  indexable.push(...blog.sitemap);
   // Sections are listed only while they have active jobs (empty ones are noindex).
   for (const cat of Object.keys(categories)) {
     if (jobs.some((j) => j.active && j.category === cat)) {

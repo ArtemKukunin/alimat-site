@@ -63,6 +63,7 @@ function resolves(href) {
 if (fs.existsSync(DIST)) {
   const pages = walk(DIST).filter((f) => f.endsWith('.html') && !f.includes(`${path.sep}admin${path.sep}`));
   const titles = new Map();
+  const hreflangSets = new Map();
   for (const file of pages) {
     const rel = path.relative(DIST, file);
     const html = fs.readFileSync(file, 'utf8');
@@ -98,9 +99,23 @@ if (fs.existsSync(DIST)) {
     if (title) titles.set(title, [...(titles.get(title) || []), rel]);
     if (!/<link rel="canonical" href="https:\/\/[^"]+">/.test(html)) err(`${rel}: no canonical`);
     const hreflangs = (html.match(/<link rel="alternate" hreflang=/g) || []).length;
-    const expected = isLangPage ? LANG_CODES.length + 1 : 2;
-    if (hreflangs !== expected) err(`${rel}: ${hreflangs} hreflang links (expected ${expected})`);
+    if (isLangPage && hreflangs !== LANG_CODES.length + 1) err(`${rel}: ${hreflangs} hreflang links (expected ${LANG_CODES.length + 1})`);
+    if (hreflangs < 2) err(`${rel}: missing hreflang`);
+    const canonical = html.match(/<link rel="canonical" href="https?:\/\/[^/"]+([^"]*)">/)?.[1];
+    const altSet = [...html.matchAll(/<link rel="alternate" hreflang="([\w-]+)" href="https?:\/\/[^/"]+([^"]*)">/g)]
+      .filter((m) => m[1] !== 'x-default').map((m) => `${m[1]} ${m[2]}`).sort().join('|');
+    if (canonical) hreflangSets.set(canonical, { rel, altSet });
     if (/\{\w+\}/.test(html.replace(/<script[\s\S]*?<\/script>/g, '').replace(/data-template="[^"]*"/g, ''))) err(`${rel}: unfilled {placeholder}`);
+  }
+  // hreflang must be reciprocal: every listed alternate exists and lists the same set.
+  for (const [url, { rel, altSet }] of hreflangSets) {
+    const own = altSet.split('|');
+    if (!own.some((x) => x.endsWith(` ${url}`))) err(`${rel}: hreflang does not include the page itself`);
+    for (const x of own) {
+      const other = hreflangSets.get(x.slice(x.indexOf(' ') + 1));
+      if (!other) err(`${rel}: hreflang target ${x} not found`);
+      else if (other.altSet !== altSet) err(`${rel}: hreflang not reciprocal with ${other.rel}`);
+    }
   }
   for (const [title, files] of titles) if (files.length > 1) err(`duplicate <title> "${title}" in ${files.join(', ')}`);
 

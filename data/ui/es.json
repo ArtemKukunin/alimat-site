@@ -197,5 +197,21 @@
   "cv_d": "Deja tu solicitud o tu CV: te añadiremos a nuestra base de candidatos y te llamaremos en cuanto surja un trabajo adecuado.",
   "cv_btn": "Dejar mi CV",
   "f_cv_wa": "CV: enviaré el archivo en este chat",
-  "f_wa_cv": "Abrimos WhatsApp: envía el mensaje y adjunta tu CV en el chat (icono del clip)."
+  "f_wa_cv": "Abrimos WhatsApp: envía el mensaje y adjunta tu CV en el chat (icono del clip).",
+  "blog_h1": "Blog sobre trabajar en Polonia",
+  "blog_title": "Blog sobre trabajar en Polonia – guías para candidatos y empresas | Alimat Group",
+  "blog_desc": "Guías de Alimat Group sobre el trabajo en Polonia: empleo legal, documentos, alojamiento, salarios y contratación de trabajadores extranjeros.",
+  "blog_all": "Todos",
+  "blog_related": "Lee también",
+  "blog_updated": "Actualizado",
+  "blog_published": "Publicado",
+  "blog_cta_t": "¿Buscas trabajo en Polonia?",
+  "blog_cta_d": "Consulta las ofertas actuales o deja tu solicitud: un reclutador encontrará el trabajo adecuado para ti.",
+  "blog_sec_candidates": "Para candidatos",
+  "blog_sec_candidates_h1": "Blog para candidatos: trabajar y vivir en Polonia",
+  "blog_sec_candidates_desc": "Guías para quienes buscan trabajo en Polonia: documentos, alojamiento, salarios, derechos laborales y vida cotidiana.",
+  "blog_sec_employers": "Para empresas",
+  "blog_sec_employers_h1": "Blog para empresas: reclutamiento y contratación",
+  "blog_sec_employers_desc": "Artículos para empleadores: reclutamiento, contratación de extranjeros, rotación de personal y colaboración con una agencia de empleo.",
+  "legal_binding": "Esto es una traducción. La versión polaca del documento es la jurídicamente vinculante:"
 }

@@ -97,7 +97,7 @@ function header(ctx, page, langLinks) {
   const { lang, t, settings } = ctx;
   const nav = ['jobs', 'candidates', 'employers', 'contact']
     .map((p) => `<li><a href="${pageUrl(lang, p)}"${p === page ? ' aria-current="page"' : ''}>${esc(t(`nav_${p}`))}</a></li>`)
-    .join('') + `<li><a href="${BASE}/blog/"${page === 'blog' ? ' aria-current="page"' : ''}${lang === 'pl' ? '' : ' hreflang="pl"'}>${esc(t('nav_blog'))}</a></li>`;
+    .join('') + `<li><a href="${ctx.blogUrl || `${BASE}/blog/`}"${page === 'blog' ? ' aria-current="page"' : ''}>${esc(t('nav_blog'))}</a></li>`;
   const langs = langLinks
     .map((a) => `<li><a href="${a.href}" hreflang="${a.lang}" lang="${a.lang}"${a.lang === lang ? ' aria-current="true"' : ''} data-lang="${a.lang}">${esc(LANGS[a.lang].name)}</a></li>`)
     .join('');
@@ -183,7 +183,7 @@ function footer(ctx) {
   </div>
   <div class="wrap footer-bottom">
     <span>© ${new Date().getFullYear()} ${esc(settings.company)}. ${esc(t('footer_rights'))}</span>
-    <span class="footer-legal"><a href="${esc(sitePath(settings.privacyUrl, BASE))}">${esc(t('footer_privacy'))}</a> · <a href="${esc(sitePath(settings.cookiesUrl, BASE))}">Cookies</a> · <a href="${BASE}/blog/">Blog</a></span>
+    <span class="footer-legal"><a href="${esc(ctx.privacyUrl || sitePath(settings.privacyUrl, BASE))}">${esc(t('footer_privacy'))}</a> · <a href="${esc(ctx.cookiesUrl || sitePath(settings.cookiesUrl, BASE))}">Cookies</a> · <a href="${ctx.blogUrl || `${BASE}/blog/`}">${esc(t('nav_blog'))}</a></span>
   </div>
 </footer>`;
 }
@@ -207,9 +207,10 @@ export function layout(ctx, opts) {
   const { lang } = ctx;
   const { page, sub, body, hideMobileBar } = opts;
   const path = opts.path || pageUrl(lang, page, sub);
-  const alts = opts.path ? [{ lang, href: path }] : alternates(page, sub);
+  // Single-language pages pass `path`; pages translated only into some languages also pass `alts`.
+  const alts = opts.alts || (opts.path ? [{ lang, href: path }] : alternates(page, sub));
   const langLinks = opts.path
-    ? LANG_CODES.map((l) => ({ lang: l, href: l === lang ? path : pageUrl(l, 'home') }))
+    ? LANG_CODES.map((l) => ({ lang: l, href: alts.find((a) => a.lang === l)?.href || pageUrl(l, 'home') }))
     : alts;
   return `<!doctype html>
 <html lang="${lang}">

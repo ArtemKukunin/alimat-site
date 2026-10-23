@@ -197,5 +197,21 @@
   "cv_d": "Zostaw zgłoszenie lub CV — dodamy Cię do bazy kandydatów i zadzwonimy, gdy pojawi się pasująca praca.",
   "cv_btn": "Zostaw CV",
   "f_cv_wa": "CV: wyślę plik w tym czacie",
-  "f_wa_cv": "Otwieramy WhatsApp — wyślij wiadomość i załącz plik CV w czacie (ikona spinacza)."
+  "f_wa_cv": "Otwieramy WhatsApp — wyślij wiadomość i załącz plik CV w czacie (ikona spinacza).",
+  "blog_h1": "Blog o pracy w Polsce",
+  "blog_title": "Blog o pracy w Polsce – poradniki dla kandydatów i firm | Alimat Group",
+  "blog_desc": "Poradniki Alimat Group o pracy w Polsce: legalne zatrudnienie, dokumenty, zakwaterowanie, zarobki oraz rekrutacja i zatrudnianie cudzoziemców.",
+  "blog_all": "Wszystkie",
+  "blog_related": "Przeczytaj też",
+  "blog_updated": "Aktualizacja",
+  "blog_published": "Opublikowano",
+  "blog_cta_t": "Szukasz pracy w Polsce?",
+  "blog_cta_d": "Sprawdź aktualne oferty albo zostaw zgłoszenie — rekruter dobierze pracę dla Ciebie.",
+  "blog_sec_candidates": "Dla kandydatów",
+  "blog_sec_candidates_h1": "Blog dla kandydatów: praca i życie w Polsce",
+  "blog_sec_candidates_desc": "Poradniki dla osób szukających pracy w Polsce: dokumenty, zakwaterowanie, zarobki, prawa pracownika i życie codzienne.",
+  "blog_sec_employers": "Dla firm",
+  "blog_sec_employers_h1": "Blog dla firm: rekrutacja i zatrudnianie",
+  "blog_sec_employers_desc": "Artykuły dla pracodawców: rekrutacja, zatrudnianie cudzoziemców, rotacja pracowników i współpraca z agencją pracy.",
+  "legal_binding": "To jest tłumaczenie. Wiążąca jest polska wersja dokumentu:"
 }

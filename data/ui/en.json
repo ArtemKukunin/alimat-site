@@ -197,5 +197,21 @@
   "cv_d": "Leave an application or your CV — we will add you to our candidate database and call you as soon as a suitable job comes up.",
   "cv_btn": "Leave your CV",
   "f_cv_wa": "CV: I will send the file in this chat",
-  "f_wa_cv": "Opening WhatsApp — send the message and attach your CV file in the chat (paperclip icon)."
+  "f_wa_cv": "Opening WhatsApp — send the message and attach your CV file in the chat (paperclip icon).",
+  "blog_h1": "Blog about working in Poland",
+  "blog_title": "Working in Poland blog – guides for candidates and employers | Alimat Group",
+  "blog_desc": "Alimat Group guides to working in Poland: legal employment, documents, accommodation, pay, and recruiting and hiring foreign workers.",
+  "blog_all": "All",
+  "blog_related": "Read also",
+  "blog_updated": "Updated",
+  "blog_published": "Published",
+  "blog_cta_t": "Looking for a job in Poland?",
+  "blog_cta_d": "Browse current openings or leave an application — a recruiter will find the right job for you.",
+  "blog_sec_candidates": "For candidates",
+  "blog_sec_candidates_h1": "Blog for candidates: working and living in Poland",
+  "blog_sec_candidates_desc": "Guides for people looking for work in Poland: documents, accommodation, pay, employee rights and everyday life.",
+  "blog_sec_employers": "For employers",
+  "blog_sec_employers_h1": "Blog for employers: recruitment and hiring",
+  "blog_sec_employers_desc": "Articles for employers: recruitment, hiring foreign workers, staff turnover and working with an employment agency.",
+  "legal_binding": "This is a translation. The Polish version of the document is legally binding:"
 }
