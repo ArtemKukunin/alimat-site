@@ -128,12 +128,12 @@ body.nav-open .main-nav a { padding: 14px 12px; font-size: 1.1rem; border-bottom
 
 /* Hero */
 .hero { background: var(--grey-1); padding: 32px 0 0; }
-.hero-grid { display: grid; gap: 24px; align-items: center; }
+.hero-grid { display: grid; gap: 24px; align-items: center; padding-bottom: 48px; } /* room for the overlapping search band */
 .hero h1 { font-size: clamp(1.8rem, 1.2rem + 2.4vw, 2.5rem); }
 .kicker { font-size: .85rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--orange-a); margin-bottom: 10px; }
 .lead { font-size: 1.1rem; color: var(--text); max-width: 60ch; }
 .hero-cta { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
-.hero-img img { width: 100%; border-radius: var(--radius) var(--radius) 0 0; }
+.hero-img img { width: 100%; border-radius: var(--radius); }
 .search-band {
   position: relative; z-index: 2; display: grid; gap: 12px; align-items: end;
   background: var(--orange); color: #fff; border-radius: var(--radius); padding: 22px 20px; margin: -24px 0 0;
@@ -214,7 +214,7 @@ body.nav-open .main-nav a { padding: 14px 12px; font-size: 1.1rem; border-bottom
 .why-row { display: grid; gap: 18px; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
 .why-img img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .why-text { position: relative; padding: 4px 22px 24px; }
-.why-n { display: block; font: 900 3.4rem/1 var(--f-head); color: var(--grey-2); margin-bottom: -18px; }
+.why-n { display: block; font: 900 3.4rem/1 var(--f-head); color: var(--grey-2); margin-bottom: 6px; }
 .why-text h3 { position: relative; font-size: 1.3rem; }
 .why-text p { margin: 0; }
 
@@ -255,7 +255,7 @@ body.nav-open .main-nav a { padding: 14px 12px; font-size: 1.1rem; border-bottom
 .referral p { margin: 0; }
 .help-box { background: var(--grey-1); border-radius: var(--radius); padding: 24px; align-self: start; }
 .help-box h2 { font-size: 1.25rem; }
-.contact-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 8px 0; }
+.contact-btns { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; margin: 8px 0; }
 .contact-btns .btn { padding: 10px 14px; }
 
 /* Job detail */
@@ -272,7 +272,7 @@ body.nav-open .main-nav a { padding: 14px 12px; font-size: 1.1rem; border-bottom
 .facts .ic { grid-row: span 2; color: var(--orange); margin-top: 2px; }
 .facts dt { font-size: .82rem; }
 .facts dd { margin: 0; font-weight: 700; color: var(--ink); }
-.contact-btns.compact { grid-template-columns: 1fr 1fr 1fr; }
+.contact-btns.compact { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
 .contact-btns.compact .btn-wa { display: none; }
 .similar { padding-bottom: 44px; }
 
@@ -349,8 +349,6 @@ body.nav-open .main-nav a { padding: 14px 12px; font-size: 1.1rem; border-bottom
 @media (min-width: 640px) {
   .job-grid, .perks, .steps, .grid-2, .duo { grid-template-columns: repeat(2, 1fr); }
   .filters { grid-template-columns: 1fr 1fr auto; align-items: end; }
-  .contact-btns { grid-template-columns: repeat(4, auto); justify-content: start; }
-  .contact-btns.compact { grid-template-columns: 1fr 1fr 1fr; }
   .search-band { grid-template-columns: 1fr 1fr; }
   .search-band h2 { grid-column: 1 / -1; }
 }
@@ -365,10 +363,8 @@ body.nav-open .main-nav a { padding: 14px 12px; font-size: 1.1rem; border-bottom
   .header-row { min-height: 84px; }
   .logo img { height: 46px; }
   .hero { padding-top: 44px; }
-  .hero-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-  .hero-img img { border-radius: var(--radius) var(--radius) 0 0; }
-  .search-band { grid-template-columns: auto 1fr 1fr auto auto; margin-top: -48px; padding: 26px 30px; }
-  .search-band h2 { grid-column: auto; align-self: center; white-space: nowrap; }
+  .hero-grid { grid-template-columns: 1fr 1fr; gap: 40px; padding-bottom: 72px; }
+  .search-band { grid-template-columns: 1fr 1fr auto auto; margin-top: -48px; padding: 26px 30px; }
   .search-band .field > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
   .page-hero { padding: 30px 0 40px; }
   .page-hero-grid { grid-template-columns: 1.2fr 1fr; gap: 40px; }
@@ -422,8 +418,10 @@ body.nav-open .main-nav a { padding: 14px 12px; font-size: 1.1rem; border-bottom
 @media (min-width: 640px) {
   .sections { grid-template-columns: repeat(3, 1fr); }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .sections { grid-template-columns: repeat(6, 1fr); }
+}
+@media (min-width: 1024px) {
   .here { grid-template-columns: 1fr 1fr; gap: 48px; }
   .block-sm { padding-top: 40px; padding-bottom: 40px; }
 }
@@ -477,3 +475,26 @@ body.nav-open .main-nav a { padding: 14px 12px; font-size: 1.1rem; border-bottom
 @media (min-width: 768px) { .cv-banner { grid-template-columns: auto 1fr auto; padding: 26px 30px; } }
 .field input[type="file"] { padding: 10px; border: 1.5px dashed var(--grey-3, #C1C1C1); border-radius: 14px; background: var(--grey-0, #F9F9F9); width: 100%; }
 .field input[type="file"]::file-selector-button { margin-right: 12px; padding: 8px 16px; border: 0; border-radius: 999px; background: var(--blue-a); color: #fff; font: inherit; font-weight: 700; cursor: pointer; }
+
+/* Layout safety: grid/flex children may shrink below their content (long words, wide selects) */
+.hero-grid > *, .job-layout > *, .form-layout > *, .contact-grid > *, .split > *, .here > *, .why-row > *,
+.sections > *, .job-grid > *, .perks > *, .steps > *, .duo > *, .footer-grid > *, .help-band-grid > *, .cv-banner > *, .contact-btns > * { min-width: 0; }
+.field select, .field input, .field textarea { max-width: 100%; }
+.field select { text-overflow: ellipsis; }
+h1, h2, h3, .section-tile, .job-card, .facts dd, .prose { overflow-wrap: break-word; hyphens: auto; }
+.contact-btns .btn { white-space: normal; text-align: center; }
+@media (max-width: 400px) {
+  .section-tile { padding: 14px; }
+  .section-name { font-size: .92rem; overflow-wrap: anywhere; }
+}
+
+/* Header & search band: avoid wrapping between 1024px and 1279px */
+.main-nav a, .header-cta, .search-band .btn { white-space: nowrap; }
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .main-nav a { padding: 10px 8px; }
+  .header-cta.btn-outline-blue { display: none; }
+}
+@media (min-width: 1280px) {
+  .search-band { grid-template-columns: auto 1fr 1fr auto auto; }
+  .search-band h2 { grid-column: auto; align-self: center; white-space: nowrap; }
+}
