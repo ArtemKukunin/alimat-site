@@ -6,7 +6,10 @@
     "region": "mazowieckie",
     "country": "PL",
     "datePosted": "2026-09-28",
-    "salary": { "min": 24, "unit": "hour" },
+    "salary": {
+      "min": 24,
+      "unit": "hour"
+    },
     "contract": "",
     "tags": [],
     "title": "Pracownik szklarni – automatyczny zbiór pomidorów",
@@ -89,19 +92,19 @@
     ]
   },
   "pt": {
-    "title": "Trabalhador(a) de estufa – colheita automatizada de tomates",
-    "summary": "Colheita de tomates em uma linha automatizada em uma estufa perto de Kozienice. Sem carregar peso, em temperatura agradável.",
+    "title": "Trabalhador(a) de estufa – colheita automatizada de tomate",
+    "summary": "Colheita de tomate numa linha automatizada numa estufa perto de Kozienice. Sem carregar pesos, a uma temperatura agradável.",
     "duties": [
-      "Colher tomates em uma linha automatizada por onde passam as caixas",
-      "Conferir e pesar as caixas",
-      "Manter o posto de trabalho limpo e organizado"
+      "Colher tomate numa linha automatizada por onde passam as caixas",
+      "Verificar e pesar as caixas",
+      "Manter o posto de trabalho limpo e arrumado"
     ],
     "requirements": [],
     "offer": [],
     "conditions": [
-      "As caixas pesam até 6 kg — tudo é automatizado, sem carregar peso",
-      "Trabalho em pé, em temperatura agradável",
-      "Trabalho fixo, tempo integral"
+      "As caixas pesam até 6 kg — tudo é automatizado, sem carregar pesos",
+      "Trabalho em pé, a uma temperatura agradável",
+      "Trabalho fixo, a tempo inteiro"
     ]
   },
   "ro": {

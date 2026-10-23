@@ -38,10 +38,10 @@
     },
     "pt": {
       "slug": "vagas-producao",
-      "name": "Vagas na produção",
-      "h1": "Vagas na produção na Polônia",
-      "desc": "Vagas na produção na Polônia: operadores de máquinas, embalagem, linhas de produção. Contrato legal, salário líquido, ajuda com moradia.",
-      "intro": "Trabalho em linhas de produção, embalagem e operação de máquinas. Os salários são líquidos; cada vaga traz as condições."
+      "name": "Trabalho na produção",
+      "h1": "Trabalho na produção na Polónia",
+      "desc": "Ofertas de trabalho na produção na Polónia: operadores de máquinas, embalagem, linhas de produção. Contrato legal, salário líquido, ajuda com alojamento.",
+      "intro": "Trabalho em linhas de produção, embalagem e operação de máquinas. Os salários são líquidos; cada oferta indica as condições."
     },
     "ro": {
       "slug": "munca-in-productie",
@@ -90,10 +90,10 @@
     },
     "pt": {
       "slug": "vagas-frigorificos",
-      "name": "Vagas em frigoríficos",
-      "h1": "Vagas em frigoríficos na Polônia",
-      "desc": "Vagas em frigoríficos de carne e aves: linha de abate, processamento, embalagem. Contrato legal; refeições, transporte e moradia em muitas vagas.",
-      "intro": "Somos especializados em recrutamento para a indústria da carne. Muitas vagas incluem refeições, transporte e ajuda com moradia."
+      "name": "Trabalho na indústria da carne",
+      "h1": "Trabalho na indústria da carne na Polónia",
+      "desc": "Ofertas na indústria da carne e das aves: linha de abate, transformação, embalagem. Contrato legal; refeições, transporte e alojamento em muitas ofertas.",
+      "intro": "Somos especializados no recrutamento para a indústria da carne. Muitas ofertas incluem refeições, transporte e ajuda com alojamento."
     },
     "ro": {
       "slug": "munca-in-abatoare",
@@ -142,10 +142,10 @@
     },
     "pt": {
       "slug": "vagas-estufas",
-      "name": "Vagas em estufas",
-      "h1": "Vagas em estufas e na agricultura na Polônia",
-      "desc": "Vagas em estufas e na colheita na Polônia. Veja o salário líquido e as condições, candidate-se online ou pelo WhatsApp.",
-      "intro": "Trabalho na colheita e em estufas, inclusive temporário. Cada vaga informa o salário e as condições."
+      "name": "Trabalho em estufas",
+      "h1": "Trabalho em estufas e na agricultura na Polónia",
+      "desc": "Ofertas de trabalho em estufas e na colheita na Polónia. Vê o salário líquido e as condições e candidata-te online ou pelo WhatsApp.",
+      "intro": "Trabalho na colheita e em estufas, incluindo sazonal. Cada oferta indica o salário e as condições."
     },
     "ro": {
       "slug": "munca-in-sere",
@@ -194,10 +194,10 @@
     },
     "pt": {
       "slug": "vagas-cozinha",
-      "name": "Vagas em cozinha e restaurantes",
-      "h1": "Vagas em cozinha e restaurantes na Polônia",
-      "desc": "Vagas em cozinhas, restaurantes e hotéis: auxiliar de cozinha, garçom. Contrato legal e salário líquido.",
-      "intro": "Vagas para auxiliares de cozinha, garçons e equipe de restaurantes em várias cidades da Polônia."
+      "name": "Trabalho em cozinha e restauração",
+      "h1": "Trabalho em cozinha e restauração na Polónia",
+      "desc": "Ofertas em cozinhas, restaurantes e hotéis: ajudante de cozinha, empregado de mesa. Contrato legal e salário líquido.",
+      "intro": "Ofertas para ajudantes de cozinha, empregados de mesa e pessoal de restauração em várias cidades da Polónia."
     },
     "ro": {
       "slug": "munca-in-bucatarie",
@@ -246,9 +246,9 @@
     },
     "pt": {
       "slug": "vagas-motorista",
-      "name": "Vagas para motorista",
-      "h1": "Vagas para motoristas C+E",
-      "desc": "Vagas para motoristas C+E no transporte internacional: rotas fixas, contrato de trabalho, salário líquido.",
+      "name": "Trabalho para motoristas",
+      "h1": "Trabalho para motoristas C+E",
+      "desc": "Ofertas para motoristas C+E no transporte internacional: rotas fixas, contrato de trabalho, salário líquido.",
       "intro": "Trabalho para motoristas da categoria C+E em rotas internacionais fixas, com contrato de trabalho."
     },
     "ro": {
@@ -298,10 +298,10 @@
     },
     "pt": {
       "slug": "vagas-armazem",
-      "name": "Vagas em armazém",
-      "h1": "Vagas em armazém na Polônia",
-      "desc": "Vagas em armazém: separação de pedidos, carga, empilhadeira. Salário líquido; transporte e refeições em muitas vagas.",
-      "intro": "Separação de pedidos, carga e descarga. O certificado UDT de empilhadeira é um diferencial, mas nem sempre é exigido."
+      "name": "Trabalho em armazém",
+      "h1": "Trabalho em armazém na Polónia",
+      "desc": "Ofertas em armazém: preparação de encomendas, cargas, empilhador. Salário líquido; transporte e refeições em muitas ofertas.",
+      "intro": "Preparação de encomendas, carga e descarga. O certificado UDT de empilhador é uma vantagem, mas nem sempre é exigido."
     },
     "ro": {
       "slug": "munca-in-depozit",

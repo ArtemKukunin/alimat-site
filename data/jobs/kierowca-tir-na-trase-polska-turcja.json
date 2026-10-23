@@ -6,9 +6,15 @@
     "region": "lubelskie",
     "country": "PL",
     "datePosted": "2026-03-05",
-    "salary": { "min": 11000, "max": 12000, "unit": "month" },
+    "salary": {
+      "min": 11000,
+      "max": 12000,
+      "unit": "month"
+    },
     "contract": "employment",
-    "tags": ["coordinator"],
+    "tags": [
+      "coordinator"
+    ],
     "title": "Kierowca TIR – trasa Polska – Turcja",
     "summary": "Stała, powtarzalna trasa z Końskowoli do Turcji (transport mięsa). Umowa o pracę i opieka koordynatora.",
     "duties": [
@@ -114,24 +120,24 @@
     ]
   },
   "pt": {
-    "title": "Motorista de carreta – rota Polônia – Turquia",
-    "summary": "Rota fixa e regular de Końskowola até a Turquia (transporte de carne). Contrato de trabalho e acompanhamento de um coordenador.",
+    "title": "Motorista de camião TIR – rota Polónia – Turquia",
+    "summary": "Rota fixa e regular de Końskowola para a Turquia (transporte de carne). Contrato de trabalho e acompanhamento de um coordenador.",
     "duties": [
-      "Transporte internacional na rota Polônia – Turquia",
+      "Transporte internacional na rota Polónia – Turquia",
       "Carregamento na fábrica em Końskowola (transporte de carne)",
-      "Descarga no cliente na Turquia e continuidade do plano de transporte",
-      "Cuidar da documentação de transporte (CMR)",
-      "Respeitar a jornada dos motoristas e as normas de transporte"
+      "Descarga no cliente na Turquia e continuação do plano de transporte",
+      "Tratar da documentação de transporte (CMR)",
+      "Cumprir o tempo de condução e as normas de transporte"
     ],
     "requirements": [
       "Experiência em transporte internacional"
     ],
     "offer": [],
     "conditions": [
-      "Rota fixa e regular, com cronograma estável",
-      "Trabalho conforme o tacógrafo e as regras de jornada",
+      "Rota fixa e regular, com horário estável",
+      "Trabalho de acordo com o tacógrafo e as regras de tempo de condução",
       "Apoio organizacional e acompanhamento de um coordenador",
-      "Possibilidade de parceria de longo prazo"
+      "Possibilidade de colaboração a longo prazo"
     ]
   },
   "ro": {

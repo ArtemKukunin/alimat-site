@@ -6,9 +6,16 @@
     "region": "lubelskie",
     "country": "PL",
     "datePosted": "2025-10-13",
-    "salary": { "min": 25, "unit": "hour" },
+    "salary": {
+      "min": 25,
+      "unit": "hour"
+    },
     "contract": "",
-    "tags": ["housing", "transport", "meals"],
+    "tags": [
+      "housing",
+      "transport",
+      "meals"
+    ],
     "title": "Magazynier",
     "summary": "Praca w magazynie w Końskowoli. Ciepłe posiłki, bezpłatny dojazd i zakwaterowanie blisko pracy w razie potrzeby.",
     "duties": [
@@ -139,28 +146,28 @@
     "conditions": []
   },
   "pt": {
-    "title": "Auxiliar de armazém",
-    "summary": "Trabalho em armazém em Końskowola. Refeição quente, transporte gratuito e moradia perto do trabalho, se necessário.",
+    "title": "Operador(a) de armazém",
+    "summary": "Trabalho em armazém em Końskowola. Refeição quente, transporte gratuito e alojamento perto do trabalho, se necessário.",
     "duties": [
-      "Escanear e registrar paletes",
-      "Envolver paletes com filme stretch e preparar mercadorias para envio",
-      "Organizar mercadorias nas prateleiras",
-      "Carregar e descarregar vans e caminhões",
-      "Separar pedidos conforme a documentação do armazém"
+      "Ler e registar paletes",
+      "Envolver paletes com filme estirável e preparar mercadorias para expedição",
+      "Arrumar mercadorias nas estantes",
+      "Carregar e descarregar carrinhas e camiões",
+      "Preparar encomendas de acordo com a documentação do armazém"
     ],
     "requirements": [
-      "Disposição para trabalho físico",
-      "Responsabilidade, atenção e comprometimento",
-      "Polonês em nível de conversação",
-      "Saber operar empilhadeira — diferencial",
-      "Certificado UDT de empilhadeira — diferencial"
+      "Disponibilidade para trabalho físico",
+      "Responsabilidade, atenção e empenho",
+      "Polaco a nível de conversação",
+      "Saber conduzir empilhador — vantagem",
+      "Certificado UDT de empilhador — vantagem"
     ],
     "offer": [
-      "Emprego estável em uma empresa em crescimento",
+      "Emprego estável numa empresa em crescimento",
       "Refeição quente",
-      "Moradia perto do trabalho (se necessário)",
-      "Transporte gratuito de ida e volta ao trabalho",
-      "Equipe internacional"
+      "Alojamento perto do trabalho (se necessário)",
+      "Transporte gratuito de ida e volta para o trabalho",
+      "Equipa internacional"
     ],
     "conditions": []
   },

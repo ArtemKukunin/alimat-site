@@ -6,9 +6,15 @@
     "region": "Brandenburg",
     "country": "DE",
     "datePosted": "2026-03-05",
-    "salary": { "min": 12000, "max": 13000, "unit": "month" },
+    "salary": {
+      "min": 12000,
+      "max": 13000,
+      "unit": "month"
+    },
     "contract": "employment",
-    "tags": ["coordinator"],
+    "tags": [
+      "coordinator"
+    ],
     "title": "Kierowca C+E – cysterna paliwowa ADR (Niemcy – Polska – Benelux)",
     "summary": "Stałe trasy cysterną paliwową z bazy w Wustermark (Niemcy). Umowa o pracę, możliwy system 3 tygodnie pracy / 1 tydzień w domu.",
     "duties": [
@@ -149,30 +155,30 @@
     ]
   },
   "pt": {
-    "title": "Motorista C+E – caminhão-tanque de combustível ADR (Alemanha – Polônia – Benelux)",
-    "summary": "Rotas fixas com caminhão-tanque de combustível a partir da base em Wustermark (Alemanha). Contrato de trabalho; possível escala de 3 semanas de trabalho / 1 semana em casa.",
+    "title": "Motorista C+E – camião-cisterna de combustível ADR (Alemanha – Polónia – Benelux)",
+    "summary": "Rotas fixas com camião-cisterna de combustível a partir da base em Wustermark (Alemanha). Contrato de trabalho; possível regime de 3 semanas de trabalho / 1 semana em casa.",
     "duties": [
-      "Transportar combustível em caminhão-tanque em rotas internacionais",
-      "Sair da base em Wustermark (Alemanha) com o tanque vazio",
-      "Carregar combustível na Polônia (Rzeszów) ou em portos da Bélgica e da Holanda",
-      "Entregar ao cliente em Berlim ou retornar à base",
-      "Seguir as normas de transporte de cargas perigosas (ADR)",
-      "Cuidar da documentação de transporte (CMR)",
-      "Verificar o veículo e zelar pelo equipamento sob sua responsabilidade"
+      "Transportar combustível em camião-cisterna em rotas internacionais",
+      "Partir da base em Wustermark (Alemanha) com a cisterna vazia",
+      "Carregar combustível na Polónia (Rzeszów) ou em portos da Bélgica e dos Países Baixos",
+      "Entregar ao cliente em Berlim ou regressar à base",
+      "Cumprir as normas de transporte de mercadorias perigosas (ADR)",
+      "Tratar da documentação de transporte (CMR)",
+      "Verificar o veículo e zelar pelo equipamento confiado"
     ],
     "requirements": [
-      "Carteira de motorista categoria C+E (padrão europeu)",
+      "Carta de condução da categoria C+E (padrão europeu)",
       "Código 95 válido",
-      "Exames médico e psicotécnico em dia",
-      "Certificado ADR (transporte de combustível)",
-      "Experiência em transporte internacional — grande diferencial",
+      "Exames médicos e psicotécnicos em dia",
+      "Certificado ADR (transporte de combustíveis)",
+      "Experiência em transporte internacional — grande vantagem",
       "Conhecimento da documentação de transporte (CMR)"
     ],
     "offer": [],
     "conditions": [
-      "Trabalho conforme as regras de jornada dos motoristas e o tacógrafo",
+      "Trabalho de acordo com as regras de tempo de condução e o tacógrafo",
       "Normalmente 5 a 6 dias de trabalho por semana",
-      "Possível escala de 3 semanas de trabalho / 1 semana em casa",
+      "Possível regime de 3 semanas de trabalho / 1 semana em casa",
       "Apoio organizacional e acompanhamento de um coordenador"
     ]
   },

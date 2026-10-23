@@ -6,9 +6,18 @@
     "region": "lubelskie",
     "country": "PL",
     "datePosted": "2026-03-05",
-    "salary": { "min": 8400, "max": 9600, "unit": "month" },
+    "salary": {
+      "min": 8400,
+      "max": 9600,
+      "unit": "month"
+    },
     "contract": "",
-    "tags": ["housing", "transport", "meals", "coordinator"],
+    "tags": [
+      "housing",
+      "transport",
+      "meals",
+      "coordinator"
+    ],
     "title": "Pracownik linii ubojowej (wołowina)",
     "summary": "Stabilna praca w renomowanym zakładzie mięsnym. Bezpłatne posiłki i dojazd, zakwaterowanie z dopłatą pracodawcy.",
     "duties": [
@@ -125,23 +134,23 @@
   },
   "pt": {
     "title": "Trabalhador(a) de linha de abate (bovinos)",
-    "summary": "Trabalho estável em um frigorífico conceituado. Refeições e transporte gratuitos, moradia subsidiada pelo empregador.",
+    "summary": "Trabalho estável numa conceituada empresa da indústria da carne. Refeições e transporte gratuitos, alojamento comparticipado pelo empregador.",
     "duties": [
-      "Tarefas básicas nas etapas principais do abate de bovinos",
-      "Processamento inicial de carcaças bovinas conforme o processo de produção",
-      "Trabalho no posto designado da linha",
-      "Controle da qualidade do trabalho e do produto",
+      "Tarefas básicas nas principais fases do abate de bovinos",
+      "Transformação inicial de carcaças de bovino de acordo com o processo de produção",
+      "Trabalho no posto atribuído na linha",
+      "Controlo da qualidade do trabalho e do produto",
       "Acompanhar o ritmo da linha de produção",
-      "Seguir as normas de segurança e higiene"
+      "Cumprir as normas de segurança e higiene"
     ],
     "requirements": [],
     "offer": [
-      "Emprego estável em um frigorífico conceituado",
-      "Salário a partir de 8.400 PLN líquidos",
-      "Equipamentos e uniforme de trabalho",
-      "Moradia subsidiada pelo empregador",
+      "Emprego estável numa conceituada empresa da indústria da carne",
+      "Salário a partir de 8400 PLN líquidos",
+      "Equipamento e fardamento de trabalho",
+      "Alojamento comparticipado pelo empregador",
       "Refeições gratuitas todos os dias no trabalho",
-      "Transporte gratuito de ida e volta ao trabalho",
+      "Transporte gratuito de ida e volta para o trabalho",
       "Apoio e acompanhamento de um coordenador"
     ],
     "conditions": []

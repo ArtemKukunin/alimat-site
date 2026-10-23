@@ -12,8 +12,8 @@ export const LANGS = {
     routes: { jobs: 'jobs', candidates: 'candidates', apply: 'apply', employers: 'employers', contact: 'contact' } },
   es: { name: 'Español', short: 'ES', locale: 'es-ES', og: 'es_ES',
     routes: { jobs: 'ofertas-de-empleo', candidates: 'candidatos', apply: 'solicitar', employers: 'empresas', contact: 'contacto' } },
-  pt: { name: 'Português', short: 'PT', locale: 'pt-BR', og: 'pt_BR',
-    routes: { jobs: 'vagas', candidates: 'candidatos', apply: 'candidatar', employers: 'empresas', contact: 'contato' } },
+  pt: { name: 'Português', short: 'PT', locale: 'pt-PT', og: 'pt_PT',
+    routes: { jobs: 'vagas', candidates: 'candidatos', apply: 'candidatar', employers: 'empresas', contact: 'contacto' } },
   ro: { name: 'Română', short: 'RO', locale: 'ro-RO', og: 'ro_RO',
     routes: { jobs: 'locuri-de-munca', candidates: 'candidati', apply: 'aplica', employers: 'angajatori', contact: 'contact' } },
 };

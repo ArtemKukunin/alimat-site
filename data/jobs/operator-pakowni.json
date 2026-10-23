@@ -6,7 +6,10 @@
     "region": "łódzkie",
     "country": "PL",
     "datePosted": "2026-09-29",
-    "salary": { "min": 28, "unit": "hour" },
+    "salary": {
+      "min": 28,
+      "unit": "hour"
+    },
     "contract": "",
     "tags": [],
     "title": "Operator pakowni",
@@ -90,15 +93,15 @@
   },
   "pt": {
     "title": "Operador(a) de linha de embalagem",
-    "summary": "Operação da linha de embalagem e dos sistemas de etiquetagem em uma fábrica em Kutno. Trabalho fixo, tempo integral.",
+    "summary": "Operação da linha de embalagem e dos sistemas de etiquetagem numa fábrica em Kutno. Trabalho fixo, a tempo inteiro.",
     "duties": [
       "Operar e acompanhar a linha de produção e as máquinas de embalagem",
-      "Operar impressoras e sistemas de etiquetagem, conferindo os dados das etiquetas",
-      "Conferir a embalagem, a etiquetagem e a quantidade de produto",
-      "Acompanhar os pedidos e o plano de produção",
-      "Reagir a irregularidades e comunicar falhas",
-      "Trabalhar em conjunto com produção, armazém, controle de qualidade e manutenção",
-      "Seguir as normas de segurança do trabalho, APPCC (HACCP) e qualidade"
+      "Operar impressoras e sistemas de etiquetagem, verificando os dados das etiquetas",
+      "Verificar a embalagem, a etiquetagem e a quantidade de produto",
+      "Acompanhar as encomendas e o plano de produção",
+      "Reagir a anomalias e comunicar avarias",
+      "Trabalhar em conjunto com a produção, o armazém, o controlo de qualidade e a manutenção",
+      "Cumprir as normas de segurança no trabalho, HACCP e qualidade"
     ],
     "requirements": [],
     "offer": [],
