@@ -1,6 +1,6 @@
 === uk
 slug: pratsivnyk-vash-naibilshyi-kapital-chastyna-2
-title: Працівник — ваш найбільший капітал. Про що пам’ятати під час найму? Частина II
+title: Працівник — ваш найбільший капітал: поради з найму (ч. II)
 description: Мотивація, баланс роботи та життя, зворотний зв’язок і утримання — як будувати довгострокові стосунки з працівниками та зберегти найкращі таланти.
 ---
 <h2>Мотивація і залученість — як будувати довгострокові стосунки?</h2>
@@ -76,7 +76,7 @@ description: Мотивація, баланс роботи та життя, зв
 <p>Напишіть нам: kontakt@alimatgroup.com<br>Телефонуйте: +48 517 654 267</p>
 === ru
 slug: rabotnik-vash-glavnyy-kapital-chast-2
-title: Работник — ваш главный капитал. О чём помнить при найме? Часть II
+title: Работник — ваш главный капитал: советы по найму (ч. II)
 description: Мотивация, баланс работы и жизни, обратная связь и удержание — как строить долгосрочные отношения с сотрудниками и сохранить лучшие таланты.
 ---
 <h2>Мотивация и вовлечённость — как строить долгосрочные отношения?</h2>
@@ -152,7 +152,7 @@ description: Мотивация, баланс работы и жизни, обр
 <p>Напишите нам: kontakt@alimatgroup.com<br>Звоните: +48 517 654 267</p>
 === en
 slug: your-employees-are-your-greatest-asset-part-2
-title: Your employees are your greatest asset. What to remember when hiring — part II
+title: Employees are your greatest asset: hiring tips, part II
 description: Motivation, work-life balance, feedback and retention — how to build long-term relationships with employees and keep your best talent.
 ---
 <h2>Motivation and engagement — how to build long-term relationships</h2>
@@ -228,7 +228,7 @@ description: Motivation, work-life balance, feedback and retention — how to bu
 <p>Email us: kontakt@alimatgroup.com<br>Call: +48 517 654 267</p>
 === es
 slug: el-empleado-es-tu-mayor-capital-parte-2
-title: El empleado es tu mayor capital. Qué tener en cuenta al contratar — parte II
+title: Tu plantilla, tu mayor capital: claves al contratar (II)
 description: Motivación, conciliación, feedback y retención: cómo crear relaciones duraderas con los empleados y conservar el mejor talento.
 ---
 <h2>Motivación y compromiso: cómo crear relaciones a largo plazo</h2>
@@ -304,7 +304,7 @@ description: Motivación, conciliación, feedback y retención: cómo crear rela
 <p>Escríbenos: kontakt@alimatgroup.com<br>Llámanos: +48 517 654 267</p>
 === pt
 slug: o-trabalhador-e-o-seu-maior-capital-parte-2
-title: O trabalhador é o seu maior capital. O que ter em conta ao contratar — parte II
+title: O trabalhador, o seu maior capital: contratar bem (II)
 description: Motivação, equilíbrio entre vida pessoal e profissional, feedback e retenção — como criar relações duradouras com os trabalhadores e reter os melhores talentos.
 ---
 <h2>Motivação e envolvimento — como criar relações duradouras?</h2>
@@ -380,7 +380,7 @@ description: Motivação, equilíbrio entre vida pessoal e profissional, feedbac
 <p>Escreva-nos: kontakt@alimatgroup.com<br>Ligue: +48 517 654 267</p>
 === ro
 slug: angajatul-este-cel-mai-mare-capital-partea-2
-title: Angajatul este cel mai mare capital al tău. La ce să fii atent când angajezi — partea a II-a
+title: Angajatul, cel mai mare capital: sfaturi de angajare (II)
 description: Motivație, echilibru viață–muncă, feedback și retenție – cum construiești relații pe termen lung cu angajații și păstrezi cele mai bune talente.
 ---
 <h2>Motivație și implicare – cum construiești relații pe termen lung?</h2>

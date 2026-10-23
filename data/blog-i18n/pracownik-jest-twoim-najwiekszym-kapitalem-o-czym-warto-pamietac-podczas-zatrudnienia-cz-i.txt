@@ -1,6 +1,6 @@
 === uk
 slug: pratsivnyk-vash-naibilshyi-kapital-chastyna-1
-title: Працівник — ваш найбільший капітал. Про що пам’ятати під час найму? Частина I
+title: Працівник — ваш найбільший капітал: поради з найму (ч. I)
 description: Як рекрутинг, вдала вакансія та продуманий онбординг впливають на лояльність працівників і результати компанії. Практичний посібник для роботодавців.
 ---
 <h2>Людський капітал як фундамент розвитку компанії</h2>
@@ -136,7 +136,7 @@ description: Як рекрутинг, вдала вакансія та прод�
 <p>Напишіть нам: kontakt@alimatgroup.com<br>Телефонуйте: +48 517 654 267</p>
 === ru
 slug: rabotnik-vash-glavnyy-kapital-chast-1
-title: Работник — ваш главный капитал. О чём помнить при найме? Часть I
+title: Работник — ваш главный капитал: советы по найму (ч. I)
 description: Как рекрутинг, удачная вакансия и продуманный онбординг влияют на лояльность сотрудников и результаты компании. Практическое руководство для работодателей.
 ---
 <h2>Человеческий капитал как фундамент развития компании</h2>
@@ -272,7 +272,7 @@ description: Как рекрутинг, удачная вакансия и пр�
 <p>Напишите нам: kontakt@alimatgroup.com<br>Звоните: +48 517 654 267</p>
 === en
 slug: your-employees-are-your-greatest-asset-part-1
-title: Your employees are your greatest asset. What to remember when hiring — part I
+title: Employees are your greatest asset: hiring tips, part I
 description: How recruitment, a well-written job ad and a planned onboarding process affect employee loyalty and company results. A practical guide for employers.
 ---
 <h2>Human capital as the foundation of company growth</h2>
@@ -408,7 +408,7 @@ description: How recruitment, a well-written job ad and a planned onboarding pro
 <p>Email us: kontakt@alimatgroup.com<br>Call: +48 517 654 267</p>
 === es
 slug: el-empleado-es-tu-mayor-capital-parte-1
-title: El empleado es tu mayor capital. Qué tener en cuenta al contratar — parte I
+title: Tu plantilla, tu mayor capital: claves al contratar (I)
 description: Cómo la selección, una buena oferta de empleo y un onboarding bien planificado influyen en la lealtad de la plantilla y en los resultados. Guía práctica para empresas.
 ---
 <h2>El capital humano como base del crecimiento de la empresa</h2>
@@ -544,7 +544,7 @@ description: Cómo la selección, una buena oferta de empleo y un onboarding bie
 <p>Escríbenos: kontakt@alimatgroup.com<br>Llámanos: +48 517 654 267</p>
 === pt
 slug: o-trabalhador-e-o-seu-maior-capital-parte-1
-title: O trabalhador é o seu maior capital. O que ter em conta ao contratar — parte I
+title: O trabalhador, o seu maior capital: contratar bem (I)
 description: Como o recrutamento, um bom anúncio de emprego e um onboarding bem planeado influenciam a lealdade dos trabalhadores e os resultados. Guia prático para empresas.
 ---
 <h2>O capital humano como base do crescimento da empresa</h2>
@@ -680,7 +680,7 @@ description: Como o recrutamento, um bom anúncio de emprego e um onboarding bem
 <p>Escreva-nos: kontakt@alimatgroup.com<br>Ligue: +48 517 654 267</p>
 === ro
 slug: angajatul-este-cel-mai-mare-capital-partea-1
-title: Angajatul este cel mai mare capital al tău. La ce să fii atent când angajezi — partea I
+title: Angajatul, cel mai mare capital: sfaturi de angajare (I)
 description: Cum influențează recrutarea, un anunț bine scris și un onboarding bine planificat loialitatea angajaților și rezultatele firmei. Ghid practic pentru angajatori.
 ---
 <h2>Capitalul uman ca fundament al dezvoltării firmei</h2>
