@@ -42,6 +42,7 @@ function rootPage(settings, ui) {
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(t('home_title'))}</title>
+${process.env.SITE_NOINDEX ? '<meta name="robots" content="noindex, nofollow">' : ''}
 <meta name="description" content="${esc(t('home_desc'))}">
 <link rel="canonical" href="${settings.siteUrl}${BASE}/">
 ${alt}
@@ -155,7 +156,9 @@ export function build() {
   writeFile(path.join(DIST, 'index.html'), rootPage(settings, ui));
   writeFile(path.join(DIST, '404.html'), notFoundPage(ui));
   writeFile(path.join(DIST, 'sitemap.xml'), sitemap(settings, indexable));
-  writeFile(path.join(DIST, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: ${settings.siteUrl}${BASE}/sitemap.xml\n`);
+  writeFile(path.join(DIST, 'robots.txt'), process.env.SITE_NOINDEX
+    ? 'User-agent: *\nDisallow: /\n'
+    : `User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: ${settings.siteUrl}${BASE}/sitemap.xml\n`);
   const redirectMap = redirects(jobs);
   writeFile(path.join(DIST, '_redirects'), netlifyRedirects(redirectMap));
   for (const [from, to] of redirectMap) {

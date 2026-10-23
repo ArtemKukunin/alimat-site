@@ -63,7 +63,7 @@ function head(ctx, { title, description, path, page, sub, jsonld, noindex }) {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(description)}">
-${noindex ? '<meta name="robots" content="noindex, follow">' : ''}
+${process.env.SITE_NOINDEX ? '<meta name="robots" content="noindex, nofollow">' : noindex ? '<meta name="robots" content="noindex, follow">' : ''}
 <link rel="canonical" href="${url}">
 ${alt}
 <link rel="alternate" hreflang="x-default" href="${settings.siteUrl}${BASE}/">
