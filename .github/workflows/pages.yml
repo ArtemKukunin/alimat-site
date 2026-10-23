@@ -18,14 +18,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-      - run: node tools/check.js
+      # Production switch: set the repository variable CUSTOM_DOMAIN (e.g. alimatgroup.com)
+      # in Settings → Secrets and variables → Actions → Variables. Without it the site
+      # builds as a noindex test copy at https://<owner>.github.io/<repo>/.
+      - name: Build target
         env:
-          # Project site lives at https://<owner>.github.io/<repo>/.
-          # After attaching a custom domain (e.g. alimatgroup.com), delete these two lines.
-          SITE_BASE: /${{ github.event.repository.name }}
-          SITE_URL: https://${{ github.repository_owner }}.github.io
-          # Test copy on github.io must not be indexed (avoids duplicate content after moving to alimatgroup.com).
-          SITE_NOINDEX: "1"
+          DOMAIN: ${{ vars.CUSTOM_DOMAIN }}
+        run: |
+          if [ -n "$DOMAIN" ]; then
+            echo "SITE_URL=https://$DOMAIN" >> "$GITHUB_ENV"
+          else
+            echo "SITE_BASE=/${{ github.event.repository.name }}" >> "$GITHUB_ENV"
+            echo "SITE_URL=https://${{ github.repository_owner }}.github.io" >> "$GITHUB_ENV"
+            echo "SITE_NOINDEX=1" >> "$GITHUB_ENV"
+          fi
+      - run: node tools/check.js
+      - name: CNAME
+        if: ${{ vars.CUSTOM_DOMAIN != '' }}
+        run: echo "${{ vars.CUSTOM_DOMAIN }}" > dist/CNAME
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist
