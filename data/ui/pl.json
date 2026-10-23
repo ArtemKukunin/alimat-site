@@ -116,13 +116,13 @@
   "apply_title": "Zgłoś się do pracy w Polsce – szybka aplikacja | Alimat Group",
   "apply_desc": "Zgłoś się do pracy w 2 minuty. Wystarczy imię i telefon — rekruter oddzwoni i dobierze dla Ciebie ofertę.",
   "apply_h1": "Zgłoś się do pracy",
-  "apply_lead": "Wystarczy imię i numer telefonu. Rekruter skontaktuje się z Tobą i dobierze ofertę.",
+  "apply_lead": "Wystarczy imię i numer telefonu. Możesz też dodać CV — nawet jeśli teraz nie ma oferty dla Ciebie, zapiszemy Cię w bazie kandydatów.",
   "f_name": "Imię i nazwisko",
   "f_phone": "Telefon (z kodem kraju)",
   "f_messenger": "Jak najlepiej się z Tobą kontaktować?",
   "f_phone_call": "Telefon",
   "f_job": "Oferta",
-  "f_job_any": "Dowolna — dobierzcie mi pracę",
+  "f_job_any": "Brak pasującej oferty — dodajcie mnie do bazy kandydatów",
   "f_more": "Dodaj więcej informacji",
   "f_country": "Obywatelstwo",
   "f_email": "E-mail",
@@ -191,5 +191,11 @@
   "alt_pay": "Pracownik zakładu mięsnego przy pracy",
   "alt_coord": "Pracownik produkcji w kasku w hali zakładu",
   "alt_here": "Młodzi pracownicy rozmawiają w przerwie",
-  "alt_cand": "Kandydatka przegląda oferty pracy na laptopie"
+  "alt_cand": "Kandydatka przegląda oferty pracy na laptopie",
+  "f_sectors": "Jaka praca Cię interesuje?",
+  "cv_t": "Nie ma oferty dla Ciebie?",
+  "cv_d": "Zostaw zgłoszenie lub CV — dodamy Cię do bazy kandydatów i zadzwonimy, gdy pojawi się pasująca praca.",
+  "cv_btn": "Zostaw CV",
+  "f_cv_wa": "CV: wyślę plik w tym czacie",
+  "f_wa_cv": "Otwieramy WhatsApp — wyślij wiadomość i załącz plik CV w czacie (ikona spinacza)."
 }

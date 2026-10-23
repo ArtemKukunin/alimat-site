@@ -10,7 +10,7 @@ export function renderContact(ctx) {
   const crumbs = [{ name: t('breadcrumb_home'), href: pageUrl(lang, 'home') }, { name: t('contact_h1'), href: pageUrl(lang, 'contact') }];
   const fields = `
   ${input(t, { name: 'name', label: t('f_name'), required: true, autocomplete: 'name' })}
-  ${input(t, { name: 'phone', label: t('f_phone'), type: 'tel', required: true, autocomplete: 'tel', attrs: 'inputmode="tel" pattern="[+0-9 ()-]{7,20}"' })}
+  ${input(t, { name: 'phone', label: t('f_phone'), type: 'tel', required: true, autocomplete: 'tel', attrs: 'inputmode="tel" pattern="[+0-9 \\(\\)\\-]{7,20}"' })}
   ${input(t, { name: 'email', label: t('f_email'), type: 'email', autocomplete: 'email' })}
   ${textarea(t, { name: 'message', label: t('f_message'), required: true })}`;
   const body = `<section class="page-hero"><div class="wrap">

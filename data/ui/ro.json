@@ -116,13 +116,13 @@
   "apply_title": "Aplică pentru un loc de muncă în Polonia – aplicare rapidă | Alimat Group",
   "apply_desc": "Aplică în 2 minute. Doar numele și telefonul — un recrutor te sună înapoi și îți găsește o ofertă.",
   "apply_h1": "Aplică pentru un loc de muncă",
-  "apply_lead": "Ne trebuie doar numele și numărul tău de telefon. Un recrutor te va contacta și îți va găsi o ofertă.",
+  "apply_lead": "Sunt suficiente numele și numărul de telefon. Poți adăuga și CV-ul — chiar dacă acum nu există o ofertă pentru tine, te păstrăm în baza de candidați.",
   "f_name": "Nume și prenume",
   "f_phone": "Telefon (cu prefixul țării)",
   "f_messenger": "Cum preferi să te contactăm?",
   "f_phone_call": "Apel telefonic",
   "f_job": "Oferta",
-  "f_job_any": "Oricare — găsiți-mi un loc de muncă",
+  "f_job_any": "Nicio ofertă potrivită — adăugați-mă în baza de candidați",
   "f_more": "Adaugă mai multe informații",
   "f_country": "Cetățenie",
   "f_email": "E-mail",
@@ -191,5 +191,11 @@
   "alt_pay": "Lucrător într-o fabrică de carne",
   "alt_coord": "Muncitor cu cască în hala de producție",
   "alt_here": "Tineri lucrători discutând în pauză",
-  "alt_cand": "Candidată care caută oferte de muncă pe laptop"
+  "alt_cand": "Candidată care caută oferte de muncă pe laptop",
+  "f_sectors": "Ce fel de muncă te interesează?",
+  "cv_t": "Nu există o ofertă pentru tine?",
+  "cv_d": "Lasă o cerere sau CV-ul — te adăugăm în baza noastră de candidați și te sunăm imediat ce apare un loc de muncă potrivit.",
+  "cv_btn": "Lasă CV-ul",
+  "f_cv_wa": "CV: trimit fișierul în acest chat",
+  "f_wa_cv": "Deschidem WhatsApp — trimite mesajul și atașează CV-ul în chat (pictograma agrafă)."
 }

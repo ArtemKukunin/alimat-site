@@ -76,6 +76,13 @@ const emptyBox = (ctx, hidden) => `<div class="empty" id="jobs-empty"${hidden ? 
     <a class="btn btn-pill btn-orange" href="${pageUrl(ctx.lang, 'apply')}">${esc(ctx.t('cta_apply_long'))}</a>
   </div>`;
 
+/** "No job for you? Leave your CV" — for candidates without a matching offer. */
+export const cvBanner = (ctx) => `<section class="wrap block-sm"><div class="cv-banner">
+  ${icon('doc', 'ic ic-lg')}
+  <div><h2>${esc(ctx.t('cv_t'))}</h2><p>${esc(ctx.t('cv_d'))}</p></div>
+  <a class="btn btn-pill btn-orange" href="${pageUrl(ctx.lang, 'apply')}#cv">${esc(ctx.t('cv_btn'))}</a>
+</div></section>`;
+
 export function renderJobsList(ctx) {
   const { lang, t, jobs } = ctx;
   const list = activeJobs(jobs);
@@ -98,7 +105,8 @@ export function renderJobsList(ctx) {
   <p class="jobs-count" id="jobs-count" aria-live="polite" data-template="${esc(t('jobs_count'))}">${esc(t('jobs_count', { n: list.length }))}</p>
   <div class="job-grid" id="job-grid">${list.map((j) => jobCard(ctx, j)).join('')}</div>
   ${emptyBox(ctx, true)}
-</section>`;
+</section>
+${cvBanner(ctx)}`;
   return layout(ctx, {
     page: 'jobs', title: t('jobs_title'), description: t('jobs_desc'), body,
     jsonld: [breadcrumbLd(ctx.settings, crumbs), itemListLd(ctx, list)],
@@ -131,6 +139,7 @@ export function renderJobSection(ctx, cat) {
   <p class="jobs-count">${esc(t('jobs_count', { n: list.length }))}</p>
   ${list.length ? `<div class="job-grid">${list.map((j) => jobCard(ctx, j)).join('')}</div>` : emptyBox(ctx, false)}
 </section>
+${list.length ? cvBanner(ctx) : ''}
 <section class="wrap block-sm">
   <h2>${esc(t('other_sections'))}</h2>
   ${sectionTiles(ctx, cat)}
@@ -233,7 +242,8 @@ export function renderJobDetail(ctx, job) {
     </div>
   </aside>
 </div>
-${similar.length ? `<section class="wrap similar"><h2>${esc(t('similar'))}</h2><div class="job-grid">${similar.map((j) => jobCard(ctx, j)).join('')}</div></section>` : ''}`;
+${similar.length ? `<section class="wrap similar"><h2>${esc(t('similar'))}</h2><div class="job-grid">${similar.map((j) => jobCard(ctx, j)).join('')}</div></section>` : ''}
+${cvBanner(ctx)}`;
   return layout(ctx, {
     page: 'jobs', sub: job.id,
     title: fitTitle(t('job_meta_title', { title: tx.title, city: loc }), `${tx.title} – ${loc}`, tx.title),

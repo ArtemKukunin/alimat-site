@@ -116,13 +116,13 @@
   "apply_title": "Apply for a Job in Poland – Quick Application | Alimat Group",
   "apply_desc": "Apply for a job in 2 minutes. Just your name and phone number — a recruiter will call you back and match you with a job.",
   "apply_h1": "Apply for a job",
-  "apply_lead": "Just your name and phone number. A recruiter will contact you and match you with a job.",
+  "apply_lead": "Your name and phone number are enough. You can also add your CV — even if there is no job for you right now, we will keep you in our candidate database.",
   "f_name": "Full name",
   "f_phone": "Phone (with country code)",
   "f_messenger": "How should we contact you?",
   "f_phone_call": "Phone call",
   "f_job": "Job",
-  "f_job_any": "Any — find me a job",
+  "f_job_any": "No matching offer — add me to the candidate database",
   "f_more": "Add more details",
   "f_country": "Citizenship",
   "f_email": "Email",
@@ -191,5 +191,11 @@
   "alt_pay": "Meat plant worker at work",
   "alt_coord": "Production worker in a hard hat on the factory floor",
   "alt_here": "Young workers chatting during a break",
-  "alt_cand": "Candidate browsing job offers on a laptop"
+  "alt_cand": "Candidate browsing job offers on a laptop",
+  "f_sectors": "What kind of work are you interested in?",
+  "cv_t": "No job for you right now?",
+  "cv_d": "Leave an application or your CV — we will add you to our candidate database and call you as soon as a suitable job comes up.",
+  "cv_btn": "Leave your CV",
+  "f_cv_wa": "CV: I will send the file in this chat",
+  "f_wa_cv": "Opening WhatsApp — send the message and attach your CV file in the chat (paperclip icon)."
 }

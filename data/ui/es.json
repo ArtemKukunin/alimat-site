@@ -116,13 +116,13 @@
   "apply_title": "Postúlate a un empleo en Polonia – solicitud rápida | Alimat Group",
   "apply_desc": "Postúlate en 2 minutos. Solo tu nombre y teléfono: un reclutador te llamará y te propondrá una oferta.",
   "apply_h1": "Postúlate a un empleo",
-  "apply_lead": "Solo necesitamos tu nombre y tu teléfono. Un reclutador se pondrá en contacto contigo y te propondrá una oferta.",
+  "apply_lead": "Basta con tu nombre y tu teléfono. También puedes añadir tu CV: aunque ahora no haya oferta para ti, te guardaremos en nuestra base de candidatos.",
   "f_name": "Nombre y apellidos",
   "f_phone": "Teléfono (con prefijo del país)",
   "f_messenger": "¿Cómo prefieres que te contactemos?",
   "f_phone_call": "Llamada",
   "f_job": "Oferta",
-  "f_job_any": "Cualquiera: buscadme un empleo",
+  "f_job_any": "No hay oferta adecuada — añadidme a la base de candidatos",
   "f_more": "Añadir más información",
   "f_country": "Nacionalidad",
   "f_email": "Correo electrónico",
@@ -191,5 +191,11 @@
   "alt_pay": "Trabajador de una planta cárnica",
   "alt_coord": "Operario con casco en la planta de producción",
   "alt_here": "Jóvenes trabajadores charlando en un descanso",
-  "alt_cand": "Candidata revisando ofertas de empleo en el portátil"
+  "alt_cand": "Candidata revisando ofertas de empleo en el portátil",
+  "f_sectors": "¿Qué tipo de trabajo te interesa?",
+  "cv_t": "¿No hay oferta para ti?",
+  "cv_d": "Deja tu solicitud o tu CV: te añadiremos a nuestra base de candidatos y te llamaremos en cuanto surja un trabajo adecuado.",
+  "cv_btn": "Dejar mi CV",
+  "f_cv_wa": "CV: enviaré el archivo en este chat",
+  "f_wa_cv": "Abrimos WhatsApp: envía el mensaje y adjunta tu CV en el chat (icono del clip)."
 }

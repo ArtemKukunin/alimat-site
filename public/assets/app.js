@@ -115,7 +115,7 @@
         Array.prototype.forEach.call(form.elements, function (el) {
           if (!el.willValidate || el.type === 'hidden') return;
           var bad = !el.checkValidity();
-          if (el.type === 'checkbox') el.closest('.check').classList.toggle('invalid', bad);
+          if (el.type === 'checkbox' || el.type === 'radio') { if (el.closest('.check')) el.closest('.check').classList.toggle('invalid', bad); }
           else el.setAttribute('aria-invalid', String(bad));
           if (bad && !firstBad) firstBad = el;
         });
@@ -144,6 +144,8 @@
           }
           lines.push(v);
         });
+        var cv = form.querySelector('input[type="file"]');
+        if (cv && cv.files[0]) lines.push(form.getAttribute('data-cv-line'));
         return lines.join('\n');
       }
 
@@ -155,7 +157,8 @@
         var endpoint = form.getAttribute('action');
 
         if (!endpoint) {
-          setStatus(form.getAttribute('data-msg-wa'), 'ok');
+          var hasCv = form.querySelector('input[type="file"]') && form.querySelector('input[type="file"]').files[0];
+          setStatus(form.getAttribute(hasCv ? 'data-msg-wa-cv' : 'data-msg-wa'), 'ok');
           window.open('https://wa.me/' + form.getAttribute('data-wa') + '?text=' + encodeURIComponent(summary(data)), '_blank', 'noopener');
           return;
         }

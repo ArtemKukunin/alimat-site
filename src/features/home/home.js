@@ -2,7 +2,7 @@ import { pageUrl, asset, BASE } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
 import { layout, contactButtons } from '../../core/layout.js';
-import { jobCard, activeJobs, filterOptions, filterSelects, sectionTiles } from '../jobs/jobs.js';
+import { jobCard, activeJobs, filterOptions, filterSelects, sectionTiles, cvBanner } from '../jobs/jobs.js';
 
 export const PERKS = [
   ['legal', 'shield'], ['docs', 'doc'], ['housing', 'home'],
@@ -61,6 +61,7 @@ export function renderHome(ctx) {
   <div class="block-head"><h2>${esc(t('latest_jobs'))}</h2><a class="link-arrow" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))} ${icon('arrow')}</a></div>
   <div class="job-grid">${latest.map((j) => jobCard(ctx, j)).join('')}</div>
 </section>
+${cvBanner(ctx)}
 
 <section class="wrap block">
   <h2 class="center-title">${esc(t('perks_title'))}</h2>

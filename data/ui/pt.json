@@ -116,13 +116,13 @@
   "apply_title": "Candidate-se a uma vaga na Polônia – inscrição rápida | Alimat Group",
   "apply_desc": "Candidate-se em 2 minutos. Basta nome e telefone — um recrutador liga de volta e encontra uma vaga para você.",
   "apply_h1": "Candidate-se a uma vaga",
-  "apply_lead": "Basta seu nome e telefone. Um recrutador entrará em contato e encontrará uma vaga para você.",
+  "apply_lead": "Basta o nome e o número de telefone. Também podes juntar o CV — mesmo que agora não haja oferta para ti, ficas na nossa base de candidatos.",
   "f_name": "Nome completo",
   "f_phone": "Telefone (com código do país)",
   "f_messenger": "Como prefere que entremos em contato?",
   "f_phone_call": "Ligação",
   "f_job": "Vaga",
-  "f_job_any": "Qualquer uma — encontrem uma vaga para mim",
+  "f_job_any": "Nenhuma oferta adequada — adicionem-me à base de candidatos",
   "f_more": "Adicionar mais informações",
   "f_country": "Nacionalidade",
   "f_email": "E-mail",
@@ -191,5 +191,11 @@
   "alt_pay": "Trabalhador de frigorífico em serviço",
   "alt_coord": "Operário de capacete na fábrica",
   "alt_here": "Jovens trabalhadores conversando no intervalo",
-  "alt_cand": "Candidata vendo vagas no notebook"
+  "alt_cand": "Candidata vendo vagas no notebook",
+  "f_sectors": "Que tipo de trabalho te interessa?",
+  "cv_t": "Não há oferta para ti?",
+  "cv_d": "Deixa a tua candidatura ou CV — vamos adicionar-te à nossa base de candidatos e ligamos-te assim que surgir um trabalho adequado.",
+  "cv_btn": "Deixar o CV",
+  "f_cv_wa": "CV: vou enviar o ficheiro neste chat",
+  "f_wa_cv": "A abrir o WhatsApp — envia a mensagem e anexa o teu CV no chat (ícone do clipe)."
 }
