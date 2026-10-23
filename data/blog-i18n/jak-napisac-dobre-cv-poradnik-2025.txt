@@ -1,0 +1,408 @@
+=== uk
+slug: yak-napysaty-dobre-cv
+title: Як підготувати CV, яке приверне увагу рекрутера? Повний посібник крок за кроком
+description: Дізнайтеся, як крок за кроком підготувати професійне CV. Що має містити добре резюме і як виділитися серед інших кандидатів.
+---
+<h2>Чому варто добре підготувати своє CV?</h2>
+<p>Шукаєте нову роботу? Перший крок — підготувати або оновити своє <strong>CV</strong>. Саме цей документ вирішує, чи запросять вас на співбесіду.<br>Добре написане <strong>резюме (curriculum vitae)</strong> дає змогу просто і зрозуміло показати ваш <strong>професійний досвід</strong>, <strong>навички</strong> й <strong>досягнення</strong>. Це не просто формальність — це ваша <strong>професійна візитівка</strong> і <strong>ключ до успіху на ринку праці</strong>.</p>
+<h2>Яким має бути добре і цінне CV?</h2>
+<p>Рекрутер витрачає на оцінку вашого резюме лише кілька секунд. Тому <strong>ваше CV має бути конкретним, зрозумілим і відповідати вакансії</strong>, на яку ви подаєтеся.<br>Не пишіть загальниками — покажіть, що знаєте, чого хочете, і що ваш досвід підходить для цієї посади.</p>
+<p>У самому верху розмістіть:</p>
+<ul><li>ім’я та прізвище,</li>
+<li>номер телефону,</li>
+<li>адресу e-mail,</li>
+<li>посилання на профіль у <strong>LinkedIn</strong>.</li>
+</ul>
+<p>Подбайте про професійну адресу e-mail (наприклад, <strong>imya.prizvyshche@domen.pl</strong>). Хоч як хочеться, краще використати саме таку адресу, а не з нікнеймом з улюбленої гри. Не забудьте також про свій профіль у LinkedIn: перевіряти кандидатів саме там уже стало стандартом. Тож приділіть трохи часу, щоб ваш профіль і CV були узгоджені й добре виглядали.</p>
+<h2>Як написати добре CV крок за кроком?</h2>
+<p>Почніть із міцного фундаменту. Кожне <strong>професійне CV</strong> складається з кількох незмінних елементів. Нижче — практичний посібник, як створити документ, що справить враження.</p>
+<h3>1. Заголовок і професійна назва</h3>
+<p>Крім контактних даних, на самому початку має бути ваша <strong>професійна назва</strong>, тобто хто ви і яку посаду обіймаєте чи обіймали (наприклад, «Спеціаліст із маркетингу», «Старший розробник Python»). Можна також коротко описати, що ви шукаєте і що пропонуєте роботодавцеві.</p>
+<h3>2. Контактні дані</h3>
+<p>Вкажіть повний набір контактних даних. Так рекрутер легко з вами зв’яжеться.</p>
+<h3>3. Професійне резюме</h3>
+<p>Не плутайте його з досвідом роботи. Це 2–4 речення, які мають привернути увагу і справити добре перше враження. Опишіть, хто ви, що вмієте і які маєте професійні цілі.<br>Приклад:</p>
+<blockquote><p>«Досвідчений фахівець із продажів із 5-річним стажем в інтернет-торгівлі. Ефективно вибудовую стосунки з клієнтами і виконую плани продажів. Зараз шукаю нових викликів у динамічній команді продажів».</p>
+</blockquote>
+<h3>4. Досвід роботи</h3>
+<p>Найважливіша частина вашого CV.<br>Перелічіть місця роботи від останнього до найдавнішого. Для кожного вкажіть:</p>
+<ul><li>назву компанії,</li>
+<li>посаду,</li>
+<li>період роботи,</li>
+<li>найважливіші обов’язки і досягнення.</li>
+</ul>
+<p>Описуйте досвід з огляду на нову посаду, на яку подаєтеся.</p>
+<h3>5. Освіта</h3>
+<p>Як і в досвіді роботи, перелічіть закінчені школи й навчальні заклади. Вкажіть назву закладу, спеціальність, ступінь і дату закінчення. Почніть з останнього етапу навчання.</p>
+<h3>6. Навички</h3>
+<p>Тут варто перелічити все, що може знадобитися на майбутній роботі. Зосередьтеся на тих, які, судячи з вакансії, потрібні рекрутерові чи роботодавцеві. Поділіть їх на:</p>
+<ul><li><strong>професійні (hard skills)</strong> — конкретні вміння, наприклад знання програм, мов програмування, посвідчення водія;</li>
+<li><strong>особистісні (soft skills)</strong> — наприклад, комунікабельність, стресостійкість, добра організація роботи.<br>Не забудьте вказати рівень знання іноземних мов.</li>
+</ul>
+<h3>7. Курси і тренінги</h3>
+<p>Перелічіть додаткові курси, сертифікати і тренінги. Вони показують, що ви інвестуєте у свій професійний розвиток, — це великий плюс для будь-якого роботодавця.</p>
+<h3>8. Інтереси та хобі</h3>
+<p>Короткий розділ, який допоможе вам вирізнитися серед інших кандидатів. Інтереси часто стають чудовою темою для розмови на співбесіді. Не розписуйте їх надто довго — оберіть кілька найцікавіших.</p>
+<h3>9. Клаузула RODO (згода на обробку даних)</h3>
+<p>Наприкінці додайте <strong>актуальну згоду на обробку персональних даних</strong>. Якщо в оголошенні вказано конкретний текст, скопіюйте його у свій документ. Для польських роботодавців клаузулу пишуть польською.</p>
+<p>Коротка версія клаузули (переклад: «Я даю згоду на обробку моїх персональних даних компанією (назва) з метою рекрутингу на посаду, на яку я подаюся»):</p>
+<blockquote><blockquote><p>Wyrażam zgodę na przetwarzanie moich danych osobowych przez (nazwa firmy) w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</p>
+</blockquote>
+<p>Розширена версія (з посиланням на польський закон про захист персональних даних і регламент ЄС 2016/679 — GDPR, польською RODO):</p>
+<blockquote><p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).</p>
+</blockquote>
+<p>Не забувайте про клаузулу. Без неї ваше CV, найімовірніше, не розглядатимуть, особливо в компаніях, де дані передаються між різними відділами. Не втрачайте свого шансу через дрібниці.</p>
+</blockquote>
+<figure>[img0]</figure>
+<h2>Фото в CV — чи варто додавати?</h2>
+<p>Хоча це не обов’язково, <strong>професійне фото в CV</strong> допоможе вас запам’ятати. Чимало роботодавців хочуть знати, з ким мають справу, і CV з фото вони точно запам’ятають краще. Оберіть нейтральне ділове фото доброї якості. Уникайте селфі й неформальних знімків.</p>
+<h2>Шаблон CV — як має виглядати ваше резюме?</h2>
+<p>Зовнішній вигляд має величезне значення. <strong>Охайне і зрозуміле CV</strong> легше сприймається.<br>Можна створити його самостійно або скористатися готовими шаблонами, наприклад у <strong>Canva</strong>, <strong>MS Word</strong> чи <strong>Google Docs</strong>.<br>Пам’ятайте:</p>
+<ul><li>робіть однакові відступи між розділами,</li>
+<li>використовуйте прості, читабельні шрифти,</li>
+<li>найкраще вміститися на одній сторінці (максимум на двох).</li>
+</ul>
+<h2>Якою мовою писати CV?</h2>
+<p>Якщо ви подаєтеся до польської компанії за польським оголошенням, підготуйте <strong>CV польською</strong>.<br>Якщо ж посада чи оголошення англійською — створіть <strong>CV англійською (English CV)</strong>.<br>Так ви покажете знання мови і професійний підхід до рекрутингу.</p>
+<h2>Підсумок: ваше CV — це інвестиція в майбутнє</h2>
+<p>Підготувати <strong>добре CV</strong> нескладно, якщо знаєте, на що звернути увагу.<br>Скористайтеся цим посібником, оберіть відповідний шаблон і покажіть себе з найкращого боку.<br>Ваша нова робота ближче, ніж ви думаєте!</p>
+=== ru
+slug: kak-napisat-khoroshee-cv
+title: Как подготовить CV, которое привлечёт внимание рекрутера? Полное пошаговое руководство
+description: Узнайте, как шаг за шагом подготовить профессиональное CV. Что должно быть в хорошем резюме и как выделиться среди других кандидатов.
+---
+<h2>Почему стоит хорошо подготовить своё CV?</h2>
+<p>Ищете новую работу? Первый шаг — подготовить или обновить своё <strong>CV</strong>. Именно этот документ решает, пригласят ли вас на собеседование.<br>Хорошо написанное <strong>резюме (curriculum vitae)</strong> позволяет просто и понятно показать ваш <strong>профессиональный опыт</strong>, <strong>навыки</strong> и <strong>достижения</strong>. Это не просто формальность — это ваша <strong>профессиональная визитка</strong> и <strong>ключ к успеху на рынке труда</strong>.</p>
+<h2>Каким должно быть хорошее и ценное CV?</h2>
+<p>Рекрутер тратит на оценку вашего резюме всего несколько секунд. Поэтому <strong>ваше CV должно быть конкретным, понятным и соответствовать вакансии</strong>, на которую вы откликаетесь.<br>Не пишите общими словами — покажите, что знаете, чего хотите, и что ваш опыт подходит для этой должности.</p>
+<p>В самом верху разместите:</p>
+<ul><li>имя и фамилию,</li>
+<li>номер телефона,</li>
+<li>адрес e-mail,</li>
+<li>ссылку на профиль в <strong>LinkedIn</strong>.</li>
+</ul>
+<p>Позаботьтесь о профессиональном адресе e-mail (например, <strong>imya.familiya@domen.pl</strong>). Как бы ни хотелось, лучше использовать именно такой адрес, а не с ником из любимой игры. Не забудьте и о своём профиле в LinkedIn: проверять кандидатов именно там уже стало стандартом. Поэтому уделите немного времени, чтобы ваш профиль и CV были согласованы и хорошо выглядели.</p>
+<h2>Как написать хорошее CV шаг за шагом?</h2>
+<p>Начните с прочного фундамента. Каждое <strong>профессиональное CV</strong> состоит из нескольких неизменных элементов. Ниже — практическое руководство, как создать документ, который произведёт впечатление.</p>
+<h3>1. Заголовок и профессиональное название</h3>
+<p>Помимо контактных данных, в самом начале должно быть ваше <strong>профессиональное название</strong>, то есть кто вы и какую должность занимаете или занимали (например, «Специалист по маркетингу», «Старший разработчик Python»). Можно также кратко описать, что вы ищете и что предлагаете работодателю.</p>
+<h3>2. Контактные данные</h3>
+<p>Укажите полный набор контактных данных. Так рекрутер легко с вами свяжется.</p>
+<h3>3. Профессиональное резюме</h3>
+<p>Не путайте его с опытом работы. Это 2–4 предложения, которые должны привлечь внимание и произвести хорошее первое впечатление. Опишите, кто вы, что умеете и какие у вас профессиональные цели.<br>Пример:</p>
+<blockquote><p>«Опытный специалист по продажам с 5-летним стажем в интернет-торговле. Эффективно выстраиваю отношения с клиентами и выполняю планы продаж. Сейчас ищу новые вызовы в динамичной команде продаж».</p>
+</blockquote>
+<h3>4. Опыт работы</h3>
+<p>Самая важная часть вашего CV.<br>Перечислите места работы от последнего к самому раннему. Для каждого укажите:</p>
+<ul><li>название компании,</li>
+<li>должность,</li>
+<li>период работы,</li>
+<li>главные обязанности и достижения.</li>
+</ul>
+<p>Описывайте опыт с учётом новой должности, на которую откликаетесь.</p>
+<h3>5. Образование</h3>
+<p>Как и в опыте работы, перечислите оконченные школы и учебные заведения. Укажите название заведения, специальность, степень и дату окончания. Начните с последнего этапа обучения.</p>
+<h3>6. Навыки</h3>
+<p>Здесь стоит перечислить всё, что может пригодиться на будущей работе. Сосредоточьтесь на тех, которые, судя по вакансии, нужны рекрутеру или работодателю. Разделите их на:</p>
+<ul><li><strong>профессиональные (hard skills)</strong> — конкретные умения, например знание программ, языков программирования, водительские права;</li>
+<li><strong>личностные (soft skills)</strong> — например, коммуникабельность, стрессоустойчивость, хорошая организация работы.<br>Не забудьте указать уровень знания иностранных языков.</li>
+</ul>
+<h3>7. Курсы и тренинги</h3>
+<p>Перечислите дополнительные курсы, сертификаты и тренинги. Они показывают, что вы инвестируете в своё профессиональное развитие, — это большой плюс для любого работодателя.</p>
+<h3>8. Интересы и хобби</h3>
+<p>Короткий раздел, который поможет выделиться среди других кандидатов. Интересы часто становятся отличной темой для разговора на собеседовании. Не расписывайте их слишком подробно — выберите несколько самых интересных.</p>
+<h3>9. Клаузула RODO (согласие на обработку данных)</h3>
+<p>В конце добавьте <strong>актуальное согласие на обработку персональных данных</strong>. Если в объявлении указан конкретный текст, скопируйте его в свой документ. Для польских работодателей клаузулу пишут на польском.</p>
+<p>Короткая версия клаузулы (перевод: «Я даю согласие на обработку моих персональных данных компанией (название) с целью рекрутинга на должность, на которую я откликаюсь»):</p>
+<blockquote><blockquote><p>Wyrażam zgodę na przetwarzanie moich danych osobowych przez (nazwa firmy) w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</p>
+</blockquote>
+<p>Расширенная версия (со ссылкой на польский закон о защите персональных данных и регламент ЕС 2016/679 — GDPR, по-польски RODO):</p>
+<blockquote><p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).</p>
+</blockquote>
+<p>Не забывайте о клаузуле. Без неё ваше CV, скорее всего, не рассмотрят, особенно в компаниях, где данные передаются между разными отделами. Не упускайте свой шанс из-за мелочей.</p>
+</blockquote>
+<figure>[img0]</figure>
+<h2>Фото в CV — стоит ли добавлять?</h2>
+<p>Хотя это не обязательно, <strong>профессиональное фото в CV</strong> поможет вас запомнить. Многие работодатели хотят знать, с кем имеют дело, и CV с фото они точно запомнят лучше. Выберите нейтральное деловое фото хорошего качества. Избегайте селфи и неформальных снимков.</p>
+<h2>Шаблон CV — как должно выглядеть ваше резюме?</h2>
+<p>Внешний вид имеет огромное значение. <strong>Аккуратное и понятное CV</strong> легче воспринимается.<br>Можно создать его самостоятельно или воспользоваться готовыми шаблонами, например в <strong>Canva</strong>, <strong>MS Word</strong> или <strong>Google Docs</strong>.<br>Помните:</p>
+<ul><li>делайте одинаковые отступы между разделами,</li>
+<li>используйте простые, читабельные шрифты,</li>
+<li>лучше всего уместиться на одной странице (максимум на двух).</li>
+</ul>
+<h2>На каком языке писать CV?</h2>
+<p>Если вы откликаетесь в польскую компанию по польскому объявлению, подготовьте <strong>CV на польском</strong>.<br>Если же должность или объявление на английском — создайте <strong>CV на английском (English CV)</strong>.<br>Так вы покажете знание языка и профессиональный подход к рекрутингу.</p>
+<h2>Итог: ваше CV — это инвестиция в будущее</h2>
+<p>Подготовить <strong>хорошее CV</strong> несложно, если знаете, на что обратить внимание.<br>Воспользуйтесь этим руководством, выберите подходящий шаблон и покажите себя с лучшей стороны.<br>Ваша новая работа ближе, чем вы думаете!</p>
+=== en
+slug: how-to-write-a-good-cv
+title: How to write a CV that gets a recruiter’s attention: a complete step-by-step guide
+description: Learn how to write a professional CV step by step. See what a good CV should include and how to stand out from other candidates.
+---
+<h2>Why is it worth preparing your CV well?</h2>
+<p>Looking for a new job? The first step is to prepare or update your <strong>CV</strong>. This is the document that decides whether you will be invited to an interview.<br>A well-written <strong>curriculum vitae</strong> lets you present your <strong>work experience</strong>, <strong>skills</strong> and <strong>achievements</strong> simply and clearly. It is not just a formality — it is your <strong>professional business card</strong> and <strong>the key to success on the job market</strong>.</p>
+<h2>What should a good, effective CV look like?</h2>
+<p>A recruiter spends only a few seconds assessing your CV. That is why <strong>your CV must be specific, easy to read and tailored to the job</strong> you are applying for.<br>Do not write in general terms — show that you know what you want and that your experience fits the position.</p>
+<p>At the very top, include:</p>
+<ul><li>your first name and surname,</li>
+<li>your phone number,</li>
+<li>your email address,</li>
+<li>a link to your <strong>LinkedIn</strong> profile.</li>
+</ul>
+<p>Use a professional email address (for example <strong>firstname.lastname@domain.com</strong>). However tempting it may be, an address like this works much better than one with a nickname from your favourite game. Also take care of your LinkedIn profile: checking candidates there has become standard practice. So spend some time making sure your profile and your CV are consistent and look good.</p>
+<h2>How to write a good CV step by step</h2>
+<p>Start with a solid foundation. Every <strong>professional CV</strong> consists of a few standard elements. Below is a practical guide to creating a document that makes an impression.</p>
+<h3>1. Header and job title</h3>
+<p>Besides your contact details, the very beginning should include your <strong>job title</strong> — who you are and what position you hold or have held (for example “Marketing Specialist” or “Senior Python Developer”). You can also add a short description of what you are looking for and what you offer an employer.</p>
+<h3>2. Contact details</h3>
+<p>Give a complete set of contact details so the recruiter can easily get in touch with you.</p>
+<h3>3. Professional summary</h3>
+<p>Do not confuse this with your work experience. These are 2–4 sentences meant to catch the reader’s eye and make a good first impression. Describe who you are, what you can do and what your career goals are.<br>Example:</p>
+<blockquote><p>“Experienced sales specialist with 5 years in e-commerce. I build strong customer relationships and consistently meet sales targets. I am now looking for new challenges in a dynamic sales team.”</p>
+</blockquote>
+<h3>4. Work experience</h3>
+<p>The most important part of your CV.<br>List your jobs from the most recent to the oldest. For each one, give:</p>
+<ul><li>the company name,</li>
+<li>your position,</li>
+<li>the dates of employment,</li>
+<li>your key duties and achievements.</li>
+</ul>
+<p>Describe your experience in the context of the new position you are applying for.</p>
+<h3>5. Education</h3>
+<p>As with your experience, list the schools and universities you have completed. Give the name of the school or university, your field of study, your degree and the date you graduated. Start with your most recent education.</p>
+<h3>6. Skills</h3>
+<p>List everything that may be useful in your future job. Focus on the skills the recruiter or employer is looking for according to the specific job ad. Divide them into:</p>
+<ul><li><strong>hard skills</strong> — specific competences such as knowledge of software or programming languages, or a driving licence;</li>
+<li><strong>soft skills</strong> — such as communication, resilience under stress and good organisation.<br>Do not forget your level of foreign languages either.</li>
+</ul>
+<h3>7. Courses and training</h3>
+<p>List any extra courses, certificates and training. They show that you invest in your professional development — a big plus for any employer.</p>
+<h3>8. Interests and hobbies</h3>
+<p>A short section that can help you stand out from other candidates. Interests are often a great topic of conversation during an interview. Do not write too much here — choose a few of the most interesting ones.</p>
+<h3>9. GDPR (RODO) consent clause</h3>
+<p>At the end, add an <strong>up-to-date consent clause for the processing of personal data</strong>. If the job ad gives specific wording, copy it into your document. For Polish employers, the clause is written in Polish.</p>
+<p>Short version of the clause (translation: “I consent to the processing of my personal data by (company name) for the purpose of recruitment for the position I am applying for”):</p>
+<blockquote><blockquote><p>Wyrażam zgodę na przetwarzanie moich danych osobowych przez (nazwa firmy) w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</p>
+</blockquote>
+<p>Extended version (referring to the Polish Personal Data Protection Act and EU Regulation 2016/679 — the GDPR, known in Polish as RODO):</p>
+<blockquote><p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).</p>
+</blockquote>
+<p>Do not forget the clause. Without it, your CV will most likely not be considered, especially in companies where data is shared between departments. Do not spoil your chance — take care of the details.</p>
+</blockquote>
+<figure>[img0]</figure>
+<h2>A photo on your CV — is it worth adding?</h2>
+<p>Although it is not compulsory, a <strong>professional photo on your CV</strong> can make you more memorable. Many employers like to know who they are dealing with, and they will certainly remember you better with a photo on your CV. Choose a neutral, business-style photo of good quality. Avoid selfies and informal shots.</p>
+<h2>CV template — what should your CV look like?</h2>
+<p>Appearance matters a lot. <strong>A neat, easy-to-read CV</strong> is easier to take in.<br>You can create it yourself or use ready-made templates, for example in <strong>Canva</strong>, <strong>MS Word</strong> or <strong>Google Docs</strong>.<br>Remember to:</p>
+<ul><li>keep equal spacing between sections,</li>
+<li>use simple, legible fonts,</li>
+<li>ideally fit it on one page (two at most).</li>
+</ul>
+<h2>Which language should your CV be in?</h2>
+<p>If you are applying to a Polish company through a Polish job ad, prepare your <strong>CV in Polish</strong>.<br>If the position or the ad is in English, create an <strong>English CV</strong>.<br>This shows your language skills and a professional approach to the recruitment process.</p>
+<h2>Summary — your CV is an investment in your future</h2>
+<p>Writing a <strong>good CV</strong> is not hard if you know what to pay attention to.<br>Use the guide above, choose the right template and present yourself at your best.<br>Your new job is closer than you think!</p>
+=== es
+slug: como-hacer-un-buen-cv
+title: ¿Cómo preparar un CV que llame la atención del reclutador? Guía completa paso a paso
+description: Aprende a preparar un CV profesional paso a paso. Descubre qué debe incluir un buen currículum y cómo destacar entre los demás candidatos.
+---
+<h2>¿Por qué conviene preparar bien el CV?</h2>
+<p>¿Buscas un nuevo trabajo? El primer paso es preparar o actualizar tu <strong>CV</strong>. Este documento es el que decide si te invitarán a una entrevista.<br>Un <strong>currículum vitae</strong> bien escrito te permite mostrar de forma sencilla y clara tu <strong>experiencia profesional</strong>, tus <strong>habilidades</strong> y tus <strong>logros</strong>. No es solo un trámite: es tu <strong>carta de presentación profesional</strong> y <strong>la clave del éxito en el mercado laboral</strong>.</p>
+<h2>¿Cómo debe ser un CV bueno y útil?</h2>
+<p>Un reclutador dedica apenas unos segundos a valorar tu currículum. Por eso <strong>tu CV debe ser concreto, claro y adaptado a la oferta</strong> a la que te presentas.<br>No escribas generalidades: demuestra que sabes lo que quieres y que tu experiencia encaja con el puesto.</p>
+<p>En la parte superior, incluye:</p>
+<ul><li>nombre y apellidos,</li>
+<li>número de teléfono,</li>
+<li>dirección de correo electrónico,</li>
+<li>enlace a tu perfil de <strong>LinkedIn</strong>.</li>
+</ul>
+<p>Usa una dirección de correo profesional (por ejemplo, <strong>nombre.apellido@dominio.com</strong>). Por tentador que sea, funciona mucho mejor que una con el apodo de tu videojuego favorito. Cuida también tu perfil de LinkedIn: revisar a los candidatos allí ya es lo habitual. Dedica un poco de tiempo a que tu perfil y tu CV sean coherentes y tengan buen aspecto.</p>
+<h2>¿Cómo escribir un buen CV paso a paso?</h2>
+<p>Empieza por una base sólida. Todo <strong>CV profesional</strong> consta de unos elementos fijos. A continuación tienes una guía práctica para crear un documento que cause buena impresión.</p>
+<h3>1. Encabezado y título profesional</h3>
+<p>Además de los datos de contacto, al principio debe aparecer tu <strong>título profesional</strong>, es decir, quién eres y qué puesto ocupas u ocupaste (por ejemplo, «Especialista en marketing» o «Desarrollador sénior de Python»). También puedes añadir una breve descripción de lo que buscas y lo que ofreces al empleador.</p>
+<h3>2. Datos de contacto</h3>
+<p>Indica todos tus datos de contacto, para que el reclutador pueda comunicarse contigo fácilmente.</p>
+<h3>3. Resumen profesional</h3>
+<p>No lo confundas con la experiencia laboral. Son 2–4 frases que deben captar la atención y causar una buena primera impresión. Describe quién eres, qué sabes hacer y cuáles son tus objetivos profesionales.<br>Ejemplo:</p>
+<blockquote><p>«Especialista en ventas con 5 años de experiencia en comercio electrónico. Construyo relaciones sólidas con los clientes y cumplo los objetivos de venta. Busco nuevos retos en un equipo comercial dinámico».</p>
+</blockquote>
+<h3>4. Experiencia laboral</h3>
+<p>La parte más importante de tu CV.<br>Enumera tus empleos del más reciente al más antiguo. Para cada uno, indica:</p>
+<ul><li>el nombre de la empresa,</li>
+<li>el puesto,</li>
+<li>el periodo de empleo,</li>
+<li>las principales funciones y logros.</li>
+</ul>
+<p>Describe tu experiencia en relación con el nuevo puesto al que te presentas.</p>
+<h3>5. Formación</h3>
+<p>Igual que con la experiencia, enumera los centros educativos que has terminado. Indica el nombre del centro, la especialidad, el título y la fecha de finalización. Empieza por la etapa más reciente.</p>
+<h3>6. Habilidades</h3>
+<p>Aquí conviene incluir todo lo que pueda serte útil en el futuro trabajo. Céntrate en las que, según la oferta concreta, busca el reclutador o el empleador. Divídelas en:</p>
+<ul><li><strong>habilidades técnicas</strong>: competencias concretas como el manejo de programas, lenguajes de programación o el carné de conducir;</li>
+<li><strong>habilidades blandas</strong>: por ejemplo, comunicación, resistencia al estrés o buena organización.<br>No olvides indicar tu nivel de idiomas.</li>
+</ul>
+<h3>7. Cursos y formación complementaria</h3>
+<p>Enumera los cursos, certificados y formaciones adicionales. Demuestran que inviertes en tu desarrollo profesional, algo muy valorado por cualquier empleador.</p>
+<h3>8. Intereses y aficiones</h3>
+<p>Una sección breve que puede ayudarte a destacar entre otros candidatos. Los intereses suelen ser un buen tema de conversación en la entrevista. No te extiendas demasiado: elige algunos de los más interesantes.</p>
+<h3>9. Cláusula RODO (protección de datos)</h3>
+<p>Al final, añade una <strong>cláusula actualizada de consentimiento para el tratamiento de datos personales</strong>. Si la oferta indica un texto concreto, cópialo en tu documento. Para empleadores polacos, la cláusula se escribe en polaco.</p>
+<p>Versión breve de la cláusula (traducción: «Doy mi consentimiento para el tratamiento de mis datos personales por parte de (nombre de la empresa) con fines de selección para el puesto al que me presento»):</p>
+<blockquote><blockquote><p>Wyrażam zgodę na przetwarzanie moich danych osobowych przez (nazwa firmy) w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</p>
+</blockquote>
+<p>Versión ampliada (con referencia a la ley polaca de protección de datos y al Reglamento (UE) 2016/679, el RGPD, en polaco RODO):</p>
+<blockquote><p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).</p>
+</blockquote>
+<p>No olvides la cláusula. Sin ella, lo más probable es que no tengan en cuenta tu CV, sobre todo en empresas donde los datos se comparten entre distintos departamentos. No pierdas tu oportunidad por un detalle.</p>
+</blockquote>
+<figure>[img0]</figure>
+<h2>¿Conviene poner foto en el CV?</h2>
+<p>Aunque no es obligatoria, una <strong>foto profesional en el CV</strong> puede hacer que te recuerden mejor. Muchos empleadores quieren saber con quién tratan y, con una foto, seguro que te recordarán mejor. Elige una foto neutra, de estilo profesional y de buena calidad. Evita los selfis y las fotos informales.</p>
+<h2>Plantilla de CV: ¿qué aspecto debe tener tu currículum?</h2>
+<p>El aspecto es muy importante. Un <strong>CV cuidado y fácil de leer</strong> se asimila mejor.<br>Puedes crearlo tú mismo o usar plantillas ya hechas, por ejemplo en <strong>Canva</strong>, <strong>MS Word</strong> o <strong>Google Docs</strong>.<br>Recuerda:</p>
+<ul><li>mantener el mismo espacio entre secciones,</li>
+<li>usar tipos de letra sencillos y legibles,</li>
+<li>a ser posible, ocupar una sola página (dos como máximo).</li>
+</ul>
+<h2>¿En qué idioma escribir el CV?</h2>
+<p>Si te presentas a una empresa polaca con una oferta en polaco, prepara un <strong>CV en polaco</strong>.<br>Si el puesto o la oferta están en inglés, crea un <strong>CV en inglés (English CV)</strong>.<br>Así demostrarás tu nivel de idioma y una actitud profesional en el proceso de selección.</p>
+<h2>Resumen: tu CV es una inversión en tu futuro</h2>
+<p>Preparar un <strong>buen CV</strong> no es difícil si sabes en qué fijarte.<br>Sigue esta guía, elige la plantilla adecuada y preséntate de la mejor manera.<br>¡Tu nuevo trabajo está más cerca de lo que crees!</p>
+=== pt
+slug: como-fazer-um-bom-cv
+title: Como preparar um CV que chame a atenção do recrutador? Guia completo passo a passo
+description: Aprende a preparar um CV profissional passo a passo. Descobre o que deve conter um bom currículo e como te destacares entre os outros candidatos.
+---
+<h2>Porque vale a pena preparar bem o teu CV?</h2>
+<p>Procuras um novo trabalho? O primeiro passo é preparar ou atualizar o teu <strong>CV</strong>. É este documento que decide se vais ser convidado para uma entrevista.<br>Um <strong>curriculum vitae</strong> bem escrito permite mostrar de forma simples e clara a tua <strong>experiência profissional</strong>, as tuas <strong>competências</strong> e as tuas <strong>conquistas</strong>. Não é apenas uma formalidade — é o teu <strong>cartão de visita profissional</strong> e <strong>a chave do sucesso no mercado de trabalho</strong>.</p>
+<h2>Como deve ser um CV bom e útil?</h2>
+<p>Um recrutador dedica apenas alguns segundos à avaliação do teu currículo. Por isso <strong>o teu CV tem de ser concreto, claro e adaptado à oferta</strong> a que te candidatas.<br>Não escrevas de forma genérica — mostra que sabes o que queres e que a tua experiência se adequa à função.</p>
+<p>No topo, coloca:</p>
+<ul><li>nome e apelido,</li>
+<li>número de telefone,</li>
+<li>endereço de e-mail,</li>
+<li>link para o teu perfil no <strong>LinkedIn</strong>.</li>
+</ul>
+<p>Usa um endereço de e-mail profissional (por exemplo, <strong>nome.apelido@dominio.com</strong>). Por mais tentador que seja, este tipo de endereço resulta muito melhor do que um com a alcunha do teu jogo preferido. Cuida também do teu perfil no LinkedIn: verificar os candidatos lá já se tornou prática comum. Dedica algum tempo a garantir que o perfil e o CV são coerentes e têm bom aspeto.</p>
+<h2>Como escrever um bom CV passo a passo?</h2>
+<p>Começa por uma base sólida. Qualquer <strong>CV profissional</strong> tem alguns elementos fixos. Em baixo tens um guia prático para criar um documento que cause boa impressão.</p>
+<h3>1. Cabeçalho e título profissional</h3>
+<p>Além dos dados de contacto, logo no início deve aparecer o teu <strong>título profissional</strong>, ou seja, quem és e que função ocupas ou ocupaste (por exemplo, «Especialista de marketing» ou «Programador sénior de Python»). Podes também acrescentar uma breve descrição do que procuras e do que ofereces ao empregador.</p>
+<h3>2. Dados de contacto</h3>
+<p>Indica todos os teus dados de contacto, para que o recrutador te possa contactar facilmente.</p>
+<h3>3. Resumo profissional</h3>
+<p>Não o confundas com a experiência profissional. São 2 a 4 frases que devem chamar a atenção e causar uma boa primeira impressão. Descreve quem és, o que sabes fazer e quais são os teus objetivos profissionais.<br>Exemplo:</p>
+<blockquote><p>«Especialista de vendas com 5 anos de experiência no comércio eletrónico. Construo relações sólidas com os clientes e cumpro os objetivos de vendas. Procuro agora novos desafios numa equipa comercial dinâmica.»</p>
+</blockquote>
+<h3>4. Experiência profissional</h3>
+<p>A parte mais importante do teu CV.<br>Enumera os teus empregos do mais recente para o mais antigo. Para cada um, indica:</p>
+<ul><li>o nome da empresa,</li>
+<li>a função,</li>
+<li>o período de trabalho,</li>
+<li>as principais tarefas e conquistas.</li>
+</ul>
+<p>Descreve a tua experiência tendo em conta a nova função a que te candidatas.</p>
+<h3>5. Formação</h3>
+<p>Tal como na experiência, enumera as escolas e universidades que concluíste. Indica o nome da escola ou universidade, o curso, o grau e a data de conclusão. Começa pela etapa mais recente.</p>
+<h3>6. Competências</h3>
+<p>Aqui vale a pena incluir tudo o que possa ser útil no futuro trabalho. Concentra-te nas que, segundo a oferta concreta, o recrutador ou o empregador procuram. Divide-as em:</p>
+<ul><li><strong>competências técnicas</strong> — competências concretas, como o domínio de programas, linguagens de programação ou carta de condução;</li>
+<li><strong>competências interpessoais</strong> — por exemplo, comunicação, resistência ao stress e boa organização.<br>Não te esqueças do teu nível de línguas estrangeiras.</li>
+</ul>
+<h3>7. Cursos e formações</h3>
+<p>Enumera os cursos, certificados e formações adicionais. Mostram que investes no teu desenvolvimento profissional — uma grande vantagem para qualquer empregador.</p>
+<h3>8. Interesses e passatempos</h3>
+<p>Uma secção curta que pode ajudar-te a destacar entre os outros candidatos. Os interesses são muitas vezes um ótimo tema de conversa na entrevista. Não escrevas demasiado — escolhe alguns dos mais interessantes.</p>
+<h3>9. Cláusula RODO (proteção de dados)</h3>
+<p>No fim, acrescenta uma <strong>cláusula atualizada de consentimento para o tratamento de dados pessoais</strong>. Se o anúncio indicar um texto concreto, copia-o para o teu documento. Para empregadores polacos, a cláusula é escrita em polaco.</p>
+<p>Versão curta da cláusula (tradução: «Autorizo o tratamento dos meus dados pessoais por (nome da empresa) para efeitos de recrutamento para a função a que me candidato»):</p>
+<blockquote><blockquote><p>Wyrażam zgodę na przetwarzanie moich danych osobowych przez (nazwa firmy) w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</p>
+</blockquote>
+<p>Versão alargada (com referência à lei polaca de proteção de dados e ao Regulamento (UE) 2016/679, o RGPD, em polaco RODO):</p>
+<blockquote><p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).</p>
+</blockquote>
+<p>Não te esqueças da cláusula. Sem ela, o teu CV muito provavelmente não será considerado, sobretudo em empresas onde os dados circulam entre departamentos. Não estragues a tua oportunidade por um pormenor.</p>
+</blockquote>
+<figure>[img0]</figure>
+<h2>Fotografia no CV — vale a pena incluir?</h2>
+<p>Embora não seja obrigatória, uma <strong>fotografia profissional no CV</strong> pode tornar-te mais memorável. Muitos empregadores gostam de saber com quem estão a lidar e, com uma fotografia, vão certamente lembrar-se melhor de ti. Escolhe uma fotografia neutra, de estilo profissional e de boa qualidade. Evita selfies e fotografias informais.</p>
+<h2>Modelo de CV — que aspeto deve ter o teu currículo?</h2>
+<p>O aspeto é muito importante. Um <strong>CV cuidado e fácil de ler</strong> é mais fácil de assimilar.<br>Podes criá-lo sozinho ou usar modelos prontos, por exemplo no <strong>Canva</strong>, no <strong>MS Word</strong> ou no <strong>Google Docs</strong>.<br>Lembra-te de:</p>
+<ul><li>manter espaços iguais entre as secções,</li>
+<li>usar tipos de letra simples e legíveis,</li>
+<li>de preferência, caber numa página (no máximo duas).</li>
+</ul>
+<h2>Em que língua escrever o CV?</h2>
+<p>Se te candidatas a uma empresa polaca através de um anúncio em polaco, prepara um <strong>CV em polaco</strong>.<br>Se a função ou o anúncio estiverem em inglês, cria um <strong>CV em inglês (English CV)</strong>.<br>Assim mostras o teu domínio da língua e uma abordagem profissional ao recrutamento.</p>
+<h2>Resumo — o teu CV é um investimento no futuro</h2>
+<p>Preparar um <strong>bom CV</strong> não é difícil se souberes a que prestar atenção.<br>Usa o guia acima, escolhe o modelo certo e apresenta-te da melhor forma.<br>O teu novo trabalho está mais perto do que pensas!</p>
+=== ro
+slug: cum-sa-scrii-un-cv-bun
+title: Cum să pregătești un CV care atrage atenția recrutorului? Ghid complet pas cu pas
+description: Află cum să pregătești pas cu pas un CV profesionist. Vezi ce trebuie să conțină un CV bun și cum să te evidențiezi printre ceilalți candidați.
+---
+<h2>De ce merită să-ți pregătești bine CV-ul?</h2>
+<p>Cauți un loc de muncă nou? Primul pas este să-ți pregătești sau să-ți actualizezi <strong>CV-ul</strong>. Acest document decide dacă vei fi invitat la interviu.<br>Un <strong>curriculum vitae</strong> bine scris îți permite să-ți prezinți simplu și clar <strong>experiența profesională</strong>, <strong>abilitățile</strong> și <strong>realizările</strong>. Nu este doar o formalitate — este <strong>cartea ta de vizită profesională</strong> și <strong>cheia succesului pe piața muncii</strong>.</p>
+<h2>Cum trebuie să arate un CV bun și valoros?</h2>
+<p>Recrutorul petrece doar câteva secunde evaluându-ți CV-ul. De aceea <strong>CV-ul tău trebuie să fie concret, clar și potrivit ofertei</strong> la care aplici.<br>Nu scrie generalități — arată că știi ce vrei și că experiența ta se potrivește postului.</p>
+<p>În partea de sus, trece:</p>
+<ul><li>numele și prenumele,</li>
+<li>numărul de telefon,</li>
+<li>adresa de e-mail,</li>
+<li>linkul către profilul de <strong>LinkedIn</strong>.</li>
+</ul>
+<p>Folosește o adresă de e-mail profesională (de exemplu <strong>prenume.nume@domeniu.com</strong>). Oricât de tentant ar fi, o astfel de adresă funcționează mult mai bine decât una cu porecla din jocul tău preferat. Ai grijă și de profilul de LinkedIn: verificarea candidaților acolo a devenit deja standard. Așa că dedică puțin timp ca profilul și CV-ul să fie coerente și să arate bine.</p>
+<h2>Cum scrii un CV bun pas cu pas?</h2>
+<p>Începe cu o bază solidă. Orice <strong>CV profesionist</strong> are câteva elemente fixe. Mai jos găsești un ghid practic pentru a crea un document care să facă impresie.</p>
+<h3>1. Antetul și titlul profesional</h3>
+<p>Pe lângă datele de contact, chiar la început trebuie să apară <strong>titlul tău profesional</strong>, adică cine ești și ce post ocupi sau ai ocupat (de exemplu „Specialist marketing”, „Programator senior Python”). Poți adăuga și o scurtă descriere a ceea ce cauți și a ceea ce îi oferi angajatorului.</p>
+<h3>2. Datele de contact</h3>
+<p>Trece toate datele de contact, ca recrutorul să te poată contacta ușor.</p>
+<h3>3. Rezumatul profesional</h3>
+<p>Nu-l confunda cu experiența profesională. Sunt 2–4 propoziții care trebuie să atragă atenția și să facă o primă impresie bună. Descrie cine ești, ce știi să faci și ce obiective profesionale ai.<br>Exemplu:</p>
+<blockquote><p>„Specialist în vânzări cu 5 ani de experiență în comerțul online. Construiesc relații solide cu clienții și îndeplinesc obiectivele de vânzări. În prezent caut noi provocări într-o echipă comercială dinamică.”</p>
+</blockquote>
+<h3>4. Experiența profesională</h3>
+<p>Cea mai importantă parte a CV-ului.<br>Enumeră locurile de muncă de la cel mai recent la cel mai vechi. Pentru fiecare, indică:</p>
+<ul><li>numele firmei,</li>
+<li>postul,</li>
+<li>perioada angajării,</li>
+<li>cele mai importante atribuții și realizări.</li>
+</ul>
+<p>Descrie experiența în legătură cu noul post la care aplici.</p>
+<h3>5. Studiile</h3>
+<p>La fel ca la experiență, enumeră școlile și universitățile absolvite. Indică numele instituției, specializarea, titlul obținut și data absolvirii. Începe cu cea mai recentă etapă.</p>
+<h3>6. Abilitățile</h3>
+<p>Aici merită să treci tot ce ți-ar putea fi util la viitorul loc de muncă. Concentrează-te pe cele pe care, după oferta concretă, le caută recrutorul sau angajatorul. Împarte-le în:</p>
+<ul><li><strong>abilități tehnice</strong> — competențe concrete, de exemplu cunoașterea unor programe, limbaje de programare, permisul de conducere;</li>
+<li><strong>abilități interpersonale</strong> — de exemplu comunicare, rezistență la stres, bună organizare.<br>Nu uita nici de nivelul de cunoaștere a limbilor străine.</li>
+</ul>
+<h3>7. Cursuri și instruiri</h3>
+<p>Enumeră cursurile, certificatele și instruirile suplimentare. Ele arată că investești în dezvoltarea ta profesională — un mare plus pentru orice angajator.</p>
+<h3>8. Interese și hobby-uri</h3>
+<p>O secțiune scurtă care te poate ajuta să te evidențiezi printre ceilalți candidați. Interesele sunt adesea un subiect excelent de discuție la interviu. Nu scrie prea mult — alege câteva dintre cele mai interesante.</p>
+<h3>9. Clauza RODO (protecția datelor)</h3>
+<p>La final, adaugă o <strong>clauză actualizată de consimțământ pentru prelucrarea datelor personale</strong>. Dacă anunțul indică un text anume, copiază-l în documentul tău. Pentru angajatorii polonezi, clauza se scrie în limba poloneză.</p>
+<p>Versiunea scurtă a clauzei (traducere: „Îmi exprim acordul pentru prelucrarea datelor mele personale de către (numele firmei) în scopul recrutării pentru postul la care aplic”):</p>
+<blockquote><blockquote><p>Wyrażam zgodę na przetwarzanie moich danych osobowych przez (nazwa firmy) w celu prowadzenia rekrutacji na aplikowane przeze mnie stanowisko.</p>
+</blockquote>
+<p>Versiunea extinsă (cu trimitere la legea poloneză privind protecția datelor și la Regulamentul (UE) 2016/679 — GDPR, în poloneză RODO):</p>
+<blockquote><p>Wyrażam zgodę na przetwarzanie moich danych osobowych dla potrzeb niezbędnych do realizacji procesu rekrutacji (zgodnie z ustawą z dnia 10 maja 2018 roku o ochronie danych osobowych (Dz. Ustaw z 2018, poz. 1000) oraz zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO).</p>
+</blockquote>
+<p>Nu uita de clauză. Fără ea, CV-ul tău cel mai probabil nu va fi luat în considerare, mai ales în firmele în care datele circulă între departamente. Nu-ți strica șansa din cauza unui detaliu.</p>
+</blockquote>
+<figure>[img0]</figure>
+<h2>Fotografia în CV — merită s-o adaugi?</h2>
+<p>Deși nu este obligatorie, o <strong>fotografie profesională în CV</strong> te poate face mai ușor de reținut. Mulți angajatori vor să știe cu cine au de-a face și, cu o fotografie în CV, cu siguranță își vor aminti mai bine de tine. Alege o fotografie neutră, de tip business, de bună calitate. Evită selfie-urile și pozele informale.</p>
+<h2>Șablonul CV-ului — cum trebuie să arate CV-ul tău?</h2>
+<p>Aspectul contează enorm. Un <strong>CV îngrijit și ușor de citit</strong> se parcurge mai ușor.<br>Îl poți crea singur sau poți folosi șabloane gata făcute, de exemplu în <strong>Canva</strong>, <strong>MS Word</strong> sau <strong>Google Docs</strong>.<br>Ține minte:</p>
+<ul><li>păstrează spații egale între secțiuni,</li>
+<li>folosește fonturi simple și lizibile,</li>
+<li>ideal, încadrează-te într-o singură pagină (maximum două).</li>
+</ul>
+<h2>În ce limbă să scrii CV-ul?</h2>
+<p>Dacă aplici la o firmă poloneză pe baza unui anunț în poloneză, pregătește un <strong>CV în poloneză</strong>.<br>Dacă postul sau anunțul sunt în engleză, creează un <strong>CV în engleză (English CV)</strong>.<br>Astfel îți arăți cunoștințele de limbă și abordarea profesionistă a recrutării.</p>
+<h2>Pe scurt — CV-ul tău este o investiție în viitor</h2>
+<p>Pregătirea unui <strong>CV bun</strong> nu este grea dacă știi la ce să fii atent.<br>Folosește ghidul de mai sus, alege șablonul potrivit și prezintă-te în cea mai bună lumină.<br>Noul tău loc de muncă e mai aproape decât crezi!</p>
