@@ -1,0 +1,133 @@
+{
+  "pl": {
+    "active": true,
+    "category": "production",
+    "city": "Kutno",
+    "region": "łódzkie",
+    "country": "PL",
+    "datePosted": "2026-09-29",
+    "salary": {
+      "min": 28,
+      "unit": "hour"
+    },
+    "contract": "",
+    "tags": [],
+    "title": "Operator maszyny pakującej",
+    "summary": "Obsługa i nadzór linii pakującej w zakładzie produkcyjnym w Kutnie. Praca stała, pełny etat.",
+    "duties": [
+      "Obsługa i bieżący nadzór nad linią pakującą",
+      "Ustawianie i kontrola parametrów pracy urządzeń",
+      "Kontrola przebiegu pakowania i jakości produktu",
+      "Reagowanie na awarie, nieprawidłowości i przestoje",
+      "Przezbrojenia i zmiany ustawień przy zmianie asortymentu",
+      "Uzupełnianie materiałów potrzebnych do produkcji",
+      "Prowadzenie podstawowej dokumentacji produkcyjnej",
+      "Przestrzeganie zasad BHP, HACCP i standardów jakości"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  },
+  "uk": {
+    "title": "Оператор пакувальної машини",
+    "summary": "Обслуговування та контроль пакувальної лінії на виробництві в Кутно. Постійна робота, повна зайнятість.",
+    "duties": [
+      "Обслуговування та поточний контроль пакувальної лінії",
+      "Налаштування й контроль параметрів роботи обладнання",
+      "Контроль процесу пакування та якості продукції",
+      "Реагування на несправності, відхилення та простої",
+      "Переналаштування обладнання при зміні асортименту",
+      "Поповнення матеріалів для виробництва",
+      "Ведення базової виробничої документації",
+      "Дотримання правил охорони праці, HACCP і стандартів якості"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  },
+  "ru": {
+    "title": "Оператор упаковочной машины",
+    "summary": "Обслуживание и контроль упаковочной линии на производстве в Кутно. Постоянная работа, полная занятость.",
+    "duties": [
+      "Обслуживание и текущий контроль упаковочной линии",
+      "Настройка и контроль параметров работы оборудования",
+      "Контроль процесса упаковки и качества продукции",
+      "Реагирование на неисправности, отклонения и простои",
+      "Переналадка оборудования при смене ассортимента",
+      "Пополнение материалов для производства",
+      "Ведение базовой производственной документации",
+      "Соблюдение правил охраны труда, HACCP и стандартов качества"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  },
+  "en": {
+    "title": "Packing Machine Operator",
+    "summary": "Operating and supervising a packing line at a production plant in Kutno. Permanent, full-time job.",
+    "duties": [
+      "Operating and monitoring the packing line",
+      "Setting and checking machine parameters",
+      "Checking the packing process and product quality",
+      "Responding to breakdowns, faults and stoppages",
+      "Changeovers and setting changes for new product ranges",
+      "Restocking production materials",
+      "Keeping basic production records",
+      "Following health and safety, HACCP and quality standards"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  },
+  "es": {
+    "title": "Operario/a de máquina de envasado",
+    "summary": "Manejo y supervisión de una línea de envasado en una planta de producción en Kutno. Empleo estable a jornada completa.",
+    "duties": [
+      "Manejo y supervisión continua de la línea de envasado",
+      "Ajuste y control de los parámetros de las máquinas",
+      "Control del proceso de envasado y de la calidad del producto",
+      "Reacción ante averías, incidencias y paradas",
+      "Cambios de formato y de ajustes al cambiar de producto",
+      "Reposición de materiales para la producción",
+      "Registro básico de la documentación de producción",
+      "Cumplimiento de las normas de seguridad laboral, APPCC (HACCP) y calidad"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  },
+  "pt": {
+    "title": "Operador(a) de máquina de embalagem",
+    "summary": "Operação e supervisão de uma linha de embalagem em uma fábrica em Kutno. Trabalho fixo, tempo integral.",
+    "duties": [
+      "Operar e acompanhar continuamente a linha de embalagem",
+      "Ajustar e controlar os parâmetros das máquinas",
+      "Controlar o processo de embalagem e a qualidade do produto",
+      "Reagir a falhas, irregularidades e paradas",
+      "Fazer trocas de formato e ajustes ao mudar de produto",
+      "Repor materiais para a produção",
+      "Manter a documentação básica de produção",
+      "Seguir as normas de segurança do trabalho, APPCC (HACCP) e qualidade"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  },
+  "ro": {
+    "title": "Operator mașină de ambalat",
+    "summary": "Deservirea și supravegherea unei linii de ambalare într-o fabrică din Kutno. Loc de muncă stabil, normă întreagă.",
+    "duties": [
+      "Deservirea și supravegherea continuă a liniei de ambalare",
+      "Setarea și controlul parametrilor de funcționare a utilajelor",
+      "Verificarea procesului de ambalare și a calității produsului",
+      "Reacția la defecțiuni, nereguli și opriri",
+      "Reglaje și schimbări de setări la schimbarea sortimentului",
+      "Completarea materialelor necesare producției",
+      "Completarea documentației de bază de producție",
+      "Respectarea normelor de securitate a muncii, HACCP și a standardelor de calitate"
+    ],
+    "requirements": [],
+    "offer": [],
+    "conditions": []
+  }
+}

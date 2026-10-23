@@ -41,10 +41,11 @@ collections:
         options:
           - { label: Produkcja, value: production }
           - { label: Zakłady mięsne, value: meat }
+          - { label: Szklarnie i rolnictwo, value: agriculture }
+          - { label: Kuchnia i gastronomia, value: kitchen }
           - { label: Magazyn i logistyka, value: logistics }
           - { label: Kierowcy, value: drivers }
-          - { label: Szklarnie i rolnictwo, value: agriculture }
-      - { label: Miasto, name: city, widget: string }
+      - { label: Miasto, name: city, widget: string, hint: "Wpisz * jeśli praca jest w różnych miastach" }
       - { label: "Województwo / region", name: region, widget: string, required: false }
       - { label: "Kraj (kod, np. PL, DE)", name: country, widget: string, default: PL, pattern: ["^[A-Z]{2}$", "Dwie wielkie litery, np. PL"] }
       - { label: Data publikacji, name: datePosted, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
@@ -55,6 +56,7 @@ collections:
         fields:
           - { label: Od, name: min, widget: number, value_type: float, min: 1 }
           - { label: "Do (opcjonalnie)", name: max, widget: number, value_type: float, required: false }
+          - { label: "Kwota netto", name: net, widget: boolean, default: true, required: false, hint: "Wyłącz, jeśli nie wiadomo, czy to netto czy brutto" }
           - label: Za
             name: unit
             widget: select

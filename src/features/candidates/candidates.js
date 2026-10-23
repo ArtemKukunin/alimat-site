@@ -1,4 +1,4 @@
-import { pageUrl } from '../../core/i18n.js';
+import { pageUrl, asset } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { layout, breadcrumbs, breadcrumbLd, contactButtons } from '../../core/layout.js';
 import { perksGrid, steps } from '../home/home.js';
@@ -15,11 +15,17 @@ export function renderCandidates(ctx) {
   };
   const body = `<section class="page-hero"><div class="wrap">
   ${breadcrumbs(crumbs)}
-  <h1>${esc(t('cand_h1'))}</h1>
-  <p class="lead">${esc(t('cand_lead'))}</p>
-  <div class="hero-cta">
-    <a class="btn btn-primary btn-lg" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))}</a>
-    <a class="btn btn-outline btn-lg" href="${pageUrl(lang, 'apply')}">${esc(t('cta_apply_long'))}</a>
+  <div class="page-hero-grid">
+    <div>
+      <h1>${esc(t('cand_h1'))}</h1>
+      <span class="dots" aria-hidden="true"><i></i><i></i></span>
+      <p class="lead">${esc(t('cand_lead'))}</p>
+      <div class="hero-cta">
+        <a class="btn btn-pill btn-blue" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))}</a>
+        <a class="btn btn-pill btn-outline-orange" href="${pageUrl(lang, 'apply')}">${esc(t('cta_apply_long'))}</a>
+      </div>
+    </div>
+    <div class="page-hero-img"><img src="${asset('img/candidates.webp')}" alt="" width="626" height="417"></div>
   </div>
 </div></section>
 <section class="wrap block"><h2>${esc(t('perks_title'))}</h2>${perksGrid(t)}</section>

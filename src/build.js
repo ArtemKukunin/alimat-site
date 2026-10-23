@@ -7,7 +7,8 @@ import { LANGS, LANG_CODES, DEFAULT_LANG, pageUrl, alternates, asset, BASE } fro
 import { readJson, writeFile, translator, esc } from './core/util.js';
 import { loadJobs } from './features/jobs/model.js';
 import { renderHome } from './features/home/home.js';
-import { renderJobsList, renderJobDetail } from './features/jobs/jobs.js';
+import { renderJobsList, renderJobDetail, renderJobSection } from './features/jobs/jobs.js';
+import { loadCategories } from './features/jobs/categories.js';
 import { renderCandidates } from './features/candidates/candidates.js';
 import { renderApply } from './features/apply/apply.js';
 import { renderEmployers } from './features/employers/employers.js';
@@ -22,7 +23,8 @@ export function loadData() {
   if (process.env.SITE_URL) settings.siteUrl = process.env.SITE_URL.replace(/\/+$/, '');
   const ui = Object.fromEntries(LANG_CODES.map((l) => [l, readJson(path.join(DATA, 'ui', `${l}.json`))]));
   const jobs = loadJobs(path.join(DATA, 'jobs'));
-  return { settings, ui, jobs };
+  const categories = loadCategories(path.join(DATA, 'categories.json'), jobs);
+  return { settings, ui, jobs, categories };
 }
 
 /** File location inside dist for a page URL (drops the sub-path base and preview suffix). */
@@ -53,7 +55,7 @@ ${alt}
 </head>
 <body class="page-root" data-autolang>
 <main class="lang-choice">
-  <img src="${asset('logo.svg')}" alt="Alimat Group" width="64" height="64">
+  <img src="${asset('img/logo.webp')}" alt="Alimat Group" width="220" height="53">
   <h1>Alimat Group</h1>
   <p>${LANG_CODES.map((l) => esc(ui[l].choose_lang)).join(' · ')}</p>
   <ul>${links}</ul>
@@ -69,7 +71,7 @@ function notFoundPage(ui) {
 <html lang="${DEFAULT_LANG}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>404 — Alimat Group</title><meta name="robots" content="noindex">
 <link rel="stylesheet" href="${asset('style.css')}"></head>
-<body class="page-root"><main class="lang-choice"><img src="${asset('logo.svg')}" alt="Alimat Group" width="64" height="64"><h1>404</h1><ul class="nf-list">${items}</ul></main></body></html>
+<body class="page-root"><main class="lang-choice"><img src="${asset('img/logo.webp')}" alt="Alimat Group" width="220" height="53"><h1>404</h1><ul class="nf-list">${items}</ul></main></body></html>
 `;
 }
 
@@ -133,14 +135,14 @@ ${common}
 }
 
 export function build() {
-  const { settings, ui, jobs } = loadData();
+  const { settings, ui, jobs, categories } = loadData();
   fs.rmSync(DIST, { recursive: true, force: true });
   fs.cpSync(path.join(ROOT, 'public'), DIST, { recursive: true });
 
   const indexable = [];
   let count = 0;
   for (const lang of LANG_CODES) {
-    const ctx = { lang, t: translator(ui, lang), settings, jobs };
+    const ctx = { lang, t: translator(ui, lang), settings, jobs, categories };
     for (const [page, render] of Object.entries(STATIC_PAGES)) {
       writeFile(outFile(pageUrl(lang, page)), render(ctx));
       count++;
@@ -149,9 +151,19 @@ export function build() {
       writeFile(outFile(pageUrl(lang, 'jobs', job.id)), renderJobDetail(ctx, job));
       count++;
     }
+    for (const cat of Object.keys(categories)) {
+      writeFile(outFile(pageUrl(lang, 'jobs', categories[cat][lang].slug)), renderJobSection(ctx, cat));
+      count++;
+    }
   }
   for (const page of Object.keys(STATIC_PAGES)) indexable.push({ page });
   for (const job of jobs.filter((j) => j.active)) indexable.push({ page: 'jobs', sub: job.id });
+  // Sections are listed only while they have active jobs (empty ones are noindex).
+  for (const cat of Object.keys(categories)) {
+    if (jobs.some((j) => j.active && j.category === cat)) {
+      indexable.push({ page: 'jobs', sub: Object.fromEntries(LANG_CODES.map((l) => [l, categories[cat][l].slug])) });
+    }
+  }
 
   writeFile(path.join(DIST, 'index.html'), rootPage(settings, ui));
   writeFile(path.join(DIST, '404.html'), notFoundPage(ui));

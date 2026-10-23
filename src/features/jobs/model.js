@@ -3,7 +3,7 @@ import path from 'node:path';
 import { readJson } from '../../core/util.js';
 import { LANG_CODES, DEFAULT_LANG } from '../../core/i18n.js';
 
-export const CATEGORIES = ['production', 'meat', 'logistics', 'drivers', 'agriculture'];
+export const CATEGORIES = ['production', 'meat', 'agriculture', 'kitchen', 'drivers', 'logistics'];
 export const CONTRACTS = ['employment', 'mandate', 'b2b'];
 export const TAGS =['housing', 'transport', 'meals', 'coordinator'];
 export const TEXT_FIELDS = ['title', 'summary', 'duties', 'requirements', 'offer', 'conditions'];
@@ -21,7 +21,7 @@ export function validateJob(id, raw) {
   if (!base) return [...errors, `missing "${DEFAULT_LANG}" block`];
   if (typeof base.active !== 'boolean') errors.push('active must be true/false');
   if (!CATEGORIES.includes(base.category)) errors.push(`category must be one of ${CATEGORIES.join(', ')}`);
-  if (!base.city) errors.push('city is required');
+  if (!base.city) errors.push('city is required (use "*" for various cities)');
   if (!/^[A-Z]{2}$/.test(base.country || '')) errors.push('country must be a 2-letter code');
   if (!DATE_RE.test(base.datePosted || '')) errors.push('datePosted must be YYYY-MM-DD');
   if (base.validThrough && !DATE_RE.test(base.validThrough)) errors.push('validThrough must be YYYY-MM-DD');
@@ -29,6 +29,7 @@ export function validateJob(id, raw) {
   if (!s || !(s.min > 0) || (s.max && s.max < s.min) || !['hour', 'month'].includes(s.unit)) {
     errors.push('salary needs min > 0, max >= min (optional), unit hour|month');
   }
+  if (s && 'net' in s && typeof s.net !== 'boolean') errors.push('salary.net must be true/false');
   if (base.contract && !CONTRACTS.includes(base.contract)) errors.push(`contract must be one of ${CONTRACTS.join(', ')}`);
   for (const tag of base.tags || []) if (!TAGS.includes(tag)) errors.push(`unknown tag "${tag}"`);
   for (const lang of LANG_CODES) {

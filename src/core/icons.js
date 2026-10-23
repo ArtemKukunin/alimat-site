@@ -17,6 +17,12 @@ const P = {
   menu: '<path d="M4 7h16M4 12h16M4 17h16"/>',
   gift: '<rect x="3" y="9" width="18" height="12" rx="1"/><path d="M3 13h18M12 9v12M12 9c-2-4-6-4-6-1s6 1 6 1zM12 9c2-4 6-4 6-1s-6 1-6 1z"/>',
   check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>',
+  factory: '<path d="M3 21V10l6 4V10l6 4V5h6v16z"/><path d="M7 17h2M12 17h2M17 17h2"/>',
+  knife: '<path d="M4 20l9-9"/><path d="M13 11l7-7c1 3 0 6-3 9l-2 2z"/><path d="M6 18l-2 2"/>',
+  leaf: '<path d="M5 19c0-9 6-14 15-14 0 9-5 15-14 15"/><path d="M5 19l8-8"/>',
+  truck: '<path d="M2 6h11v10H2zM13 10h4l4 4v2h-8z"/><circle cx="6" cy="18" r="1.8"/><circle cx="17" cy="18" r="1.8"/>',
+  box: '<path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/>',
+  search: '<circle cx="11" cy="11" r="6.5"/><path d="M16 16l5 5"/>',
 };
 
 export function icon(name, cls = 'ic') {
