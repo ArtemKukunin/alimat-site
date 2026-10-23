@@ -1,7 +1,7 @@
 import { pageUrl, asset, BASE } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
-import { layout, contactButtons } from '../../core/layout.js';
+import { layout, contactButtons, officeList } from '../../core/layout.js';
 import { jobCard, activeJobs, filterOptions, filterSelects, sectionTiles, cvBanner } from '../jobs/jobs.js';
 
 export const PERKS = [
@@ -68,11 +68,6 @@ ${cvBanner(ctx)}
   <div class="why">${perkRows(t)}</div>
 </section>
 
-<section class="wrap block duo">
-  <a class="duo-card duo-orange" href="${pageUrl(lang, 'candidates')}">${icon('user', 'ic ic-xl')}<h2>${esc(t('cand_h1'))}</h2><p>${esc(t('card_cand_d'))}</p><span class="btn btn-pill btn-outline-light">${esc(t('all_jobs'))} ${icon('arrow')}</span></a>
-  <a class="duo-card duo-blue" href="${pageUrl(lang, 'employers')}">${icon('shield', 'ic ic-xl')}<h2>${esc(t('nav_employers'))}</h2><p>${esc(t('emp_teaser_d'))}</p><span class="btn btn-pill btn-outline-light">${esc(t('emp_teaser_cta'))} ${icon('arrow')}</span></a>
-</section>
-
 <section class="wrap block">
   <ul class="stats">${settings.stats.map((v, i) => `<li>${icon(['shield', 'doc', 'user', 'home'][i], 'ic ic-lg')}<strong>${esc(v)}</strong><span>${esc(t(`stat${i + 1}`))}</span></li>`).join('')}</ul>
 </section>
@@ -100,6 +95,20 @@ ${cvBanner(ctx)}
 <section class="wrap block split">
   <div class="referral">${icon('gift', 'ic ic-lg')}<div><h2>${esc(t('referral_t', { bonus: settings.referralBonus }))}</h2><p>${esc(t('referral_d', { bonus: settings.referralBonus, half: settings.referralBonus / 2 }))}</p></div></div>
   <div class="help-box"><h2>${esc(t('f_fast'))}</h2>${contactButtons(ctx)}</div>
+</section>
+
+<section class="wrap block-sm">
+  <h2 class="center-title">${esc(t('offices_t'))}</h2>
+  <p class="center lead-c">${esc(t('offices_d'))}</p>
+  ${officeList(ctx)}
+</section>
+
+<section class="wrap block-sm">
+  <div class="emp-strip">
+    ${icon('shield', 'ic ic-lg')}
+    <div><h2>${esc(t('emp_teaser_t'))}</h2><p>${esc(t('emp_teaser_d'))}</p></div>
+    <a class="btn btn-pill btn-outline-blue" href="${pageUrl(lang, 'employers')}">${esc(t('emp_teaser_cta'))} ${icon('arrow')}</a>
+  </div>
 </section>`;
   const websiteLd = {
     '@context': 'https://schema.org', '@type': 'WebSite', name: settings.brand, inLanguage: lang,

@@ -29,5 +29,19 @@
     "+3 000",
     "+40 000"
   ],
-  "cookiesUrl": "/polityka-plikow-cookie/"
+  "cookiesUrl": "/polityka-plikow-cookie/",
+  "offices": [
+    {
+      "city": "Kraków",
+      "street": "Aleja Płk. Władysława Beliny-Prażmowskiego 6A/9",
+      "postal": "31-514",
+      "mapUrl": "https://maps.app.goo.gl/nfUV94BuS91ZC7dE7"
+    },
+    {
+      "city": "Kutno",
+      "street": "ul. Łąkoszyńska 127",
+      "postal": "99-300",
+      "mapUrl": "https://www.google.com/maps/search/?api=1&query=%C5%81%C4%85koszy%C5%84ska%20127%2C%2099-300%20Kutno"
+    }
+  ]
 }

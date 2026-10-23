@@ -219,14 +219,6 @@ body.nav-open .main-nav a { padding: 14px 12px; font-size: 1.1rem; border-bottom
 .why-text p { margin: 0; }
 
 /* Two big cards */
-.duo { display: grid; gap: 16px; }
-.duo-card { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; min-height: 230px; padding: 30px; border-radius: var(--radius); color: #fff; text-decoration: none; }
-.duo-card h2, .duo-card p { color: #fff; margin: 0; }
-.duo-card p { margin-bottom: 14px; opacity: .95; }
-.duo-card .btn { margin-top: auto; }
-.duo-orange { background: var(--orange-a); }
-.duo-blue { background: var(--blue-a); }
-.duo-card:hover .btn { background: rgba(255, 255, 255, .15); }
 
 /* Stats */
 .stats { list-style: none; margin: 0; padding: 24px 12px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px 8px; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; }
@@ -347,7 +339,7 @@ body.nav-open .main-nav a { padding: 14px 12px; font-size: 1.1rem; border-bottom
 
 /* ≥ 640px */
 @media (min-width: 640px) {
-  .job-grid, .perks, .steps, .grid-2, .duo { grid-template-columns: repeat(2, 1fr); }
+  .job-grid, .perks, .steps, .grid-2 { grid-template-columns: repeat(2, 1fr); }
   .filters { grid-template-columns: 1fr 1fr auto; align-items: end; }
   .search-band { grid-template-columns: 1fr 1fr; }
   .search-band h2 { grid-column: 1 / -1; }
@@ -498,3 +490,24 @@ h1, h2, h3, .section-tile, .job-card, .facts dd, .prose { overflow-wrap: break-w
   .search-band { grid-template-columns: auto 1fr 1fr auto auto; }
   .search-band h2 { grid-column: auto; align-self: center; white-space: nowrap; }
 }
+
+/* Offices (Kraków, Kutno) */
+.offices { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.offices li { background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px; }
+.offices h3 { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; }
+.offices h3 .ic { color: var(--orange); }
+.offices address { font-style: normal; margin-bottom: 8px; }
+.offices-stack li { box-shadow: none; padding: 0; background: transparent; }
+.offices-stack li + li { padding-top: 14px; border-top: 1px solid var(--grey-2); }
+.lead-c { max-width: 60ch; margin: -6px auto 22px; text-align: center; }
+@media (min-width: 640px) { .offices:not(.offices-stack) { grid-template-columns: 1fr 1fr; } }
+/* Small employer strip — candidates come first on the home page */
+.emp-strip { display: grid; gap: 14px; align-items: center; border: 1.5px solid var(--grey-2); border-radius: var(--radius); padding: 20px 22px; background: #fff; }
+.emp-strip h2 { margin: 0 0 4px; font-size: 1.2rem; }
+.emp-strip p { margin: 0; }
+.emp-strip .ic-lg { color: var(--blue); }
+@media (min-width: 768px) { .emp-strip { grid-template-columns: auto 1fr auto; } }
+.ticks-2 { gap: 12px; }
+.ticks-2 li { background: #fff; border-radius: 16px; padding: 14px 16px 14px 42px; box-shadow: var(--shadow); }
+.ticks-2 li::before { left: 18px; top: 1.35em; }
+@media (min-width: 768px) { .ticks-2 { grid-template-columns: 1fr 1fr; } }

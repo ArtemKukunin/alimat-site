@@ -25,6 +25,14 @@ export function renderEmployers(ctx) {
 <section class="wrap block">
   <ul class="perks services">${SERVICES.map(([k, ic]) => `<li>${icon(ic, 'ic ic-lg')}<h2>${esc(t(`${k}_t`))}</h2><p>${esc(t(`${k}_d`))}</p></li>`).join('')}</ul>
 </section>
+<section class="band"><div class="wrap block">
+  <h2 class="center-title">${esc(t('emp_why_t'))}</h2>
+  <ul class="ticks ticks-2">${Array.from({ length: 12 }, (_, i) => `<li>${esc(t(`emp_why${i + 1}`))}</li>`).join('')}</ul>
+</div></section>
+<section class="wrap block">
+  <h2 class="center-title">${esc(t('emp_how_t'))}</h2>
+  <ol class="steps">${[1, 2, 3, 4].map((n) => `<li><span class="step-n">${n}</span><h3>${esc(t(`emp_how${n}_t`))}</h3><p>${esc(t(`emp_how${n}_d`))}</p></li>`).join('')}</ol>
+</section>
 <section class="band" id="inquiry"><div class="wrap block form-narrow">
   <h2>${esc(t('emp_form_t'))}</h2>
   ${formShell(ctx, { type: 'employer', fieldsHtml: fields, submitLabel: t('emp_submit') })}

@@ -6,6 +6,13 @@ export const waLink = (settings, text) =>
   `https://wa.me/${digits(settings.phone)}${text ? `?text=${encodeURIComponent(text)}` : ''}`;
 export const telLink = (phone) => `tel:+${digits(phone)}`;
 
+/** Office cards (Kraków, Kutno…) from settings.offices. */
+export const officeList = (ctx, cls = 'offices') => `<ul class="${cls}">${ctx.settings.offices.map((o) => `<li>
+  <h3>${icon('pin')}${esc(o.city)}</h3>
+  <address>${esc(o.street)}<br>${esc(o.postal)} ${esc(o.city)}</address>
+  <a class="link-arrow" href="${esc(o.mapUrl)}" target="_blank" rel="noopener">${esc(ctx.t('c_map'))} ${icon('arrow')}</a>
+</li>`).join('')}</ul>`;
+
 export function organizationLd(settings) {
   const a = settings.address;
   return {
@@ -23,6 +30,7 @@ export function organizationLd(settings) {
     knowsLanguage: LANG_CODES,
     contactPoint: { '@type': 'ContactPoint', contactType: 'recruitment', telephone: settings.phone, email: settings.email, availableLanguage: ['Polish', 'Ukrainian', 'Russian', 'English', 'Spanish', 'Portuguese', 'Romanian'] },
     address: { '@type': 'PostalAddress', streetAddress: a.street, postalCode: a.postal, addressLocality: a.city, addressCountry: a.country },
+    location: settings.offices.map((o) => ({ '@type': 'Place', name: `${settings.brand} ${o.city}`, address: { '@type': 'PostalAddress', streetAddress: o.street, postalCode: o.postal, addressLocality: o.city, addressCountry: 'PL' } })),
     sameAs: Object.values(settings.social),
   };
 }
@@ -117,7 +125,6 @@ function header(ctx, page, langLinks) {
     <nav class="main-nav" id="main-nav" aria-label="${esc(t('menu'))}"><ul>${nav}</ul></nav>
     <div class="header-actions">
       <a class="btn btn-pill btn-outline-orange header-cta" href="${pageUrl(lang, 'apply')}">${icon('doc')}<span>${esc(t('cta_apply'))}</span></a>
-      <a class="btn btn-pill btn-outline-blue header-cta" href="${pageUrl(lang, 'employers')}#inquiry">${icon('menu')}<span>${esc(t('emp_form_t'))}</span></a>
       <details class="lang-switch">
         <summary aria-label="${esc(t('lang_label'))}">${icon('globe')}<span>${LANGS[lang].short}</span></summary>
         <ul>${langs}</ul>
@@ -142,7 +149,7 @@ function footer(ctx) {
     <ul class="help-band-list">
       <li>${icon('phone')}<a href="${telLink(settings.phone)}">${esc(settings.phone)}</a> · WhatsApp · Viber</li>
       <li>${icon('mail')}<a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></li>
-      <li>${icon('pin')}<a href="${esc(settings.mapUrl)}" rel="noopener" target="_blank">${esc(a.street)}, ${esc(a.postal)} ${esc(a.city)}</a></li>
+      ${settings.offices.map((o) => `<li>${icon('pin')}<a href="${esc(o.mapUrl)}" rel="noopener" target="_blank">${esc(o.city)}: ${esc(o.street)}</a></li>`).join('')}
     </ul>
     <div class="help-band-cta">
       <a class="btn btn-pill btn-orange" href="${pageUrl(lang, 'apply')}">${esc(t('cta_apply_long'))} ${icon('arrow')}</a>
@@ -173,7 +180,7 @@ function footer(ctx) {
       <ul class="f-list">
         <li><a href="${telLink(settings.phone)}">${esc(settings.phone)}</a></li>
         <li><a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></li>
-        <li><address>${esc(a.street)}<br>${esc(a.postal)} ${esc(a.city)}</address></li>
+        ${settings.offices.map((o) => `<li><address>${esc(o.street)}<br>${esc(o.postal)} ${esc(o.city)}</address></li>`).join('')}
       </ul>
     </div>
   </div>

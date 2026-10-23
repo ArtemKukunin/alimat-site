@@ -1,12 +1,11 @@
 import { pageUrl } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
-import { layout, breadcrumbs, breadcrumbLd, contactButtons, telLink } from '../../core/layout.js';
+import { layout, breadcrumbs, breadcrumbLd, contactButtons, telLink, officeList } from '../../core/layout.js';
 import { formShell, input, textarea } from '../../core/form.js';
 
 export function renderContact(ctx) {
   const { lang, t, settings } = ctx;
-  const a = settings.address;
   const crumbs = [{ name: t('breadcrumb_home'), href: pageUrl(lang, 'home') }, { name: t('contact_h1'), href: pageUrl(lang, 'contact') }];
   const fields = `
   ${input(t, { name: 'name', label: t('f_name'), required: true, autocomplete: 'name' })}
@@ -32,8 +31,7 @@ export function renderContact(ctx) {
     </section>
     <section class="c-card">
       <h2>${icon('pin')}${esc(t('c_address'))}</h2>
-      <address>${esc(settings.company)}<br>${esc(a.street)}<br>${esc(a.postal)} ${esc(a.city)}</address>
-      <p><a class="link-arrow" href="${esc(settings.mapUrl)}" target="_blank" rel="noopener">${esc(t('c_map'))} ${icon('arrow')}</a></p>
+      ${officeList(ctx, 'offices offices-stack')}
     </section>
   </div>
   ${formShell(ctx, { type: 'contact', fieldsHtml: fields, submitLabel: t('f_send') })}
