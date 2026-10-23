@@ -149,6 +149,12 @@ function footer(ctx) {
       <p>${esc(t('footer_tagline'))}</p>
     </div>
     <div>
+      <h2 class="f-h">${esc(t('nav_jobs'))}</h2>
+      <ul class="f-list">
+        ${Object.keys(ctx.categories).map((c) => `<li><a href="${pageUrl(lang, 'jobs', ctx.categories[c][lang].slug)}">${esc(ctx.categories[c][lang].name)}</a></li>`).join('')}
+      </ul>
+    </div>
+    <div>
       <h2 class="f-h">Alimat Group</h2>
       <ul class="f-list">
         ${['jobs', 'candidates', 'apply', 'employers', 'contact'].map((p) => `<li><a href="${pageUrl(lang, p)}">${esc(t(p === 'apply' ? 'cta_apply_long' : `nav_${p}`))}</a></li>`).join('')}
@@ -162,10 +168,10 @@ function footer(ctx) {
         <li><address>${esc(a.street)}<br>${esc(a.postal)} ${esc(a.city)}</address></li>
       </ul>
     </div>
-    <div>
-      <h2 class="f-h">${esc(t('c_social'))}</h2>
-      <ul class="f-list">${social}</ul>
-    </div>
+  </div>
+  <div class="wrap footer-social">
+    <span class="f-h">${esc(t('c_social'))}</span>
+    <ul>${social}</ul>
   </div>
   <div class="wrap footer-bottom">
     <span>© ${new Date().getFullYear()} ${esc(settings.company)}. ${esc(t('footer_rights'))}</span>

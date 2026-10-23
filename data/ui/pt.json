@@ -91,11 +91,6 @@
   "tag_transport": "Transporte",
   "tag_meals": "Refeições",
   "tag_coordinator": "Coordenador",
-  "cat_production": "Produção",
-  "cat_meat": "Frigoríficos",
-  "cat_logistics": "Armazém e logística",
-  "cat_drivers": "Motoristas",
-  "cat_agriculture": "Estufas e agricultura",
   "country_DE": "Alemanha",
   "cand_title": "Trabalho na Polônia para estrangeiros – como funciona | Alimat Group",
   "cand_desc": "Como funciona a contratação na Alimat Group: emprego legal, ajuda com documentos e moradia, coordenador 24/7. Respostas às dúvidas mais comuns.",
@@ -178,5 +173,14 @@
   "stat1": "empresas trabalham com a Alimat Group",
   "stat2": "projetos realizados",
   "stat3": "trabalhadores recrutados por ano para parceiros",
-  "stat4": "trabalhadores recrutados na história da empresa"
+  "stat4": "trabalhadores recrutados na história da empresa",
+  "sections_title": "Escolha o tipo de trabalho",
+  "section_count": "Vagas: {n}",
+  "other_sections": "Outros tipos de trabalho",
+  "loc_various": "Várias cidades da Polônia",
+  "here_t": "Estamos aqui por você!",
+  "here_d1": "Todos os anos ajudamos milhares de pessoas a encontrar um emprego legal e estável na Polônia e apoiamos centenas de empresas a montar suas equipes.",
+  "here_d2": "Encontramos uma vaga de acordo com suas habilidades, ajudamos com documentos e moradia, e nosso coordenador apoia você no local de trabalho.",
+  "unit_hour_any": "PLN/hora",
+  "unit_month_any": "PLN/mês"
 }

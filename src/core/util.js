@@ -38,7 +38,9 @@ export function formatSalary(salary, lang, t) {
   const nf = new Intl.NumberFormat(LANGS[lang].locale, { maximumFractionDigits: 2 });
   const { min, max, unit } = salary;
   const amount = max && max !== min ? `${nf.format(min)} – ${nf.format(max)}` : nf.format(min);
-  return `${amount} ${t(unit === 'hour' ? 'unit_hour' : 'unit_month')}`;
+  // salary.net === false → the ad does not say net/gross, so the unit label drops "net".
+  const key = `unit_${unit === 'hour' ? 'hour' : 'month'}${salary.net === false ? '_any' : ''}`;
+  return `${amount} ${t(key)}`;
 }
 
 export function formatDate(iso, lang) {

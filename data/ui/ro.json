@@ -91,11 +91,6 @@
   "tag_transport": "Transport",
   "tag_meals": "Masă",
   "tag_coordinator": "Coordonator",
-  "cat_production": "Producție",
-  "cat_meat": "Industria cărnii",
-  "cat_logistics": "Depozit și logistică",
-  "cat_drivers": "Șoferi",
-  "cat_agriculture": "Sere și agricultură",
   "country_DE": "Germania",
   "cand_title": "Muncă în Polonia pentru străini – cum funcționează | Alimat Group",
   "cand_desc": "Cum funcționează angajarea la Alimat Group: contract legal, ajutor cu actele și cazarea, coordonator 24/7. Răspunsuri la întrebările frecvente.",
@@ -178,5 +173,14 @@
   "stat1": "companii lucrează cu Alimat Group",
   "stat2": "proiecte realizate",
   "stat3": "lucrători recrutați anual pentru parteneri",
-  "stat4": "lucrători recrutați în istoria companiei"
+  "stat4": "lucrători recrutați în istoria companiei",
+  "sections_title": "Alege tipul de muncă",
+  "section_count": "Oferte: {n}",
+  "other_sections": "Alte tipuri de muncă",
+  "loc_various": "Diverse orașe din Polonia",
+  "here_t": "Suntem aici pentru tine!",
+  "here_d1": "În fiecare an ajutăm mii de oameni să găsească un loc de muncă legal și stabil în Polonia și sprijinim sute de companii să își formeze echipele.",
+  "here_d2": "Îți găsim un post potrivit abilităților tale, te ajutăm cu actele și cazarea, iar coordonatorul nostru te sprijină la locul de muncă.",
+  "unit_hour_any": "PLN/oră",
+  "unit_month_any": "PLN/lună"
 }

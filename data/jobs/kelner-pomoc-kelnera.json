@@ -1,0 +1,118 @@
+{
+  "pl": {
+    "active": true,
+    "category": "kitchen",
+    "city": "Bolesław",
+    "region": "",
+    "country": "PL",
+    "datePosted": "2026-07-13",
+    "salary": {
+      "min": 5000,
+      "max": 6000,
+      "unit": "month",
+      "net": false
+    },
+    "contract": "",
+    "tags": [
+      "housing",
+      "meals",
+      "coordinator"
+    ],
+    "title": "Kelner / pomoc kelnera",
+    "summary": "Praca jako kelner lub pomoc kelnera (runner) w tradycyjnej polskiej restauracji w Bolesławiu, ok. 35 km od Katowic.",
+    "duties": [],
+    "requirements": [],
+    "offer": [
+      "Wynagrodzenie od 5000 zł miesięcznie",
+      "Legalne zatrudnienie u polskiego pracodawcy",
+      "Bezpłatne posiłki: śniadania, obiady i kolacje w restauracji",
+      "Bezpłatne zakwaterowanie tuż obok miejsca pracy",
+      "Wsparcie opiekuna z naszej firmy, gdy go potrzebujesz"
+    ],
+    "conditions": []
+  },
+  "uk": {
+    "title": "Офіціант / помічник офіціанта",
+    "summary": "Робота офіціантом або помічником офіціанта (ранер) у традиційному польському ресторані в Болеславі, приблизно 35 км від Катовіце.",
+    "duties": [],
+    "requirements": [],
+    "offer": [
+      "Зарплата від 5000 зл на місяць",
+      "Легальне працевлаштування в польського роботодавця",
+      "Безкоштовне харчування: сніданки, обіди й вечері в ресторані",
+      "Безкоштовне житло поруч із місцем роботи",
+      "Підтримка куратора з нашої компанії, коли вона потрібна"
+    ],
+    "conditions": []
+  },
+  "ru": {
+    "title": "Официант / помощник официанта",
+    "summary": "Работа официантом или помощником официанта (раннер) в традиционном польском ресторане в Болеславе, примерно в 35 км от Катовице.",
+    "duties": [],
+    "requirements": [],
+    "offer": [
+      "Зарплата от 5000 зл в месяц",
+      "Легальное трудоустройство у польского работодателя",
+      "Бесплатное питание: завтраки, обеды и ужины в ресторане",
+      "Бесплатное жильё рядом с местом работы",
+      "Поддержка куратора из нашей компании, когда она нужна"
+    ],
+    "conditions": []
+  },
+  "en": {
+    "title": "Waiter / Waiter Assistant",
+    "summary": "Work as a waiter or waiter assistant (runner) in a traditional Polish restaurant in Bolesław, about 35 km from Katowice.",
+    "duties": [],
+    "requirements": [],
+    "offer": [
+      "Pay from PLN 5,000 a month",
+      "Legal employment with a Polish employer",
+      "Free meals: breakfast, lunch and dinner at the restaurant",
+      "Free accommodation right next to your workplace",
+      "Support from our company's coordinator whenever you need it"
+    ],
+    "conditions": []
+  },
+  "es": {
+    "title": "Camarero/a / ayudante de camarero",
+    "summary": "Trabajo como camarero o ayudante de camarero (runner) en un restaurante polaco tradicional en Bolesław, a unos 35 km de Katowice.",
+    "duties": [],
+    "requirements": [],
+    "offer": [
+      "Salario desde 5000 PLN al mes",
+      "Empleo legal con un empleador polaco",
+      "Comidas gratuitas: desayuno, almuerzo y cena en el restaurante",
+      "Alojamiento gratuito justo al lado del trabajo",
+      "Apoyo de un coordinador de nuestra empresa cuando lo necesites"
+    ],
+    "conditions": []
+  },
+  "pt": {
+    "title": "Garçom / auxiliar de garçom",
+    "summary": "Trabalho como garçom ou auxiliar de garçom (runner) em um restaurante polonês tradicional em Bolesław, a cerca de 35 km de Katowice.",
+    "duties": [],
+    "requirements": [],
+    "offer": [
+      "Salário a partir de 5.000 PLN por mês",
+      "Emprego legal com um empregador polonês",
+      "Refeições gratuitas: café da manhã, almoço e jantar no restaurante",
+      "Moradia gratuita ao lado do local de trabalho",
+      "Apoio de um coordenador da nossa empresa sempre que precisar"
+    ],
+    "conditions": []
+  },
+  "ro": {
+    "title": "Ospătar / ajutor de ospătar",
+    "summary": "Muncă de ospătar sau ajutor de ospătar (runner) într-un restaurant tradițional polonez din Bolesław, la aproximativ 35 km de Katowice.",
+    "duties": [],
+    "requirements": [],
+    "offer": [
+      "Salariu de la 5.000 PLN pe lună",
+      "Angajare legală la un angajator polonez",
+      "Masă gratuită: mic dejun, prânz și cină în restaurant",
+      "Cazare gratuită chiar lângă locul de muncă",
+      "Sprijinul unui coordonator din firma noastră, când ai nevoie"
+    ],
+    "conditions": []
+  }
+}

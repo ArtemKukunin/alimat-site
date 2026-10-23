@@ -1,0 +1,314 @@
+{
+  "production": {
+    "icon": "factory",
+    "pl": {
+      "slug": "praca-na-produkcji",
+      "name": "Praca na produkcji",
+      "h1": "Praca na produkcji w Polsce",
+      "desc": "Oferty pracy na produkcji w Polsce: operatorzy maszyn, pakowanie, linie produkcyjne. Legalna umowa, stawki netto, pomoc z zakwaterowaniem.",
+      "intro": "Praca przy liniach produkcyjnych, pakowaniu i obsłudze maszyn. Stawki podajemy netto, a warunki znajdziesz w każdej ofercie."
+    },
+    "uk": {
+      "slug": "robota-na-vyrobnytstvi",
+      "name": "Робота на виробництві",
+      "h1": "Робота на виробництві в Польщі",
+      "desc": "Вакансії на виробництві в Польщі: оператори машин, пакування, виробничі лінії. Легальний договір, ставки нетто, допомога з житлом.",
+      "intro": "Робота на виробничих лініях, пакуванні та обслуговуванні машин. Ставки вказані нетто, умови — в кожній вакансії."
+    },
+    "ru": {
+      "slug": "rabota-na-proizvodstve",
+      "name": "Работа на производстве",
+      "h1": "Работа на производстве в Польше",
+      "desc": "Вакансии на производстве в Польше: операторы машин, упаковка, производственные линии. Легальный договор, ставки нетто, помощь с жильём.",
+      "intro": "Работа на производственных линиях, упаковке и обслуживании машин. Ставки указаны нетто, условия — в каждой вакансии."
+    },
+    "en": {
+      "slug": "production-jobs",
+      "name": "Production jobs",
+      "h1": "Production jobs in Poland",
+      "desc": "Production jobs in Poland: machine operators, packing, production lines. Legal contract, net pay, help with accommodation.",
+      "intro": "Work on production lines, packing and machine operation. Pay rates are net; each listing gives the full conditions."
+    },
+    "es": {
+      "slug": "empleo-en-produccion",
+      "name": "Empleo en producción",
+      "h1": "Empleo en producción en Polonia",
+      "desc": "Empleo en producción en Polonia: operarios de máquinas, envasado, líneas de producción. Contrato legal, salario neto, ayuda con el alojamiento.",
+      "intro": "Trabajo en líneas de producción, envasado y manejo de máquinas. Los salarios son netos; cada oferta detalla las condiciones."
+    },
+    "pt": {
+      "slug": "vagas-producao",
+      "name": "Vagas na produção",
+      "h1": "Vagas na produção na Polônia",
+      "desc": "Vagas na produção na Polônia: operadores de máquinas, embalagem, linhas de produção. Contrato legal, salário líquido, ajuda com moradia.",
+      "intro": "Trabalho em linhas de produção, embalagem e operação de máquinas. Os salários são líquidos; cada vaga traz as condições."
+    },
+    "ro": {
+      "slug": "munca-in-productie",
+      "name": "Muncă în producție",
+      "h1": "Muncă în producție în Polonia",
+      "desc": "Locuri de muncă în producție în Polonia: operatori mașini, ambalare, linii de producție. Contract legal, salariu net, ajutor la cazare.",
+      "intro": "Muncă pe linii de producție, la ambalare și la deservirea mașinilor. Salariile sunt nete; fiecare ofertă descrie condițiile."
+    }
+  },
+  "meat": {
+    "icon": "knife",
+    "pl": {
+      "slug": "praca-w-zakladach-miesnych",
+      "name": "Praca w zakładach mięsnych",
+      "h1": "Praca w zakładach mięsnych w Polsce",
+      "desc": "Praca w zakładach mięsnych i drobiowych: linia ubojowa, obróbka, pakowanie. Legalna umowa; posiłki, dojazd i zakwaterowanie w wielu ofertach.",
+      "intro": "Specjalizujemy się w rekrutacji do branży mięsnej. Wiele ofert obejmuje posiłki, dojazd i pomoc w zakwaterowaniu."
+    },
+    "uk": {
+      "slug": "robota-na-myasokombinati",
+      "name": "Робота на м'ясокомбінатах",
+      "h1": "Робота на м'ясокомбінатах у Польщі",
+      "desc": "Робота на м'ясокомбінатах і птахофабриках: лінія забою, обробка, пакування. Легальний договір; харчування, доїзд і житло в багатьох вакансіях.",
+      "intro": "Ми спеціалізуємося на підборі персоналу для м'ясної галузі. Багато вакансій включають харчування, доїзд і допомогу з житлом."
+    },
+    "ru": {
+      "slug": "rabota-na-myasokombinate",
+      "name": "Работа на мясокомбинатах",
+      "h1": "Работа на мясокомбинатах в Польше",
+      "desc": "Работа на мясокомбинатах и птицефабриках: линия убоя, обработка, упаковка. Легальный договор; питание, доезд и жильё во многих вакансиях.",
+      "intro": "Мы специализируемся на подборе персонала для мясной отрасли. Многие вакансии включают питание, доезд и помощь с жильём."
+    },
+    "en": {
+      "slug": "meat-processing-jobs",
+      "name": "Meat processing jobs",
+      "h1": "Meat processing jobs in Poland",
+      "desc": "Jobs in meat and poultry plants: slaughter line, processing, packing. Legal contract; meals, transport and accommodation in many listings.",
+      "intro": "We specialise in recruitment for the meat industry. Many listings include meals, transport and help with accommodation."
+    },
+    "es": {
+      "slug": "empleo-industria-carnica",
+      "name": "Empleo en la industria cárnica",
+      "h1": "Empleo en la industria cárnica en Polonia",
+      "desc": "Empleo en plantas cárnicas y avícolas: línea de sacrificio, procesado, envasado. Contrato legal; comidas, transporte y alojamiento en muchas ofertas.",
+      "intro": "Estamos especializados en la selección de personal para la industria cárnica. Muchas ofertas incluyen comidas, transporte y ayuda con el alojamiento."
+    },
+    "pt": {
+      "slug": "vagas-frigorificos",
+      "name": "Vagas em frigoríficos",
+      "h1": "Vagas em frigoríficos na Polônia",
+      "desc": "Vagas em frigoríficos de carne e aves: linha de abate, processamento, embalagem. Contrato legal; refeições, transporte e moradia em muitas vagas.",
+      "intro": "Somos especializados em recrutamento para a indústria da carne. Muitas vagas incluem refeições, transporte e ajuda com moradia."
+    },
+    "ro": {
+      "slug": "munca-in-abatoare",
+      "name": "Muncă în industria cărnii",
+      "h1": "Muncă în industria cărnii în Polonia",
+      "desc": "Muncă în abatoare și fabrici de carne și pasăre: linie de sacrificare, procesare, ambalare. Contract legal; masă, transport și cazare la multe oferte.",
+      "intro": "Suntem specializați în recrutare pentru industria cărnii. Multe oferte includ masă, transport și ajutor la cazare."
+    }
+  },
+  "agriculture": {
+    "icon": "leaf",
+    "pl": {
+      "slug": "praca-w-szklarni",
+      "name": "Praca w szklarniach",
+      "h1": "Praca w szklarniach i rolnictwie w Polsce",
+      "desc": "Praca w szklarniach i przy zbiorach w Polsce. Sprawdź stawki netto i warunki, aplikuj online lub przez WhatsApp.",
+      "intro": "Praca przy zbiorach i w szklarniach, także sezonowa. Stawki i warunki znajdziesz w każdej ofercie."
+    },
+    "uk": {
+      "slug": "robota-v-teplytsi",
+      "name": "Робота в теплицях",
+      "h1": "Робота в теплицях і сільському господарстві",
+      "desc": "Робота в теплицях і на зборі врожаю в Польщі. Ставки нетто та умови — подайте заявку онлайн або через WhatsApp.",
+      "intro": "Робота на зборі врожаю та в теплицях, зокрема сезонна. Ставки й умови — в кожній вакансії."
+    },
+    "ru": {
+      "slug": "rabota-v-teplitse",
+      "name": "Работа в теплицах",
+      "h1": "Работа в теплицах и сельском хозяйстве",
+      "desc": "Работа в теплицах и на сборе урожая в Польше. Ставки нетто и условия — откликнитесь онлайн или через WhatsApp.",
+      "intro": "Работа на сборе урожая и в теплицах, в том числе сезонная. Ставки и условия — в каждой вакансии."
+    },
+    "en": {
+      "slug": "greenhouse-jobs",
+      "name": "Greenhouse jobs",
+      "h1": "Greenhouse and farm jobs in Poland",
+      "desc": "Greenhouse and harvest jobs in Poland. See net pay and conditions, apply online or via WhatsApp.",
+      "intro": "Harvest and greenhouse work, including seasonal jobs. Each listing gives the pay and conditions."
+    },
+    "es": {
+      "slug": "empleo-en-invernaderos",
+      "name": "Empleo en invernaderos",
+      "h1": "Empleo en invernaderos y agricultura en Polonia",
+      "desc": "Empleo en invernaderos y en la cosecha en Polonia. Consulta el salario neto y las condiciones, postúlate en línea o por WhatsApp.",
+      "intro": "Trabajo en la cosecha y en invernaderos, también de temporada. Cada oferta indica el salario y las condiciones."
+    },
+    "pt": {
+      "slug": "vagas-estufas",
+      "name": "Vagas em estufas",
+      "h1": "Vagas em estufas e na agricultura na Polônia",
+      "desc": "Vagas em estufas e na colheita na Polônia. Veja o salário líquido e as condições, candidate-se online ou pelo WhatsApp.",
+      "intro": "Trabalho na colheita e em estufas, inclusive temporário. Cada vaga informa o salário e as condições."
+    },
+    "ro": {
+      "slug": "munca-in-sere",
+      "name": "Muncă în sere",
+      "h1": "Muncă în sere și agricultură în Polonia",
+      "desc": "Muncă în sere și la recoltare în Polonia. Vezi salariul net și condițiile, aplică online sau pe WhatsApp.",
+      "intro": "Muncă la recoltare și în sere, inclusiv sezonieră. Fiecare ofertă indică salariul și condițiile."
+    }
+  },
+  "kitchen": {
+    "icon": "meal",
+    "pl": {
+      "slug": "praca-w-kuchni",
+      "name": "Praca w kuchni i gastronomii",
+      "h1": "Praca w kuchni i gastronomii w Polsce",
+      "desc": "Praca w kuchni, restauracjach i hotelach: pomoc kuchenna, kelner. Legalna umowa i stawki netto.",
+      "intro": "Oferty dla pomocy kuchennej, kelnerów i obsługi restauracji w różnych miastach Polski."
+    },
+    "uk": {
+      "slug": "robota-na-kukhni",
+      "name": "Робота на кухні та в ресторанах",
+      "h1": "Робота на кухні та в ресторанах Польщі",
+      "desc": "Робота на кухні, в ресторанах і готелях: помічник на кухні, офіціант. Легальний договір і ставки нетто.",
+      "intro": "Вакансії для помічників на кухні, офіціантів і персоналу ресторанів у різних містах Польщі."
+    },
+    "ru": {
+      "slug": "rabota-na-kukhne",
+      "name": "Работа на кухне и в ресторанах",
+      "h1": "Работа на кухне и в ресторанах Польши",
+      "desc": "Работа на кухне, в ресторанах и отелях: помощник на кухне, официант. Легальный договор и ставки нетто.",
+      "intro": "Вакансии для помощников на кухне, официантов и персонала ресторанов в разных городах Польши."
+    },
+    "en": {
+      "slug": "kitchen-jobs",
+      "name": "Kitchen and restaurant jobs",
+      "h1": "Kitchen and restaurant jobs in Poland",
+      "desc": "Kitchen, restaurant and hotel jobs: kitchen helper, waiter. Legal contract and net pay.",
+      "intro": "Jobs for kitchen helpers, waiters and restaurant staff in cities across Poland."
+    },
+    "es": {
+      "slug": "empleo-en-cocina",
+      "name": "Empleo en cocina y hostelería",
+      "h1": "Empleo en cocina y hostelería en Polonia",
+      "desc": "Empleo en cocinas, restaurantes y hoteles: ayudante de cocina, camarero. Contrato legal y salario neto.",
+      "intro": "Ofertas para ayudantes de cocina, camareros y personal de restaurantes en distintas ciudades de Polonia."
+    },
+    "pt": {
+      "slug": "vagas-cozinha",
+      "name": "Vagas em cozinha e restaurantes",
+      "h1": "Vagas em cozinha e restaurantes na Polônia",
+      "desc": "Vagas em cozinhas, restaurantes e hotéis: auxiliar de cozinha, garçom. Contrato legal e salário líquido.",
+      "intro": "Vagas para auxiliares de cozinha, garçons e equipe de restaurantes em várias cidades da Polônia."
+    },
+    "ro": {
+      "slug": "munca-in-bucatarie",
+      "name": "Muncă în bucătărie și restaurante",
+      "h1": "Muncă în bucătărie și restaurante în Polonia",
+      "desc": "Muncă în bucătării, restaurante și hoteluri: ajutor de bucătar, ospătar. Contract legal și salariu net.",
+      "intro": "Oferte pentru ajutoare de bucătar, ospătari și personal de restaurant în diferite orașe din Polonia."
+    }
+  },
+  "drivers": {
+    "icon": "truck",
+    "pl": {
+      "slug": "praca-kierowca",
+      "name": "Praca jako kierowca",
+      "h1": "Praca dla kierowców C+E",
+      "desc": "Praca dla kierowców C+E w transporcie międzynarodowym: stałe trasy, umowa o pracę, wynagrodzenie netto.",
+      "intro": "Praca dla kierowców kategorii C+E na stałych trasach międzynarodowych, na umowę o pracę."
+    },
+    "uk": {
+      "slug": "robota-vodiyem",
+      "name": "Робота водієм",
+      "h1": "Робота водієм C+E",
+      "desc": "Робота для водіїв C+E у міжнародних перевезеннях: постійні маршрути, трудовий договір, зарплата нетто.",
+      "intro": "Робота для водіїв категорії C+E на постійних міжнародних маршрутах за трудовим договором."
+    },
+    "ru": {
+      "slug": "rabota-voditelem",
+      "name": "Работа водителем",
+      "h1": "Работа водителем C+E",
+      "desc": "Работа для водителей C+E в международных перевозках: постоянные маршруты, трудовой договор, зарплата нетто.",
+      "intro": "Работа для водителей категории C+E на постоянных международных маршрутах по трудовому договору."
+    },
+    "en": {
+      "slug": "driver-jobs",
+      "name": "Driver jobs",
+      "h1": "C+E driver jobs",
+      "desc": "Jobs for C+E drivers in international haulage: fixed routes, employment contract, net pay.",
+      "intro": "Jobs for C+E drivers on fixed international routes, on an employment contract."
+    },
+    "es": {
+      "slug": "empleo-conductor",
+      "name": "Empleo de conductor",
+      "h1": "Empleo para conductores C+E",
+      "desc": "Empleo para conductores C+E en transporte internacional: rutas fijas, contrato laboral, salario neto.",
+      "intro": "Trabajo para conductores con permiso C+E en rutas internacionales fijas y con contrato laboral."
+    },
+    "pt": {
+      "slug": "vagas-motorista",
+      "name": "Vagas para motorista",
+      "h1": "Vagas para motoristas C+E",
+      "desc": "Vagas para motoristas C+E no transporte internacional: rotas fixas, contrato de trabalho, salário líquido.",
+      "intro": "Trabalho para motoristas da categoria C+E em rotas internacionais fixas, com contrato de trabalho."
+    },
+    "ro": {
+      "slug": "munca-sofer",
+      "name": "Muncă de șofer",
+      "h1": "Muncă pentru șoferi C+E",
+      "desc": "Muncă pentru șoferi C+E în transport internațional: rute fixe, contract de muncă, salariu net.",
+      "intro": "Muncă pentru șoferi cu categoria C+E pe rute internaționale fixe, cu contract de muncă."
+    }
+  },
+  "logistics": {
+    "icon": "box",
+    "pl": {
+      "slug": "praca-na-magazynie",
+      "name": "Praca na magazynie",
+      "h1": "Praca na magazynie w Polsce",
+      "desc": "Praca na magazynie: kompletacja, załadunek, wózek widłowy. Stawki netto; dojazd i posiłki w wielu ofertach.",
+      "intro": "Kompletacja zamówień, załadunek i rozładunek. Uprawnienia UDT są mile widziane, ale nie zawsze wymagane."
+    },
+    "uk": {
+      "slug": "robota-na-skladi",
+      "name": "Робота на складі",
+      "h1": "Робота на складі в Польщі",
+      "desc": "Робота на складі: комплектування, завантаження, навантажувач. Ставки нетто; доїзд і харчування в багатьох вакансіях.",
+      "intro": "Комплектування замовлень, завантаження й розвантаження. Посвідчення UDT — перевага, але потрібне не завжди."
+    },
+    "ru": {
+      "slug": "rabota-na-sklade",
+      "name": "Работа на складе",
+      "h1": "Работа на складе в Польше",
+      "desc": "Работа на складе: комплектация, погрузка, погрузчик. Ставки нетто; доезд и питание во многих вакансиях.",
+      "intro": "Комплектация заказов, погрузка и разгрузка. Удостоверение UDT — преимущество, но требуется не всегда."
+    },
+    "en": {
+      "slug": "warehouse-jobs",
+      "name": "Warehouse jobs",
+      "h1": "Warehouse jobs in Poland",
+      "desc": "Warehouse jobs: order picking, loading, forklift work. Net pay; transport and meals in many listings.",
+      "intro": "Order picking, loading and unloading. A UDT forklift licence is an advantage but not always required."
+    },
+    "es": {
+      "slug": "empleo-en-almacen",
+      "name": "Empleo en almacén",
+      "h1": "Empleo en almacén en Polonia",
+      "desc": "Empleo en almacén: preparación de pedidos, carga, carretilla elevadora. Salario neto; transporte y comidas en muchas ofertas.",
+      "intro": "Preparación de pedidos, carga y descarga. El certificado UDT de carretillero se valora, pero no siempre se exige."
+    },
+    "pt": {
+      "slug": "vagas-armazem",
+      "name": "Vagas em armazém",
+      "h1": "Vagas em armazém na Polônia",
+      "desc": "Vagas em armazém: separação de pedidos, carga, empilhadeira. Salário líquido; transporte e refeições em muitas vagas.",
+      "intro": "Separação de pedidos, carga e descarga. O certificado UDT de empilhadeira é um diferencial, mas nem sempre é exigido."
+    },
+    "ro": {
+      "slug": "munca-in-depozit",
+      "name": "Muncă în depozit",
+      "h1": "Muncă în depozit în Polonia",
+      "desc": "Muncă în depozit: pregătirea comenzilor, încărcare, stivuitor. Salariu net; transport și masă la multe oferte.",
+      "intro": "Pregătirea comenzilor, încărcare și descărcare. Atestatul UDT de stivuitorist este un avantaj, dar nu este cerut mereu."
+    }
+  }
+}

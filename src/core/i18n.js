@@ -26,7 +26,7 @@ const SUFFIX = process.env.SITE_PREVIEW ? 'index.html' : '';
 export const BASE = (process.env.SITE_BASE || '').replace(/\/+$/, '');
 export const asset = (p) => `${BASE}/assets/${p}`;
 
-/** Path of a page in a language. page = 'home' | route key; sub = optional child slug. */
+/** Path of a page in a language. page = 'home' | route key; sub = optional child slug, or {lang: slug}. */
 export function pageUrl(lang, page, sub) {
   let p = `${BASE}/${lang}/`;
   if (page !== 'home') {
@@ -34,7 +34,8 @@ export function pageUrl(lang, page, sub) {
     if (!route) throw new Error(`Unknown page "${page}" for ${lang}`);
     p += `${route}/`;
   }
-  if (sub) p += `${sub}/`;
+  const s = sub && typeof sub === 'object' ? sub[lang] : sub;
+  if (s) p += `${s}/`;
   return p + SUFFIX;
 }
 

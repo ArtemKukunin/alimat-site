@@ -91,11 +91,6 @@
   "tag_transport": "Transport",
   "tag_meals": "Meals",
   "tag_coordinator": "Coordinator",
-  "cat_production": "Production",
-  "cat_meat": "Meat processing",
-  "cat_logistics": "Warehouse & logistics",
-  "cat_drivers": "Drivers",
-  "cat_agriculture": "Greenhouses & agriculture",
   "country_DE": "Germany",
   "cand_title": "Jobs in Poland for Foreigners – How It Works | Alimat Group",
   "cand_desc": "How hiring works at Alimat Group: legal employment, help with paperwork and accommodation, a 24/7 coordinator. Answers to common questions.",
@@ -178,5 +173,14 @@
   "stat1": "companies work with Alimat Group",
   "stat2": "projects completed",
   "stat3": "workers recruited for partners every year",
-  "stat4": "workers recruited in the company's history"
+  "stat4": "workers recruited in the company's history",
+  "sections_title": "Choose a type of work",
+  "section_count": "Jobs: {n}",
+  "other_sections": "Other types of work",
+  "loc_various": "Various cities in Poland",
+  "here_t": "We're here for you!",
+  "here_d1": "Every year we help thousands of people find stable, legal work in Poland, and we support hundreds of companies in building their teams.",
+  "here_d2": "We match you with a job that fits your skills, help with paperwork and accommodation, and our coordinator supports you on site.",
+  "unit_hour_any": "PLN/hour",
+  "unit_month_any": "PLN/month"
 }

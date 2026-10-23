@@ -2,7 +2,7 @@ import { pageUrl, asset } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
 import { layout, contactButtons } from '../../core/layout.js';
-import { jobCard, activeJobs, filterOptions, filterSelects } from '../jobs/jobs.js';
+import { jobCard, activeJobs, filterOptions, filterSelects, sectionTiles } from '../jobs/jobs.js';
 
 export const PERKS = [
   ['legal', 'shield'], ['docs', 'doc'], ['housing', 'home'],
@@ -11,9 +11,10 @@ export const PERKS = [
 
 export const perksGrid = (t) => `<ul class="perks">${PERKS.map(([k, ic]) => `<li>${icon(ic, 'ic ic-lg')}<h3>${esc(t(`perk_${k}_t`))}</h3><p>${esc(t(`perk_${k}_d`))}</p></li>`).join('')}</ul>`;
 
-/** Alternating photo + text rows with a large faint index, as on the original site. */
-const perkRows = (t) => PERKS.map(([k], i) => `<article class="why-row${i % 2 ? ' why-row-rev' : ''}">
-  <div class="why-img"><img src="${asset(`img/home-${i + 1}.webp`)}" alt="" width="800" height="533" loading="lazy" decoding="async"></div>
+/** Alternating photo + text rows with a large faint index (0.1 … 0.5), as on the original site. */
+const WHY = [['legal', 'home-2'], ['docs', 'home-1'], ['transport', 'home-3'], ['pay', 'home-4'], ['coord', 'home-5']];
+const perkRows = (t) => WHY.map(([k, img], i) => `<article class="why-row${i % 2 ? ' why-row-rev' : ''}">
+  <div class="why-img"><img src="${asset(`img/${img}.webp`)}" alt="" width="800" height="533" loading="lazy" decoding="async"></div>
   <div class="why-text"><span class="why-n" aria-hidden="true">0.${i + 1}</span><h3>${esc(t(`perk_${k}_t`))}</h3><p>${esc(t(`perk_${k}_d`))}</p></div>
 </article>`).join('');
 
@@ -45,13 +46,18 @@ export function renderHome(ctx) {
     <form class="search-band" action="${pageUrl(lang, 'jobs')}" method="get" role="search">
       <h2>${esc(t('search_band'))}</h2>
       ${filterSelects(ctx, filterOptions(jobs, lang), 'h')}
-      <button class="btn btn-pill btn-blue" type="submit">${esc(t('search_btn'))}</button>
+      <button class="btn btn-pill btn-blue" type="submit">${esc(t('search_btn'))} ${icon('search')}</button>
       <a class="btn btn-pill btn-outline-light" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))}</a>
     </form>
   </div>
 </section>
 
 <section class="wrap block">
+  <h2 class="center-title">${esc(t('sections_title'))}</h2>
+  ${sectionTiles(ctx)}
+</section>
+
+<section class="wrap block-sm">
   <div class="block-head"><h2>${esc(t('latest_jobs'))}</h2><a class="link-arrow" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))} ${icon('arrow')}</a></div>
   <div class="job-grid">${latest.map((j) => jobCard(ctx, j)).join('')}</div>
 </section>
@@ -68,6 +74,20 @@ export function renderHome(ctx) {
 
 <section class="wrap block">
   <ul class="stats">${settings.stats.map((v, i) => `<li>${icon(['shield', 'doc', 'user', 'home'][i], 'ic ic-lg')}<strong>${esc(v)}</strong><span>${esc(t(`stat${i + 1}`))}</span></li>`).join('')}</ul>
+</section>
+
+<section class="wrap block here">
+  <div class="here-text">
+    <h2>${esc(t('here_t'))}</h2>
+    ${dots}
+    <p>${esc(t('here_d1'))}</p>
+    <p>${esc(t('here_d2'))}</p>
+    <div class="hero-cta">
+      <a class="btn btn-pill btn-orange" href="${pageUrl(lang, 'candidates')}">${esc(t('cand_h1'))} ${icon('arrow')}</a>
+      <a class="btn btn-pill btn-outline-orange" href="${pageUrl(lang, 'apply')}">${esc(t('cta_apply'))}</a>
+    </div>
+  </div>
+  <div class="here-img"><img src="${asset('img/home-6.webp')}" alt="" width="710" height="619" loading="lazy" decoding="async"></div>
 </section>
 
 <section class="band"><div class="wrap block">

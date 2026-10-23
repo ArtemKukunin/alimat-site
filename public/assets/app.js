@@ -73,7 +73,8 @@
     function apply() {
       var shown = 0;
       cards.forEach(function (c) {
-        var ok = (!city.value || c.getAttribute('data-city') === city.value) && (!cat.value || c.getAttribute('data-cat') === cat.value);
+        var cc = c.getAttribute('data-city');
+        var ok = (!city.value || cc === city.value || cc === '*') && (!cat.value || c.getAttribute('data-cat') === cat.value);
         c.hidden = !ok;
         if (ok) shown++;
       });

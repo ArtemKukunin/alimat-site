@@ -91,11 +91,6 @@
   "tag_transport": "Dojazd",
   "tag_meals": "Posiłki",
   "tag_coordinator": "Koordynator",
-  "cat_production": "Produkcja",
-  "cat_meat": "Zakłady mięsne",
-  "cat_logistics": "Magazyn i logistyka",
-  "cat_drivers": "Kierowcy",
-  "cat_agriculture": "Szklarnie i rolnictwo",
   "country_DE": "Niemcy",
   "cand_title": "Praca w Polsce dla cudzoziemców – jak to działa | Alimat Group",
   "cand_desc": "Jak wygląda rekrutacja w Alimat Group: legalne zatrudnienie, pomoc z dokumentami i zakwaterowaniem, koordynator 24/7. Odpowiedzi na najczęstsze pytania.",
@@ -178,5 +173,14 @@
   "stat1": "firm korzysta z usług Alimat Group",
   "stat2": "zrealizowanych projektów",
   "stat3": "pracowników rekrutujemy rocznie dla partnerów",
-  "stat4": "zrekrutowanych pracowników w historii firmy"
+  "stat4": "zrekrutowanych pracowników w historii firmy",
+  "sections_title": "Wybierz rodzaj pracy",
+  "section_count": "Ofert: {n}",
+  "other_sections": "Inne rodzaje pracy",
+  "loc_various": "Różne miasta w Polsce",
+  "here_t": "Jesteśmy tu dla Ciebie!",
+  "here_d1": "Co roku pomagamy tysiącom osób znaleźć legalną, stabilną pracę w Polsce i wspieramy setki firm w budowaniu zespołów.",
+  "here_d2": "Dobieramy stanowisko do Twoich umiejętności, pomagamy z dokumentami i zakwaterowaniem, a na miejscu pracy wspiera Cię nasz koordynator.",
+  "unit_hour_any": "zł/godz.",
+  "unit_month_any": "zł/mies."
 }
