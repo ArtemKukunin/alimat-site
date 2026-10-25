@@ -268,7 +268,7 @@
     }
   }
 
-  /** Job slider: arrows, dots, autoplay (paused on hover/focus/touch, off with reduced motion). */
+  /** Job slider: arrows, dots, autoplay every 15 s (paused on hover/focus/touch, off with reduced motion). */
   function jobSlider() {
     document.querySelectorAll('.job-slider').forEach(function (root) {
       var track = root.querySelector('.js-track');
@@ -322,7 +322,7 @@
       setInterval(function () {
         var dlg = document.getElementById('lead-pop');
         if (!paused && !document.hidden && !(dlg && dlg.open)) go(current() + 1);
-      }, 6000);
+      }, 15000);
     });
   }
 
