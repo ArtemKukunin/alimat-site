@@ -14,6 +14,7 @@ import { renderApply } from './features/apply/apply.js';
 import { renderEmployers } from './features/employers/employers.js';
 import { renderContact } from './features/contact/contact.js';
 import { loadContent, buildBlog, postsIn, blogPath, legalUrl } from './features/blog/blog.js';
+import { loadServices, renderService, serviceSlugs } from './features/services/services.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const DIST = path.resolve(ROOT, process.env.OUT_DIR || 'dist');
@@ -27,7 +28,8 @@ export function loadData() {
   const categories = loadCategories(path.join(DATA, 'categories.json'), jobs);
   const { posts, pages } = loadContent(DATA);
   const legacy = readJson(path.join(DATA, 'legacy.json'));
-  return { settings, ui, jobs, categories, posts, pages, legacy };
+  const services = loadServices(readJson(path.join(DATA, 'services.json')));
+  return { settings, ui, jobs, categories, posts, pages, legacy, services };
 }
 
 /** Small CSS minifier: drops comments and whitespace outside quoted strings. */
@@ -122,12 +124,14 @@ ${urls}
 }
 
 /** 301s from the old WordPress URLs so existing Google rankings and links keep working. */
-function redirects(jobs, legacy) {
+function redirects(jobs, legacy, services) {
   const pl = (p, s) => pageUrl('pl', p, s);
   const map = [
     ['/dla-kandydatow/*', pl('candidates')],
     ['/oferty-pracy/*', pl('jobs')],
     ['/przeslij-cv/*', pl('apply')],
+    // Old service pages under the employers menu (same Polish slugs)
+    ...services.map((s) => [`/oferta-dla-firm/${s.pl.slug}/*`, pl('employers', s.pl.slug)]),
     ['/oferta-dla-firm/*', pl('employers')],
     ['/zapytanie-ofertowe/*', `${pl('employers')}#inquiry`],
     ['/kontakt/*', pl('contact')],
@@ -171,8 +175,8 @@ ${common}
 }
 
 export function build() {
-  const { settings, ui, jobs, categories, posts, pages, legacy } = loadData();
-  const redirectMap = redirects(jobs, legacy);
+  const { settings, ui, jobs, categories, posts, pages, legacy, services } = loadData();
+  const redirectMap = redirects(jobs, legacy, services);
   // Old WordPress paths inside imported articles → new URLs (same table as the redirects).
   const legacyMap = (oldPath) => redirectMap.find(([from]) => from.replace(/\*$/, '') === oldPath)?.[1];
   const reserved = new Set([...LANG_CODES, 'assets', 'admin', 'blog', 'category', 'tag', 'oferta', 'wp-content']);
@@ -186,7 +190,7 @@ export function build() {
   let count = 0;
   const slugOf = (u) => u.replace(/^\/+|\/+$/g, '');
   const makeCtx = (lang) => ({
-    lang, t: translator(ui, lang), settings, jobs, categories,
+    lang, t: translator(ui, lang), settings, jobs, categories, services,
     blogUrl: blogPath(postsIn(posts, lang).length ? lang : 'pl'),
     privacyUrl: legalUrl(pages, slugOf(settings.privacyUrl), lang),
     cookiesUrl: legalUrl(pages, slugOf(settings.cookiesUrl), lang),
@@ -205,6 +209,10 @@ export function build() {
       writeFile(outFile(pageUrl(lang, 'jobs', categories[cat][lang].slug)), renderJobSection(ctx, cat));
       count++;
     }
+    for (const svc of services) {
+      writeFile(outFile(pageUrl(lang, 'employers', svc[lang].slug)), renderService(ctx, svc));
+      count++;
+    }
   }
   // Blog + legal pages: Polish on the old WordPress URLs, translations under /{lang}/.
   const blog = buildBlog({ posts, pages, jobs, legacyMap, makeCtx });
@@ -216,6 +224,7 @@ export function build() {
   for (const page of Object.keys(STATIC_PAGES)) indexable.push({ page });
   for (const job of jobs.filter((j) => j.active)) indexable.push({ page: 'jobs', sub: job.id, lastmod: job.datePosted });
   indexable.push(...blog.sitemap);
+  for (const svc of services) indexable.push({ page: 'employers', sub: serviceSlugs(svc) });
   // Sections are listed only while they have active jobs (empty ones are noindex).
   for (const cat of Object.keys(categories)) {
     if (jobs.some((j) => j.active && j.category === cat)) {

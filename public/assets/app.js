@@ -45,8 +45,19 @@
         btn.focus();
       }
     });
-    // Close language dropdown when clicking outside.
+    // Submenu toggle (touch / keyboard); hover handled in CSS on desktop.
+    document.querySelectorAll('.sub-btn').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var li = b.parentNode;
+        var open = li.classList.toggle('sub-open');
+        b.setAttribute('aria-expanded', String(open));
+      });
+    });
+    // Close language dropdown and submenus when clicking outside.
     document.addEventListener('click', function (e) {
+      document.querySelectorAll('.has-sub.sub-open').forEach(function (li) {
+        if (!li.contains(e.target)) { li.classList.remove('sub-open'); li.querySelector('.sub-btn').setAttribute('aria-expanded', 'false'); }
+      });
       document.querySelectorAll('details.lang-switch[open]').forEach(function (d) {
         if (!d.contains(e.target)) d.removeAttribute('open');
       });

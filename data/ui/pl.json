@@ -1,7 +1,7 @@
 {
   "nav_jobs": "Oferty pracy",
   "nav_candidates": "Dla kandydatów",
-  "nav_employers": "Dla firm",
+  "nav_employers": "Oferta dla firm",
   "nav_contact": "Kontakt",
   "cta_apply": "Aplikuj",
   "cta_apply_long": "Zgłoś się do pracy",
@@ -253,5 +253,7 @@
   "apply_langs": "Napisz w swoim języku — mówimy:",
   "c_langs": "Mówimy w Twoim języku",
   "c_langs_more": " i inne.",
-  "emp_why13": "Mamy doświadczenie w zatrudnianiu ponad 60 narodowości, a nasi koordynatorzy mówią w językach pracowników — to szybsza adaptacja i mniejsza rotacja."
+  "emp_why13": "Mamy doświadczenie w zatrudnianiu ponad 60 narodowości, a nasi koordynatorzy mówią w językach pracowników — to szybsza adaptacja i mniejsza rotacja.",
+  "svc_other": "Pozostałe usługi dla firm",
+  "svc_more": "Więcej"
 }

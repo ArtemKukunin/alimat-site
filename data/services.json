@@ -1,0 +1,1050 @@
+{
+  "_comment": "Employer service pages (menu: Oferta dla firm). Order = menu order. points: [title, text]; list: bullet items.",
+  "services": [
+    {
+      "id": "temporary",
+      "icon": "user",
+      "pl": {
+        "slug": "rekrutacja-tymczasowa",
+        "name": "Rekrutacja tymczasowa",
+        "title": "Rekrutacja tymczasowa i praca tymczasowa dla firm | Alimat Group",
+        "desc": "Pracownicy tymczasowi dla produkcji, zakładów mięsnych i logistyki: szybka rekrutacja, legalizacja cudzoziemców, transport, zakwaterowanie, koordynator.",
+        "lead": "Rozumiemy dynamiczne wyzwania, przed którymi stoją firmy. Praca tymczasowa pozwala elastycznie zarządzać zespołem i dopasować liczbę pracowników do zmian na rynku, sezonu i wielkości zamówień.",
+        "points": [
+          [
+            "Elastyczność",
+            "Dopasujesz liczbę pracowników do bieżących projektów i zamówień — zwiększasz lub zmniejszasz zespół wtedy, kiedy potrzebujesz."
+          ],
+          [
+            "Szybkość",
+            "Krótki proces rekrutacji pozwala szybko uzupełnić braki kadrowe, bez utraty kontroli nad strukturą zatrudnienia."
+          ],
+          [
+            "Niższe koszty",
+            "Pracownicy tymczasowi nie generują wielu kosztów typowych dla etatu ani długoterminowych zobowiązań."
+          ],
+          [
+            "Profesjonalizm",
+            "Starannie selekcjonujemy kandydatów i dopasowujemy ich do specyfiki Twojej branży i stanowiska."
+          ]
+        ],
+        "list_t": "Co robimy w ramach rekrutacji tymczasowej",
+        "list": [
+          "Korzystamy z dużej bazy kandydatów z Polski i z ponad 60 krajów",
+          "Prowadzimy cały proces: od rekrutacji do pierwszego dnia pracy",
+          "Zajmujemy się legalizacją zatrudnienia cudzoziemców",
+          "Organizujemy transport i zakwaterowanie w pobliżu zakładu",
+          "Zapewniamy dedykowanego koordynatora dla pracowników i dla Ciebie",
+          "Ograniczamy Twoje koszty administracyjne i kadrowe"
+        ],
+        "end_t": "Potrzebujesz pracowników na sezon lub do dużego zamówienia?",
+        "end_d": "Opisz swoje potrzeby — odpowiemy w ciągu 24 godzin i zaproponujemy model współpracy."
+      },
+      "uk": {
+        "slug": "tymchasovyi-pidbir-personalu",
+        "name": "Тимчасовий підбір персоналу",
+        "title": "Тимчасовий підбір персоналу для компаній | Alimat Group",
+        "desc": "Тимчасові працівники для виробництва, м'ясної галузі та логістики: швидкий підбір, легалізація іноземців, транспорт, житло і координатор.",
+        "lead": "Ми розуміємо динамічні виклики, з якими стикаються компанії. Тимчасова праця дає змогу гнучко керувати командою і підлаштовувати кількість працівників під ринок, сезон і обсяг замовлень.",
+        "points": [
+          [
+            "Гнучкість",
+            "Ви підлаштовуєте кількість працівників під поточні проєкти й замовлення — збільшуєте чи зменшуєте команду тоді, коли потрібно."
+          ],
+          [
+            "Швидкість",
+            "Короткий процес підбору дає змогу швидко закрити кадрові прогалини, не втрачаючи контролю над структурою зайнятості."
+          ],
+          [
+            "Нижчі витрати",
+            "Тимчасові працівники не створюють багатьох витрат, типових для штатних посад, і довгострокових зобов'язань."
+          ],
+          [
+            "Професіоналізм",
+            "Ми ретельно відбираємо кандидатів і підбираємо їх під специфіку вашої галузі та посади."
+          ]
+        ],
+        "list_t": "Що ми робимо в межах тимчасового підбору",
+        "list": [
+          "Користуємося великою базою кандидатів з Польщі та понад 60 країн",
+          "Ведемо весь процес — від підбору до першого робочого дня",
+          "Займаємося легалізацією працевлаштування іноземців",
+          "Організовуємо транспорт і житло поблизу підприємства",
+          "Надаємо окремого координатора для працівників і для вас",
+          "Зменшуємо ваші адміністративні та кадрові витрати"
+        ],
+        "end_t": "Потрібні працівники на сезон чи під велике замовлення?",
+        "end_d": "Опишіть свої потреби — ми відповімо протягом 24 годин і запропонуємо модель співпраці."
+      },
+      "ru": {
+        "slug": "vremennyy-podbor-personala",
+        "name": "Временный подбор персонала",
+        "title": "Временный подбор персонала для компаний | Alimat Group",
+        "desc": "Временные работники для производства, мясной отрасли и логистики: быстрый подбор, легализация иностранцев, транспорт, жильё и координатор.",
+        "lead": "Мы понимаем динамичные вызовы, с которыми сталкиваются компании. Временный труд позволяет гибко управлять командой и подстраивать число работников под рынок, сезон и объём заказов.",
+        "points": [
+          [
+            "Гибкость",
+            "Вы подстраиваете число работников под текущие проекты и заказы — увеличиваете или уменьшаете команду тогда, когда нужно."
+          ],
+          [
+            "Скорость",
+            "Короткий процесс подбора позволяет быстро закрыть кадровые пробелы, не теряя контроля над структурой занятости."
+          ],
+          [
+            "Ниже затраты",
+            "Временные работники не создают многих расходов, типичных для штатных должностей, и долгосрочных обязательств."
+          ],
+          [
+            "Профессионализм",
+            "Мы тщательно отбираем кандидатов и подбираем их под специфику вашей отрасли и должности."
+          ]
+        ],
+        "list_t": "Что мы делаем в рамках временного подбора",
+        "list": [
+          "Используем большую базу кандидатов из Польши и более чем 60 стран",
+          "Ведём весь процесс — от подбора до первого рабочего дня",
+          "Занимаемся легализацией трудоустройства иностранцев",
+          "Организуем транспорт и жильё рядом с предприятием",
+          "Предоставляем отдельного координатора для работников и для вас",
+          "Снижаем ваши административные и кадровые расходы"
+        ],
+        "end_t": "Нужны работники на сезон или под крупный заказ?",
+        "end_d": "Опишите свои потребности — мы ответим в течение 24 часов и предложим модель сотрудничества."
+      },
+      "en": {
+        "slug": "temporary-recruitment",
+        "name": "Temporary recruitment",
+        "title": "Temporary recruitment and temporary staffing | Alimat Group",
+        "desc": "Temporary workers for manufacturing, meat processing and logistics: fast recruitment, work permits for foreign staff, transport, accommodation and a coordinator.",
+        "lead": "We understand the fast-changing challenges businesses face. Temporary staffing lets you manage your team flexibly and match headcount to the market, the season and your order volume.",
+        "points": [
+          [
+            "Flexibility",
+            "Match headcount to current projects and orders — scale your team up or down whenever you need."
+          ],
+          [
+            "Speed",
+            "A short recruitment process fills staffing gaps quickly without losing control over your workforce structure."
+          ],
+          [
+            "Lower costs",
+            "Temporary workers avoid many of the costs and long-term commitments of permanent employment."
+          ],
+          [
+            "Professionalism",
+            "We carefully screen candidates and match them to your industry and role."
+          ]
+        ],
+        "list_t": "What temporary recruitment with us includes",
+        "list": [
+          "A large pool of candidates from Poland and more than 60 countries",
+          "The whole process, from recruitment to the first day at work",
+          "Legalising the employment of foreign workers",
+          "Transport and accommodation near your site",
+          "A dedicated coordinator for the workers and for you",
+          "Lower administrative and HR costs for your company"
+        ],
+        "end_t": "Need workers for the season or a large order?",
+        "end_d": "Tell us what you need — we reply within 24 hours with a proposed way of working together."
+      },
+      "es": {
+        "slug": "seleccion-temporal",
+        "name": "Selección temporal",
+        "title": "Selección temporal y trabajo temporal para empresas | Alimat Group",
+        "desc": "Trabajadores temporales para producción, industria cárnica y logística: selección rápida, legalización de extranjeros, transporte, alojamiento y coordinador.",
+        "lead": "Entendemos los retos cambiantes a los que se enfrentan las empresas. El trabajo temporal permite gestionar el equipo con flexibilidad y ajustar la plantilla al mercado, la temporada y el volumen de pedidos.",
+        "points": [
+          [
+            "Flexibilidad",
+            "Ajusta la plantilla a los proyectos y pedidos actuales: amplía o reduce el equipo cuando lo necesites."
+          ],
+          [
+            "Rapidez",
+            "Un proceso de selección corto cubre rápidamente la falta de personal sin perder el control de la estructura de empleo."
+          ],
+          [
+            "Menos costes",
+            "Los trabajadores temporales evitan muchos costes y compromisos a largo plazo propios del empleo fijo."
+          ],
+          [
+            "Profesionalidad",
+            "Seleccionamos cuidadosamente a los candidatos y los adaptamos a tu sector y puesto."
+          ]
+        ],
+        "list_t": "Qué incluye la selección temporal con nosotros",
+        "list": [
+          "Una amplia base de candidatos de Polonia y de más de 60 países",
+          "Todo el proceso, desde la selección hasta el primer día de trabajo",
+          "La legalización del empleo de trabajadores extranjeros",
+          "Transporte y alojamiento cerca de tu centro",
+          "Un coordinador dedicado para los trabajadores y para ti",
+          "Menos costes administrativos y de personal"
+        ],
+        "end_t": "¿Necesitas trabajadores para la temporada o un gran pedido?",
+        "end_d": "Cuéntanos qué necesitas: respondemos en 24 horas con una propuesta de colaboración."
+      },
+      "pt": {
+        "slug": "recrutamento-temporario",
+        "name": "Recrutamento temporário",
+        "title": "Recrutamento temporário e trabalho temporário para empresas | Alimat Group",
+        "desc": "Trabalhadores temporários para produção, indústria da carne e logística: recrutamento rápido, legalização de estrangeiros, transporte, alojamento e coordenador.",
+        "lead": "Compreendemos os desafios dinâmicos que as empresas enfrentam. O trabalho temporário permite gerir a equipa com flexibilidade e ajustar o número de trabalhadores ao mercado, à época e ao volume de encomendas.",
+        "points": [
+          [
+            "Flexibilidade",
+            "Ajuste o número de trabalhadores aos projetos e encomendas atuais — aumente ou reduza a equipa quando precisar."
+          ],
+          [
+            "Rapidez",
+            "Um processo de recrutamento curto preenche rapidamente as faltas de pessoal, sem perder o controlo da estrutura de emprego."
+          ],
+          [
+            "Custos mais baixos",
+            "Os trabalhadores temporários evitam muitos custos e compromissos de longo prazo do emprego efetivo."
+          ],
+          [
+            "Profissionalismo",
+            "Selecionamos cuidadosamente os candidatos e ajustamo-los ao seu setor e à função."
+          ]
+        ],
+        "list_t": "O que inclui o recrutamento temporário connosco",
+        "list": [
+          "Uma vasta base de candidatos da Polónia e de mais de 60 países",
+          "Todo o processo, do recrutamento ao primeiro dia de trabalho",
+          "A legalização do emprego de trabalhadores estrangeiros",
+          "Transporte e alojamento perto das suas instalações",
+          "Um coordenador dedicado aos trabalhadores e à sua empresa",
+          "Menos custos administrativos e de pessoal"
+        ],
+        "end_t": "Precisa de trabalhadores para a época alta ou uma grande encomenda?",
+        "end_d": "Descreva as suas necessidades — respondemos em 24 horas com uma proposta de colaboração."
+      },
+      "ro": {
+        "slug": "recrutare-temporara",
+        "name": "Recrutare temporară",
+        "title": "Recrutare temporară și muncă temporară pentru firme | Alimat Group",
+        "desc": "Lucrători temporari pentru producție, industria cărnii și logistică: recrutare rapidă, legalizarea străinilor, transport, cazare și coordonator.",
+        "lead": "Înțelegem provocările dinamice cu care se confruntă firmele. Munca temporară permite gestionarea flexibilă a echipei și adaptarea numărului de lucrători la piață, sezon și volumul comenzilor.",
+        "points": [
+          [
+            "Flexibilitate",
+            "Adaptezi numărul de lucrători la proiectele și comenzile curente — mărești sau micșorezi echipa atunci când ai nevoie."
+          ],
+          [
+            "Rapiditate",
+            "Un proces scurt de recrutare acoperă rapid lipsurile de personal, fără să pierzi controlul asupra structurii angajărilor."
+          ],
+          [
+            "Costuri mai mici",
+            "Lucrătorii temporari evită multe costuri și obligații pe termen lung specifice angajării permanente."
+          ],
+          [
+            "Profesionalism",
+            "Selectăm atent candidații și îi potrivim specificului domeniului și postului tău."
+          ]
+        ],
+        "list_t": "Ce include recrutarea temporară cu noi",
+        "list": [
+          "O bază mare de candidați din Polonia și din peste 60 de țări",
+          "Întregul proces, de la recrutare până la prima zi de muncă",
+          "Legalizarea angajării lucrătorilor străini",
+          "Transport și cazare aproape de locul de muncă",
+          "Un coordonator dedicat pentru lucrători și pentru tine",
+          "Costuri administrative și de personal mai mici"
+        ],
+        "end_t": "Ai nevoie de lucrători pentru sezon sau pentru o comandă mare?",
+        "end_d": "Descrie-ne nevoile — răspundem în 24 de ore cu o propunere de colaborare."
+      }
+    },
+    {
+      "id": "permanent",
+      "icon": "shield",
+      "pl": {
+        "slug": "rekrutacja-stala",
+        "name": "Rekrutacja stała",
+        "title": "Rekrutacja stała pracowników i specjalistów | Alimat Group",
+        "desc": "Rekrutacja stała specjalistów i kadry średniego oraz wyższego szczebla: staranna selekcja, dopasowanie do kultury firmy, szybki proces i doradztwo HR.",
+        "lead": "Wyjątkowi pracownicy są siłą napędową każdego biznesu. Rekrutacja stała z Alimat Group to sposób na pozyskanie najlepszych talentów do Twojego zespołu.",
+        "points": [
+          [
+            "Starannie wyselekcjonowani kandydaci",
+            "Docieramy do talentów także poza tradycyjnymi kanałami — do ekspertów i profesjonalistów, którzy wniosą realną wartość."
+          ],
+          [
+            "Dopasowanie do Twojego biznesu",
+            "Każdą rekrutację dopasowujemy do celów, wartości i kultury organizacyjnej Twojej firmy."
+          ],
+          [
+            "Szybki proces rekrutacyjny",
+            "Korzystamy z własnej bazy specjalistów i aktywnego wyszukiwania, aby szybko przedstawić najlepiej dopasowanych kandydatów."
+          ],
+          [
+            "Profesjonalne doradztwo",
+            "Pomagamy określić kluczowe kompetencje i umiejętności potrzebne do realizacji celów firmy."
+          ]
+        ],
+        "list_t": "Rekrutacja stała z Alimat Group",
+        "list": [
+          "Rekrutujemy specjalistów oraz kadrę średniego i wyższego szczebla",
+          "Współpracujemy z firmami polskimi i międzynarodowymi",
+          "Budujemy wyspecjalizowane zespoły do dedykowanych projektów",
+          "Zapewniamy doradztwo i wsparcie we wszystkich obszarach HR"
+        ],
+        "end_t": "Szukasz specjalisty lub kierownika do swojego zespołu?",
+        "end_d": "Jesteśmy partnerem biznesowym, który wspiera zarządzanie zasobami ludzkimi. Napisz do nas — odpowiemy w ciągu 24 godzin."
+      },
+      "uk": {
+        "slug": "postiinyi-pidbir-personalu",
+        "name": "Постійний підбір персоналу",
+        "title": "Постійний підбір персоналу та фахівців | Alimat Group",
+        "desc": "Постійний підбір фахівців і керівників середньої та вищої ланки: ретельний відбір, відповідність культурі компанії, швидкий процес і HR-консультації.",
+        "lead": "Виняткові працівники — рушійна сила кожного бізнесу. Постійний підбір персоналу з Alimat Group — спосіб залучити найкращі таланти до вашої команди.",
+        "points": [
+          [
+            "Ретельно відібрані кандидати",
+            "Ми знаходимо таланти й поза традиційними каналами — експертів і професіоналів, які принесуть реальну цінність."
+          ],
+          [
+            "Відповідність вашому бізнесу",
+            "Кожен підбір ми узгоджуємо з цілями, цінностями та культурою вашої компанії."
+          ],
+          [
+            "Швидкий процес підбору",
+            "Користуємося власною базою фахівців та активним пошуком, щоб швидко представити найкраще підібраних кандидатів."
+          ],
+          [
+            "Професійні консультації",
+            "Допомагаємо визначити ключові компетенції та навички, потрібні для досягнення цілей компанії."
+          ]
+        ],
+        "list_t": "Постійний підбір з Alimat Group",
+        "list": [
+          "Підбираємо фахівців і керівників середньої та вищої ланки",
+          "Співпрацюємо з польськими та міжнародними компаніями",
+          "Формуємо спеціалізовані команди для окремих проєктів",
+          "Надаємо консультації та підтримку в усіх сферах HR"
+        ],
+        "end_t": "Шукаєте фахівця чи керівника до своєї команди?",
+        "end_d": "Ми — бізнес-партнер, що підтримує управління персоналом. Напишіть нам — відповімо протягом 24 годин."
+      },
+      "ru": {
+        "slug": "postoyannyy-podbor-personala",
+        "name": "Постоянный подбор персонала",
+        "title": "Постоянный подбор персонала и специалистов | Alimat Group",
+        "desc": "Постоянный подбор специалистов и руководителей среднего и высшего звена: тщательный отбор, соответствие культуре компании, быстрый процесс и HR-консультации.",
+        "lead": "Исключительные сотрудники — движущая сила любого бизнеса. Постоянный подбор персонала с Alimat Group — способ привлечь лучшие таланты в вашу команду.",
+        "points": [
+          [
+            "Тщательно отобранные кандидаты",
+            "Мы находим таланты и за пределами традиционных каналов — экспертов и профессионалов, которые принесут реальную пользу."
+          ],
+          [
+            "Соответствие вашему бизнесу",
+            "Каждый подбор мы согласуем с целями, ценностями и культурой вашей компании."
+          ],
+          [
+            "Быстрый процесс подбора",
+            "Используем собственную базу специалистов и активный поиск, чтобы быстро представить наиболее подходящих кандидатов."
+          ],
+          [
+            "Профессиональные консультации",
+            "Помогаем определить ключевые компетенции и навыки, необходимые для достижения целей компании."
+          ]
+        ],
+        "list_t": "Постоянный подбор с Alimat Group",
+        "list": [
+          "Подбираем специалистов и руководителей среднего и высшего звена",
+          "Сотрудничаем с польскими и международными компаниями",
+          "Формируем специализированные команды для отдельных проектов",
+          "Оказываем консультации и поддержку во всех областях HR"
+        ],
+        "end_t": "Ищете специалиста или руководителя в свою команду?",
+        "end_d": "Мы — бизнес-партнёр, поддерживающий управление персоналом. Напишите нам — ответим в течение 24 часов."
+      },
+      "en": {
+        "slug": "permanent-recruitment",
+        "name": "Permanent recruitment",
+        "title": "Permanent recruitment of staff and specialists | Alimat Group",
+        "desc": "Permanent recruitment of specialists and mid- and senior-level staff: careful selection, cultural fit, a fast process and HR advice.",
+        "lead": "Exceptional people drive every business. Permanent recruitment with Alimat Group is how you bring top talent into your team.",
+        "points": [
+          [
+            "Carefully selected candidates",
+            "We reach talent beyond traditional channels — experts and professionals who add real value."
+          ],
+          [
+            "A fit for your business",
+            "Every search is matched to your company's goals, values and culture."
+          ],
+          [
+            "A fast recruitment process",
+            "Our own specialist database and active sourcing let us present the best-matched candidates quickly."
+          ],
+          [
+            "Professional advice",
+            "We help you define the key competencies and skills needed to reach your business goals."
+          ]
+        ],
+        "list_t": "Permanent recruitment with Alimat Group",
+        "list": [
+          "We recruit specialists and mid- and senior-level staff",
+          "We work with Polish and international companies",
+          "We build specialised teams for dedicated projects",
+          "We provide advice and support across all areas of HR"
+        ],
+        "end_t": "Looking for a specialist or manager for your team?",
+        "end_d": "We are a business partner supporting your HR management. Write to us — we reply within 24 hours."
+      },
+      "es": {
+        "slug": "seleccion-permanente",
+        "name": "Selección permanente",
+        "title": "Selección permanente de personal y especialistas | Alimat Group",
+        "desc": "Selección permanente de especialistas y mandos intermedios y directivos: selección cuidadosa, encaje cultural, proceso rápido y asesoría de RR. HH.",
+        "lead": "Las personas excepcionales impulsan cualquier negocio. La selección permanente con Alimat Group es la forma de incorporar el mejor talento a tu equipo.",
+        "points": [
+          [
+            "Candidatos cuidadosamente seleccionados",
+            "Llegamos al talento más allá de los canales tradicionales: expertos y profesionales que aportan valor real."
+          ],
+          [
+            "Encaje con tu negocio",
+            "Adaptamos cada búsqueda a los objetivos, valores y cultura de tu empresa."
+          ],
+          [
+            "Proceso de selección rápido",
+            "Nuestra propia base de especialistas y la búsqueda activa nos permiten presentar pronto a los candidatos más adecuados."
+          ],
+          [
+            "Asesoría profesional",
+            "Te ayudamos a definir las competencias y habilidades clave para alcanzar los objetivos de la empresa."
+          ]
+        ],
+        "list_t": "Selección permanente con Alimat Group",
+        "list": [
+          "Seleccionamos especialistas y mandos intermedios y directivos",
+          "Trabajamos con empresas polacas e internacionales",
+          "Creamos equipos especializados para proyectos concretos",
+          "Ofrecemos asesoría y apoyo en todas las áreas de RR. HH."
+        ],
+        "end_t": "¿Buscas un especialista o un responsable para tu equipo?",
+        "end_d": "Somos un socio que apoya la gestión de tus recursos humanos. Escríbenos: respondemos en 24 horas."
+      },
+      "pt": {
+        "slug": "recrutamento-permanente",
+        "name": "Recrutamento permanente",
+        "title": "Recrutamento permanente de pessoal e especialistas | Alimat Group",
+        "desc": "Recrutamento permanente de especialistas e quadros intermédios e superiores: seleção cuidada, adequação à cultura, processo rápido e consultoria de RH.",
+        "lead": "Pessoas excecionais impulsionam qualquer negócio. O recrutamento permanente com a Alimat Group é a forma de trazer os melhores talentos para a sua equipa.",
+        "points": [
+          [
+            "Candidatos cuidadosamente selecionados",
+            "Chegamos ao talento para além dos canais tradicionais — especialistas e profissionais que trazem valor real."
+          ],
+          [
+            "Adequação ao seu negócio",
+            "Ajustamos cada recrutamento aos objetivos, valores e cultura da sua empresa."
+          ],
+          [
+            "Processo de recrutamento rápido",
+            "A nossa própria base de especialistas e a pesquisa ativa permitem apresentar rapidamente os candidatos mais adequados."
+          ],
+          [
+            "Consultoria profissional",
+            "Ajudamos a definir as competências e aptidões-chave necessárias para atingir os objetivos da empresa."
+          ]
+        ],
+        "list_t": "Recrutamento permanente com a Alimat Group",
+        "list": [
+          "Recrutamos especialistas e quadros intermédios e superiores",
+          "Trabalhamos com empresas polacas e internacionais",
+          "Formamos equipas especializadas para projetos dedicados",
+          "Oferecemos consultoria e apoio em todas as áreas de RH"
+        ],
+        "end_t": "Procura um especialista ou chefia para a sua equipa?",
+        "end_d": "Somos um parceiro de negócio que apoia a gestão de recursos humanos. Escreva-nos — respondemos em 24 horas."
+      },
+      "ro": {
+        "slug": "recrutare-permanenta",
+        "name": "Recrutare permanentă",
+        "title": "Recrutare permanentă de personal și specialiști | Alimat Group",
+        "desc": "Recrutare permanentă de specialiști și cadre de nivel mediu și superior: selecție atentă, potrivire culturală, proces rapid și consultanță HR.",
+        "lead": "Oamenii excepționali sunt motorul oricărei afaceri. Recrutarea permanentă cu Alimat Group este calea spre cele mai bune talente pentru echipa ta.",
+        "points": [
+          [
+            "Candidați selectați cu atenție",
+            "Ajungem la talente și dincolo de canalele tradiționale — experți și profesioniști care aduc valoare reală."
+          ],
+          [
+            "Potrivire cu afacerea ta",
+            "Adaptăm fiecare recrutare la obiectivele, valorile și cultura firmei tale."
+          ],
+          [
+            "Proces rapid de recrutare",
+            "Baza noastră proprie de specialiști și căutarea activă ne permit să prezentăm rapid cei mai potriviți candidați."
+          ],
+          [
+            "Consultanță profesionistă",
+            "Te ajutăm să definești competențele și abilitățile-cheie necesare pentru atingerea obiectivelor firmei."
+          ]
+        ],
+        "list_t": "Recrutare permanentă cu Alimat Group",
+        "list": [
+          "Recrutăm specialiști și cadre de nivel mediu și superior",
+          "Colaborăm cu firme poloneze și internaționale",
+          "Construim echipe specializate pentru proiecte dedicate",
+          "Oferim consultanță și sprijin în toate domeniile HR"
+        ],
+        "end_t": "Cauți un specialist sau un manager pentru echipa ta?",
+        "end_d": "Suntem un partener de afaceri care sprijină gestionarea resurselor umane. Scrie-ne — răspundem în 24 de ore."
+      }
+    },
+    {
+      "id": "consulting",
+      "icon": "chat",
+      "pl": {
+        "slug": "doradztwo-personalne",
+        "name": "Doradztwo personalne",
+        "title": "Doradztwo personalne i audyty HR dla firm | Alimat Group",
+        "desc": "Doradztwo personalne: kompetencje, systemy motywacyjne, ścieżki kariery, wartościowanie stanowisk i przygotowanie do audytów WRAP, amfori BSCI i SMETA.",
+        "lead": "Wzmacniamy siłę Twojego biznesu. Pomagamy firmom w pełni wykorzystać potencjał ludzi: tworzymy strategie, wdrażamy rozwiązania optymalizujące i przygotowujemy organizacje do audytów etyczno-społecznych WRAP, amfori BSCI i SMETA.",
+        "points": [
+          [
+            "Indywidualne podejście",
+            "Każdą współpracę zaczynamy od analizy potrzeb, aby rozwiązania pasowały do Twojej firmy."
+          ],
+          [
+            "Rozwój kompetencji",
+            "Identyfikujemy kluczowe kompetencje zespołu i projektujemy programy, które lepiej wykorzystują jego potencjał."
+          ],
+          [
+            "Zarządzanie zmianą i karierą",
+            "Wspieramy w zarządzaniu zmianą organizacyjną i rozwoju ścieżek kariery pracowników."
+          ],
+          [
+            "Efektywność organizacji",
+            "Usprawniamy procesy i strukturę organizacyjną, aby zwiększyć produktywność."
+          ]
+        ],
+        "list_t": "Projekty szyte na miarę",
+        "list": [
+          "Zarządzanie kompetencjami",
+          "Planowanie potrzeb szkoleniowych i analiza luk kompetencyjnych",
+          "Identyfikacja talentów: programy High Potential i Fast Tracker",
+          "Dialog kompetencyjny i roczna ocena pracownicza",
+          "Planowanie ścieżek kariery i sukcesji",
+          "Wartościowanie stanowisk pracy",
+          "Zarządzanie przez cele (MBO) i ich ocena",
+          "Budżetowanie, planowanie wynagrodzeń i podwyżek",
+          "Projektowanie finansowych i pozafinansowych systemów motywacyjnych",
+          "Audyty procesów HR i przygotowanie do audytów WRAP, amfori BSCI i SMETA"
+        ],
+        "end_t": "Odkryj nowe perspektywy dla swojego zespołu",
+        "end_d": "Doradztwo personalne pomaga budować silne, zmotywowane i dobrze zorganizowane zespoły. Napisz do nas — odpowiemy w ciągu 24 godzin."
+      },
+      "uk": {
+        "slug": "kadrovyi-konsaltynh",
+        "name": "Кадровий консалтинг",
+        "title": "Кадровий консалтинг і HR-аудити для компаній | Alimat Group",
+        "desc": "Кадровий консалтинг для компаній: управління компетенціями, системи мотивації, кар'єрні шляхи, оцінка посад і підготовка до аудитів WRAP, amfori BSCI та SMETA.",
+        "lead": "Ми посилюємо силу вашого бізнесу. Допомагаємо компаніям повністю розкрити потенціал людей: створюємо стратегії, впроваджуємо рішення для оптимізації та готуємо організації до етично-соціальних аудитів WRAP, amfori BSCI і SMETA.",
+        "points": [
+          [
+            "Індивідуальний підхід",
+            "Кожну співпрацю починаємо з аналізу потреб, щоб рішення пасували саме вашій компанії."
+          ],
+          [
+            "Розвиток компетенцій",
+            "Визначаємо ключові компетенції команди та розробляємо програми, що краще використовують її потенціал."
+          ],
+          [
+            "Управління змінами й кар'єрою",
+            "Підтримуємо в управлінні організаційними змінами та розвитку кар'єрних шляхів працівників."
+          ],
+          [
+            "Ефективність організації",
+            "Удосконалюємо процеси та організаційну структуру, щоб підвищити продуктивність."
+          ]
+        ],
+        "list_t": "Проєкти під ваші потреби",
+        "list": [
+          "Управління компетенціями",
+          "Планування потреб у навчанні та аналіз прогалин у компетенціях",
+          "Виявлення талантів: програми High Potential і Fast Tracker",
+          "Компетенційний діалог і щорічна оцінка працівників",
+          "Планування кар'єрних шляхів і наступності",
+          "Оцінка (грейдування) посад",
+          "Управління за цілями (MBO) та їх оцінка",
+          "Бюджетування, планування зарплат і підвищень",
+          "Розробка фінансових і нефінансових систем мотивації",
+          "Аудити HR-процесів і підготовка до аудитів WRAP, amfori BSCI та SMETA"
+        ],
+        "end_t": "Відкрийте нові перспективи для своєї команди",
+        "end_d": "Кадровий консалтинг допомагає будувати сильні, вмотивовані й добре організовані команди. Напишіть нам — відповімо протягом 24 годин."
+      },
+      "ru": {
+        "slug": "kadrovyy-konsalting",
+        "name": "Кадровый консалтинг",
+        "title": "Кадровый консалтинг и HR-аудиты для компаний | Alimat Group",
+        "desc": "Кадровый консалтинг для компаний: управление компетенциями, системы мотивации, карьерные пути, оценка должностей и подготовка к аудитам WRAP, amfori BSCI и SMETA.",
+        "lead": "Мы усиливаем ваш бизнес. Помогаем компаниям полностью раскрыть потенциал людей: создаём стратегии, внедряем решения для оптимизации и готовим организации к этико-социальным аудитам WRAP, amfori BSCI и SMETA.",
+        "points": [
+          [
+            "Индивидуальный подход",
+            "Каждое сотрудничество начинаем с анализа потребностей, чтобы решения подходили именно вашей компании."
+          ],
+          [
+            "Развитие компетенций",
+            "Определяем ключевые компетенции команды и разрабатываем программы, которые лучше используют её потенциал."
+          ],
+          [
+            "Управление изменениями и карьерой",
+            "Поддерживаем в управлении организационными изменениями и развитии карьерных путей сотрудников."
+          ],
+          [
+            "Эффективность организации",
+            "Совершенствуем процессы и организационную структуру, чтобы повысить продуктивность."
+          ]
+        ],
+        "list_t": "Проекты под ваши задачи",
+        "list": [
+          "Управление компетенциями",
+          "Планирование потребностей в обучении и анализ пробелов в компетенциях",
+          "Выявление талантов: программы High Potential и Fast Tracker",
+          "Компетенционный диалог и ежегодная оценка сотрудников",
+          "Планирование карьерных путей и преемственности",
+          "Оценка (грейдирование) должностей",
+          "Управление по целям (MBO) и их оценка",
+          "Бюджетирование, планирование зарплат и повышений",
+          "Разработка финансовых и нефинансовых систем мотивации",
+          "Аудиты HR-процессов и подготовка к аудитам WRAP, amfori BSCI и SMETA"
+        ],
+        "end_t": "Откройте новые перспективы для своей команды",
+        "end_d": "Кадровый консалтинг помогает строить сильные, мотивированные и хорошо организованные команды. Напишите нам — ответим в течение 24 часов."
+      },
+      "en": {
+        "slug": "hr-consulting",
+        "name": "HR consulting",
+        "title": "HR consulting and HR audits for companies | Alimat Group",
+        "desc": "HR consulting for companies: competency management, incentive schemes, career paths, job evaluation and preparation for WRAP, amfori BSCI and SMETA audits.",
+        "lead": "We strengthen your business. We help companies get the most out of their people: we design strategies, implement optimisation solutions and prepare organisations for WRAP, amfori BSCI and SMETA ethical and social audits.",
+        "points": [
+          [
+            "An individual approach",
+            "Every engagement starts with a needs analysis, so the solutions fit your company."
+          ],
+          [
+            "Competency development",
+            "We identify your team's key competencies and design programmes that make better use of its potential."
+          ],
+          [
+            "Change and career management",
+            "We support organisational change management and the development of employee career paths."
+          ],
+          [
+            "Organisational effectiveness",
+            "We improve processes and organisational structure to raise productivity."
+          ]
+        ],
+        "list_t": "Tailor-made projects",
+        "list": [
+          "Competency management",
+          "Training needs planning and competency gap analysis",
+          "Talent identification: High Potential and Fast Tracker programmes",
+          "Competency dialogue and annual performance reviews",
+          "Career path and succession planning",
+          "Job evaluation",
+          "Management by objectives (MBO) and its evaluation",
+          "Budgeting and planning of pay and pay rises",
+          "Design of financial and non-financial incentive schemes",
+          "HR process audits and preparation for WRAP, amfori BSCI and SMETA audits"
+        ],
+        "end_t": "Discover new perspectives for your team",
+        "end_d": "HR consulting helps you build strong, motivated and well-organised teams. Write to us — we reply within 24 hours."
+      },
+      "es": {
+        "slug": "consultoria-de-rrhh",
+        "name": "Consultoría de RR. HH.",
+        "title": "Consultoría de recursos humanos y auditorías de RR. HH. | Alimat Group",
+        "desc": "Consultoría de RR. HH.: gestión de competencias, incentivos, planes de carrera, valoración de puestos y preparación para auditorías WRAP, amfori BSCI y SMETA.",
+        "lead": "Reforzamos tu negocio. Ayudamos a las empresas a aprovechar al máximo el potencial de las personas: diseñamos estrategias, implantamos soluciones de optimización y preparamos a las organizaciones para auditorías éticas y sociales WRAP, amfori BSCI y SMETA.",
+        "points": [
+          [
+            "Enfoque individual",
+            "Cada colaboración empieza con un análisis de necesidades para que las soluciones se ajusten a tu empresa."
+          ],
+          [
+            "Desarrollo de competencias",
+            "Identificamos las competencias clave del equipo y diseñamos programas que aprovechan mejor su potencial."
+          ],
+          [
+            "Gestión del cambio y de la carrera",
+            "Apoyamos la gestión del cambio organizativo y el desarrollo de planes de carrera."
+          ],
+          [
+            "Eficacia organizativa",
+            "Mejoramos los procesos y la estructura organizativa para aumentar la productividad."
+          ]
+        ],
+        "list_t": "Proyectos a medida",
+        "list": [
+          "Gestión de competencias",
+          "Planificación de necesidades formativas y análisis de brechas de competencias",
+          "Identificación del talento: programas High Potential y Fast Tracker",
+          "Diálogo sobre competencias y evaluación anual del desempeño",
+          "Planes de carrera y de sucesión",
+          "Valoración de puestos de trabajo",
+          "Dirección por objetivos (MBO) y su evaluación",
+          "Presupuestos, planificación salarial y de subidas",
+          "Diseño de sistemas de incentivos económicos y no económicos",
+          "Auditorías de procesos de RR. HH. y preparación para auditorías WRAP, amfori BSCI y SMETA"
+        ],
+        "end_t": "Descubre nuevas perspectivas para tu equipo",
+        "end_d": "La consultoría de RR. HH. ayuda a crear equipos sólidos, motivados y bien organizados. Escríbenos: respondemos en 24 horas."
+      },
+      "pt": {
+        "slug": "consultoria-de-rh",
+        "name": "Consultoria de RH",
+        "title": "Consultoria de recursos humanos e auditorias de RH | Alimat Group",
+        "desc": "Consultoria de RH: competências, incentivos, planos de carreira, avaliação de funções e preparação para auditorias WRAP, amfori BSCI e SMETA.",
+        "lead": "Reforçamos o seu negócio. Ajudamos as empresas a tirar o máximo partido do potencial das pessoas: criamos estratégias, implementamos soluções de otimização e preparamos as organizações para auditorias éticas e sociais WRAP, amfori BSCI e SMETA.",
+        "points": [
+          [
+            "Abordagem individual",
+            "Cada colaboração começa com uma análise de necessidades, para que as soluções se ajustem à sua empresa."
+          ],
+          [
+            "Desenvolvimento de competências",
+            "Identificamos as competências-chave da equipa e criamos programas que aproveitam melhor o seu potencial."
+          ],
+          [
+            "Gestão da mudança e da carreira",
+            "Apoiamos a gestão da mudança organizacional e o desenvolvimento de percursos de carreira."
+          ],
+          [
+            "Eficácia organizacional",
+            "Melhoramos processos e a estrutura organizacional para aumentar a produtividade."
+          ]
+        ],
+        "list_t": "Projetos à medida",
+        "list": [
+          "Gestão de competências",
+          "Planeamento de necessidades de formação e análise de lacunas de competências",
+          "Identificação de talentos: programas High Potential e Fast Tracker",
+          "Diálogo sobre competências e avaliação anual de desempenho",
+          "Planeamento de carreiras e sucessão",
+          "Avaliação de funções",
+          "Gestão por objetivos (MBO) e respetiva avaliação",
+          "Orçamentação, planeamento salarial e de aumentos",
+          "Conceção de sistemas de incentivos financeiros e não financeiros",
+          "Auditorias de processos de RH e preparação para auditorias WRAP, amfori BSCI e SMETA"
+        ],
+        "end_t": "Descubra novas perspetivas para a sua equipa",
+        "end_d": "A consultoria de RH ajuda a criar equipas fortes, motivadas e bem organizadas. Escreva-nos — respondemos em 24 horas."
+      },
+      "ro": {
+        "slug": "consultanta-hr",
+        "name": "Consultanță HR",
+        "title": "Consultanță în resurse umane și audituri HR | Alimat Group",
+        "desc": "Consultanță HR: competențe, sisteme de motivare, trasee de carieră, evaluarea posturilor și pregătire pentru auditurile WRAP, amfori BSCI și SMETA.",
+        "lead": "Întărim forța afacerii tale. Ajutăm firmele să valorifice pe deplin potențialul oamenilor: creăm strategii, implementăm soluții de optimizare și pregătim organizațiile pentru auditurile etice și sociale WRAP, amfori BSCI și SMETA.",
+        "points": [
+          [
+            "Abordare individuală",
+            "Fiecare colaborare începe cu o analiză a nevoilor, ca soluțiile să se potrivească firmei tale."
+          ],
+          [
+            "Dezvoltarea competențelor",
+            "Identificăm competențele-cheie ale echipei și creăm programe care îi valorifică mai bine potențialul."
+          ],
+          [
+            "Managementul schimbării și al carierei",
+            "Sprijinim gestionarea schimbărilor organizaționale și dezvoltarea traseelor de carieră."
+          ],
+          [
+            "Eficiența organizației",
+            "Îmbunătățim procesele și structura organizațională pentru a crește productivitatea."
+          ]
+        ],
+        "list_t": "Proiecte personalizate",
+        "list": [
+          "Managementul competențelor",
+          "Planificarea nevoilor de instruire și analiza lipsurilor de competențe",
+          "Identificarea talentelor: programele High Potential și Fast Tracker",
+          "Dialog privind competențele și evaluarea anuală a angajaților",
+          "Planificarea traseelor de carieră și a succesiunii",
+          "Evaluarea posturilor",
+          "Managementul prin obiective (MBO) și evaluarea lor",
+          "Bugetarea, planificarea salariilor și a măririlor",
+          "Proiectarea sistemelor de motivare financiare și nefinanciare",
+          "Audituri ale proceselor HR și pregătirea pentru auditurile WRAP, amfori BSCI și SMETA"
+        ],
+        "end_t": "Descoperă noi perspective pentru echipa ta",
+        "end_d": "Consultanța HR te ajută să construiești echipe puternice, motivate și bine organizate. Scrie-ne — răspundem în 24 de ore."
+      }
+    },
+    {
+      "id": "outsourcing",
+      "icon": "factory",
+      "pl": {
+        "slug": "outsourcing-procesow",
+        "name": "Outsourcing procesów",
+        "title": "Outsourcing procesów produkcyjnych i logistycznych | Alimat Group",
+        "desc": "Kompleksowy outsourcing procesów produkcyjnych i logistycznych dla małych, średnich i dużych firm. Specjalizacja w branży mięsnej: drób, wołowina, wieprzowina.",
+        "lead": "Oferujemy kompleksowy outsourcing procesów dla małych, średnich i dużych firm. Oszczędzasz czas i pieniądze, a Twój zespół może skupić się na kluczowych obszarach biznesu.",
+        "points": [
+          [
+            "Przestrzeń na rozwój",
+            "Przejmujemy działania operacyjne, a Ty skupiasz się na strategii firmy."
+          ],
+          [
+            "Specjalistyczne zasoby",
+            "Doświadczony zespół ze znajomością branży zapewnia wysoką jakość usług."
+          ],
+          [
+            "Oszczędności finansowe",
+            "Nie ponosisz kosztów zatrudniania i szkolenia pracowników etatowych — płacisz za usługi, których potrzebujesz."
+          ],
+          [
+            "Elastyczność w działaniu",
+            "Skalujemy usługi w górę lub w dół wraz ze zmianami w Twoim biznesie."
+          ]
+        ],
+        "list_t": "Specjalizacja w branży mięsnej — kompleksowa obsługa projektów",
+        "list": [
+          "Doradztwo przy budowie linii produkcyjnych od podstaw",
+          "Rekrutacja pracowników specjalistycznych i produkcyjnych",
+          "Dokumentacja kadrowa i księgowa oraz legalizacja zatrudnienia, także cudzoziemców",
+          "Szkolenia i stała opieka nad pracownikami",
+          "Zakwaterowanie w pobliżu zakładu, wyżywienie i codzienny dojazd",
+          "Odzież ochronna i nadzór nad przestrzeganiem zasad BHP",
+          "Szybka reakcja na zmieniające się potrzeby produkcji"
+        ],
+        "end_t": "Outsourcing procesów, który przyspiesza Twój biznes",
+        "end_d": "Współpracujemy z producentami drobiu, wołowiny i wieprzowiny w całej Polsce. Napisz do nas — odpowiemy w ciągu 24 godzin."
+      },
+      "uk": {
+        "slug": "autsorsynh-protsesiv",
+        "name": "Аутсорсинг процесів",
+        "title": "Аутсорсинг виробничих і логістичних процесів | Alimat Group",
+        "desc": "Комплексний аутсорсинг виробничих і логістичних процесів для малих, середніх і великих компаній. Спеціалізація — м'ясна галузь: птиця, яловичина, свинина.",
+        "lead": "Ми пропонуємо комплексний аутсорсинг процесів для малих, середніх і великих компаній. Ви заощаджуєте час і гроші, а ваша команда зосереджується на ключових напрямах бізнесу.",
+        "points": [
+          [
+            "Простір для розвитку",
+            "Ми беремо на себе операційну роботу, а ви зосереджуєтеся на стратегії компанії."
+          ],
+          [
+            "Спеціалізовані ресурси",
+            "Досвідчена команда зі знанням галузі забезпечує високу якість послуг."
+          ],
+          [
+            "Фінансова економія",
+            "Ви не несете витрат на найм і навчання штатних працівників — платите лише за потрібні послуги."
+          ],
+          [
+            "Гнучкість у роботі",
+            "Масштабуємо послуги в більший чи менший бік разом зі змінами у вашому бізнесі."
+          ]
+        ],
+        "list_t": "Спеціалізація в м'ясній галузі — комплексний супровід проєктів",
+        "list": [
+          "Консультації зі створення виробничих ліній з нуля",
+          "Підбір спеціалізованого та виробничого персоналу",
+          "Кадрова й бухгалтерська документація та легалізація працевлаштування, зокрема іноземців",
+          "Навчання і постійна опіка над працівниками",
+          "Житло поблизу підприємства, харчування та щоденний доїзд",
+          "Захисний одяг і контроль дотримання правил охорони праці (BHP)",
+          "Швидка реакція на зміни потреб виробництва"
+        ],
+        "end_t": "Аутсорсинг процесів, що пришвидшує ваш бізнес",
+        "end_d": "Ми співпрацюємо з виробниками птиці, яловичини та свинини по всій Польщі. Напишіть нам — відповімо протягом 24 годин."
+      },
+      "ru": {
+        "slug": "autsorsing-protsessov",
+        "name": "Аутсорсинг процессов",
+        "title": "Аутсорсинг производственных и логистических процессов | Alimat Group",
+        "desc": "Комплексный аутсорсинг производственных и логистических процессов для малых, средних и крупных компаний. Специализация — мясная отрасль: птица, говядина, свинина.",
+        "lead": "Мы предлагаем комплексный аутсорсинг процессов для малых, средних и крупных компаний. Вы экономите время и деньги, а ваша команда сосредотачивается на ключевых направлениях бизнеса.",
+        "points": [
+          [
+            "Пространство для развития",
+            "Мы берём на себя операционную работу, а вы сосредотачиваетесь на стратегии компании."
+          ],
+          [
+            "Специализированные ресурсы",
+            "Опытная команда со знанием отрасли обеспечивает высокое качество услуг."
+          ],
+          [
+            "Финансовая экономия",
+            "Вы не несёте расходов на наём и обучение штатных сотрудников — платите только за нужные услуги."
+          ],
+          [
+            "Гибкость в работе",
+            "Масштабируем услуги в большую или меньшую сторону вместе с изменениями в вашем бизнесе."
+          ]
+        ],
+        "list_t": "Специализация в мясной отрасли — комплексное сопровождение проектов",
+        "list": [
+          "Консультации по созданию производственных линий с нуля",
+          "Подбор специализированного и производственного персонала",
+          "Кадровая и бухгалтерская документация и легализация трудоустройства, в том числе иностранцев",
+          "Обучение и постоянная опека над работниками",
+          "Жильё рядом с предприятием, питание и ежедневный проезд",
+          "Защитная одежда и контроль соблюдения правил охраны труда (BHP)",
+          "Быстрая реакция на изменения потребностей производства"
+        ],
+        "end_t": "Аутсорсинг процессов, который ускоряет ваш бизнес",
+        "end_d": "Мы сотрудничаем с производителями птицы, говядины и свинины по всей Польше. Напишите нам — ответим в течение 24 часов."
+      },
+      "en": {
+        "slug": "process-outsourcing",
+        "name": "Process outsourcing",
+        "title": "Production and logistics process outsourcing | Alimat Group",
+        "desc": "End-to-end outsourcing of production and logistics processes for small, medium and large companies. Meat industry specialists: poultry, beef and pork.",
+        "lead": "We offer end-to-end process outsourcing for small, medium and large companies. You save time and money, and your team can focus on the core areas of your business.",
+        "points": [
+          [
+            "Room to grow",
+            "We take over day-to-day operations so you can focus on strategy."
+          ],
+          [
+            "Specialist resources",
+            "An experienced team with industry knowledge delivers high-quality service."
+          ],
+          [
+            "Financial savings",
+            "No costs of hiring and training permanent staff — you pay only for the services you need."
+          ],
+          [
+            "Operational flexibility",
+            "We scale our services up or down as your business changes."
+          ]
+        ],
+        "list_t": "Meat industry specialists — end-to-end project support",
+        "list": [
+          "Advice on building production lines from scratch",
+          "Recruitment of specialist and production staff",
+          "HR and accounting documentation and work legalisation, including for foreign workers",
+          "Training and ongoing care for the workers",
+          "Accommodation near the plant, meals and daily transport",
+          "Protective clothing and monitoring of health and safety (BHP) standards",
+          "Fast response to changing production needs"
+        ],
+        "end_t": "Process outsourcing that speeds up your business",
+        "end_d": "We work with poultry, beef and pork producers across Poland. Write to us — we reply within 24 hours."
+      },
+      "es": {
+        "slug": "externalizacion-de-procesos",
+        "name": "Externalización de procesos",
+        "title": "Externalización de procesos de producción y logística | Alimat Group",
+        "desc": "Externalización integral de procesos de producción y logística para empresas de todos los tamaños. Especialistas en la industria cárnica.",
+        "lead": "Ofrecemos externalización integral de procesos para pequeñas, medianas y grandes empresas. Ahorras tiempo y dinero, y tu equipo puede centrarse en las áreas clave del negocio.",
+        "points": [
+          [
+            "Espacio para crecer",
+            "Nos encargamos de la operativa diaria para que tú te centres en la estrategia."
+          ],
+          [
+            "Recursos especializados",
+            "Un equipo con experiencia y conocimiento del sector garantiza un servicio de alta calidad."
+          ],
+          [
+            "Ahorro económico",
+            "Sin costes de contratación y formación de plantilla fija: pagas solo por los servicios que necesitas."
+          ],
+          [
+            "Flexibilidad operativa",
+            "Ampliamos o reducimos los servicios según cambie tu negocio."
+          ]
+        ],
+        "list_t": "Especialistas en la industria cárnica: gestión integral de proyectos",
+        "list": [
+          "Asesoría para montar líneas de producción desde cero",
+          "Selección de personal especializado y de producción",
+          "Documentación laboral y contable y legalización del empleo, también de extranjeros",
+          "Formación y atención continua a los trabajadores",
+          "Alojamiento cerca de la planta, comidas y transporte diario",
+          "Ropa de protección y control de las normas de seguridad y salud laboral (BHP)",
+          "Respuesta rápida a los cambios en las necesidades de producción"
+        ],
+        "end_t": "Externalización de procesos que acelera tu negocio",
+        "end_d": "Trabajamos con productores de aves, vacuno y porcino en toda Polonia. Escríbenos: respondemos en 24 horas."
+      },
+      "pt": {
+        "slug": "outsourcing-de-processos",
+        "name": "Outsourcing de processos",
+        "title": "Outsourcing de processos de produção e logística | Alimat Group",
+        "desc": "Outsourcing completo de processos de produção e logística para pequenas, médias e grandes empresas. Especialistas na indústria da carne: aves, bovino e suíno.",
+        "lead": "Oferecemos outsourcing completo de processos para pequenas, médias e grandes empresas. Poupa tempo e dinheiro, e a sua equipa pode concentrar-se nas áreas-chave do negócio.",
+        "points": [
+          [
+            "Espaço para crescer",
+            "Assumimos a operação diária para que se possa concentrar na estratégia."
+          ],
+          [
+            "Recursos especializados",
+            "Uma equipa experiente e conhecedora do setor garante serviços de elevada qualidade."
+          ],
+          [
+            "Poupança financeira",
+            "Sem custos de contratação e formação de pessoal efetivo — paga apenas os serviços de que precisa."
+          ],
+          [
+            "Flexibilidade operacional",
+            "Aumentamos ou reduzimos os serviços à medida que o seu negócio muda."
+          ]
+        ],
+        "list_t": "Especialistas na indústria da carne — acompanhamento completo de projetos",
+        "list": [
+          "Consultoria na criação de linhas de produção de raiz",
+          "Recrutamento de pessoal especializado e de produção",
+          "Documentação laboral e contabilística e legalização do emprego, incluindo de estrangeiros",
+          "Formação e acompanhamento contínuo dos trabalhadores",
+          "Alojamento perto da fábrica, refeições e transporte diário",
+          "Vestuário de proteção e controlo das normas de segurança e saúde no trabalho (BHP)",
+          "Resposta rápida às mudanças nas necessidades de produção"
+        ],
+        "end_t": "Outsourcing de processos que acelera o seu negócio",
+        "end_d": "Trabalhamos com produtores de aves, bovino e suíno em toda a Polónia. Escreva-nos — respondemos em 24 horas."
+      },
+      "ro": {
+        "slug": "externalizarea-proceselor",
+        "name": "Externalizarea proceselor",
+        "title": "Externalizarea proceselor de producție și logistică | Alimat Group",
+        "desc": "Externalizare completă a proceselor de producție și logistică pentru firme mici, mijlocii și mari. Specializare în industria cărnii: pasăre, vită și porc.",
+        "lead": "Oferim externalizare completă a proceselor pentru firme mici, mijlocii și mari. Economisești timp și bani, iar echipa ta se poate concentra pe domeniile-cheie ale afacerii.",
+        "points": [
+          [
+            "Spațiu pentru dezvoltare",
+            "Preluăm activitatea operațională, iar tu te concentrezi pe strategie."
+          ],
+          [
+            "Resurse specializate",
+            "O echipă cu experiență și cunoașterea domeniului asigură servicii de înaltă calitate."
+          ],
+          [
+            "Economii financiare",
+            "Fără costuri de angajare și instruire a personalului permanent — plătești doar serviciile de care ai nevoie."
+          ],
+          [
+            "Flexibilitate operațională",
+            "Extindem sau reducem serviciile odată cu schimbările din afacerea ta."
+          ]
+        ],
+        "list_t": "Specializare în industria cărnii — gestionarea completă a proiectelor",
+        "list": [
+          "Consultanță la construirea liniilor de producție de la zero",
+          "Recrutarea personalului specializat și de producție",
+          "Documentație de personal și contabilă și legalizarea angajării, inclusiv a străinilor",
+          "Instruire și grijă permanentă față de lucrători",
+          "Cazare lângă fabrică, masă și transport zilnic",
+          "Echipament de protecție și supravegherea normelor de securitate în muncă (BHP)",
+          "Reacție rapidă la schimbarea nevoilor producției"
+        ],
+        "end_t": "Externalizarea proceselor care îți accelerează afacerea",
+        "end_d": "Colaborăm cu producători de carne de pasăre, vită și porc din toată Polonia. Scrie-ne — răspundem în 24 de ore."
+      }
+    }
+  ]
+}

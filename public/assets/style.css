@@ -534,3 +534,30 @@ h1, h2, h3, .section-tile, .job-card, .facts dd, .prose { overflow-wrap: break-w
   .intl-stats .ic { display: block; }
   .intl-lists { grid-template-columns: 1.4fr 1fr; gap: 40px; }
 }
+
+/* Employers submenu (Oferta dla firm) */
+.main-nav .has-sub { position: relative; display: flex; align-items: center; flex-wrap: wrap; }
+.sub-btn { border: 0; background: none; padding: 6px 4px; margin-left: -8px; cursor: pointer; color: inherit; display: inline-flex; border-radius: 6px; }
+.sub-btn .ic { width: 16px; height: 16px; transition: transform .2s; }
+.has-sub.sub-open .sub-btn .ic { transform: rotate(180deg); }
+.main-nav .sub { display: none; list-style: none; margin: 0; padding: 8px 0; flex-direction: column; gap: 0; }
+.main-nav .sub a { white-space: nowrap; }
+.has-sub.sub-open > .sub { display: flex; }
+body.nav-open .main-nav .has-sub { display: flex; }
+body.nav-open .main-nav .has-sub > a { flex: 1; }
+body.nav-open .main-nav .sub-btn { margin-left: 0; padding: 12px; border-bottom: 1px solid var(--grey-1); border-radius: 0; align-self: stretch; }
+body.nav-open .main-nav .sub { width: 100%; padding: 0 0 0 16px; }
+body.nav-open .main-nav .sub a { font-size: 1rem; padding: 12px; }
+@media (min-width: 1024px) {
+  .main-nav .sub { position: absolute; top: 100%; left: 0; min-width: 260px; background: #fff; box-shadow: var(--shadow); border-radius: 0 0 10px 10px; z-index: 50; }
+  .main-nav .sub a { padding: 12px 20px; border-radius: 0; }
+  .main-nav .sub a:hover { background: var(--grey-1); }
+  .has-sub:hover > .sub, .has-sub:focus-within > .sub { display: flex; }
+}
+.svc-links { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: 1fr; }
+.svc-links a { display: flex; align-items: center; gap: 12px; padding: 16px 18px; background: #fff; border-radius: var(--radius); box-shadow: var(--shadow); color: inherit; text-decoration: none; font-weight: 600; }
+.svc-links a span { flex: 1; }
+.svc-links a .ic:first-child { color: var(--orange); }
+.services h2 a { color: inherit; text-decoration: none; }
+.services .link-arrow { margin-top: 8px; display: inline-flex; }
+@media (min-width: 768px) { .svc-links { grid-template-columns: repeat(3, 1fr); } }
