@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { pageUrl, asset, BASE } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
@@ -34,7 +35,12 @@ export const languageNames = (lang, codes, capitalize = true) => {
   const dn = new Intl.DisplayNames([icuLang(lang)], { type: 'language' });
   return codes.map((c) => (capitalize ? cap(dn.of(c), lang) : dn.of(c)));
 };
-const chips = (items, more) => `<ul class="chips">${items.map((x) => `<li>${esc(x)}</li>`).join('')}${more ? `<li class="chip-more">${esc(more)}</li>` : ''}</ul>`;
+/** Flag image (public/assets/flags/xx.svg, flag-icons, MIT) when the file exists; CMS may add new countries. */
+const flag = (code) => {
+  const f = `flags/${code.toLowerCase()}.svg`;
+  return existsSync(new URL(`../../../public/assets/${f}`, import.meta.url)) ? `<img class="flag" src="${asset(f)}" alt="" width="20" height="15" loading="lazy" decoding="async">` : '';
+};
+const chips = (items, more, codes) => `<ul class="chips">${items.map((x, i) => `<li>${codes ? flag(codes[i]) : ''}${esc(x)}</li>`).join('')}${more ? `<li class="chip-more">${esc(more)}</li>` : ''}</ul>`;
 
 /** "Why foreigners choose us" — experience with 60+ nationalities, staff languages, no Polish needed. */
 export function intlBlock(ctx, { heading = 'h2' } = {}) {
@@ -49,7 +55,7 @@ export function intlBlock(ctx, { heading = 'h2' } = {}) {
     <li>${icon('chat', 'ic ic-lg')}<strong>${intl.languages.length}+</strong><span>${esc(t('intl_s3'))}</span></li>
   </ul>
   <div class="intl-lists">
-    <div><h3>${esc(t('intl_countries'))}</h3>${chips(countryNames(lang, intl.countries), t('intl_more'))}</div>
+    <div><h3>${esc(t('intl_countries'))}</h3>${chips(countryNames(lang, intl.countries), t('intl_more'), intl.countries)}</div>
     <div><h3>${esc(t('intl_langs'))}</h3>${chips(languageNames(lang, intl.languages), t('intl_more'))}</div>
   </div>
   <p class="center intl-coord">${icon('user')}${esc(t('intl_coord'))}</p>

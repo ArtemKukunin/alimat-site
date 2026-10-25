@@ -59,7 +59,8 @@ export function contactButtons(ctx, { waText, compact = false, call = true } = {
     <a class="btn btn-wa" href="${waLink(settings, waText)}" rel="noopener" target="_blank">${icon('chat')}<span>WhatsApp</span></a>
     <a class="btn btn-ghost" href="${esc(settings.telegram)}" rel="noopener" target="_blank">${icon('chat')}<span>Telegram</span></a>
     <a class="btn btn-ghost" href="viber://chat?number=%2B${digits(settings.phone)}">${icon('chat')}<span>Viber</span></a>
-    ${call ? `<a class="btn btn-ghost" href="${telLink(settings.phone)}">${icon('phone')}<span>${esc(t('cta_call'))}</span></a>` : ''}
+    ${call ? `<a class="btn btn-ghost" href="${telLink(settings.phone)}">${icon('phone')}<span>${esc(t('cta_call'))}</span></a>
+    <a class="btn btn-ghost" href="mailto:${esc(settings.email)}">${icon('mail')}<span>${esc(t('cta_email'))}</span></a>` : ''}
   </div>`;
 }
 
@@ -103,11 +104,18 @@ ${ld}
 
 function header(ctx, page, langLinks) {
   const { lang, t, settings } = ctx;
-  const sub = (ctx.services || []).map((s) => `<li><a href="${pageUrl(lang, 'employers', s[lang].slug)}">${esc(s[lang].name)}</a></li>`).join('');
+  const subs = {
+    employers: (ctx.services || []).map((s) => [pageUrl(lang, 'employers', s[lang].slug), s[lang].name]),
+    candidates: Object.entries(ctx.categories || {}).map(([, c]) => [pageUrl(lang, 'jobs', c[lang].slug), c[lang].name]),
+  };
   const nav = ['jobs', 'candidates', 'employers', 'contact']
-    .map((p) => (p === 'employers' && sub
-      ? `<li class="has-sub"><a href="${pageUrl(lang, p)}"${p === page ? ' aria-current="page"' : ''}>${esc(t(`nav_${p}`))}</a><button class="sub-btn" type="button" aria-expanded="false" aria-label="${esc(t(`nav_${p}`))}">${icon('chevron')}</button><ul class="sub">${sub}</ul></li>`
-      : `<li><a href="${pageUrl(lang, p)}"${p === page ? ' aria-current="page"' : ''}>${esc(t(`nav_${p}`))}</a></li>`))
+    .map((p) => {
+      const cur = p === page ? ' aria-current="page"' : '';
+      const sub = (subs[p] || []).map(([href, name]) => `<li><a href="${href}">${esc(name)}</a></li>`).join('');
+      return sub
+        ? `<li class="has-sub"><a href="${pageUrl(lang, p)}"${cur}>${esc(t(`nav_${p}`))}</a><button class="sub-btn" type="button" aria-expanded="false" aria-label="${esc(t(`nav_${p}`))}">${icon('chevron')}</button><ul class="sub">${sub}</ul></li>`
+        : `<li><a href="${pageUrl(lang, p)}"${cur}>${esc(t(`nav_${p}`))}</a></li>`;
+    })
     .join('') + `<li><a href="${ctx.blogUrl || `${BASE}/blog/`}"${page === 'blog' ? ' aria-current="page"' : ''}>${esc(t('nav_blog'))}</a></li>`;
   const langs = langLinks
     .map((a) => `<li><a href="${a.href}" hreflang="${a.lang}" lang="${a.lang}"${a.lang === lang ? ' aria-current="true"' : ''} data-lang="${a.lang}">${esc(LANGS[a.lang].name)}</a></li>`)

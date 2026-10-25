@@ -9,7 +9,7 @@ import { formShell, input, textarea } from '../../core/form.js';
 const SVC_TEXT = { temporary: 'svc1_d', permanent: 'svc2_d', outsourcing: 'svc3_d', consulting: 'svc4_d' };
 
 /** Quote request form, shared with the service pages. */
-export function inquirySection(ctx) {
+export function inquirySection(ctx, title) {
   const { t } = ctx;
   const fields = `<div class="grid-2">
     ${input(t, { name: 'company', label: t('f_company'), required: true, autocomplete: 'organization' })}
@@ -19,7 +19,8 @@ export function inquirySection(ctx) {
   </div>
   ${textarea(t, { name: 'message', label: t('f_need'), required: true })}`;
   return `<section class="band" id="inquiry"><div class="wrap block form-narrow">
-  <h2>${esc(t('emp_form_t'))}</h2>
+  <h2>${esc(title || t('emp_form_t'))}</h2>
+  ${title ? `<p>${esc(t('contact_lead'))}</p>` : ''}
   ${formShell(ctx, { type: 'employer', fieldsHtml: fields, submitLabel: t('emp_submit') })}
 </div></section>`;
 }

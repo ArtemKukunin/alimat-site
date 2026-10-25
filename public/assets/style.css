@@ -523,6 +523,8 @@ h1, h2, h3, .section-tile, .job-card, .facts dd, .prose { overflow-wrap: break-w
 .intl-lists h3 { font-size: 1.05rem; margin: 0 0 10px; }
 .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .chips li { padding: 6px 12px; border-radius: 999px; background: #eef5fb; color: #1d2b36; font-size: .95rem; line-height: 1.3; }
+.chips li:has(.flag) { display: inline-flex; align-items: center; gap: 7px; padding-left: 9px; }
+.chips .flag { width: 20px; height: 15px; border-radius: 3px; box-shadow: 0 0 0 1px rgba(0,0,0,.08); flex: none; object-fit: cover; }
 .chips .chip-more { background: transparent; border: 1px dashed #9db8cc; }
 .intl-coord { max-width: 760px; margin: 24px auto 18px; display: flex; gap: 10px; align-items: flex-start; justify-content: center; text-align: left; }
 .intl-coord .ic { flex: none; color: var(--orange); margin-top: 3px; }
@@ -584,3 +586,17 @@ body.nav-open .main-nav .sub a { font-size: 1rem; padding: 12px; }
 @media (max-width: 600px) {
   .lead-pop { margin: auto auto 0; width: 100vw; max-width: 100vw; border-radius: var(--radius) var(--radius) 0 0; padding: 22px 16px 16px; }
 }
+
+/* With e-mail: WhatsApp full width, the other four in a 2x2 / 4x1 grid. */
+.contact-btns:not(.no-call):not(.compact) .btn-wa { grid-column: 1 / -1; }
+.contact-btns.compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* Service pages */
+.page-hero .hero-sub { font-size: 1.2rem; margin: 6px 0 8px; }
+@media (min-width: 768px) { .perks.cards-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1100px) { .perks.cards-4 { grid-template-columns: repeat(4, 1fr); } }
+.perks.cards-4 h2, .perks.cards-4 h3 { font-size: 1.15rem; }
+.svc-sec .steps h3 { font-size: 1.1rem; }
+.svc-list .ticks-2 { max-width: 1000px; margin-inline: auto; }
+.svc-outro { margin-top: 22px; }
+.svc-end a { font-weight: 600; white-space: nowrap; }
