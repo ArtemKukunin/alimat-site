@@ -259,8 +259,7 @@
   "rev_d": "Real reviews from the Alimat Group Google profile (Kraków office).",
   "rev_count": "Google reviews: {n}",
   "rev_all": "All reviews on Google",
-  "rev_orig": "Show original ({lang})",
-  "rev_tr": "translated",
+  "rev_tr": "Translation",
   "rev_stars": "Rated {n} out of 5",
   "svc_contact": "Have a question or want to find out more? Email us at {email} or call {phone}. We're here to help!",
   "svc_other": "Other services for employers",
@@ -270,5 +269,7 @@
   "pop_t_list": "Not sure which job to choose?",
   "pop_d_list": "Leave your name and phone number — a recruiter will find you a job with accommodation.",
   "pop_or": "or message us right away",
-  "pop_close": "Close"
+  "pop_close": "Close",
+  "rev_check": "Check on Google",
+  "rev_alt": "Google review by {name}: {text}"
 }

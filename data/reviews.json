@@ -1,5 +1,5 @@
 {
-  "_comment": "Real Google reviews of the Kraków office (Google Maps profile). Copy text verbatim from Google; 'tr' = our translations into the other site languages (labelled as translations on the page). rating/count: update from the Google profile.",
+  "_comment": "Real Google reviews of the Kraków office. image = screenshot of the review on Google Maps (public/assets/reviews/), link = the author's Google reviews page (to verify). text = original wording (used as image alt), tr = our translations into the other site languages.",
   "rating": 4.6,
   "count": 45,
   "url": "https://www.google.com/maps?cid=13343852088762403520",
@@ -8,6 +8,10 @@
       "name": "Ivan Y.",
       "stars": 5,
       "lang": "ru",
+      "image": "reviews/ivan.webp",
+      "width": 654,
+      "height": 492,
+      "link": "https://www.google.com/maps/contrib/116372263916405173028/reviews",
       "text": "Первый мой опыт работы в Польше был связан с фирмой Alimat Group, меня по приезду сразу же забрали с автовокзала, поселили на хостел с хорошими условиями, потом провели на работу, на любые вопросы отвечают, проблемы с документами решаются в кратчайшие сроки, персонал в офисе очень приятный, условия работы и проживания хорошие. Alimat Group, Президент компании Алексей Бабин - так и продолжайте, таких фирм как ваша, мало по Польше.",
       "tr": {
         "pl": "Moje pierwsze doświadczenie zawodowe w Polsce było związane z firmą Alimat Group. Po przyjeździe od razu odebrano mnie z dworca autobusowego, zakwaterowano w hostelu w dobrych warunkach, a potem zaprowadzono do pracy. Odpowiadają na każde pytanie, problemy z dokumentami rozwiązują w najkrótszym czasie, personel w biurze jest bardzo miły, warunki pracy i zakwaterowania są dobre. Alimat Group, prezes firmy Aleksiej Babin – tak trzymajcie, takich firm jak wasza jest w Polsce niewiele.",
@@ -22,6 +26,10 @@
       "name": "Оля Ш.",
       "stars": 5,
       "lang": "uk",
+      "image": "reviews/olya.webp",
+      "width": 654,
+      "height": 424,
+      "link": "https://www.google.com/maps/contrib/117898629414836782207/reviews",
       "text": "Відповідально підійшли працевлаштування. Допомогли з оформленням і виплутатись зі складної ситуації дуже швидко. Робота повністю влаштовує. Все що говорять менеджера відповідає дійсності, і дуже дуже вдячна дівчатам, що відповідали на всі мої питання, так як я їхала перший раз до Польщі. Працюю в ресторані на кухні, робота активна та не нудна ;) Рекомендую",
       "tr": {
         "pl": "Odpowiedzialnie podeszli do zatrudnienia. Pomogli z formalnościami i bardzo szybko wyplątać się z trudnej sytuacji. Praca w pełni mi odpowiada. Wszystko, co mówią menedżerowie, jest zgodne z prawdą, i jestem bardzo, bardzo wdzięczna dziewczynom, które odpowiadały na wszystkie moje pytania, bo jechałam do Polski pierwszy raz. Pracuję w restauracji na kuchni, praca jest aktywna i nie nudna ;) Polecam",
@@ -36,6 +44,10 @@
       "name": "Виталина Л.",
       "stars": 5,
       "lang": "uk",
+      "image": "reviews/vitalina.webp",
+      "width": 654,
+      "height": 256,
+      "link": "https://www.google.com/maps/contrib/108779421300221138140/reviews",
       "text": "Alimat Group - моя перша робота в Польщі. Дуже все доступно пояснюють. Все оформлюють офіційно. Велика подяка за підтримку.",
       "tr": {
         "pl": "Alimat Group to moja pierwsza praca w Polsce. Wszystko bardzo przystępnie tłumaczą. Wszystko załatwiają oficjalnie. Wielkie dzięki za wsparcie.",
@@ -50,6 +62,10 @@
       "name": "Valentina T.",
       "stars": 5,
       "lang": "uk",
+      "image": "reviews/valentina.webp",
+      "width": 654,
+      "height": 290,
+      "link": "https://www.google.com/maps/contrib/112019192256291139655/reviews",
       "text": "Працюємо з фірмою більше двох років. Проблем з виплатою і оформлення документів немає. Колектив фірми професіонали своєї справи. Завжди підтримають і допоможуть.",
       "tr": {
         "pl": "Pracujemy z firmą od ponad dwóch lat. Nie ma problemów z wypłatami ani z załatwianiem dokumentów. Zespół firmy to profesjonaliści w swoim fachu. Zawsze wesprą i pomogą.",
@@ -64,6 +80,10 @@
       "name": "Łukasz D.",
       "stars": 5,
       "lang": "en",
+      "image": "reviews/lukasz.webp",
+      "width": 654,
+      "height": 256,
+      "link": "https://www.google.com/maps/contrib/106612909979883763215/reviews",
       "text": "Great place with great people. Call them, write to them and they will take good care of your future. Work options in whole Poland.",
       "tr": {
         "pl": "Świetne miejsce i świetni ludzie. Zadzwońcie, napiszcie do nich, a dobrze zatroszczą się o waszą przyszłość. Oferty pracy w całej Polsce.",
@@ -78,6 +98,10 @@
       "name": "Liv",
       "stars": 5,
       "lang": "pl",
+      "image": "reviews/liv.webp",
+      "width": 654,
+      "height": 322,
+      "link": "https://www.google.com/maps/contrib/107626802184898391411/reviews",
       "text": "Profesjonalna, rzetelna agencja pracy. Przede wszystkim trzeba docenić kompetentnych, bardzo pomocnych pracowników, korzystne warunki współpracy i terminowość zespołu. Zdecydowanie polecam współpracę z Alimat Group!",
       "tr": {
         "uk": "Професійне, надійне агентство праці. Насамперед варто відзначити компетентних, дуже чуйних працівників, вигідні умови співпраці та пунктуальність команди. Однозначно рекомендую співпрацю з Alimat Group!",

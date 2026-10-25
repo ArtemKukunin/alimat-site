@@ -3,7 +3,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { LANGS, LANG_CODES, DEFAULT_LANG, pageUrl, alternates, asset, BASE } from './core/i18n.js';
+import { LANGS, LANG_CODES, DEFAULT_LANG, pageUrl, alternates, asset, versionedAsset, BASE } from './core/i18n.js';
 import { readJson, writeFile, translator, esc } from './core/util.js';
 import { loadJobs } from './features/jobs/model.js';
 import { renderHome } from './features/home/home.js';
@@ -76,8 +76,8 @@ ${process.env.SITE_NOINDEX ? '<meta name="robots" content="noindex, nofollow">' 
 ${alt}
 <link rel="alternate" hreflang="x-default" href="${settings.siteUrl}${BASE}/">
 <link rel="icon" href="${asset('favicon.svg')}" type="image/svg+xml">
-<link rel="stylesheet" href="${asset('style.css')}">
-<script src="${asset('app.js')}" defer></script>
+<link rel="stylesheet" href="${versionedAsset('style.css')}">
+<script src="${versionedAsset('app.js')}" defer></script>
 </head>
 <body class="page-root" data-autolang>
 <main class="lang-choice">
@@ -96,7 +96,7 @@ function notFoundPage(ui) {
   return `<!doctype html>
 <html lang="${DEFAULT_LANG}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>404 — Alimat Group</title><meta name="robots" content="noindex">
-<link rel="stylesheet" href="${asset('style.css')}"></head>
+<link rel="stylesheet" href="${versionedAsset('style.css')}"></head>
 <body class="page-root"><main class="lang-choice"><img src="${asset('img/logo.webp')}" alt="Alimat Group" width="220" height="53"><h1>404</h1><ul class="nf-list">${items}</ul></main></body></html>
 `;
 }

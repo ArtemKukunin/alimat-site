@@ -1,4 +1,4 @@
-import { LANGS, LANG_CODES, pageUrl, alternates, asset, BASE } from './i18n.js';
+import { LANGS, LANG_CODES, pageUrl, alternates, asset, versionedAsset, BASE } from './i18n.js';
 import { esc, digits, sitePath, fitTitle } from './util.js';
 import { icon } from './icons.js';
 
@@ -96,8 +96,8 @@ ${og.published ? `<meta property="article:published_time" content="${og.publishe
 <link rel="preload" href="${asset('fonts/titillium-web-400.woff')}" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="${asset('fonts/roboto-slab-900.woff')}" as="font" type="font/woff" crossorigin>
 ${[...(og.preloadImages || []), ...(og.preloadImage ? [og.preloadImage] : [])].map((im) => `<link rel="preload" as="image" href="${im.src}"${im.srcset ? ` imagesrcset="${im.srcset}" imagesizes="${im.sizes}"` : ''}${im.media ? ` media="${im.media}"` : ''} fetchpriority="high">`).join('\n')}
-<link rel="stylesheet" href="${asset('style.css')}">
-<script src="${asset('app.js')}" defer></script>
+<link rel="stylesheet" href="${versionedAsset('style.css')}">
+<script src="${versionedAsset('app.js')}" defer></script>
 ${ld}
 </head>`;
 }

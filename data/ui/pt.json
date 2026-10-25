@@ -259,8 +259,7 @@
   "rev_d": "Opiniões reais do perfil da Alimat Group no Google (escritório de Cracóvia).",
   "rev_count": "Opiniões no Google: {n}",
   "rev_all": "Todas as opiniões no Google",
-  "rev_orig": "Ver original ({lang})",
-  "rev_tr": "traduzido",
+  "rev_tr": "Tradução",
   "rev_stars": "Classificação: {n} em 5",
   "svc_contact": "Tens alguma pergunta ou queres saber mais? Escreve-nos para {email} ou liga para o {phone}. Estamos ao teu dispor!",
   "svc_other": "Outros serviços para empresas",
@@ -270,5 +269,7 @@
   "pop_t_list": "Não sabes que oferta escolher?",
   "pop_d_list": "Deixa o teu nome e telefone — um recrutador encontra-te um trabalho com alojamento.",
   "pop_or": "ou escreve-nos já",
-  "pop_close": "Fechar"
+  "pop_close": "Fechar",
+  "rev_check": "Verificar no Google",
+  "rev_alt": "Opinião de {name} no Google: {text}"
 }

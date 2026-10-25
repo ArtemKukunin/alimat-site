@@ -259,8 +259,7 @@
   "rev_d": "Recenzii reale din profilul Google al Alimat Group (biroul din Cracovia).",
   "rev_count": "Recenzii pe Google: {n}",
   "rev_all": "Toate recenziile pe Google",
-  "rev_orig": "Vezi originalul ({lang})",
-  "rev_tr": "tradus",
+  "rev_tr": "Traducere",
   "rev_stars": "Notă: {n} din 5",
   "svc_contact": "Ai o întrebare sau vrei să afli mai multe? Scrie-ne la {email} sau sună la {phone}. Suntem la dispoziția ta!",
   "svc_other": "Alte servicii pentru firme",
@@ -270,5 +269,7 @@
   "pop_t_list": "Nu știi ce ofertă să alegi?",
   "pop_d_list": "Lasă-ne numele și telefonul — un recrutor îți găsește un loc de muncă cu cazare.",
   "pop_or": "sau scrie-ne imediat",
-  "pop_close": "Închide"
+  "pop_close": "Închide",
+  "rev_check": "Verifică pe Google",
+  "rev_alt": "Recenzia lui {name} pe Google: {text}"
 }

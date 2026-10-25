@@ -259,8 +259,7 @@
   "rev_d": "Prawdziwe opinie z profilu Alimat Group w Google (biuro w Krakowie).",
   "rev_count": "Opinie w Google: {n}",
   "rev_all": "Wszystkie opinie w Google",
-  "rev_orig": "Pokaż oryginał ({lang})",
-  "rev_tr": "przetłumaczone",
+  "rev_tr": "Tłumaczenie",
   "rev_stars": "Ocena {n} z 5",
   "svc_contact": "Masz do nas pytanie lub chcesz się dowiedzieć więcej? Napisz do nas {email} lub zadzwoń pod numer {phone}. Jesteśmy do Twojej dyspozycji!",
   "svc_other": "Pozostałe usługi dla firm",
@@ -270,5 +269,7 @@
   "pop_t_list": "Nie wiesz, którą ofertę wybrać?",
   "pop_d_list": "Zostaw imię i telefon — rekruter dobierze dla Ciebie pracę z zakwaterowaniem.",
   "pop_or": "albo napisz od razu",
-  "pop_close": "Zamknij"
+  "pop_close": "Zamknij",
+  "rev_check": "Sprawdź w Google",
+  "rev_alt": "Opinia {name} w Google: {text}"
 }

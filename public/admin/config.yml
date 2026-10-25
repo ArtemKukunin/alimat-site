@@ -108,7 +108,11 @@ collections:
               - { label: "Imię (jak w Google, nazwisko skrócone)", name: name, widget: string }
               - { label: "Gwiazdki", name: stars, widget: number, value_type: int, min: 1, max: 5, default: 5 }
               - { label: "Język oryginału", name: lang, widget: select, options: [pl, uk, ru, en, es, pt, ro] }
-              - { label: "Tekst oryginalny", name: text, widget: text }
+              - { label: "Zrzut ekranu opinii z Google", name: image, widget: image, media_folder: /public/assets/reviews, public_folder: reviews, hint: "WebP lub PNG, ok. 650 px szerokości." }
+              - { label: "Szerokość zrzutu (px)", name: width, widget: number, value_type: int }
+              - { label: "Wysokość zrzutu (px)", name: height, widget: number, value_type: int }
+              - { label: "Link do opinii autora w Google", name: link, widget: string }
+              - { label: "Tekst oryginalny (opis obrazka)", name: text, widget: text }
               - label: Tłumaczenia
                 name: tr
                 widget: object

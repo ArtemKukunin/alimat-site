@@ -1,4 +1,6 @@
 // Languages, localized route slugs and URL helpers.
+import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
 export const DEFAULT_LANG = 'pl';
 
 export const LANGS = {
@@ -25,6 +27,16 @@ const SUFFIX = process.env.SITE_PREVIEW ? 'index.html' : '';
 // SITE_BASE=/repo-name → site served from a sub-path (e.g. GitHub Pages without a custom domain).
 export const BASE = (process.env.SITE_BASE || '').replace(/\/+$/, '');
 export const asset = (p) => `${BASE}/assets/${p}`;
+
+/** Asset URL with a content hash (?v=…) so browsers and the CDN pick up new CSS/JS right after a deploy. */
+const versions = new Map();
+export function versionedAsset(p) {
+  if (!versions.has(p)) {
+    const file = new URL(`../../public/assets/${p}`, import.meta.url);
+    versions.set(p, createHash('sha1').update(readFileSync(file)).digest('hex').slice(0, 10));
+  }
+  return `${asset(p)}?v=${versions.get(p)}`;
+}
 
 /** Path of a page in a language. page = 'home' | route key; sub = optional child slug, or {lang: slug}. */
 export function pageUrl(lang, page, sub) {

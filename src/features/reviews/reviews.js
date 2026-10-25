@@ -1,6 +1,8 @@
 // Google reviews block (Kraków office): data/reviews.json, edited in the CMS.
-// Reviews are shown in the page language; a translated review keeps its original behind "Show original".
-import { LANG_CODES, LANGS } from '../../core/i18n.js';
+// Each review is a screenshot from Google Maps (verifiable via the author's Google link),
+// with our translation underneath when the page language differs from the original.
+import { existsSync } from 'node:fs';
+import { LANG_CODES, LANGS, asset } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
 
@@ -11,6 +13,9 @@ export function loadReviews(raw) {
   raw.reviews.forEach((r, i) => {
     const where = `reviews.json: review #${i + 1}`;
     if (!r.name || !r.text) throw new Error(`${where}: name and text are required`);
+    if (!/^https:\/\//.test(r.link)) throw new Error(`${where}: link must be an https URL`);
+    if (!existsSync(new URL(`../../../public/assets/${r.image}`, import.meta.url))) throw new Error(`${where}: image ${r.image} not found`);
+    if (!(r.width > 0 && r.height > 0)) throw new Error(`${where}: width and height are required`);
     if (!Number.isInteger(r.stars) || r.stars < 1 || r.stars > 5) throw new Error(`${where}: stars must be 1–5`);
     if (!LANG_CODES.includes(r.lang)) throw new Error(`${where}: unknown lang "${r.lang}"`);
     const missing = LANG_CODES.filter((l) => l !== r.lang && !r.tr?.[l]);
@@ -22,16 +27,15 @@ export function loadReviews(raw) {
 const stars = (n, label) => `<span class="stars" role="img" aria-label="${esc(label)}">${
   Array.from({ length: 5 }, (_, i) => icon('star', `ic star${i < n ? '' : ' off'}`)).join('')}</span>`;
 
-const languageName = (lang, code) => new Intl.DisplayNames([LANGS[lang].locale], { type: 'language' }).of(code);
-
 function reviewCard(ctx, r) {
   const { lang, t } = ctx;
   const translated = r.lang !== lang;
   return `<li class="review">
-    ${stars(r.stars, t('rev_stars', { n: r.stars }))}
-    <blockquote lang="${translated ? lang : r.lang}"><p>${esc(translated ? r.tr[lang] : r.text)}</p></blockquote>
-    ${translated ? `<details class="review-orig"><summary>${esc(t('rev_orig', { lang: languageName(lang, r.lang) }))}</summary><p lang="${r.lang}">${esc(r.text)}</p></details>` : ''}
-    <p class="review-by"><strong>${esc(r.name)}</strong><span>Google${translated ? ` · ${esc(t('rev_tr'))}` : ''}</span></p>
+    <a class="review-shot" href="${esc(r.link)}" target="_blank" rel="noopener">
+      <img src="${asset(r.image)}" alt="${esc(t('rev_alt', { name: r.name, text: r.text }))}" lang="${r.lang}" width="${r.width}" height="${r.height}" loading="lazy" decoding="async">
+    </a>
+    ${translated ? `<p class="review-tr"><span>${esc(t('rev_tr'))}:</span> ${esc(r.tr[lang])}</p>` : ''}
+    <a class="link-arrow review-check" href="${esc(r.link)}" target="_blank" rel="noopener">${esc(t('rev_check'))} ${icon('arrow')}</a>
   </li>`;
 }
 
