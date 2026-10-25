@@ -189,6 +189,65 @@
     });
   }
 
+  /**
+   * Lead popup: opens once per session — after 60 s of reading a job (visible time only),
+   * or on job lists after the visitor has scrolled through the offers (or 60 s).
+   * Never while the visitor is typing in another form or after a form was sent.
+   */
+  function leadPopup() {
+    var dlg = document.getElementById('lead-pop');
+    if (!dlg || typeof dlg.showModal !== 'function') return;
+    var ss = {
+      get: function (k) { try { return sessionStorage.getItem(k); } catch (e) { return '1'; } },
+      set: function (k) { try { sessionStorage.setItem(k, '1'); } catch (e) { /* ignore */ } },
+    };
+    if (ss.get('lead-pop') || ss.get('lead-sent')) return;
+    var delay = Number(dlg.getAttribute('data-delay')) * 1000;
+    var seen = 0, last = Date.now(), done = false, timer;
+
+    function busy() {
+      var a = document.activeElement;
+      return a && a.closest && a.closest('form') && !dlg.contains(a);
+    }
+    function open() {
+      if (done) return;
+      if (busy() || document.querySelector('form.sent')) { timer = setTimeout(open, 15000); return; }
+      done = true;
+      ss.set('lead-pop');
+      dlg.showModal();
+    }
+    function tick() {
+      if (done) return;
+      if (!document.hidden) seen += Date.now() - last;
+      last = Date.now();
+      if (seen >= delay) open(); else timer = setTimeout(tick, 1000);
+    }
+    document.addEventListener('visibilitychange', function () { last = Date.now(); });
+    timer = setTimeout(tick, 1000);
+
+    if (dlg.getAttribute('data-mode') === 'list') {
+      var grid = document.getElementById('job-grid') || document.querySelector('.job-grid');
+      if (grid) {
+        var onScroll = function () {
+          var r = grid.getBoundingClientRect();
+          // Bottom of the offers reached and at least 15 s on the page.
+          if (r.bottom < window.innerHeight * 0.9 && seen + (Date.now() - last) > 15000) {
+            window.removeEventListener('scroll', onScroll);
+            open();
+          }
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+      }
+    }
+
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg || e.target.closest('[data-close]')) dlg.close();
+    });
+    document.addEventListener('submit', function (e) {
+      if (e.target.matches && e.target.matches('form[data-form]')) ss.set('lead-sent');
+    }, true);
+  }
+
   function init() {
     rootRedirect();
     rememberLanguage();
@@ -196,6 +255,7 @@
     jobFilters();
     preselectJob();
     forms();
+    leadPopup();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
   else init();

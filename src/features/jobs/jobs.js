@@ -1,8 +1,9 @@
 import { pageUrl, asset, BASE, LANG_CODES } from '../../core/i18n.js';
-import { esc, formatSalary, formatDate, fitTitle, fitDesc } from '../../core/util.js';
+import { esc, formatSalary, fitTitle, fitDesc } from '../../core/util.js';
 import { icon, TAG_ICONS } from '../../core/icons.js';
 import { layout, breadcrumbs, breadcrumbLd, contactButtons, waLink } from '../../core/layout.js';
 import { CATEGORIES } from './model.js';
+import { leadPopup } from './popup.js';
 
 /** "*" in job.city = several cities. */
 export const locationLabel = (job, t) => {
@@ -106,7 +107,8 @@ export function renderJobsList(ctx) {
   <div class="job-grid" id="job-grid">${list.map((j) => jobCard(ctx, j)).join('')}</div>
   ${emptyBox(ctx, true)}
 </section>
-${cvBanner(ctx)}`;
+${cvBanner(ctx)}
+${leadPopup(ctx)}`;
   return layout(ctx, {
     page: 'jobs', title: t('jobs_title'), description: t('jobs_desc'), body,
     jsonld: [breadcrumbLd(ctx.settings, crumbs), itemListLd(ctx, list)],
@@ -143,7 +145,8 @@ ${list.length ? cvBanner(ctx) : ''}
 <section class="wrap block-sm">
   <h2>${esc(t('other_sections'))}</h2>
   ${sectionTiles(ctx, cat)}
-</section>`;
+</section>
+${list.length ? leadPopup(ctx) : ''}`;
   return layout(ctx, {
     page: 'jobs', sub: catSlugs(ctx, cat),
     title: fitTitle(`${c.h1} | Alimat Group`, c.h1), description: fitDesc(c.desc), body,
@@ -230,7 +233,6 @@ export function renderJobDetail(ctx, job) {
     ${section(t('sec_offer'), tx.offer)}
     ${section(t('sec_conditions'), tx.conditions)}
     <section class="referral">${icon('gift', 'ic ic-lg')}<div><h2>${esc(t('referral_t', { bonus: settings.referralBonus }))}</h2><p>${esc(t('referral_d', { bonus: settings.referralBonus, half: settings.referralBonus / 2 }))}</p></div></section>
-    <p class="posted">${esc(t('d_posted'))}: <time datetime="${job.datePosted}">${esc(formatDate(job.datePosted, lang))}</time></p>
   </article>
   <aside class="job-aside">
     <div class="apply-card">
@@ -243,7 +245,8 @@ export function renderJobDetail(ctx, job) {
   </aside>
 </div>
 ${similar.length ? `<section class="wrap similar"><h2>${esc(t('similar'))}</h2><div class="job-grid">${similar.map((j) => jobCard(ctx, j)).join('')}</div></section>` : ''}
-${cvBanner(ctx)}`;
+${cvBanner(ctx)}
+${job.active ? leadPopup(ctx, job) : ''}`;
   return layout(ctx, {
     page: 'jobs', sub: job.id,
     title: fitTitle(t('job_meta_title', { title: tx.title, city: loc }), `${tx.title} – ${loc}`, tx.title),

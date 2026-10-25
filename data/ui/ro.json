@@ -255,5 +255,11 @@
   "c_langs_more": " și altele.",
   "emp_why13": "Avem experiență în angajarea a peste 60 de naționalități, iar coordonatorii noștri vorbesc limbile lucrătorilor — adaptare mai rapidă și fluctuație mai mică.",
   "svc_other": "Alte servicii pentru firme",
-  "svc_more": "Detalii"
+  "svc_more": "Detalii",
+  "pop_t": "Te interesează această ofertă?",
+  "pop_d": "Lasă-ne numele și telefonul — un recrutor te sună înapoi și îți răspunde la întrebări. Oferta:",
+  "pop_t_list": "Nu știi ce ofertă să alegi?",
+  "pop_d_list": "Lasă-ne numele și telefonul — un recrutor îți găsește un loc de muncă cu cazare.",
+  "pop_or": "sau scrie-ne imediat",
+  "pop_close": "Închide"
 }

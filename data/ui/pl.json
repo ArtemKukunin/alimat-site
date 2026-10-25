@@ -255,5 +255,11 @@
   "c_langs_more": " i inne.",
   "emp_why13": "Mamy doświadczenie w zatrudnianiu ponad 60 narodowości, a nasi koordynatorzy mówią w językach pracowników — to szybsza adaptacja i mniejsza rotacja.",
   "svc_other": "Pozostałe usługi dla firm",
-  "svc_more": "Więcej"
+  "svc_more": "Więcej",
+  "pop_t": "Zainteresowała Cię ta oferta?",
+  "pop_d": "Zostaw imię i telefon — rekruter oddzwoni i odpowie na pytania. Oferta:",
+  "pop_t_list": "Nie wiesz, którą ofertę wybrać?",
+  "pop_d_list": "Zostaw imię i telefon — rekruter dobierze dla Ciebie pracę z zakwaterowaniem.",
+  "pop_or": "albo napisz od razu",
+  "pop_close": "Zamknij"
 }

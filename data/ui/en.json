@@ -255,5 +255,11 @@
   "c_langs_more": " and more.",
   "emp_why13": "We have experience employing more than 60 nationalities, and our coordinators speak the workers' languages — which means faster onboarding and lower turnover.",
   "svc_other": "Other services for employers",
-  "svc_more": "Learn more"
+  "svc_more": "Learn more",
+  "pop_t": "Interested in this job?",
+  "pop_d": "Leave your name and phone number — a recruiter will call you back and answer your questions. Job:",
+  "pop_t_list": "Not sure which job to choose?",
+  "pop_d_list": "Leave your name and phone number — a recruiter will find you a job with accommodation.",
+  "pop_or": "or message us right away",
+  "pop_close": "Close"
 }
