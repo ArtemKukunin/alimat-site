@@ -5,49 +5,49 @@
       "slug": "praca-na-produkcji",
       "name": "Praca na produkcji",
       "h1": "Praca na produkcji w Polsce",
-      "desc": "Oferty pracy na produkcji w Polsce: operatorzy maszyn, pakowanie, linie produkcyjne. Legalna umowa, stawki netto, pomoc z zakwaterowaniem.",
+      "desc": "Oferty pracy na produkcji w Polsce: operatorzy maszyn, pakowanie, linie produkcyjne. Legalna umowa, stawki netto, zakwaterowanie i dojazd.",
       "intro": "Praca przy liniach produkcyjnych, pakowaniu i obsłudze maszyn. Stawki podajemy netto, a warunki znajdziesz w każdej ofercie."
     },
     "uk": {
       "slug": "robota-na-vyrobnytstvi",
       "name": "Робота на виробництві",
       "h1": "Робота на виробництві в Польщі",
-      "desc": "Вакансії на виробництві в Польщі: оператори машин, пакування, виробничі лінії. Легальний договір, ставки нетто, допомога з житлом.",
+      "desc": "Вакансії на виробництві в Польщі: оператори машин, пакування, виробничі лінії. Легальний договір, ставки нетто, житло і доїзд.",
       "intro": "Робота на виробничих лініях, пакуванні та обслуговуванні машин. Ставки вказані нетто, умови — в кожній вакансії."
     },
     "ru": {
       "slug": "rabota-na-proizvodstve",
       "name": "Работа на производстве",
       "h1": "Работа на производстве в Польше",
-      "desc": "Вакансии на производстве в Польше: операторы машин, упаковка, производственные линии. Легальный договор, ставки нетто, помощь с жильём.",
+      "desc": "Вакансии на производстве в Польше: операторы машин, упаковка, производственные линии. Легальный договор, ставки нетто, жильё и доезд.",
       "intro": "Работа на производственных линиях, упаковке и обслуживании машин. Ставки указаны нетто, условия — в каждой вакансии."
     },
     "en": {
       "slug": "production-jobs",
       "name": "Production jobs",
       "h1": "Production jobs in Poland",
-      "desc": "Production jobs in Poland: machine operators, packing, production lines. Legal contract, net pay, help with accommodation.",
+      "desc": "Production jobs in Poland: machine operators, packing, production lines. Legal contract, net pay, accommodation and transport.",
       "intro": "Work on production lines, packing and machine operation. Pay rates are net; each listing gives the full conditions."
     },
     "es": {
       "slug": "empleo-en-produccion",
       "name": "Empleo en producción",
       "h1": "Empleo en producción en Polonia",
-      "desc": "Empleo en producción en Polonia: operarios de máquinas, envasado, líneas de producción. Contrato legal, salario neto, ayuda con el alojamiento.",
+      "desc": "Empleo en producción en Polonia: operarios de máquinas, envasado, líneas de producción. Contrato legal, salario neto, alojamiento y transporte.",
       "intro": "Trabajo en líneas de producción, envasado y manejo de máquinas. Los salarios son netos; cada oferta detalla las condiciones."
     },
     "pt": {
       "slug": "vagas-producao",
       "name": "Trabalho na produção",
       "h1": "Trabalho na produção na Polónia",
-      "desc": "Ofertas de trabalho na produção na Polónia: operadores de máquinas, embalagem, linhas de produção. Contrato legal, salário líquido, ajuda com alojamento.",
+      "desc": "Ofertas de trabalho na produção na Polónia: operadores de máquinas, embalagem, linhas de produção. Contrato legal, salário líquido, alojamento e transporte.",
       "intro": "Trabalho em linhas de produção, embalagem e operação de máquinas. Os salários são líquidos; cada oferta indica as condições."
     },
     "ro": {
       "slug": "munca-in-productie",
       "name": "Muncă în producție",
       "h1": "Muncă în producție în Polonia",
-      "desc": "Locuri de muncă în producție în Polonia: operatori mașini, ambalare, linii de producție. Contract legal, salariu net, ajutor la cazare.",
+      "desc": "Locuri de muncă în producție în Polonia: operatori mașini, ambalare, linii de producție. Contract legal, salariu net, cazare și transport.",
       "intro": "Muncă pe linii de producție, la ambalare și la deservirea mașinilor. Salariile sunt nete; fiecare ofertă descrie condițiile."
     }
   },
@@ -58,49 +58,49 @@
       "name": "Praca w zakładach mięsnych",
       "h1": "Praca w zakładach mięsnych w Polsce",
       "desc": "Praca w zakładach mięsnych i drobiowych: linia ubojowa, obróbka, pakowanie. Legalna umowa; posiłki, dojazd i zakwaterowanie w wielu ofertach.",
-      "intro": "Specjalizujemy się w rekrutacji do branży mięsnej. Wiele ofert obejmuje posiłki, dojazd i pomoc w zakwaterowaniu."
+      "intro": "Specjalizujemy się w rekrutacji do branży mięsnej. Wiele ofert obejmuje posiłki, dojazd i zakwaterowanie."
     },
     "uk": {
       "slug": "robota-na-myasokombinati",
       "name": "Робота на м'ясокомбінатах",
       "h1": "Робота на м'ясокомбінатах у Польщі",
       "desc": "Робота на м'ясокомбінатах і птахофабриках: лінія забою, обробка, пакування. Легальний договір; харчування, доїзд і житло в багатьох вакансіях.",
-      "intro": "Ми спеціалізуємося на підборі персоналу для м'ясної галузі. Багато вакансій включають харчування, доїзд і допомогу з житлом."
+      "intro": "Ми спеціалізуємося на підборі персоналу для м'ясної галузі. Багато вакансій включають харчування, доїзд і житло."
     },
     "ru": {
       "slug": "rabota-na-myasokombinate",
       "name": "Работа на мясокомбинатах",
       "h1": "Работа на мясокомбинатах в Польше",
       "desc": "Работа на мясокомбинатах и птицефабриках: линия убоя, обработка, упаковка. Легальный договор; питание, доезд и жильё во многих вакансиях.",
-      "intro": "Мы специализируемся на подборе персонала для мясной отрасли. Многие вакансии включают питание, доезд и помощь с жильём."
+      "intro": "Мы специализируемся на подборе персонала для мясной отрасли. Многие вакансии включают питание, доезд и жильё."
     },
     "en": {
       "slug": "meat-processing-jobs",
       "name": "Meat processing jobs",
       "h1": "Meat processing jobs in Poland",
       "desc": "Jobs in meat and poultry plants: slaughter line, processing, packing. Legal contract; meals, transport and accommodation in many listings.",
-      "intro": "We specialise in recruitment for the meat industry. Many listings include meals, transport and help with accommodation."
+      "intro": "We specialise in recruitment for the meat industry. Many listings include meals, transport and accommodation."
     },
     "es": {
       "slug": "empleo-industria-carnica",
       "name": "Empleo en la industria cárnica",
       "h1": "Empleo en la industria cárnica en Polonia",
       "desc": "Empleo en plantas cárnicas y avícolas: línea de sacrificio, procesado, envasado. Contrato legal; comidas, transporte y alojamiento en muchas ofertas.",
-      "intro": "Estamos especializados en la selección de personal para la industria cárnica. Muchas ofertas incluyen comidas, transporte y ayuda con el alojamiento."
+      "intro": "Estamos especializados en la selección de personal para la industria cárnica. Muchas ofertas incluyen comidas, transporte y alojamiento."
     },
     "pt": {
       "slug": "vagas-frigorificos",
       "name": "Trabalho na indústria da carne",
       "h1": "Trabalho na indústria da carne na Polónia",
       "desc": "Ofertas na indústria da carne e das aves: linha de abate, transformação, embalagem. Contrato legal; refeições, transporte e alojamento em muitas ofertas.",
-      "intro": "Somos especializados no recrutamento para a indústria da carne. Muitas ofertas incluem refeições, transporte e ajuda com alojamento."
+      "intro": "Somos especializados no recrutamento para a indústria da carne. Muitas ofertas incluem refeições, transporte e alojamento."
     },
     "ro": {
       "slug": "munca-in-abatoare",
       "name": "Muncă în industria cărnii",
       "h1": "Muncă în industria cărnii în Polonia",
       "desc": "Muncă în abatoare și fabrici de carne și pasăre: linie de sacrificare, procesare, ambalare. Contract legal; masă, transport și cazare la multe oferte.",
-      "intro": "Suntem specializați în recrutare pentru industria cărnii. Multe oferte includ masă, transport și ajutor la cazare."
+      "intro": "Suntem specializați în recrutare pentru industria cărnii. Multe oferte includ masă, transport și cazare."
     }
   },
   "agriculture": {
