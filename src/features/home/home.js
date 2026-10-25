@@ -3,6 +3,7 @@ import { pageUrl, asset, BASE } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
 import { layout, contactButtons, officeList } from '../../core/layout.js';
+import { reviewsBlock } from '../reviews/reviews.js';
 import { jobCard, activeJobs, filterOptions, filterSelects, sectionTiles, cvBanner } from '../jobs/jobs.js';
 
 export const PERKS = [
@@ -93,6 +94,7 @@ export function renderHome(ctx) {
   </div>
 </section>
 ${intlBlock(ctx)}
+${reviewsBlock(ctx)}
 
 <section class="wrap block">
   <h2 class="center-title">${esc(t('sections_title'))}</h2>

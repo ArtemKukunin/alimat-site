@@ -600,3 +600,20 @@ body.nav-open .main-nav .sub a { font-size: 1rem; padding: 12px; }
 .svc-list .ticks-2 { max-width: 1000px; margin-inline: auto; }
 .svc-outro { margin-top: 22px; }
 .svc-end a { font-weight: 600; white-space: nowrap; }
+
+/* Google reviews */
+.stars { display: inline-flex; gap: 2px; color: #f5a623; }
+.stars .ic { width: 18px; height: 18px; }
+.stars .off { color: #d5dde4; }
+.review-sum { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; margin: -12px 0 8px; }
+.review-score { font-size: 2rem; line-height: 1; }
+.review-grid { list-style: none; margin: 0 0 28px; padding: 0; display: grid; gap: 16px; }
+@media (min-width: 768px) { .review-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1100px) { .review-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.review { background: #fff; border-radius: 20px; padding: 22px; box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.review blockquote { margin: 0; flex: 1; }
+.review blockquote p { margin: 0; }
+.review-orig summary { cursor: pointer; font-size: .9rem; color: var(--blue); }
+.review-orig p { margin: 8px 0 0; font-size: .95rem; color: #4a5866; }
+.review-by { margin: 0; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 12px; font-size: .95rem; }
+.review-by span { color: #6b7884; }

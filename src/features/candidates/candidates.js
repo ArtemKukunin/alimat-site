@@ -1,6 +1,7 @@
 import { pageUrl, asset } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { layout, breadcrumbs, breadcrumbLd, contactButtons } from '../../core/layout.js';
+import { reviewsBlock } from '../reviews/reviews.js';
 import { perksGrid, steps, intlBlock } from '../home/home.js';
 
 export const FAQ_COUNT = 9;
@@ -29,6 +30,7 @@ export function renderCandidates(ctx) {
   </div>
 </div></section>
 ${intlBlock(ctx)}
+${reviewsBlock(ctx)}
 <section class="wrap block"><h2>${esc(t('perks_title'))}</h2>${perksGrid(t)}</section>
 <section class="band"><div class="wrap block"><h2>${esc(t('steps_title'))}</h2>${steps(t)}</div></section>
 <section class="wrap block faq" id="faq">

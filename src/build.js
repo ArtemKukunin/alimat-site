@@ -14,6 +14,7 @@ import { renderApply } from './features/apply/apply.js';
 import { renderEmployers } from './features/employers/employers.js';
 import { renderContact } from './features/contact/contact.js';
 import { loadContent, buildBlog, postsIn, blogPath, legalUrl } from './features/blog/blog.js';
+import { loadReviews } from './features/reviews/reviews.js';
 import { loadServices, renderService, serviceSlugs } from './features/services/services.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -29,7 +30,8 @@ export function loadData() {
   const { posts, pages } = loadContent(DATA);
   const legacy = readJson(path.join(DATA, 'legacy.json'));
   const services = loadServices(readJson(path.join(DATA, 'services.json')));
-  return { settings, ui, jobs, categories, posts, pages, legacy, services };
+  const reviews = loadReviews(readJson(path.join(DATA, 'reviews.json')));
+  return { settings, ui, jobs, categories, posts, pages, legacy, services, reviews };
 }
 
 /** Small CSS minifier: drops comments and whitespace outside quoted strings. */
@@ -175,7 +177,7 @@ ${common}
 }
 
 export function build() {
-  const { settings, ui, jobs, categories, posts, pages, legacy, services } = loadData();
+  const { settings, ui, jobs, categories, posts, pages, legacy, services, reviews } = loadData();
   const redirectMap = redirects(jobs, legacy, services);
   // Old WordPress paths inside imported articles → new URLs (same table as the redirects).
   const legacyMap = (oldPath) => redirectMap.find(([from]) => from.replace(/\*$/, '') === oldPath)?.[1];
@@ -190,7 +192,7 @@ export function build() {
   let count = 0;
   const slugOf = (u) => u.replace(/^\/+|\/+$/g, '');
   const makeCtx = (lang) => ({
-    lang, t: translator(ui, lang), settings, jobs, categories, services,
+    lang, t: translator(ui, lang), settings, jobs, categories, services, reviews,
     blogUrl: blogPath(postsIn(posts, lang).length ? lang : 'pl'),
     privacyUrl: legalUrl(pages, slugOf(settings.privacyUrl), lang),
     cookiesUrl: legalUrl(pages, slugOf(settings.cookiesUrl), lang),

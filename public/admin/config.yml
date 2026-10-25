@@ -88,6 +88,40 @@ collections:
       - { label: Oferujemy, name: offer, widget: list, i18n: true, required: false, field: { label: Punkt, name: item, widget: string } }
       - { label: Warunki pracy, name: conditions, widget: list, i18n: true, required: false, field: { label: Punkt, name: item, widget: string } }
 
+  - name: reviews
+    label: Opinie Google
+    files:
+      - name: reviews
+        label: Opinie (biuro Kraków)
+        file: data/reviews.json
+        format: json
+        fields:
+          - { label: "Średnia ocena w Google", name: rating, widget: number, value_type: float, min: 1, max: 5, step: 0.1 }
+          - { label: "Liczba opinii w Google", name: count, widget: number, value_type: int, min: 1 }
+          - { label: "Link do opinii w Google Maps", name: url, widget: string }
+          - label: Opinie
+            name: reviews
+            widget: list
+            summary: "{{fields.name}} ({{fields.stars}}★)"
+            hint: "Tylko prawdziwe opinie z Google, tekst bez zmian. Tłumaczenia wpisz we wszystkich pozostałych językach."
+            fields:
+              - { label: "Imię (jak w Google, nazwisko skrócone)", name: name, widget: string }
+              - { label: "Gwiazdki", name: stars, widget: number, value_type: int, min: 1, max: 5, default: 5 }
+              - { label: "Język oryginału", name: lang, widget: select, options: [pl, uk, ru, en, es, pt, ro] }
+              - { label: "Tekst oryginalny", name: text, widget: text }
+              - label: Tłumaczenia
+                name: tr
+                widget: object
+                hint: "Wypełnij wszystkie języki poza językiem oryginału."
+                fields:
+                  - { label: PL, name: pl, widget: text, required: false }
+                  - { label: UK, name: uk, widget: text, required: false }
+                  - { label: RU, name: ru, widget: text, required: false }
+                  - { label: EN, name: en, widget: text, required: false }
+                  - { label: ES, name: es, widget: text, required: false }
+                  - { label: PT, name: pt, widget: text, required: false }
+                  - { label: RO, name: ro, widget: text, required: false }
+
   - name: settings
     label: Ustawienia
     files:
