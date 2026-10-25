@@ -8,8 +8,8 @@ export const telLink = (phone) => `tel:+${digits(phone)}`;
 
 /** Office cards (Kraków, Kutno…) from settings.offices. */
 export const officeList = (ctx, cls = 'offices') => `<ul class="${cls}">${ctx.settings.offices.map((o) => `<li>
-  <h3>${icon('pin')}${esc(o.city)}</h3>
-  <address>${esc(o.street)}<br>${esc(o.postal)} ${esc(o.city)}</address>
+  <a class="office-link" href="${esc(o.mapUrl)}" target="_blank" rel="noopener"><h3>${icon('pin')}${esc(o.city)}</h3>
+  <address>${esc(o.street)}<br>${esc(o.postal)} ${esc(o.city)}</address></a>
   <a class="link-arrow" href="${esc(o.mapUrl)}" target="_blank" rel="noopener">${esc(ctx.t('c_map'))} ${icon('arrow')}</a>
 </li>`).join('')}</ul>`;
 
@@ -53,13 +53,13 @@ export function breadcrumbs(items) {
 }
 
 /** Messenger / call buttons used in several places. */
-export function contactButtons(ctx, { waText, compact = false } = {}) {
+export function contactButtons(ctx, { waText, compact = false, call = true } = {}) {
   const { t, settings } = ctx;
-  return `<div class="contact-btns${compact ? ' compact' : ''}">
+  return `<div class="contact-btns${compact ? ' compact' : ''}${call ? '' : ' no-call'}">
     <a class="btn btn-wa" href="${waLink(settings, waText)}" rel="noopener" target="_blank">${icon('chat')}<span>WhatsApp</span></a>
     <a class="btn btn-ghost" href="${esc(settings.telegram)}" rel="noopener" target="_blank">${icon('chat')}<span>Telegram</span></a>
     <a class="btn btn-ghost" href="viber://chat?number=%2B${digits(settings.phone)}">${icon('chat')}<span>Viber</span></a>
-    <a class="btn btn-ghost" href="${telLink(settings.phone)}">${icon('phone')}<span>${esc(t('cta_call'))}</span></a>
+    ${call ? `<a class="btn btn-ghost" href="${telLink(settings.phone)}">${icon('phone')}<span>${esc(t('cta_call'))}</span></a>` : ''}
   </div>`;
 }
 
@@ -183,7 +183,7 @@ function footer(ctx) {
       <ul class="f-list">
         <li><a href="${telLink(settings.phone)}">${esc(settings.phone)}</a></li>
         <li><a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></li>
-        ${settings.offices.map((o) => `<li><address>${esc(o.street)}<br>${esc(o.postal)} ${esc(o.city)}</address></li>`).join('')}
+        ${settings.offices.map((o) => `<li><a href="${esc(o.mapUrl)}" target="_blank" rel="noopener"><address>${esc(o.street)}<br>${esc(o.postal)} ${esc(o.city)}</address></a></li>`).join('')}
       </ul>
     </div>
   </div>

@@ -561,3 +561,13 @@ body.nav-open .main-nav .sub a { font-size: 1rem; padding: 12px; }
 .services h2 a { color: inherit; text-decoration: none; }
 .services .link-arrow { margin-top: 8px; display: inline-flex; }
 @media (min-width: 768px) { .svc-links { grid-template-columns: repeat(3, 1fr); } }
+
+/* Contact: call button next to the number, three messengers below */
+.phone-row { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin: 4px 0 14px; }
+.phone-row .btn { padding: 10px 20px; }
+.contact-btns.no-call { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+@media (max-width: 480px) { .contact-btns.no-call .btn { padding: 10px 6px; gap: 6px; font-size: .9rem; } }
+@media (max-width: 339px) { .contact-btns.no-call { grid-template-columns: 1fr; } }
+.office-link { display: block; color: inherit; text-decoration: none; border-radius: 10px; }
+.office-link:hover h3, .office-link:hover address { color: var(--blue-a); }
+.office-link address { cursor: pointer; }

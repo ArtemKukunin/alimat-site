@@ -24,8 +24,8 @@ export function renderContact(ctx) {
   <div class="contact-cards">
     <section class="c-card">
       <h2>${icon('phone')}${esc(t('cta_call'))}</h2>
-      <p><a class="big-link" href="${telLink(settings.phone)}">${esc(settings.phone)}</a></p>
-      ${contactButtons(ctx)}
+      <div class="phone-row"><a class="big-link" href="${telLink(settings.phone)}">${esc(settings.phone)}</a><a class="btn btn-pill btn-orange" href="${telLink(settings.phone)}">${icon('phone')}<span>${esc(t('cta_call'))}</span></a></div>
+      ${contactButtons(ctx, { call: false })}
     </section>
     <section class="c-card">
       <h2>${icon('mail')}E-mail</h2>
