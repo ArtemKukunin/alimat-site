@@ -42,7 +42,9 @@ const flag = (code) => {
   const f = `flags/${code.toLowerCase()}.svg`;
   return existsSync(new URL(`../../../public/assets/${f}`, import.meta.url)) ? `<img class="flag" src="${asset(f)}" alt="" width="20" height="15" loading="lazy" decoding="async">` : '';
 };
-const chips = (items, more, codes) => `<ul class="chips">${items.map((x, i) => `<li>${codes ? flag(codes[i]) : ''}${esc(x)}</li>`).join('')}${more ? `<li class="chip-more">${esc(more)}</li>` : ''}</ul>`;
+/** Language → flag of the country most associated with it (for the staff-languages chips). */
+const LANG_FLAG = { es: 'ES', en: 'GB', pl: 'PL', uk: 'UA', ru: 'RU', ro: 'RO', ne: 'NP' };
+const chips = (items, more, codes) => `<ul class="chips">${items.map((x, i) => `<li>${codes?.[i] ? flag(codes[i]) : ''}${esc(x)}</li>`).join('')}${more ? `<li class="chip-more">${esc(more)}</li>` : ''}</ul>`;
 
 /** "Why foreigners choose us" — experience with 60+ nationalities, staff languages, no Polish needed. */
 export function intlBlock(ctx, { heading = 'h2' } = {}) {
@@ -58,7 +60,7 @@ export function intlBlock(ctx, { heading = 'h2' } = {}) {
   </ul>
   <div class="intl-lists">
     <div><h3>${esc(t('intl_countries'))}</h3>${chips(countryNames(lang, intl.countries), t('intl_more'), intl.countries)}</div>
-    <div><h3>${esc(t('intl_langs'))}</h3>${chips(languageNames(lang, intl.languages), t('intl_more'))}</div>
+    <div><h3>${esc(t('intl_langs'))}</h3>${chips(languageNames(lang, intl.languages), t('intl_more'), intl.languages.map((l) => LANG_FLAG[l] || ''))}</div>
   </div>
   <p class="center intl-coord">${icon('user')}${esc(t('intl_coord'))}</p>
   <div class="center hero-cta"><a class="btn btn-pill btn-blue" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))} ${icon('arrow')}</a><a class="btn btn-pill btn-outline-orange" href="${pageUrl(lang, 'apply')}">${esc(t('cta_apply_long'))}</a></div>
