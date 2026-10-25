@@ -638,3 +638,20 @@ body.nav-open .main-nav .sub a { font-size: 1rem; padding: 12px; }
 @media (min-width: 600px) { .js-track { grid-auto-columns: calc((100% - 16px) / 2); } }
 @media (min-width: 1024px) { .js-track { grid-auto-columns: calc((100% - 32px) / 3); } }
 @media (prefers-reduced-motion: reduce) { .js-track { scroll-behavior: auto; } }
+
+/* Service pages: section beside a photo (as on the original pages) */
+.svc-split { display: grid; gap: 28px; align-items: stretch; }
+.svc-split .center-title, .svc-split .lead-c { text-align: left; margin-left: 0; margin-right: 0; }
+.svc-split .center-title { margin-bottom: 18px; }
+.svc-img img { display: block; width: 100%; height: 100%; min-height: 280px; max-height: 760px; object-fit: cover; border-radius: 24px; }
+.svc-split .ticks-2, .svc-split .steps { grid-template-columns: 1fr; }
+.svc-split .steps li { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: start; padding: 16px 18px; }
+.svc-split .steps .step-n { grid-row: span 2; margin: 0; }
+.svc-split .steps h3, .svc-split .steps p { grid-column: 2; }
+.svc-end.svc-split .svc-text { align-self: center; }
+.svc-end.svc-split a { font-weight: 600; }
+@media (max-width: 899px) { .svc-split-rev .svc-img { order: 2; } .svc-img img { max-height: 420px; } }
+@media (min-width: 900px) {
+  .svc-split { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .svc-split .perks.cards-4 { grid-template-columns: 1fr 1fr; }
+}

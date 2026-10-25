@@ -1,5 +1,5 @@
 {
-  "_comment": "Employer service pages (menu: Oferta dla firm), content mirrors the original alimatgroup.com pages. Order = menu order. sections: type cards ([title,text]) | steps (text or [title,text]) | list (text or [title,text]) | text; intro = paragraphs. card_icons = icons for the cards section.",
+  "_comment": "Employer service pages (menu: Oferta dla firm), content mirrors the original alimatgroup.com pages. Order = menu order. sections: type cards ([title,text]) | steps (text or [title,text]) | list (text or [title,text]) | text; intro = paragraphs. card_icons = icons for the cards section. images = photos from the original pages (public/assets/img/services/<name>.webp): sections {index: name} shown beside that section, end = beside the closing block.",
   "services": [
     {
       "id": "temporary",
@@ -310,7 +310,13 @@
         "clock",
         "pay",
         "shield"
-      ]
+      ],
+      "images": {
+        "sections": {
+          "1": "temporary-1"
+        },
+        "end": "temporary-2"
+      }
     },
     {
       "id": "permanent",
@@ -663,7 +669,13 @@
         "user",
         "clock",
         "chat"
-      ]
+      ],
+      "images": {
+        "sections": {
+          "1": "permanent-1"
+        },
+        "end": "permanent-2"
+      }
     },
     {
       "id": "consulting",
@@ -1044,7 +1056,13 @@
         "leaf",
         "globe",
         "factory"
-      ]
+      ],
+      "images": {
+        "sections": {
+          "0": "consulting-1",
+          "1": "consulting-2"
+        }
+      }
     },
     {
       "id": "outsourcing",
@@ -1609,7 +1627,13 @@
         "end_d": "Externalizarea proceselor este cheia eficienței operaționale. Concentrează-te pe obiectivele strategice, iar noi îți oferim cele mai bune soluții de externalizare, croite pe nevoile companiei tale. Contactează-ne chiar azi ca să afli cum îți putem revoluționa afacerea.",
         "form_t": "Solicită oferta de externalizare"
       },
-      "card_icons": []
+      "card_icons": [],
+      "images": {
+        "sections": {
+          "1": "outsourcing-1",
+          "2": "outsourcing-2"
+        }
+      }
     }
   ]
 }
