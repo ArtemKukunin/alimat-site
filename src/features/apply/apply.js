@@ -4,6 +4,7 @@ import { layout, breadcrumbs, breadcrumbLd, contactButtons } from '../../core/la
 import { formShell, input, textarea } from '../../core/form.js';
 import { activeJobs, locationLabel, catText } from '../jobs/jobs.js';
 import { CATEGORIES } from '../jobs/model.js';
+import { languageNames } from '../home/home.js';
 
 export function renderApply(ctx) {
   const { lang, t, jobs } = ctx;
@@ -35,7 +36,7 @@ export function renderApply(ctx) {
 </div></section>
 <div class="wrap form-layout">
   ${formShell(ctx, { type: 'candidate', fieldsHtml: fields, submitLabel: t('f_submit') })}
-  <aside class="help-box"><h2>${esc(t('f_fast'))}</h2>${contactButtons(ctx)}<p class="small">${esc(t('contact_lead'))}</p></aside>
+  <aside class="help-box"><h2>${esc(t('f_fast'))}</h2>${contactButtons(ctx)}<p class="small">${esc(t('contact_lead'))}</p><p class="small langs-note">${esc(t('apply_langs'))} ${esc(languageNames(lang, ctx.settings.intl.languages, false).join(', '))}.</p></aside>
 </div>`;
   return layout(ctx, {
     page: 'apply', title: t('apply_title'), description: t('apply_desc'), body, hideMobileBar: true,

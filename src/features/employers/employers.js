@@ -27,7 +27,7 @@ export function renderEmployers(ctx) {
 </section>
 <section class="band"><div class="wrap block">
   <h2 class="center-title">${esc(t('emp_why_t'))}</h2>
-  <ul class="ticks ticks-2">${Array.from({ length: 12 }, (_, i) => `<li>${esc(t(`emp_why${i + 1}`))}</li>`).join('')}</ul>
+  <ul class="ticks ticks-2">${Array.from({ length: 13 }, (_, i) => `<li>${esc(t(`emp_why${i + 1}`))}</li>`).join('')}</ul>
 </div></section>
 <section class="wrap block">
   <h2 class="center-title">${esc(t('emp_how_t'))}</h2>

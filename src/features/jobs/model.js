@@ -5,7 +5,7 @@ import { LANG_CODES, DEFAULT_LANG } from '../../core/i18n.js';
 
 export const CATEGORIES = ['production', 'meat', 'agriculture', 'kitchen', 'drivers', 'logistics'];
 export const CONTRACTS = ['employment', 'mandate', 'b2b'];
-export const TAGS =['housing', 'transport', 'meals', 'coordinator'];
+export const TAGS = ['nopolish', 'housing', 'transport', 'meals', 'coordinator'];
 export const TEXT_FIELDS = ['title', 'summary', 'duties', 'requirements', 'offer', 'conditions'];
 const SLUG_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;

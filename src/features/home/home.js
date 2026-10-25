@@ -22,6 +22,41 @@ export const steps = (t) => `<ol class="steps">${[1, 2, 3, 4].map((n) => `<li><s
 
 const dots = '<span class="dots" aria-hidden="true"><i></i><i></i></span>';
 
+/** Names from ICU so the lists stay data-only (settings.intl). Short forms where ICU is too long. */
+const SHORT_REGION = { pl: { ZA: 'RPA' }, uk: { ZA: 'ПАР' }, ru: { ZA: 'ЮАР' } };
+const icuLang = (lang) => (lang === 'pt' ? 'pt-PT' : lang);
+const cap = (s, lang) => s.charAt(0).toLocaleUpperCase(lang) + s.slice(1);
+export const countryNames = (lang, codes) => {
+  const dn = new Intl.DisplayNames([icuLang(lang)], { type: 'region' });
+  return codes.map((c) => SHORT_REGION[lang]?.[c] || dn.of(c));
+};
+export const languageNames = (lang, codes, capitalize = true) => {
+  const dn = new Intl.DisplayNames([icuLang(lang)], { type: 'language' });
+  return codes.map((c) => (capitalize ? cap(dn.of(c), lang) : dn.of(c)));
+};
+const chips = (items, more) => `<ul class="chips">${items.map((x) => `<li>${esc(x)}</li>`).join('')}${more ? `<li class="chip-more">${esc(more)}</li>` : ''}</ul>`;
+
+/** "Why foreigners choose us" — experience with 60+ nationalities, staff languages, no Polish needed. */
+export function intlBlock(ctx, { heading = 'h2' } = {}) {
+  const { lang, t, settings } = ctx;
+  const { intl } = settings;
+  return `<section class="wrap block intl" aria-labelledby="intl-t">
+  <${heading} class="center-title" id="intl-t">${esc(t('intl_t'))}</${heading}>
+  <p class="center lead-c">${esc(t('intl_d'))}</p>
+  <ul class="intl-stats">
+    <li>${icon('globe', 'ic ic-lg')}<strong>${esc(intl.nationalities)}</strong><span>${esc(t('intl_s1'))}</span></li>
+    <li>${icon('check', 'ic ic-lg')}<strong>${esc(intl.noPolish)}</strong><span>${esc(t('intl_s2'))}</span></li>
+    <li>${icon('chat', 'ic ic-lg')}<strong>${intl.languages.length}+</strong><span>${esc(t('intl_s3'))}</span></li>
+  </ul>
+  <div class="intl-lists">
+    <div><h3>${esc(t('intl_countries'))}</h3>${chips(countryNames(lang, intl.countries), t('intl_more'))}</div>
+    <div><h3>${esc(t('intl_langs'))}</h3>${chips(languageNames(lang, intl.languages), t('intl_more'))}</div>
+  </div>
+  <p class="center intl-coord">${icon('user')}${esc(t('intl_coord'))}</p>
+  <div class="center hero-cta"><a class="btn btn-pill btn-blue" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))} ${icon('arrow')}</a><a class="btn btn-pill btn-outline-orange" href="${pageUrl(lang, 'apply')}">${esc(t('cta_apply_long'))}</a></div>
+</section>`;
+}
+
 export function renderHome(ctx) {
   const { lang, t, settings, jobs } = ctx;
   const latest = activeJobs(jobs).slice(0, 6);
@@ -51,6 +86,7 @@ export function renderHome(ctx) {
     </form>
   </div>
 </section>
+${intlBlock(ctx)}
 
 <section class="wrap block">
   <h2 class="center-title">${esc(t('sections_title'))}</h2>

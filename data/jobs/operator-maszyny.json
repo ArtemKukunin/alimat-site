@@ -11,7 +11,9 @@
       "unit": "hour"
     },
     "contract": "",
-    "tags": [],
+    "tags": [
+      "nopolish"
+    ],
     "title": "Operator maszyny pakującej",
     "summary": "Obsługa i nadzór linii pakującej w zakładzie produkcyjnym w Kutnie. Praca stała, pełny etat.",
     "duties": [

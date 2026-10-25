@@ -11,7 +11,9 @@
       "unit": "hour"
     },
     "contract": "",
-    "tags": [],
+    "tags": [
+      "nopolish"
+    ],
     "title": "Operator pakowni",
     "summary": "Obsługa linii pakującej i systemów etykietowania w zakładzie produkcyjnym w Kutnie. Praca stała, pełny etat.",
     "duties": [

@@ -43,5 +43,37 @@
       "postal": "99-300",
       "mapUrl": "https://www.google.com/maps/search/?api=1&query=%C5%81%C4%85koszy%C5%84ska%20127%2C%2099-300%20Kutno"
     }
-  ]
+  ],
+  "intl": {
+    "nationalities": "60+",
+    "noPolish": "95%",
+    "countries": [
+      "CO",
+      "NP",
+      "VN",
+      "MN",
+      "UA",
+      "MD",
+      "AR",
+      "GT",
+      "MX",
+      "BR",
+      "UZ",
+      "KZ",
+      "GE",
+      "VE",
+      "AO",
+      "ZA",
+      "PH"
+    ],
+    "languages": [
+      "es",
+      "en",
+      "pl",
+      "uk",
+      "ru",
+      "ro",
+      "ne"
+    ]
+  }
 }

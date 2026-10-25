@@ -3,6 +3,9 @@ import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
 import { layout, breadcrumbs, breadcrumbLd, contactButtons, telLink, officeList } from '../../core/layout.js';
 import { formShell, input, textarea } from '../../core/form.js';
+import { languageNames } from '../home/home.js';
+
+const cap1 = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 
 export function renderContact(ctx) {
   const { lang, t, settings } = ctx;
@@ -22,12 +25,15 @@ export function renderContact(ctx) {
     <section class="c-card">
       <h2>${icon('phone')}${esc(t('cta_call'))}</h2>
       <p><a class="big-link" href="${telLink(settings.phone)}">${esc(settings.phone)}</a></p>
-      <p class="small">WhatsApp · Viber</p>
       ${contactButtons(ctx)}
     </section>
     <section class="c-card">
       <h2>${icon('mail')}E-mail</h2>
       <p><a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></p>
+    </section>
+    <section class="c-card">
+      <h2>${icon('chat')}${esc(t('c_langs'))}</h2>
+      <p>${esc(cap1(languageNames(lang, settings.intl.languages, false).join(', ')))}${esc(t('c_langs_more'))}</p>
     </section>
     <section class="c-card">
       <h2>${icon('pin')}${esc(t('c_address'))}</h2>

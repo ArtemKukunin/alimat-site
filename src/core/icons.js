@@ -29,4 +29,4 @@ export function icon(name, cls = 'ic') {
   return `<svg class="${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${P[name]}</svg>`;
 }
 
-export const TAG_ICONS = { housing: 'home', transport: 'bus', meals: 'meal', coordinator: 'user' };
+export const TAG_ICONS = { nopolish: 'chat', housing: 'home', transport: 'bus', meals: 'meal', coordinator: 'user' };

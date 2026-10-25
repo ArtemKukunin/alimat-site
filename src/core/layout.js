@@ -147,7 +147,7 @@ function footer(ctx) {
       <p>${esc(t('help_d'))}</p>
     </div>
     <ul class="help-band-list">
-      <li>${icon('phone')}<a href="${telLink(settings.phone)}">${esc(settings.phone)}</a> · WhatsApp · Viber</li>
+      <li>${icon('phone')}<a href="${telLink(settings.phone)}">${esc(settings.phone)}</a></li>
       <li>${icon('mail')}<a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></li>
       ${settings.offices.map((o) => `<li>${icon('pin')}<a href="${esc(o.mapUrl)}" rel="noopener" target="_blank">${esc(o.city)}: ${esc(o.street)}</a></li>`).join('')}
     </ul>

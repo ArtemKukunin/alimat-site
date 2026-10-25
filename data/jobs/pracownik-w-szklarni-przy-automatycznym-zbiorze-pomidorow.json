@@ -11,7 +11,9 @@
       "unit": "hour"
     },
     "contract": "",
-    "tags": [],
+    "tags": [
+      "nopolish"
+    ],
     "title": "Pracownik szklarni – automatyczny zbiór pomidorów",
     "summary": "Zbiór pomidorów na zautomatyzowanej linii w szklarni pod Kozienicami. Bez dźwigania ciężarów, w komfortowej temperaturze.",
     "duties": [
