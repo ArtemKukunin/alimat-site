@@ -69,7 +69,7 @@ function head(ctx, { title, description, path, alts, jsonld, noindex, og = {} })
   const url = settings.siteUrl + path;
   const alt = alts
     .map((a) => `<link rel="alternate" hreflang="${a.lang}" href="${settings.siteUrl}${a.href}">`).join('\n');
-  const ogImage = og.image || { url: asset('og.png'), width: 1200, height: 630 };
+  const ogImage = og.image || { url: asset('og.jpg'), width: 1200, height: 630 };
   const ld = [organizationLd(settings), ...(jsonld || [])]
     .map((o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, '\\u003c')}</script>`).join('\n');
   return `<head>
@@ -92,7 +92,9 @@ ${ogImage.width ? `<meta property="og:image:width" content="${ogImage.width}">\n
 ${og.published ? `<meta property="article:published_time" content="${og.published}">\n<meta property="article:modified_time" content="${og.modified || og.published}">` : ''}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0199DD">
-<link rel="icon" href="${asset('favicon.svg')}" type="image/svg+xml">
+<link rel="icon" href="${asset('favicon-32.png')}" type="image/png" sizes="32x32">
+<link rel="icon" href="${asset('icon-192.png')}" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="${asset('apple-touch-icon.png')}">
 <link rel="preload" href="${asset('fonts/titillium-web-400.woff')}" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="${asset('fonts/roboto-slab-900.woff')}" as="font" type="font/woff" crossorigin>
 ${[...(og.preloadImages || []), ...(og.preloadImage ? [og.preloadImage] : [])].map((im) => `<link rel="preload" as="image" href="${im.src}"${im.srcset ? ` imagesrcset="${im.srcset}" imagesizes="${im.sizes}"` : ''}${im.media ? ` media="${im.media}"` : ''} fetchpriority="high">`).join('\n')}
@@ -108,7 +110,7 @@ function header(ctx, page, langLinks) {
     employers: (ctx.services || []).map((s) => [pageUrl(lang, 'employers', s[lang].slug), s[lang].name]),
     candidates: Object.entries(ctx.categories || {}).map(([, c]) => [pageUrl(lang, 'jobs', c[lang].slug), c[lang].name]),
   };
-  const nav = ['jobs', 'candidates', 'employers', 'contact']
+  const nav = ['jobs', 'candidates', 'employers', 'contact', 'reviews']
     .map((p) => {
       const cur = p === page ? ' aria-current="page"' : '';
       const sub = (subs[p] || []).map(([href, name]) => `<li><a href="${href}">${esc(name)}</a></li>`).join('');
@@ -123,7 +125,7 @@ function header(ctx, page, langLinks) {
   return `<a class="skip" href="#main">${esc(t('skip'))}</a>
 <div class="topbar">
   <div class="wrap topbar-row">
-    <a href="${telLink(settings.phone)}">${icon('phone')}${esc(settings.phone)}</a>
+    <a href="${waLink(settings)}" target="_blank" rel="noopener" title="WhatsApp">${icon('chat')}${esc(settings.phone)}</a>
     <a href="mailto:${esc(settings.email)}">${icon('mail')}${esc(settings.email)}</a>
     <ul class="topbar-social">${Object.entries(settings.social).map(([n, h]) => `<li><a href="${esc(h)}" rel="noopener" target="_blank">${esc(n)}</a></li>`).join('')}</ul>
   </div>

@@ -16,7 +16,7 @@ export const catText = (ctx, cat) => ctx.categories[cat][ctx.lang];
 export const catSlugs = (ctx, cat) => Object.fromEntries(LANG_CODES.map((l) => [l, ctx.categories[cat][l].slug]));
 export const catUrl = (ctx, cat) => pageUrl(ctx.lang, 'jobs', catSlugs(ctx, cat));
 
-const tagList = (job, t) => (job.tags.length
+export const tagList = (job, t) => (job.tags.length
   ? `<ul class="tags">${job.tags.map((tag) => `<li>${icon(TAG_ICONS[tag])}${esc(t(`tag_${tag}`))}</li>`).join('')}</ul>`
   : '');
 

@@ -256,7 +256,7 @@
   "c_langs_more": " și altele.",
   "emp_why13": "Avem experiență în angajarea a peste 60 de naționalități, iar coordonatorii noștri vorbesc limbile lucrătorilor — adaptare mai rapidă și fluctuație mai mică.",
   "rev_t": "Ce spun lucrătorii noștri",
-  "rev_d": "Recenzii reale din profilul Google al Alimat Group (biroul din Cracovia).",
+  "rev_d": "Recenzii reale din profilul Google al Alimat Group.",
   "rev_count": "Recenzii pe Google: {n}",
   "rev_all": "Toate recenziile pe Google",
   "rev_tr": "Traducere",
@@ -271,5 +271,11 @@
   "pop_or": "sau scrie-ne imediat",
   "pop_close": "Închide",
   "rev_check": "Verifică pe Google",
-  "rev_alt": "Recenzia lui {name} pe Google: {text}"
+  "rev_alt": "Recenzia lui {name} pe Google: {text}",
+  "nav_reviews": "Recenzii",
+  "rev_lead": "Ce spun despre noi oamenii care au lucrat cu Alimat Group. Poți verifica fiecare recenzie pe Google.",
+  "rev_title": "Recenzii ale lucrătorilor despre Alimat Group | Muncă în Polonia",
+  "rev_desc": "Recenzii reale ale lucrătorilor despre agenția Alimat Group pe Google: cazare, acte, muncă în Polonia pentru străini.",
+  "slider_prev": "Ofertele anterioare",
+  "slider_next": "Ofertele următoare"
 }

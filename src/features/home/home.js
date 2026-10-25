@@ -4,7 +4,8 @@ import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
 import { layout, contactButtons, officeList } from '../../core/layout.js';
 import { reviewsBlock } from '../reviews/reviews.js';
-import { jobCard, activeJobs, filterOptions, filterSelects, sectionTiles, cvBanner } from '../jobs/jobs.js';
+import { jobSlider } from '../jobs/slider.js';
+import { filterOptions, filterSelects, sectionTiles, cvBanner } from '../jobs/jobs.js';
 
 export const PERKS = [
   ['legal', 'shield'], ['docs', 'doc'], ['housing', 'home'],
@@ -66,7 +67,6 @@ export function intlBlock(ctx, { heading = 'h2' } = {}) {
 
 export function renderHome(ctx) {
   const { lang, t, settings, jobs } = ctx;
-  const latest = activeJobs(jobs).slice(0, 6);
   const body = `<section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-text">
@@ -93,6 +93,7 @@ export function renderHome(ctx) {
     </form>
   </div>
 </section>
+${jobSlider(ctx)}
 ${intlBlock(ctx)}
 ${reviewsBlock(ctx)}
 
@@ -101,10 +102,6 @@ ${reviewsBlock(ctx)}
   ${sectionTiles(ctx)}
 </section>
 
-<section class="wrap block-sm">
-  <div class="block-head"><h2>${esc(t('latest_jobs'))}</h2><a class="link-arrow" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))} ${icon('arrow')}</a></div>
-  <div class="job-grid">${latest.map((j) => jobCard(ctx, j)).join('')}</div>
-</section>
 ${cvBanner(ctx)}
 
 <section class="wrap block">

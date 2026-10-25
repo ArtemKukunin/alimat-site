@@ -256,7 +256,7 @@
   "c_langs_more": " i inne.",
   "emp_why13": "Mamy doświadczenie w zatrudnianiu ponad 60 narodowości, a nasi koordynatorzy mówią w językach pracowników — to szybsza adaptacja i mniejsza rotacja.",
   "rev_t": "Opinie naszych pracowników",
-  "rev_d": "Prawdziwe opinie z profilu Alimat Group w Google (biuro w Krakowie).",
+  "rev_d": "Prawdziwe opinie z profilu Alimat Group w Google.",
   "rev_count": "Opinie w Google: {n}",
   "rev_all": "Wszystkie opinie w Google",
   "rev_tr": "Tłumaczenie",
@@ -271,5 +271,11 @@
   "pop_or": "albo napisz od razu",
   "pop_close": "Zamknij",
   "rev_check": "Sprawdź w Google",
-  "rev_alt": "Opinia {name} w Google: {text}"
+  "rev_alt": "Opinia {name} w Google: {text}",
+  "nav_reviews": "Opinie",
+  "rev_lead": "Co mówią o nas osoby, które pracowały z Alimat Group. Każdą opinię możesz sprawdzić w Google.",
+  "rev_title": "Opinie pracowników o Alimat Group | Agencja pracy Kraków",
+  "rev_desc": "Prawdziwe opinie pracowników o agencji pracy Alimat Group z Google: zakwaterowanie, dokumenty, praca w Polsce dla obcokrajowców.",
+  "slider_prev": "Poprzednie oferty",
+  "slider_next": "Następne oferty"
 }

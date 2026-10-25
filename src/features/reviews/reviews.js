@@ -2,9 +2,10 @@
 // Each review is a screenshot from Google Maps (verifiable via the author's Google link),
 // with our translation underneath when the page language differs from the original.
 import { existsSync } from 'node:fs';
-import { LANG_CODES, LANGS, asset } from '../../core/i18n.js';
+import { LANG_CODES, LANGS, asset, pageUrl } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
+import { layout, breadcrumbs, breadcrumbLd } from '../../core/layout.js';
 
 export function loadReviews(raw) {
   if (!(raw.rating > 0 && raw.rating <= 5) || !(raw.count > 0) || !/^https:\/\//.test(raw.url)) {
@@ -39,12 +40,13 @@ function reviewCard(ctx, r) {
   </li>`;
 }
 
-export function reviewsBlock(ctx) {
+/** title: false on the reviews page itself (its h1 already names the section). */
+export function reviewsBlock(ctx, { title = true } = {}) {
   const { lang, t, reviews } = ctx;
   if (!reviews?.reviews.length) return '';
   const rating = new Intl.NumberFormat(LANGS[lang].locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(reviews.rating);
-  return `<section class="band reviews" aria-labelledby="rev-t"><div class="wrap block">
-  <h2 class="center-title" id="rev-t">${esc(t('rev_t'))}</h2>
+  return `<section class="band reviews"${title ? ' aria-labelledby="rev-t"' : ''}><div class="wrap block">
+  ${title ? `<h2 class="center-title" id="rev-t">${esc(t('rev_t'))}</h2>` : ''}
   <div class="review-sum">
     <strong class="review-score">${rating}</strong>
     ${stars(Math.round(reviews.rating), t('rev_stars', { n: rating }))}
@@ -54,4 +56,22 @@ export function reviewsBlock(ctx) {
   <ul class="review-grid">${reviews.reviews.map((r) => reviewCard(ctx, r)).join('')}</ul>
   <p class="center"><a class="btn btn-pill btn-outline-orange" href="${esc(reviews.url)}" rel="noopener" target="_blank">${esc(t('rev_all'))} ${icon('arrow')}</a></p>
 </div></section>`;
+}
+
+/** Dedicated page (menu "Opinie"). */
+export function renderReviews(ctx) {
+  const { lang, t, settings } = ctx;
+  const crumbs = [{ name: t('breadcrumb_home'), href: pageUrl(lang, 'home') }, { name: t('nav_reviews'), href: pageUrl(lang, 'reviews') }];
+  const body = `<section class="page-hero"><div class="wrap">
+  ${breadcrumbs(crumbs)}
+  <h1>${esc(t('rev_t'))}</h1>
+  <span class="dots" aria-hidden="true"><i></i><i></i></span>
+  <p class="lead">${esc(t('rev_lead'))}</p>
+  <div class="hero-cta"><a class="btn btn-pill btn-blue" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))} ${icon('arrow')}</a><a class="btn btn-pill btn-outline-orange" href="${pageUrl(lang, 'apply')}">${esc(t('cta_apply_long'))}</a></div>
+</div></section>
+${reviewsBlock(ctx, { title: false })}`;
+  return layout(ctx, {
+    page: 'reviews', title: t('rev_title'), description: t('rev_desc'), body,
+    jsonld: [breadcrumbLd(settings, crumbs)],
+  });
 }

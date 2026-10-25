@@ -190,9 +190,11 @@
   }
 
   /**
-   * Lead popup: opens once per session — after 60 s of reading a job (visible time only),
-   * or on job lists after the visitor has scrolled through the offers (or 60 s).
-   * Never while the visitor is typing in another form or after a form was sent.
+   * Lead popup (quick application form).
+   * - [data-apply] buttons (job slider) open it for a given job at any time.
+   * - data-auto="1": opens by itself once per session — after 60 s of reading a job (visible time only),
+   *   or on job lists after the visitor has scrolled through the offers. Never while the visitor
+   *   is typing in another form or after a form was sent.
    */
   function leadPopup() {
     var dlg = document.getElementById('lead-pop');
@@ -201,17 +203,42 @@
       get: function (k) { try { return sessionStorage.getItem(k); } catch (e) { return '1'; } },
       set: function (k) { try { sessionStorage.setItem(k, '1'); } catch (e) { /* ignore */ } },
     };
-    if (ss.get('lead-pop') || ss.get('lead-sent')) return;
+
+    dlg.addEventListener('click', function (e) {
+      if (e.target === dlg || e.target.closest('[data-close]')) dlg.close();
+    });
+    document.addEventListener('submit', function (e) {
+      if (e.target.matches && e.target.matches('form[data-form]')) ss.set('lead-sent');
+    }, true);
+
+    // Open for a specific job (slider "Apply" buttons).
+    document.addEventListener('click', function (e) {
+      var btn = e.target.closest && e.target.closest('[data-apply]');
+      if (!btn) return;
+      var title = btn.getAttribute('data-apply');
+      dlg.querySelector('input[name="job"]').value = title;
+      dlg.querySelector('#lead-pop-t').textContent = dlg.getAttribute('data-t-job');
+      var desc = dlg.querySelector('.lead-pop-d');
+      desc.textContent = dlg.getAttribute('data-d-job') + ' ';
+      var strong = document.createElement('strong');
+      strong.textContent = title;
+      desc.appendChild(strong);
+      dlg.querySelector('.lead-pop-wa').href = btn.getAttribute('data-wa');
+      ss.set('lead-pop');
+      if (!dlg.open) dlg.showModal();
+    });
+
+    if (dlg.getAttribute('data-auto') !== '1' || ss.get('lead-pop') || ss.get('lead-sent')) return;
     var delay = Number(dlg.getAttribute('data-delay')) * 1000;
-    var seen = 0, last = Date.now(), done = false, timer;
+    var seen = 0, last = Date.now(), done = false;
 
     function busy() {
       var a = document.activeElement;
       return a && a.closest && a.closest('form') && !dlg.contains(a);
     }
     function open() {
-      if (done) return;
-      if (busy() || document.querySelector('form.sent')) { timer = setTimeout(open, 15000); return; }
+      if (done || dlg.open) return;
+      if (busy() || document.querySelector('form.sent')) { setTimeout(open, 15000); return; }
       done = true;
       ss.set('lead-pop');
       dlg.showModal();
@@ -220,10 +247,10 @@
       if (done) return;
       if (!document.hidden) seen += Date.now() - last;
       last = Date.now();
-      if (seen >= delay) open(); else timer = setTimeout(tick, 1000);
+      if (seen >= delay) open(); else setTimeout(tick, 1000);
     }
     document.addEventListener('visibilitychange', function () { last = Date.now(); });
-    timer = setTimeout(tick, 1000);
+    setTimeout(tick, 1000);
 
     if (dlg.getAttribute('data-mode') === 'list') {
       var grid = document.getElementById('job-grid') || document.querySelector('.job-grid');
@@ -239,13 +266,64 @@
         window.addEventListener('scroll', onScroll, { passive: true });
       }
     }
+  }
 
-    dlg.addEventListener('click', function (e) {
-      if (e.target === dlg || e.target.closest('[data-close]')) dlg.close();
+  /** Job slider: arrows, dots, autoplay (paused on hover/focus/touch, off with reduced motion). */
+  function jobSlider() {
+    document.querySelectorAll('.job-slider').forEach(function (root) {
+      var track = root.querySelector('.js-track');
+      var slides = track.children;
+      var dotsBox = root.querySelector('.js-dots');
+      if (!slides.length) return;
+      var paused = false, timer;
+
+      function step() { return slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth; }
+      function perView() { return Math.max(1, Math.round(track.clientWidth / step())); }
+      function pages() { return Math.max(1, Math.ceil(slides.length - perView() + 1)); }
+      function current() { return Math.round(track.scrollLeft / step()); }
+      function go(i) {
+        var n = pages();
+        i = (i + n) % n;
+        track.scrollTo({ left: i * step(), behavior: 'smooth' });
+      }
+      function renderDots() {
+        var n = pages();
+        if (dotsBox.children.length !== n) {
+          dotsBox.innerHTML = '';
+          for (var i = 0; i < n; i++) {
+            var d = document.createElement('button');
+            d.type = 'button';
+            d.tabIndex = -1;
+            d.addEventListener('click', go.bind(null, i));
+            dotsBox.appendChild(d);
+          }
+        }
+        var c = Math.min(current(), n - 1);
+        Array.prototype.forEach.call(dotsBox.children, function (d, i) { d.classList.toggle('on', i === c); });
+        root.classList.toggle('js-static', n < 2);
+      }
+
+      root.querySelectorAll('.js-btn').forEach(function (b) {
+        b.addEventListener('click', function () { go(current() + Number(b.getAttribute('data-dir'))); });
+      });
+      track.addEventListener('scroll', function () { window.requestAnimationFrame(renderDots); }, { passive: true });
+      window.addEventListener('resize', renderDots);
+      renderDots();
+
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+      function pause() { paused = true; }
+      function resume() { paused = false; }
+      root.addEventListener('mouseenter', pause);
+      root.addEventListener('mouseleave', resume);
+      root.addEventListener('focusin', pause);
+      root.addEventListener('focusout', resume);
+      track.addEventListener('touchstart', function () { pause(); clearTimeout(timer); timer = setTimeout(resume, 10000); }, { passive: true });
+      setInterval(function () {
+        var dlg = document.getElementById('lead-pop');
+        if (!paused && !document.hidden && !(dlg && dlg.open)) go(current() + 1);
+      }, 6000);
     });
-    document.addEventListener('submit', function (e) {
-      if (e.target.matches && e.target.matches('form[data-form]')) ss.set('lead-sent');
-    }, true);
   }
 
   function init() {
@@ -256,6 +334,7 @@
     preselectJob();
     forms();
     leadPopup();
+    jobSlider();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
   else init();

@@ -614,3 +614,27 @@ body.nav-open .main-nav .sub a { font-size: 1rem; padding: 12px; }
 .review-tr { margin: 0 4px; font-size: .95rem; color: #3d4a56; }
 .review-tr span { font-weight: 600; color: #6b7884; }
 .review-check { margin: 0 4px; font-size: .95rem; }
+
+/* Job slider (home): scroll-snap track; app.js adds arrows, dots, autoplay */
+.job-slider .block-head { align-items: center; }
+.js-nav { display: flex; align-items: center; gap: 8px; }
+.js-nav .link-arrow { margin-right: 6px; }
+.js-btn { width: 42px; height: 42px; border-radius: 50%; border: 1.5px solid var(--grey-2); background: #fff; color: var(--ink); display: inline-flex; align-items: center; justify-content: center; cursor: pointer; }
+.js-btn:hover { border-color: var(--blue); color: var(--blue-a); }
+.js-btn[data-dir="-1"] .ic { transform: rotate(180deg); }
+.js-track { list-style: none; margin: 0 -16px; padding: 6px 16px 18px; display: grid; grid-auto-flow: column; grid-auto-columns: 86%; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 16px; scrollbar-width: none; overscroll-behavior-x: contain; }
+.js-track::-webkit-scrollbar { display: none; }
+.js-track:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+.js-slide { scroll-snap-align: start; position: relative; background: #fff; border-radius: 20px; padding: 22px; box-shadow: var(--shadow); border: 1px solid var(--grey-2); display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.js-slide .job-title a::after { content: none; }
+.js-sum { margin: 6px 0 0; color: #4a5866; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.js-actions { margin-top: auto; padding-top: 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.js-actions .btn { padding: 10px 12px; justify-content: center; }
+.js-dots { display: flex; justify-content: center; gap: 8px; min-height: 10px; }
+.js-dots button { width: 9px; height: 9px; padding: 0; border: 0; border-radius: 999px; background: #c9d4dd; cursor: pointer; transition: width .2s ease, background .2s ease; }
+.js-dots button.on { width: 26px; background: var(--orange); }
+.job-slider.js-static .js-btn, .job-slider.js-static .js-dots { display: none; }
+@media (max-width: 599px) { .js-nav .js-btn { display: none; } .job-slider .block-head { flex-wrap: wrap; gap: 6px; } }
+@media (min-width: 600px) { .js-track { grid-auto-columns: calc((100% - 16px) / 2); } }
+@media (min-width: 1024px) { .js-track { grid-auto-columns: calc((100% - 32px) / 3); } }
+@media (prefers-reduced-motion: reduce) { .js-track { scroll-behavior: auto; } }

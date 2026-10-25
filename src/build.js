@@ -14,7 +14,7 @@ import { renderApply } from './features/apply/apply.js';
 import { renderEmployers } from './features/employers/employers.js';
 import { renderContact } from './features/contact/contact.js';
 import { loadContent, buildBlog, postsIn, blogPath, legalUrl } from './features/blog/blog.js';
-import { loadReviews } from './features/reviews/reviews.js';
+import { loadReviews, renderReviews } from './features/reviews/reviews.js';
 import { loadServices, renderService, serviceSlugs } from './features/services/services.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -58,7 +58,7 @@ const outFile = (url) => path.join(DIST, url.slice(BASE.length).replace(/index\.
 
 const STATIC_PAGES = {
   home: renderHome, jobs: renderJobsList, candidates: renderCandidates,
-  apply: renderApply, employers: renderEmployers, contact: renderContact,
+  apply: renderApply, employers: renderEmployers, contact: renderContact, reviews: renderReviews,
 };
 
 function rootPage(settings, ui) {
@@ -75,7 +75,9 @@ ${process.env.SITE_NOINDEX ? '<meta name="robots" content="noindex, nofollow">' 
 <link rel="canonical" href="${settings.siteUrl}${BASE}/">
 ${alt}
 <link rel="alternate" hreflang="x-default" href="${settings.siteUrl}${BASE}/">
-<link rel="icon" href="${asset('favicon.svg')}" type="image/svg+xml">
+<link rel="icon" href="${asset('favicon-32.png')}" type="image/png" sizes="32x32">
+<link rel="icon" href="${asset('icon-192.png')}" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="${asset('apple-touch-icon.png')}">
 <link rel="stylesheet" href="${versionedAsset('style.css')}">
 <script src="${versionedAsset('app.js')}" defer></script>
 </head>

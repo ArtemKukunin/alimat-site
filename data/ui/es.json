@@ -256,7 +256,7 @@
   "c_langs_more": " y otros.",
   "emp_why13": "Tenemos experiencia contratando a más de 60 nacionalidades y nuestros coordinadores hablan los idiomas de los trabajadores: adaptación más rápida y menor rotación.",
   "rev_t": "Opiniones de nuestros trabajadores",
-  "rev_d": "Opiniones reales del perfil de Alimat Group en Google (oficina de Cracovia).",
+  "rev_d": "Opiniones reales del perfil de Alimat Group en Google.",
   "rev_count": "Opiniones en Google: {n}",
   "rev_all": "Todas las opiniones en Google",
   "rev_tr": "Traducción",
@@ -271,5 +271,11 @@
   "pop_or": "o escríbenos ahora mismo",
   "pop_close": "Cerrar",
   "rev_check": "Verificar en Google",
-  "rev_alt": "Opinión de {name} en Google: {text}"
+  "rev_alt": "Opinión de {name} en Google: {text}",
+  "nav_reviews": "Opiniones",
+  "rev_lead": "Lo que dicen de nosotros las personas que han trabajado con Alimat Group. Puedes verificar cada opinión en Google.",
+  "rev_title": "Opiniones de trabajadores sobre Alimat Group | Trabajo en Polonia",
+  "rev_desc": "Opiniones reales de trabajadores sobre la agencia Alimat Group en Google: alojamiento, documentos, trabajo en Polonia para extranjeros.",
+  "slider_prev": "Ofertas anteriores",
+  "slider_next": "Siguientes ofertas"
 }
