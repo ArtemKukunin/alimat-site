@@ -28,7 +28,8 @@ function slide(ctx, job, i, total) {
   </li>`;
 }
 
-export function jobSlider(ctx) {
+/** popup: include the quick-apply dialog (false when the page already has one); allLink: "all jobs" link. */
+export function jobSlider(ctx, { popup = true, allLink = true } = {}) {
   const { lang, t, jobs } = ctx;
   const list = activeJobs(jobs).sort(newestFirst);
   if (!list.length) return '';
@@ -36,7 +37,7 @@ export function jobSlider(ctx) {
   <div class="block-head">
     <h2 id="js-t">${esc(t('latest_jobs'))}</h2>
     <div class="js-nav">
-      <a class="link-arrow" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))} ${icon('arrow')}</a>
+      ${allLink ? `<a class="link-arrow" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))} ${icon('arrow')}</a>` : ''}
       <button class="js-btn" type="button" data-dir="-1" aria-label="${esc(t('slider_prev'))}">${icon('arrow')}</button>
       <button class="js-btn" type="button" data-dir="1" aria-label="${esc(t('slider_next'))}">${icon('arrow')}</button>
     </div>
@@ -44,5 +45,5 @@ export function jobSlider(ctx) {
   <ul class="js-track" tabindex="0">${list.map((j, i) => slide(ctx, j, i, list.length)).join('')}</ul>
   <div class="js-dots" aria-hidden="true"></div>
 </section>
-${leadPopup(ctx, null, { auto: false })}`;
+${popup ? leadPopup(ctx, null, { auto: false }) : ''}`;
 }

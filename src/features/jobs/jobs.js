@@ -4,6 +4,7 @@ import { icon, TAG_ICONS } from '../../core/icons.js';
 import { layout, breadcrumbs, breadcrumbLd, contactButtons, waLink } from '../../core/layout.js';
 import { CATEGORIES } from './model.js';
 import { leadPopup } from './popup.js';
+import { jobSlider } from './slider.js';
 
 /** "*" in job.city = several cities. */
 export const locationLabel = (job, t) => {
@@ -94,6 +95,7 @@ export function renderJobsList(ctx) {
   <span class="dots" aria-hidden="true"><i></i><i></i></span>
   <p class="lead">${esc(t('jobs_lead'))}</p>
 </div></section>
+${jobSlider(ctx, { popup: false, allLink: false })}
 <section class="wrap block-sm">
   <h2>${esc(t('sections_title'))}</h2>
   ${sectionTiles(ctx)}
