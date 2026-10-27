@@ -75,5 +75,14 @@
       "ro",
       "ne"
     ]
+  },
+  "analytics": {
+    "gtmId": "",
+    "ga4Id": "",
+    "googleAdsId": "",
+    "metaPixelId": "",
+    "googleSiteVerification": "",
+    "facebookDomainVerification": "",
+    "cspExtra": ""
   }
 }

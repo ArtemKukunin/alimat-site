@@ -167,7 +167,9 @@
         var data = new FormData(form);
         var endpoint = form.getAttribute('action');
 
+        var lead = { form_type: form.getAttribute('data-form'), job: (form.elements.job && form.elements.job.value) || '', channel: endpoint ? 'form' : 'whatsapp' };
         if (!endpoint) {
+          track('generate_lead', lead);
           var hasCv = form.querySelector('input[type="file"]') && form.querySelector('input[type="file"]').files[0];
           setStatus(form.getAttribute(hasCv ? 'data-msg-wa-cv' : 'data-msg-wa'), 'ok');
           window.open('https://wa.me/' + form.getAttribute('data-wa') + '?text=' + encodeURIComponent(summary(data)), '_blank', 'noopener');
@@ -179,6 +181,7 @@
           .then(function (r) {
             if (!r.ok) throw new Error('HTTP ' + r.status);
             form.classList.add('sent');
+            track('generate_lead', lead);
             setStatus(form.getAttribute('data-msg-ok'), 'ok');
             status.setAttribute('tabindex', '-1');
             status.focus();
@@ -225,7 +228,7 @@
       desc.appendChild(strong);
       dlg.querySelector('.lead-pop-wa').href = btn.getAttribute('data-wa');
       ss.set('lead-pop');
-      if (!dlg.open) dlg.showModal();
+      if (!dlg.open) { dlg.showModal(); track('apply_popup_open', { job: title, trigger: 'button' }); }
     });
 
     if (dlg.getAttribute('data-auto') !== '1' || ss.get('lead-pop') || ss.get('lead-sent')) return;
@@ -242,6 +245,7 @@
       done = true;
       ss.set('lead-pop');
       dlg.showModal();
+      track('apply_popup_open', { trigger: 'auto' });
     }
     function tick() {
       if (done) return;
@@ -326,6 +330,62 @@
     });
   }
 
+
+  /** Conversion events for GTM (dataLayer), direct GA4/Ads (gtag) and Meta Pixel (fbq). No-ops when nothing is configured. */
+  var META_EVENT = { generate_lead: 'Lead', contact: 'Contact' };
+  function track(name, params) {
+    var c = window.alimatConsent;
+    if (!c) return;
+    params = params || {};
+    var data = { event: name };
+    for (var k in params) data[k] = params[k];
+    window.dataLayer.push(data);
+    if (!c.cfg.gtm && (c.cfg.ga4 || c.cfg.ads)) window.gtag('event', name, params);
+    if (window.fbq && META_EVENT[name]) window.fbq('track', META_EVENT[name], params);
+  }
+  window.alimatTrack = track;
+
+  function trackClicks() {
+    var METHODS = [[/^https:\/\/wa\.me\//, 'whatsapp'], [/^tel:/, 'phone'], [/^https:\/\/t\.me\//, 'telegram'], [/^viber:/, 'viber'], [/^mailto:/, 'email']];
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a) return;
+      var href = a.getAttribute('href');
+      for (var i = 0; i < METHODS.length; i++) {
+        if (METHODS[i][0].test(href)) { track('contact', { method: METHODS[i][1] }); return; }
+      }
+    });
+  }
+
+  /** Cookie banner: shown until the visitor chooses; footer link "cookie settings" reopens it. */
+  function cookieBanner() {
+    var box = document.getElementById('cc');
+    var c = window.alimatConsent;
+    if (!box || !c) return;
+    var opts = box.querySelector('.cc-opts');
+    function show(detailed) {
+      var saved = c.get();
+      opts.elements.analytics.checked = !!(saved && saved.analytics);
+      opts.elements.marketing.checked = !!(saved && saved.marketing);
+      opts.hidden = !detailed;
+      box.querySelector('[data-cc="settings"]').hidden = detailed;
+      box.querySelector('[data-cc="save"]').hidden = !detailed;
+      box.hidden = false;
+    }
+    function done(choice) { c.set(choice); box.hidden = true; }
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest && e.target.closest('[data-cc]');
+      if (!b) return;
+      var act = b.getAttribute('data-cc');
+      if (act === 'open') show(true);
+      else if (act === 'settings') show(true);
+      else if (act === 'accept') done({ analytics: true, marketing: true });
+      else if (act === 'reject') done({ analytics: false, marketing: false });
+      else if (act === 'save') done({ analytics: opts.elements.analytics.checked, marketing: opts.elements.marketing.checked });
+    });
+    if (!c.get()) show(false);
+  }
+
   function init() {
     rootRedirect();
     rememberLanguage();
@@ -335,6 +395,8 @@
     forms();
     leadPopup();
     jobSlider();
+    trackClicks();
+    cookieBanner();
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
   else init();

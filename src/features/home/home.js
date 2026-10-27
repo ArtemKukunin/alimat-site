@@ -37,9 +37,9 @@ export const languageNames = (lang, codes, capitalize = true) => {
   const dn = new Intl.DisplayNames([icuLang(lang)], { type: 'language' });
   return codes.map((c) => (capitalize ? cap(dn.of(c), lang) : dn.of(c)));
 };
-/** Flag image (public/assets/flags/xx.svg, flag-icons, MIT) when the file exists; CMS may add new countries. */
+/** Flag image (public/assets/flags/xx.webp, rasterized from flag-icons, MIT) when the file exists; CMS may add new countries. */
 const flag = (code) => {
-  const f = `flags/${code.toLowerCase()}.svg`;
+  const f = `flags/${code.toLowerCase()}.webp`;
   return existsSync(new URL(`../../../public/assets/${f}`, import.meta.url)) ? `<img class="flag" src="${asset(f)}" alt="" width="20" height="15" loading="lazy" decoding="async">` : '';
 };
 /** Language → flag of the country most associated with it (for the staff-languages chips). */

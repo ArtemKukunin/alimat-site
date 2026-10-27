@@ -8,6 +8,10 @@ import { pageUrl, asset, BASE, LANG_CODES } from '../../core/i18n.js';
 import { esc, readJson, formatDate, fitTitle, fitDesc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
 import { layout, breadcrumbs, breadcrumbLd, contactButtons } from '../../core/layout.js';
+import { imageSize } from '../../core/imagesize.js';
+import { markdownToHtml } from './markdown.js';
+
+const PUBLIC_ASSETS = new URL('../../../public/assets/', import.meta.url).pathname;
 
 export const BLOG_LANG = 'pl';
 const firstText = (html) => (html.match(/<p>([\s\S]*?)<\/p>/)?.[1] || '').replace(/<[^>]+>/g, '');
@@ -34,10 +38,10 @@ export const postPath = (p) => (p.lang === BLOG_LANG ? `${BASE}/${p.slug}/` : `$
 export const legalPath = (p) => (p.lang === BLOG_LANG ? `${BASE}/${p.slug}/` : `${BASE}/${p.lang}/${p.slug}/`);
 
 // ---------- loading ----------
-function loadDir(dir, required) {
+function loadDir(dir, required, prepare = (r) => r) {
   if (!fs.existsSync(dir)) return [];
   return fs.readdirSync(dir).filter((f) => f.endsWith('.json')).map((f) => {
-    const rec = readJson(path.join(dir, f));
+    const rec = prepare(readJson(path.join(dir, f)), f);
     const errors = required.filter((k) => !rec[k]).map((k) => `"${k}" is required`);
     if (!SLUG_RE.test(rec.slug || '')) errors.push('slug must be lowercase ascii');
     if (rec.slug !== path.basename(f, '.json')) errors.push('slug must match the file name');
@@ -113,8 +117,24 @@ function attachTranslations(recs, dir, kind) {
   return recs;
 }
 
+/**
+ * Posts written in the admin panel have Markdown `body` and an uploaded `cover` ("/assets/uploads/…");
+ * imported WordPress posts have `html` and a prepared `image`. Both end up as `html` + `image`.
+ */
+function prepareAdminPost(rec, file) {
+  if (!rec.html && rec.body) rec.html = markdownToHtml(rec.body);
+  if (!rec.image && rec.cover) {
+    const rel = rec.cover.replace(/^\/?assets\//, '');
+    const abs = path.join(PUBLIC_ASSETS, rel);
+    if (!fs.existsSync(abs)) throw new Error(`blog/${file}: cover image ${rec.cover} not found`);
+    const { w, h } = imageSize(abs);
+    rec.image = { src: rel, src640: rel, w, h };
+  }
+  return rec;
+}
+
 export function loadContent(dataDir) {
-  const posts = loadDir(path.join(dataDir, 'blog'), ['slug', 'title', 'description', 'published', 'section', 'html'])
+  const posts = loadDir(path.join(dataDir, 'blog'), ['slug', 'title', 'description', 'published', 'section', 'html'], prepareAdminPost)
     .sort((a, b) => b.published.localeCompare(a.published));
   for (const p of posts) if (!SECTION_KEYS.includes(p.section)) throw new Error(`blog/${p.slug}: unknown section "${p.section}"`);
   const pages = loadDir(path.join(dataDir, 'pages'), ['slug', 'title', 'html']);

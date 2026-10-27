@@ -277,5 +277,19 @@
   "rev_title": "Alimat Group reviews from workers | Jobs in Poland",
   "rev_desc": "Real Google reviews of the Alimat Group employment agency from workers: accommodation, documents, jobs in Poland for foreigners.",
   "slider_prev": "Previous jobs",
-  "slider_next": "Next jobs"
+  "slider_next": "Next jobs",
+  "cc_title": "Cookies",
+  "cc_text": "We use cookies for statistics and advertising to reach candidates better. Essential cookies are always on; the others only with your consent.",
+  "cc_more": "Cookie policy",
+  "cc_accept": "Accept all",
+  "cc_reject": "Essential only",
+  "cc_settings": "Settings",
+  "cc_save": "Save choice",
+  "cc_necessary": "Essential",
+  "cc_necessary_d": "— the site's operation and remembering your choice.",
+  "cc_analytics": "Statistics",
+  "cc_analytics_d": "— Google Analytics: anonymous visit data.",
+  "cc_marketing": "Marketing",
+  "cc_marketing_d": "— Google Ads and Meta (Facebook, Instagram): ad targeting and measurement.",
+  "cc_open": "Cookie settings"
 }

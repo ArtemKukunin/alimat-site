@@ -1,5 +1,7 @@
 import { LANGS, LANG_CODES, pageUrl, alternates, asset, versionedAsset, BASE } from './i18n.js';
 import { esc, digits, sitePath, fitTitle } from './util.js';
+import { styleTag } from './style.js';
+import { analyticsHead, consentBanner, consentLink } from '../features/analytics/analytics.js';
 import { icon } from './icons.js';
 
 export const waLink = (settings, text) =>
@@ -75,6 +77,7 @@ function head(ctx, { title, description, path, alts, jsonld, noindex, og = {} })
   return `<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+${ctx.csp ? `<meta http-equiv="Content-Security-Policy" content="${esc(ctx.csp)}">` : ''}
 <title>${esc(fitTitle(title, title.replace(/\s*\|\s*Alimat Group$/, '')))}</title>
 <meta name="description" content="${esc(description)}">
 ${process.env.SITE_NOINDEX ? '<meta name="robots" content="noindex, nofollow">' : noindex ? '<meta name="robots" content="noindex, follow">' : ''}
@@ -92,13 +95,14 @@ ${ogImage.width ? `<meta property="og:image:width" content="${ogImage.width}">\n
 ${og.published ? `<meta property="article:published_time" content="${og.published}">\n<meta property="article:modified_time" content="${og.modified || og.published}">` : ''}
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#0199DD">
+${analyticsHead(ctx.analytics)}
 <link rel="icon" href="${asset('favicon-32.png')}" type="image/png" sizes="32x32">
 <link rel="icon" href="${asset('icon-192.png')}" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="${asset('apple-touch-icon.png')}">
 <link rel="preload" href="${asset('fonts/titillium-web-400.woff')}" as="font" type="font/woff" crossorigin>
 <link rel="preload" href="${asset('fonts/roboto-slab-900.woff')}" as="font" type="font/woff" crossorigin>
 ${[...(og.preloadImages || []), ...(og.preloadImage ? [og.preloadImage] : [])].map((im) => `<link rel="preload" as="image" href="${im.src}"${im.srcset ? ` imagesrcset="${im.srcset}" imagesizes="${im.sizes}"` : ''}${im.media ? ` media="${im.media}"` : ''} fetchpriority="high">`).join('\n')}
-<link rel="stylesheet" href="${versionedAsset('style.css')}">
+${styleTag()}
 <script src="${versionedAsset('app.js')}" defer></script>
 ${ld}
 </head>`;
@@ -203,7 +207,7 @@ function footer(ctx) {
   </div>
   <div class="wrap footer-bottom">
     <span>© ${new Date().getFullYear()} ${esc(settings.company)}. ${esc(t('footer_rights'))}</span>
-    <span class="footer-legal"><a href="${esc(ctx.privacyUrl || sitePath(settings.privacyUrl, BASE))}">${esc(t('footer_privacy'))}</a> · <a href="${esc(ctx.cookiesUrl || sitePath(settings.cookiesUrl, BASE))}">Cookies</a> · <a href="${ctx.blogUrl || `${BASE}/blog/`}">${esc(t('nav_blog'))}</a></span>
+    <span class="footer-legal"><a href="${esc(ctx.privacyUrl || sitePath(settings.privacyUrl, BASE))}">${esc(t('footer_privacy'))}</a> · <a href="${esc(ctx.cookiesUrl || sitePath(settings.cookiesUrl, BASE))}">Cookies</a> · <a href="${ctx.blogUrl || `${BASE}/blog/`}">${esc(t('nav_blog'))}</a>${consentLink(ctx)}</span>
   </div>
 </footer>`;
 }
@@ -242,6 +246,7 @@ ${body}
 </main>
 ${footer(ctx)}
 ${hideMobileBar ? '' : mobileBar(ctx)}
+${consentBanner(ctx)}
 </body>
 </html>
 `;

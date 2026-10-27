@@ -26,15 +26,29 @@ tools/check.js            перевірки якості
 
 ## Адмінка (/admin)
 
-Decap CMS: редагування вакансій (всіма 7 мовами) і контактів у браузері.
-Зміни зберігаються як коміти в Git, хостинг сам перезбирає сайт.
+Decap CMS 3.6.2 (точна версія + SRI): вакансії (7 мов), блог (нові записи — польською, Markdown),
+відгуки Google, контакти й налаштування, ідентифікатори аналітики.
+«Опублікувати» = коміт у GitHub → Netlify перезбирає сайт (~1 хв). Якщо `tools/check.js` знаходить помилку,
+збірка зупиняється і в мережі лишається попередня версія.
 
-Налаштування на Netlify:
-1. Залити проєкт у GitHub-репозиторій, підключити його в Netlify (налаштування збірки вже в `netlify.toml`).
-2. Site settings → Identity → Enable; Registration → Invite only; Services → Git Gateway → Enable.
-3. Запросити email адміністратора — він зайде на `https://alimatgroup.com/admin/`.
+Вхід — через GitHub (backend `github`), бо Git Gateway Netlify більше не рекомендує для нових сайтів:
+1. Підключити репозиторій у Netlify (налаштування збірки — у `netlify.toml`).
+2. Netlify → Site configuration → Access & security → OAuth → Install provider → **GitHub**
+   (Client ID і Secret з GitHub → Settings → Developer settings → OAuth Apps,
+   callback URL: `https://api.netlify.com/auth/done`).
+3. Кожному редактору — акаунт GitHub із правом запису в репозиторій (Collaborators).
+4. Вхід: `https://alimatgroup.com/admin/` → «Login with GitHub».
 
-Для інших хостингів (Cloudflare Pages, Vercel) замініть `backend` у `public/admin/config.yml` на `github`.
+Інструкція для редакторів польською: `docs/panel-instrukcja.md`.
+
+## Аналітика (Google, Meta)
+
+Адмінка → Ustawienia → «Analityka i marketing». Поки всі поля порожні, на сайті немає жодних сторонніх
+скриптів і банера cookies. Рекомендовано: лише **GTM-ID**, а GA4, Google Ads, Meta Pixel, LinkedIn — тегами в GTM.
+- Банер згоди (7 мов) + Google Consent Mode v2: до згоди все «denied»; Meta Pixel вантажиться лише після згоди на маркетинг.
+- Події в `dataLayer`: `generate_lead` (form_type, job, channel), `contact` (method: whatsapp/phone/telegram/viber/email),
+  `apply_popup_open`, `consent_update`. Без GTM вони йдуть напряму в GA4/Ads (gtag) і Meta (`Lead`, `Contact`).
+- Content-Security-Policy (meta-тег на сторінках) розширюється лише для доменів увімкнених сервісів.
 
 ## Форми
 

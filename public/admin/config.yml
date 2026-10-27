@@ -1,11 +1,14 @@
-# Decap CMS — content admin at /admin/
-# Saves edits as commits to the Git repo; the host rebuilds the site (node src/build.js).
+# Decap CMS — content admin at /admin/ (Polish UI).
+# "Publikuj" saves a commit to the GitHub repo; Netlify rebuilds the site in ~1 minute
+# (node src/build.js + tools/check.js). If a check fails, the previous version stays online.
+# Login: GitHub account with write access to the repo, via Netlify's GitHub OAuth provider
+# (Netlify → Site configuration → Access & security → OAuth → Install provider → GitHub).
 backend:
-  name: git-gateway        # Netlify Identity + Git Gateway
+  name: github
+  repo: ArtemKukunin/alimat-site
   branch: main
 # For local editing: run `npx decap-server` and open http://localhost:8080/admin/
 local_backend: true
-publish_mode: editorial_workflow   # drafts → review → publish
 media_folder: public/assets/uploads
 public_folder: /assets/uploads
 locale: pl
@@ -88,6 +91,37 @@ collections:
       - { label: Oferujemy, name: offer, widget: list, i18n: true, required: false, field: { label: Punkt, name: item, widget: string } }
       - { label: Warunki pracy, name: conditions, widget: list, i18n: true, required: false, field: { label: Punkt, name: item, widget: string } }
 
+  - name: blog
+    label: Blog
+    label_singular: Wpis
+    description: "Nowe wpisy publikowane są po polsku pod adresem alimatgroup.com/{adres-wpisu}/. Tłumaczenia na inne języki dodaje programista."
+    folder: data/blog
+    extension: json
+    format: json
+    create: true
+    delete: false
+    slug: "{{fields.slug}}"
+    identifier_field: title
+    summary: "{{published}} — {{title}}"
+    sortable_fields: [published, title]
+    fields:
+      - { label: Tytuł, name: title, widget: string }
+      - { label: "Adres wpisu (małe litery, bez polskich znaków, z myślnikami)", name: slug, widget: string, pattern: ["^[a-z0-9]+(?:-[a-z0-9]+)*$", "Tylko a-z, 0-9 i myślniki, np. praca-w-polsce-zima"], hint: "Nie zmieniaj adresu opublikowanego wpisu — link w Google przestanie działać." }
+      - { label: "Tytuł SEO (opcjonalnie, do 60 znaków)", name: seoTitle, widget: string, required: false }
+      - { label: "Opis (1–2 zdania, do 160 znaków — widoczny w Google)", name: description, widget: text }
+      - label: Dział
+        name: section
+        widget: select
+        options: [{ label: Dla kandydatów, value: candidates }, { label: Dla firm, value: employers }]
+      - { label: Data publikacji, name: published, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Data aktualizacji (opcjonalnie)", name: modified, widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false, required: false }
+      - { label: "Zdjęcie główne (JPG/WebP, ok. 1200 px)", name: cover, widget: image, required: false, hint: "Dla nowych wpisów. Starsze wpisy mają już zdjęcie." }
+      - { label: Treść, name: body, widget: markdown, required: false, buttons: [bold, italic, link, heading-two, heading-three, bulleted-list, numbered-list, quote], editor_components: [image], hint: "Śródtytuły: Nagłówek 2 / 3. Treść jest wymagana dla nowych wpisów." }
+      - { label: "Treść HTML (wpisy przeniesione ze starej strony)", name: html, widget: code, output_code_only: true, default_language: html, required: false, hint: "Edytuj ostrożnie — to kod HTML starego wpisu." }
+      - { label: Słowa kluczowe, name: keywords, widget: list, required: false, field: { label: Słowo, name: item, widget: string } }
+      - { name: image, widget: hidden, required: false }
+      - { name: metaTitle, widget: hidden, required: false }
+
   - name: reviews
     label: Opinie Google
     files:
@@ -150,8 +184,46 @@ collections:
               - { label: Kraj (kod), name: country, widget: string }
           - { label: Link do mapy, name: mapUrl, widget: string }
           - { label: Link do polityki prywatności, name: privacyUrl, widget: string }
+          - { label: Link do polityki cookies, name: cookiesUrl, widget: string }
+          - label: "Liczby na stronie głównej (4 pozycje, w kolejności)"
+            name: stats
+            widget: list
+            min: 4
+            max: 4
+            field: { label: Wartość, name: item, widget: string }
+          - label: Biura
+            name: offices
+            widget: list
+            summary: "{{fields.city}}"
+            fields:
+              - { label: Miasto, name: city, widget: string }
+              - { label: Ulica, name: street, widget: string }
+              - { label: Kod pocztowy, name: postal, widget: string }
+              - { label: Link do mapy, name: mapUrl, widget: string }
+          - label: "Blok „Cudzoziemcy” (narodowości, języki)"
+            name: intl
+            widget: object
+            collapsed: true
+            fields:
+              - { label: "Liczba narodowości (np. 60+)", name: nationalities, widget: string }
+              - { label: "Oferty bez polskiego (np. 95%)", name: noPolish, widget: string }
+              - { label: "Kraje (kody ISO, np. CO, NP, UA)", name: countries, widget: list, field: { label: Kod, name: item, widget: string, pattern: ["^[A-Z]{2}$", "Dwie wielkie litery"] } }
+              - { label: "Języki zespołu (kody, np. es, en, pl, uk, ru, ro, ne)", name: languages, widget: list, field: { label: Kod, name: item, widget: string, pattern: ["^[a-z]{2,3}$", "Małe litery, np. es"] } }
           - { label: "Adres obsługi formularzy (np. Formspree/Web3Forms). Puste = wysyłka przez WhatsApp", name: formEndpoint, widget: string, required: false }
           - { label: Premia za polecenie (zł), name: referralBonus, widget: number }
+          - label: "Analityka i marketing (Google, Meta)"
+            name: analytics
+            widget: object
+            collapsed: true
+            hint: "Puste pola = brak skryptów i brak banera cookies. Po wpisaniu identyfikatora pojawi się baner zgody."
+            fields:
+              - { label: "Google Tag Manager (GTM-XXXXXXX) — zalecane", name: gtmId, widget: string, required: false, pattern: ["^(GTM-[A-Z0-9]{4,12})?$", "Format: GTM-XXXXXXX"], hint: "Jeśli używasz GTM, tagi GA4, Google Ads, Meta i LinkedIn ustawiasz w GTM, a pola poniżej zostaw puste." }
+              - { label: "Google Analytics 4 (G-XXXXXXXXXX) — tylko bez GTM", name: ga4Id, widget: string, required: false, pattern: ["^(G-[A-Z0-9]{6,14})?$", "Format: G-XXXXXXXXXX"] }
+              - { label: "Google Ads (AW-XXXXXXXXXX) — tylko bez GTM", name: googleAdsId, widget: string, required: false, pattern: ["^(AW-[0-9]{6,14})?$", "Format: AW-1234567890"] }
+              - { label: "Meta Pixel ID (same cyfry)", name: metaPixelId, widget: string, required: false, pattern: ["^([0-9]{10,20})?$", "Same cyfry"], hint: "Ładuje się tylko po zgodzie na cookies marketingowe." }
+              - { label: "Google Search Console — kod weryfikacji (wartość content)", name: googleSiteVerification, widget: string, required: false }
+              - { label: "Meta — weryfikacja domeny (wartość content)", name: facebookDomainVerification, widget: string, required: false }
+              - { label: "Dodatkowe domeny skryptów (CSP), oddzielone spacją", name: cspExtra, widget: string, required: false, hint: "Tylko jeśli w GTM dodasz narzędzie spoza Google/Meta/LinkedIn, np. https://analytics.tiktok.com" }
           - label: Media społecznościowe
             name: social
             widget: object

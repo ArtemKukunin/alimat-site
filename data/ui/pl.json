@@ -277,5 +277,19 @@
   "rev_title": "Opinie pracowników o Alimat Group | Agencja pracy Kraków",
   "rev_desc": "Prawdziwe opinie pracowników o agencji pracy Alimat Group z Google: zakwaterowanie, dokumenty, praca w Polsce dla obcokrajowców.",
   "slider_prev": "Poprzednie oferty",
-  "slider_next": "Następne oferty"
+  "slider_next": "Następne oferty",
+  "cc_title": "Pliki cookies",
+  "cc_text": "Używamy plików cookies do statystyk i reklam, aby lepiej docierać do kandydatów. Niezbędne pliki działają zawsze, pozostałe tylko za Twoją zgodą.",
+  "cc_more": "Polityka cookies",
+  "cc_accept": "Akceptuję wszystkie",
+  "cc_reject": "Tylko niezbędne",
+  "cc_settings": "Ustawienia",
+  "cc_save": "Zapisz wybór",
+  "cc_necessary": "Niezbędne",
+  "cc_necessary_d": "— działanie strony i zapamiętanie Twojego wyboru.",
+  "cc_analytics": "Statystyczne",
+  "cc_analytics_d": "— Google Analytics: anonimowe dane o odwiedzinach.",
+  "cc_marketing": "Marketingowe",
+  "cc_marketing_d": "— Google Ads i Meta (Facebook, Instagram): dopasowanie i pomiar reklam.",
+  "cc_open": "Ustawienia cookies"
 }

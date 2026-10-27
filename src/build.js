@@ -5,6 +5,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { LANGS, LANG_CODES, DEFAULT_LANG, pageUrl, alternates, asset, versionedAsset, BASE } from './core/i18n.js';
 import { readJson, writeFile, translator, esc } from './core/util.js';
+import { styleTag, inlineStyle } from './core/style.js';
+import { loadAnalytics, cspSources } from './features/analytics/analytics.js';
 import { loadJobs } from './features/jobs/model.js';
 import { renderHome } from './features/home/home.js';
 import { renderJobsList, renderJobDetail, renderJobSection } from './features/jobs/jobs.js';
@@ -34,25 +36,6 @@ export function loadData() {
   return { settings, ui, jobs, categories, posts, pages, legacy, services, reviews };
 }
 
-/** Small CSS minifier: drops comments and whitespace outside quoted strings. */
-export function minifyCss(css) {
-  let out = '';
-  for (let i = 0; i < css.length; i++) {
-    const c = css[i];
-    if (c === '"' || c === "'") { const j = css.indexOf(c, i + 1); out += css.slice(i, j + 1); i = j; continue; }
-    if (c === '/' && css[i + 1] === '*') { i = css.indexOf('*/', i + 2) + 1; continue; }
-    if (/\s/.test(c)) {
-      while (/\s/.test(css[i + 1] || '')) i++;
-      const prev = out[out.length - 1]; const next = css[i + 1];
-      if (prev && next && !/[{};:,>]/.test(prev) && !/[{};:,>)]/.test(next)) out += ' ';
-      continue;
-    }
-    if (c === ';' && css[i + 1] === '}') continue;
-    out += c;
-  }
-  return out;
-}
-
 /** File location inside dist for a page URL (drops the sub-path base and preview suffix). */
 const outFile = (url) => path.join(DIST, url.slice(BASE.length).replace(/index\.html$/, ''), 'index.html');
 
@@ -78,7 +61,7 @@ ${alt}
 <link rel="icon" href="${asset('favicon-32.png')}" type="image/png" sizes="32x32">
 <link rel="icon" href="${asset('icon-192.png')}" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="${asset('apple-touch-icon.png')}">
-<link rel="stylesheet" href="${versionedAsset('style.css')}">
+${styleTag()}
 <script src="${versionedAsset('app.js')}" defer></script>
 </head>
 <body class="page-root" data-autolang>
@@ -98,7 +81,7 @@ function notFoundPage(ui) {
   return `<!doctype html>
 <html lang="${DEFAULT_LANG}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>404 — Alimat Group</title><meta name="robots" content="noindex">
-<link rel="stylesheet" href="${versionedAsset('style.css')}"></head>
+${styleTag()}</head>
 <body class="page-root"><main class="lang-choice"><img src="${asset('img/logo.webp')}" alt="Alimat Group" width="220" height="53"><h1>404</h1><ul class="nf-list">${items}</ul></main></body></html>
 `;
 }
@@ -158,28 +141,56 @@ const redirectStub = (to, siteUrl) => `<!doctype html><html><head><meta charset=
 <title>Redirect</title></head><body><a href="${to}">${to}</a></body></html>
 `;
 
-function securityHeaders(settings) {
+/**
+ * Content-Security-Policy for the generated pages (sent as a <meta> tag, so it does not also hit /admin/,
+ * which needs Decap from unpkg and the GitHub API). Strict by default, widened only for the analytics
+ * vendors in use; the inline <style> is allowed by its hash.
+ */
+function contentSecurityPolicy(settings, analytics) {
   let formOrigin = '';
   try { formOrigin = settings.formEndpoint ? new URL(settings.formEndpoint).origin : ''; } catch { throw new Error('settings.formEndpoint must be a full https:// URL or empty'); }
-  const csp = [
-    "default-src 'self'", "script-src 'self'", "style-src 'self'", "img-src 'self' data:",
-    `connect-src 'self'${formOrigin ? ` ${formOrigin}` : ''}`, `form-action 'self'${formOrigin ? ` ${formOrigin}` : ''}`,
-    "base-uri 'self'", "frame-ancestors 'none'", "object-src 'none'",
+  const v = cspSources(analytics);
+  const list = (...xs) => xs.flat().filter(Boolean).join(' ');
+  return [
+    "default-src 'self'",
+    `script-src ${list("'self'", v.script)}`,
+    `style-src ${list("'self'", `'${inlineStyle().hash}'`, v.style)}`,
+    `img-src ${list("'self'", 'data:', v.img)}`,
+    `font-src ${list("'self'", v.font)}`,
+    `connect-src ${list("'self'", formOrigin, v.connect)}`,
+    `frame-src ${list("'self'", v.frame)}`,
+    `form-action ${list("'self'", formOrigin)}`,
+    "base-uri 'self'", "object-src 'none'",
   ].join('; ');
+}
+
+/** Netlify _headers: security headers and long caching for fingerprinted / rarely changing assets. */
+function securityHeaders() {
   const common = `  X-Content-Type-Options: nosniff
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=()`;
-  return `/*\n${common}\n  X-Frame-Options: DENY\n  Content-Security-Policy: ${csp}
-/assets/*
-  Cache-Control: public, max-age=604800
-/admin/*
+  const year = '  Cache-Control: public, max-age=31536000, immutable';
+  const month = '  Cache-Control: public, max-age=2592000';
+  // One rule per path: Netlify merges headers of overlapping rules.
+  const cached = [
+    ['/assets/app.js', year], ['/assets/consent.js', year], ['/assets/fonts/*', year],
+    ...['img', 'flags', 'reviews', 'blog', 'uploads'].map((d) => [`/assets/${d}/*`, month]),
+    ...['favicon-32.png', 'icon-192.png', 'apple-touch-icon.png', 'og.jpg'].map((f) => [`/assets/${f}`, month]),
+  ];
+  return `/*
 ${common}
+  X-Frame-Options: DENY
+  Strict-Transport-Security: max-age=31536000
+${cached.map(([p, h]) => `${p}\n${h}`).join('\n')}
+/admin/*
   X-Robots-Tag: noindex
 `;
 }
 
 export function build() {
   const { settings, ui, jobs, categories, posts, pages, legacy, services, reviews } = loadData();
+  const analytics = loadAnalytics(settings);
+  const csp = contentSecurityPolicy(settings, analytics);
   const redirectMap = redirects(jobs, legacy, services);
   // Old WordPress paths inside imported articles → new URLs (same table as the redirects).
   const legacyMap = (oldPath) => redirectMap.find(([from]) => from.replace(/\*$/, '') === oldPath)?.[1];
@@ -187,14 +198,13 @@ export function build() {
   for (const s of [...posts, ...pages].map((p) => p.slug)) if (reserved.has(s)) throw new Error(`Slug "${s}" is reserved`);
   fs.rmSync(DIST, { recursive: true, force: true });
   fs.cpSync(path.join(ROOT, 'public'), DIST, { recursive: true });
-  const cssFile = path.join(DIST, 'assets', 'style.css');
-  fs.writeFileSync(cssFile, minifyCss(fs.readFileSync(cssFile, 'utf8')));
+  fs.rmSync(path.join(DIST, 'assets', 'style.css')); // inlined into every page (core/style.js)
 
   const indexable = [];
   let count = 0;
   const slugOf = (u) => u.replace(/^\/+|\/+$/g, '');
   const makeCtx = (lang) => ({
-    lang, t: translator(ui, lang), settings, jobs, categories, services, reviews,
+    lang, t: translator(ui, lang), settings, jobs, categories, services, reviews, analytics, csp,
     blogUrl: blogPath(postsIn(posts, lang).length ? lang : 'pl'),
     privacyUrl: legalUrl(pages, slugOf(settings.privacyUrl), lang),
     cookiesUrl: legalUrl(pages, slugOf(settings.cookiesUrl), lang),
@@ -248,7 +258,7 @@ export function build() {
     if (fs.existsSync(file)) throw new Error(`Redirect ${from} would overwrite a real page`);
     writeFile(file, redirectStub(to, settings.siteUrl));
   }
-  writeFile(path.join(DIST, '_headers'), securityHeaders(settings));
+  writeFile(path.join(DIST, '_headers'), securityHeaders());
   return { pages: count, jobs: jobs.length, langs: LANG_CODES.length };
 }
 

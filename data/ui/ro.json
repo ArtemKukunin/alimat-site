@@ -277,5 +277,19 @@
   "rev_title": "Recenzii ale lucrătorilor despre Alimat Group | Muncă în Polonia",
   "rev_desc": "Recenzii reale ale lucrătorilor despre agenția Alimat Group pe Google: cazare, acte, muncă în Polonia pentru străini.",
   "slider_prev": "Ofertele anterioare",
-  "slider_next": "Ofertele următoare"
+  "slider_next": "Ofertele următoare",
+  "cc_title": "Cookie-uri",
+  "cc_text": "Folosim cookie-uri pentru statistici și publicitate, ca să ajungem mai bine la candidați. Cookie-urile necesare funcționează mereu, celelalte doar cu acordul tău.",
+  "cc_more": "Politica cookie",
+  "cc_accept": "Accept toate",
+  "cc_reject": "Doar necesare",
+  "cc_settings": "Setări",
+  "cc_save": "Salvează alegerea",
+  "cc_necessary": "Necesare",
+  "cc_necessary_d": "— funcționarea site-ului și memorarea alegerii tale.",
+  "cc_analytics": "Statistici",
+  "cc_analytics_d": "— Google Analytics: date anonime despre vizite.",
+  "cc_marketing": "Marketing",
+  "cc_marketing_d": "— Google Ads și Meta (Facebook, Instagram): personalizarea și măsurarea reclamelor.",
+  "cc_open": "Setări cookie"
 }
