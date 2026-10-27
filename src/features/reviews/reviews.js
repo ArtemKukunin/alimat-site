@@ -28,12 +28,18 @@ export function loadReviews(raw) {
 const stars = (n, label) => `<span class="stars" role="img" aria-label="${esc(label)}">${
   Array.from({ length: 5 }, (_, i) => icon('star', `ic star${i < n ? '' : ' off'}`)).join('')}</span>`;
 
+/** Optional 360 px copy next to the screenshot (reviews/name-360.webp) for phones. */
+const small = (img) => {
+  const f = img.replace(/\.webp$/, '-360.webp');
+  return f !== img && existsSync(new URL(`../../../public/assets/${f}`, import.meta.url)) ? f : '';
+};
+
 function reviewCard(ctx, r) {
   const { lang, t } = ctx;
   const translated = r.lang !== lang;
   return `<li class="review">
     <a class="review-shot" href="${esc(r.link)}" target="_blank" rel="noopener">
-      <img src="${asset(r.image)}" alt="${esc(t('rev_alt', { name: r.name, text: r.text }))}" lang="${r.lang}" width="${r.width}" height="${r.height}" loading="lazy" decoding="async">
+      <img src="${asset(r.image)}"${small(r.image) ? ` srcset="${asset(small(r.image))} 360w, ${asset(r.image)} ${r.width}w" sizes="(min-width: 1100px) 360px, (min-width: 768px) 45vw, 92vw"` : ''} alt="${esc(t('rev_alt', { name: r.name, text: r.text }))}" lang="${r.lang}" width="${r.width}" height="${r.height}" loading="lazy" decoding="async">
     </a>
     ${translated ? `<p class="review-tr"><span>${esc(t('rev_tr'))}:</span> ${esc(r.tr[lang])}</p>` : ''}
     <a class="link-arrow review-check" href="${esc(r.link)}" target="_blank" rel="noopener">${esc(t('rev_check'))} ${icon('arrow')}</a>
