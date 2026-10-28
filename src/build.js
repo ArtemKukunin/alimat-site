@@ -133,7 +133,10 @@ function redirects(jobs, legacy, services) {
   return map;
 }
 
-const netlifyRedirects = (map) => `${map.map(([from, to]) => `${from}  ${to}  301`).join('\n')}\n`;
+// REDIRECT_STATUS=302 (Netlify env var) for a temporary test on the live domain: Google keeps the old URLs.
+const REDIRECT_STATUS = process.env.REDIRECT_STATUS || '301';
+if (!['301', '302'].includes(REDIRECT_STATUS)) throw new Error('REDIRECT_STATUS must be 301 or 302');
+const netlifyRedirects = (map) => `${map.map(([from, to]) => `${from}  ${to}  ${REDIRECT_STATUS}`).join('\n')}\n`;
 
 /** Hosts without server redirects (GitHub Pages): an HTML stub per old URL. */
 const redirectStub = (to, siteUrl) => `<!doctype html><html><head><meta charset="utf-8"><meta name="robots" content="noindex">
@@ -253,7 +256,9 @@ export function build() {
     ? 'User-agent: *\nDisallow: /\n'
     : `User-agent: *\nAllow: /\nDisallow: /admin/\n\nSitemap: ${settings.siteUrl}${BASE}/sitemap.xml\n`);
   writeFile(path.join(DIST, '_redirects'), netlifyRedirects(redirectMap));
-  for (const [from, to] of redirectMap) {
+  // HTML stubs only for hosts without server redirects (GitHub Pages). On Netlify a file would win over
+  // the _redirects rule and visitors/Google would get 200 instead of a real 301/302.
+  if (process.env.NETLIFY !== 'true') for (const [from, to] of redirectMap) {
     const file = path.join(DIST, from.replace(/\/\*$/, ''), 'index.html');
     if (fs.existsSync(file)) throw new Error(`Redirect ${from} would overwrite a real page`);
     writeFile(file, redirectStub(to, settings.siteUrl));
