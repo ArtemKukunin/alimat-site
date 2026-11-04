@@ -1052,3 +1052,7 @@ html body .rv.in { opacity: 1; transform: none; }
 .help-box.wide .contact-btns { margin: 0; }
 @media (min-width: 900px) { .help-box.wide { grid-template-columns: 1fr 1.25fr; padding: 34px 40px; } }
 .help-box-tel .f-label { font: 600 .8rem/1.3 var(--f-body); }
+
+@media (max-width: 1023px) { .hb { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 400px) { .contact-btns .btn { padding: 10px 8px; gap: 6px; font-size: .88rem; } }
+@media (max-width: 360px) { .contact-btns:not(.no-call):not(.compact) .btn-call, .contact-btns:not(.no-call):not(.compact) .btn-mail { grid-column: 1 / -1; } }

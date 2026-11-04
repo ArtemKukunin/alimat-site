@@ -5,12 +5,13 @@ import { layout, breadcrumbs, breadcrumbLd, contactButtons, telLink } from '../.
 import { reviewsBlock } from '../reviews/reviews.js';
 import { perksGrid, steps, intlBlock } from '../home/home.js';
 
-export const FAQ_COUNT = 9;
+/** FAQ items (ui keys faq_q<n>/faq_a<n>) in display order. */
+export const FAQ_ORDER = [1, 10, 2, 3, 4, 5, 6, 7, 8, 9];
 
 export function renderCandidates(ctx) {
   const { lang, t } = ctx;
   const crumbs = [{ name: t('breadcrumb_home'), href: pageUrl(lang, 'home') }, { name: t('cand_h1'), href: pageUrl(lang, 'candidates') }];
-  const faq = Array.from({ length: FAQ_COUNT }, (_, i) => ({ q: t(`faq_q${i + 1}`), a: t(`faq_a${i + 1}`) }));
+  const faq = FAQ_ORDER.map((n) => ({ q: t(`faq_q${n}`), a: t(`faq_a${n}`) }));
   const faqLd = {
     '@context': 'https://schema.org', '@type': 'FAQPage',
     mainEntity: faq.map(({ q, a }) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
