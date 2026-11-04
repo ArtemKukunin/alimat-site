@@ -307,6 +307,18 @@
         root.classList.toggle('js-static', n < 2);
       }
 
+      // "Full description": opens the slide-up panel (touch screens, keyboard); hover does it with CSS.
+      root.addEventListener('click', function (e) {
+        var panel = e.target.closest('.js-detail');
+        if (panel && !e.target.closest('a')) { panel.parentNode.querySelector('.js-more').click(); return; }
+        var b = e.target.closest('.js-more');
+        if (!b) return;
+        var slide = b.closest('.js-slide');
+        var open = !slide.classList.contains('is-open');
+        root.querySelectorAll('.js-slide.is-open').forEach(function (s) { s.classList.remove('is-open'); s.querySelector('.js-more').setAttribute('aria-expanded', 'false'); });
+        slide.classList.toggle('is-open', open);
+        b.setAttribute('aria-expanded', String(open));
+      });
       root.querySelectorAll('.js-btn').forEach(function (b) {
         b.addEventListener('click', function () { go(current() + Number(b.getAttribute('data-dir'))); });
       });

@@ -908,3 +908,28 @@ html body .rv.in { opacity: 1; transform: none; }
 }
 .intl-lists > div { text-align: center; }
 .intl-lists .chips { justify-content: center; }
+
+/* ── Job slider: full description slides up over the card (hover on desktop, button on touch) ── */
+.js-slide { overflow: hidden; }
+.js-more { align-self: flex-start; display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; padding: 6px 0; border: 0; background: none; color: var(--blue-a); font: 600 .92rem/1.2 var(--f-body); cursor: pointer; }
+.js-more .ic { width: 16px; height: 16px; transform: rotate(180deg); transition: transform .3s ease; }
+.js-more:hover { text-decoration: underline; }
+.js-detail {
+  position: absolute; left: 0; right: 0; top: 0; bottom: 80px; z-index: 1; overflow-y: auto; overscroll-behavior: contain;
+  padding: 20px 22px 12px; background: #fff; border-bottom: 3px solid var(--orange); scrollbar-width: thin;
+  transform: translateY(100%); visibility: hidden;
+  transition: transform .45s cubic-bezier(.2, .8, .2, 1), visibility 0s linear .45s;
+}
+.js-detail-t { font: 900 1.05rem/1.3 var(--f-head); color: var(--ink); margin: 0 0 6px; }
+.js-detail p { margin: 0 0 8px; color: #4a5866; }
+.js-detail h4 { margin: 12px 0 6px; font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; color: var(--orange-a); }
+.js-detail ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; font-size: .94rem; }
+.js-detail li::marker { color: var(--blue); }
+.js-actions { position: relative; z-index: 2; background: #fff; }
+.js-slide.is-open .js-detail { transform: none; visibility: visible; transition: transform .45s cubic-bezier(.2, .8, .2, 1), visibility 0s; }
+.js-slide.is-open .js-more .ic { transform: none; }
+@media (hover: hover) {
+  .js-slide:hover .js-detail { transform: none; visibility: visible; transition: transform .45s cubic-bezier(.2, .8, .2, 1) .12s, visibility 0s .12s; }
+  .js-slide:hover .js-more .ic { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) { .js-detail { transition: none !important; } }
