@@ -62,10 +62,10 @@ export function contactButtons(ctx, { waText, compact = false, call = true } = {
   const { t, settings } = ctx;
   return `<div class="contact-btns${compact ? ' compact' : ''}${call ? '' : ' no-call'}">
     <a class="btn btn-wa" href="${waLink(settings, waText)}" rel="noopener" target="_blank">${icon('chat')}<span>WhatsApp</span></a>
-    <a class="btn btn-ghost" href="${esc(settings.telegram)}" rel="noopener" target="_blank">${icon('chat')}<span>Telegram</span></a>
-    <a class="btn btn-ghost" href="viber://chat?number=%2B${digits(settings.phone)}">${icon('chat')}<span>Viber</span></a>
-    ${call ? `<a class="btn btn-ghost" href="${telLink(settings.phone)}">${icon('phone')}<span>${esc(t('cta_call'))}</span></a>
-    <a class="btn btn-ghost" href="mailto:${esc(settings.email)}">${icon('mail')}<span>${esc(t('cta_email'))}</span></a>` : ''}
+    <a class="btn btn-tg" href="${esc(settings.telegram)}" rel="noopener" target="_blank">${icon('chat')}<span>Telegram</span></a>
+    <a class="btn btn-viber" href="viber://chat?number=%2B${digits(settings.phone)}">${icon('chat')}<span>Viber</span></a>
+    ${call ? `<a class="btn btn-call" href="${telLink(settings.phone)}">${icon('phone')}<span>${esc(t('cta_call'))}</span></a>
+    <a class="btn btn-mail" href="mailto:${esc(settings.email)}">${icon('mail')}<span>${esc(t('cta_email'))}</span></a>` : ''}
   </div>`;
 }
 
@@ -167,7 +167,8 @@ function footer(ctx) {
       <p>${esc(t('help_d'))}</p>
     </div>
     <ul class="help-band-list">
-      <li>${icon('phone')}<a href="${telLink(settings.phone)}">${esc(settings.phone)}</a></li>
+      <li>${icon('phone')}<span><span class="f-label">${esc(t('tel_cand'))}</span><a href="${telLink(settings.phone)}">${esc(settings.phone)}</a></span></li>
+      ${settings.phoneB2B ? `<li>${icon('phone')}<span><span class="f-label">${esc(t('b2b_short'))}</span><a href="${telLink(settings.phoneB2B)}">${esc(settings.phoneB2B)}</a></span></li>` : ''}
       <li>${icon('mail')}<a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></li>
       ${settings.offices.map((o) => `<li>${icon('pin')}<a href="${esc(o.mapUrl)}" rel="noopener" target="_blank">${esc(o.city)}: ${esc(o.street)}</a></li>`).join('')}
     </ul>
@@ -181,6 +182,7 @@ function footer(ctx) {
   <div class="wrap footer-grid">
     <div>
       <a class="logo" href="${pageUrl(lang, 'home')}"><img src="${asset('img/logo.webp')}" alt="Alimat Group" width="183" height="44" loading="lazy"></a>
+      <p class="f-slogan">${esc(t('brand_slogan'))}</p>
       <p>${esc(t('footer_tagline'))}</p>
     </div>
     <div>
@@ -198,8 +200,8 @@ function footer(ctx) {
     <div>
       <h2 class="f-h">${esc(t('nav_contact'))}</h2>
       <ul class="f-list">
-        <li><a href="${telLink(settings.phone)}">${esc(settings.phone)}</a></li>
-        ${settings.phoneB2B ? `<li>${esc(t('b2b_short'))}: <a href="${telLink(settings.phoneB2B)}">${esc(settings.phoneB2B)}</a></li>` : ''}
+        <li><span class="f-label">${esc(t('tel_cand'))}</span><a href="${telLink(settings.phone)}">${esc(settings.phone)}</a></li>
+        ${settings.phoneB2B ? `<li><span class="f-label">${esc(t('b2b_short'))}</span><a href="${telLink(settings.phoneB2B)}">${esc(settings.phoneB2B)}</a></li>` : ''}
         <li><a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></li>
         ${settings.offices.map((o) => `<li><a href="${esc(o.mapUrl)}" target="_blank" rel="noopener"><address>${esc(o.street)}<br>${esc(o.postal)} ${esc(o.city)}</address></a></li>`).join('')}
       </ul>

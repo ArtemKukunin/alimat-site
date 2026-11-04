@@ -52,7 +52,8 @@ export function reviewsBlock(ctx, { title = true } = {}) {
   if (!reviews?.reviews.length) return '';
   const rating = new Intl.NumberFormat(LANGS[lang].locale, { minimumFractionDigits: 1, maximumFractionDigits: 1 }).format(reviews.rating);
   return `<section class="band reviews"${title ? ' aria-labelledby="rev-t"' : ''}><div class="wrap block">
-  ${title ? `<h2 class="center-title" id="rev-t">${esc(t('rev_t'))}</h2>` : ''}
+  ${title ? `<p class="emp-kicker">${esc(t('rev_k'))}</p>
+  <h2 class="center-title" id="rev-t">${esc(t('rev_t'))}</h2>` : ''}
   <div class="review-sum">
     <strong class="review-score">${rating}</strong>
     ${stars(Math.round(reviews.rating), t('rev_stars', { n: rating }))}

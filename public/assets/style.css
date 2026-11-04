@@ -987,3 +987,68 @@ html body .rv.in { opacity: 1; transform: none; }
   .ab-join { grid-template-columns: 1fr 1fr; }
 }
 @media (min-width: 1024px) { .ab-values { grid-template-columns: repeat(4, 1fr); } }
+
+/* Slogans and phone labels */
+.slogan-k { margin: 0 0 4px; font-size: .8rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--orange-a); }
+.f-slogan { font: 900 1.05rem/1.4 var(--f-head); color: var(--ink); margin: 10px 0 4px; }
+.f-label { display: block; font-size: .8rem; color: var(--text); margin-bottom: 1px; }
+.help-band .f-label { color: rgba(255, 255, 255, .7); }
+
+/* ── Colours exactly as on the original site (Elementor global colours):
+   filled buttons #F8660D / #0199DD with white text; on hover they invert to white with coloured text,
+   outline buttons fill with colour on hover. ── */
+.btn-orange, .form .btn-primary, .mobile-bar .btn-primary { background: var(--orange); border-color: var(--orange); color: #fff; font-weight: 700; }
+.btn-blue, .btn-primary { background: var(--blue); border-color: var(--blue); color: #fff; font-weight: 700; }
+.btn-orange:hover, .form .btn-primary:hover, .mobile-bar .btn-primary:hover { background: #fff; color: var(--orange-dark); border-color: var(--orange); }
+.btn-blue:hover, .btn-primary:hover { background: #fff; color: var(--blue-dark); border-color: var(--blue); }
+.btn-outline-orange { border-color: var(--orange); }
+.btn-outline-orange:hover { background: var(--orange); border-color: var(--orange); color: #fff; }
+.btn-outline-blue { border-color: var(--blue); }
+.btn-outline-blue:hover { background: var(--blue); border-color: var(--blue); color: #fff; }
+.search-band .btn-blue:hover { border-color: #fff; }
+.ab-join-cand { background: var(--orange); }
+.ab-join-firm { background: var(--blue); }
+.emp-quote, .ab-quote { background: var(--blue); }
+.emp-nums strong, .emp-n, .emp-model-n { color: var(--blue); }
+.emp-model-n { background: var(--blue); color: #fff; }
+.emp-nums li:nth-child(even) strong, .emp-models li:nth-child(3) .emp-n { color: var(--orange); }
+.emp-model:nth-child(3) .emp-model-n, .ab-values .ic-lg, .emp-brand:nth-child(odd) .ic-lg { background: var(--orange); }
+.ab-values li:nth-child(even) .ic-lg, .emp-brand .ic-lg { background: var(--blue); }
+.emp-brand:nth-child(odd) .ic-lg { background: var(--orange); }
+
+/* Language and sub-menu items: orange on hover */
+.lang-switch a:hover, .main-nav .sub a:hover { background: var(--orange); color: #fff; }
+.lang-switch a[aria-current="true"]:hover { color: #fff; }
+
+/* ── Messenger buttons: each in its brand colour, balanced grid (3 on top, 2 below) ── */
+.contact-btns { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
+.contact-btns .btn { grid-column: span 2; color: #fff; border: 0; font-weight: 700; min-height: 48px; }
+.contact-btns .btn-call, .contact-btns .btn-mail { grid-column: span 3; }
+.contact-btns:not(.no-call):not(.compact) .btn-wa { grid-column: span 2; }
+.contact-btns .btn-wa { background: var(--wa); }
+.contact-btns .btn-tg { background: #1b84c4; }
+.contact-btns .btn-viber { background: #6c55d6; }
+.contact-btns .btn-call { background: var(--orange); }
+.contact-btns .btn-mail { background: var(--blue); }
+.contact-btns .btn:hover { filter: brightness(1.08); color: #fff; }
+.contact-btns.no-call { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.contact-btns.no-call .btn { grid-column: auto; }
+.contact-btns.compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.contact-btns.compact .btn { grid-column: auto; }
+@media (max-width: 520px) {
+  .contact-btns:not(.no-call):not(.compact) .btn-wa { grid-column: 1 / -1; }
+  .contact-btns .btn-tg, .contact-btns .btn-viber { grid-column: span 3; }
+}
+
+/* "Masz pytania?" box on the candidates page: text on the left, buttons on the right */
+.help-box.wide { display: grid; gap: 18px 40px; align-items: center; padding: 28px; background: linear-gradient(135deg, #fff 0%, var(--grey-1) 100%); border: 1.5px solid var(--grey-2); }
+.help-box-text { display: grid; grid-template-columns: auto 1fr; column-gap: 14px; align-items: center; }
+.help-box-text .ic-lg { grid-row: span 2; width: 58px; height: 58px; padding: 13px; border-radius: 50%; background: var(--orange); color: #fff; }
+.help-box-text h2 { margin: 0; font-size: 1.5rem; }
+.help-box-text p { margin: 4px 0 0; }
+.help-box-tel { grid-column: 1 / -1; margin-top: 14px !important; font: 900 1.35rem/1.2 var(--f-head); }
+.help-box-tel a { color: var(--ink); text-decoration: none; }
+.help-box-tel a:hover { color: var(--orange); }
+.help-box.wide .contact-btns { margin: 0; }
+@media (min-width: 900px) { .help-box.wide { grid-template-columns: 1fr 1.25fr; padding: 34px 40px; } }
+.help-box-tel .f-label { font: 600 .8rem/1.3 var(--f-body); }

@@ -536,42 +536,61 @@
   }
 
   /**
-   * Scroll reveal like the original site's entrance animations: blocks below the fold fade/slide in
-   * once, children of the same list are staggered. Content already on screen is left untouched.
+   * Scroll reveal, the same on every page (like the original site's entrance animations).
+   * Each section under <main> (except the hero) is walked generically:
+   *  - split layouts (text + photo): the two halves slide in from the sides;
+   *  - lists / grids of cards: the items rise in one after another (staggered);
+   *  - everything else (kicker, title, lead, banners, forms): rises in as one block.
+   * Blocks already on screen animate right after load; blocks scrolled past are left alone.
    */
+  var SPLIT = '.emp-split, .svc-split, .split, .here, .why-row, .contact-grid, .job-layout, .form-layout';
   function reveal() {
     if (!('IntersectionObserver' in window)) return;
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var groups = [
-      ['.center-title, .block-head, .lead-c, .cv-banner, .emp-strip, .referral, .help-box, .job-slider .js-track', ''],
-      ['.intl-stats > li, .intl-lists > div, .review-grid > li, .sections > li, .stats > li, .steps > li, .perks > li, .job-grid > *, .post-grid > *, .offices > li, .ticks > li, .emp-nums > li, .emp-brands > li, .emp-models > *, .emp-flow > li, .emp-inds > li, .emp-refs > li, .ab-story > li, .ab-values > li, .ab-join > a', 'stagger'],
-      ['.why-row, .here', ''], // whole rows rise in, like the original site
-      ['.svc-split > :first-child, .emp-split > :first-child', 'rv-l'],
-      ['.svc-split > :last-child, .emp-split > :last-child', 'rv-r'],
-    ];
-    var fold = window.innerHeight;
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
         if (!en.isIntersecting) return;
         var el = en.target;
         io.unobserve(el);
         el.classList.add('in');
-        el.querySelectorAll('[data-count]').forEach(countUp);
         // Drop the helper classes afterwards so hover transitions work normally.
-        setTimeout(function () { el.classList.remove('rv', 'rv-l', 'rv-r', 'in'); el.style.removeProperty('--rv-i'); }, 1400);
+        setTimeout(function () { el.classList.remove('rv', 'rv-l', 'rv-r', 'in'); el.style.removeProperty('--rv-i'); }, 1600);
       });
-    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.12 });
-    groups.forEach(function (g) {
-      document.querySelectorAll(g[0]).forEach(function (el) {
-        if (el.classList.contains('rv') || el.closest('.hero, .page-hero, .site-header, .site-footer, dialog, .cc')) return;
-        if (el.getBoundingClientRect().top < fold) return;
-        el.classList.add('rv');
-        if (g[1] === 'stagger') {
-          var i = Array.prototype.indexOf.call(el.parentNode.children, el);
-          el.style.setProperty('--rv-i', String(i % 6));
-        } else if (g[1]) el.classList.add(g[1]);
-        io.observe(el);
+    }, { rootMargin: '0px 0px -30px 0px', threshold: 0.08 });
+
+    function mark(el, kind, i) {
+      if (el.classList.contains('rv') || el.getBoundingClientRect().bottom < 0) return;
+      el.classList.add('rv');
+      if (kind) el.classList.add(kind);
+      if (i) el.style.setProperty('--rv-i', String(i % 6));
+      io.observe(el);
+    }
+    function isList(el) {
+      if (el.children.length < 2 || el.matches('form, .js-track, .hero-cta, .search-band, p, h1, h2, h3, blockquote, figure')) return false;
+      var d = window.getComputedStyle(el).display;
+      return /^(grid|inline-grid|flex)$/.test(d) || el.matches('ul, ol');
+    }
+    function walk(box) {
+      if (box.matches(SPLIT)) {
+        Array.prototype.forEach.call(box.children, function (c, i) { mark(c, i % 2 ? 'rv-r' : 'rv-l'); });
+        return;
+      }
+      Array.prototype.forEach.call(box.children, function (c) {
+        if (c.matches('script, style, dialog, .cc, [hidden]')) return;
+        if (c.matches(SPLIT)) { walk(c); return; }
+        if (isList(c)) {
+          var items = Array.prototype.filter.call(c.children, function (x) { return !x.matches('script, template'); });
+          // A list of split rows (e.g. "why" rows, cooperation models): each row rises in whole.
+          items.forEach(function (x, i) { mark(x, '', x.matches(SPLIT) ? 0 : i); });
+          return;
+        }
+        mark(c, '');
       });
+    }
+    document.querySelectorAll('#main > *').forEach(function (sec) {
+      if (sec.matches('.hero, .page-hero, .post-hero, script, dialog, .cc, .js-detail')) return;
+      var inner = sec.matches('.wrap') ? sec : sec.querySelector(':scope > .wrap') || sec;
+      walk(inner);
     });
   }
 
@@ -596,19 +615,22 @@
     window.requestAnimationFrame(tick);
   }
   function prepareCounters() {
+    if (!('IntersectionObserver' in window)) return;
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.unobserve(en.target);
+        setTimeout(countUp.bind(null, en.target), 250); // start once the block has risen in
+      });
+    }, { threshold: 0.5 });
     document.querySelectorAll('.stats strong, .intl-stats strong, .emp-nums strong, .emp-years strong').forEach(function (el) {
-      if (el.getBoundingClientRect().top < window.innerHeight) return; // already visible: leave as is
+      if (el.getBoundingClientRect().bottom < 0) return;
       var t = el.textContent.trim();
       if (!/\d/.test(t)) return;
       el.setAttribute('data-count', t);
       el.textContent = t.replace(/\d/g, '0').replace(/^(\D*)0+([\s .,]0+)*/, '$10');
-      var block = el.closest('li, .emp-years') || el;
-      if (!block.classList.contains('rv')) {
-        // not part of a reveal group: start counting when it becomes visible
-        var io = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { io.disconnect(); countUp(el); } }, { threshold: 0.4 });
-        io.observe(el);
-      }
+      io.observe(el);
     });
   }
 

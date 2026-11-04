@@ -1,6 +1,7 @@
 import { pageUrl, asset } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
-import { layout, breadcrumbs, breadcrumbLd, contactButtons } from '../../core/layout.js';
+import { icon } from '../../core/icons.js';
+import { layout, breadcrumbs, breadcrumbLd, contactButtons, telLink } from '../../core/layout.js';
 import { reviewsBlock } from '../reviews/reviews.js';
 import { perksGrid, steps, intlBlock } from '../home/home.js';
 
@@ -37,7 +38,7 @@ ${reviewsBlock(ctx)}
   <h2>${esc(t('faq_title'))}</h2>
   ${faq.map(({ q, a }) => `<details><summary>${esc(q)}</summary><p>${esc(a)}</p></details>`).join('')}
 </section>
-<section class="wrap block"><div class="help-box wide"><h2>${esc(t('help_t'))}</h2><p>${esc(t('help_d'))}</p>${contactButtons(ctx)}</div></section>`;
+<section class="wrap block"><div class="help-box wide"><div class="help-box-text">${icon('chat', 'ic ic-lg')}<h2>${esc(t('help_t'))}</h2><p>${esc(t('help_d'))}</p><p class="help-box-tel"><span class="f-label">${esc(t('tel_cand'))}</span><a href="${telLink(ctx.settings.phone)}">${esc(ctx.settings.phone)}</a></p></div>${contactButtons(ctx)}</div></section>`;
   return layout(ctx, {
     page: 'candidates', title: t('cand_title'), description: t('cand_desc'), body,
     jsonld: [breadcrumbLd(ctx.settings, crumbs), faqLd],

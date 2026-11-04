@@ -52,6 +52,7 @@ export function intlBlock(ctx, { heading = 'h2' } = {}) {
   const { lang, t, settings } = ctx;
   const { intl } = settings;
   return `<section class="wrap block intl" aria-labelledby="intl-t">
+  <p class="emp-kicker">${esc(t('intl_k'))}</p>
   <${heading} class="center-title" id="intl-t">${esc(t('intl_t'))}</${heading}>
   <p class="center lead-c">${esc(t('intl_d'))}</p>
   <ul class="intl-stats">
@@ -122,7 +123,7 @@ ${cvBanner(ctx)}
 </div></section>
 
 <section class="wrap block split">
-  <div class="referral">${icon('gift', 'ic ic-lg')}<div><h2>${esc(t('referral_t', { bonus: settings.referralBonus }))}</h2><p>${esc(t('referral_d', { bonus: settings.referralBonus, half: settings.referralBonus / 2 }))}</p></div></div>
+  <div class="referral">${icon('gift', 'ic ic-lg')}<div><p class="slogan-k">${esc(t('referral_k'))}</p><h2>${esc(t('referral_t', { bonus: settings.referralBonus }))}</h2><p>${esc(t('referral_d', { bonus: settings.referralBonus, half: settings.referralBonus / 2 }))}</p></div></div>
   <div class="help-box"><h2>${esc(t('f_fast'))}</h2>${contactButtons(ctx)}</div>
 </section>
 
