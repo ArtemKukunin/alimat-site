@@ -15,6 +15,7 @@ export const HERO = [
   { photos: 'production', cat: 'production' },
   { photos: 'poultry', job: 'pracownik-produkcji-w-zakladzie-drobiowym-2' },
   { photos: 'beef', job: 'pracownik-linii-ubojowej-wolowina' },
+  { photos: 'greenhouse', cat: 'agriculture' },
   { photos: 'logistics', cat: 'logistics' },
   { photos: 'kitchen', cat: 'kitchen' },
 ];

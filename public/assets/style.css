@@ -936,3 +936,13 @@ html body .rv.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) { .js-detail { transition: none !important; } }
 
 .stats strong, .intl-stats strong, .emp-nums strong, .emp-years strong { font-variant-numeric: tabular-nums; }
+
+/* Business phone (settings.phoneB2B) on employer-facing blocks */
+.b2b-call { display: grid; grid-template-columns: auto 1fr; gap: 10px 14px; align-items: center; margin: 0 0 18px; padding: 16px 18px; background: #fff; border-radius: 18px; border-left: 4px solid var(--orange); box-shadow: var(--shadow); }
+.b2b-call .ic-lg { color: var(--orange-a); }
+.b2b-call strong { display: block; color: var(--ink); }
+.b2b-call span { color: var(--text); font-size: .95rem; }
+.b2b-call .btn { grid-column: 1 / -1; justify-self: start; }
+.b2b-call .btn span { color: #fff; font-size: inherit; }
+@media (min-width: 640px) { .b2b-call { grid-template-columns: auto 1fr auto; } .b2b-call .btn { grid-column: auto; } }
+.emp-strip-tel { margin-top: 6px !important; font-weight: 600; }

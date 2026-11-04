@@ -4,7 +4,7 @@
 import { pageUrl, asset } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
-import { layout, breadcrumbs, breadcrumbLd } from '../../core/layout.js';
+import { layout, breadcrumbs, breadcrumbLd, telLink } from '../../core/layout.js';
 import { formShell, input, textarea } from '../../core/form.js';
 
 /** esc() + **bold** (the only markup used in the texts). */
@@ -13,6 +13,14 @@ const img = (name, alt, w, h, extra = 'loading="lazy" decoding="async"') => `<im
 const head = (kicker, title, lead, id) => `<p class="emp-kicker">${esc(kicker)}</p>
   <h2 class="center-title"${id ? ` id="${id}"` : ''}>${esc(title)}</h2>${lead ? `\n  <p class="center lead-c">${esc(lead)}</p>` : ''}`;
 const two = (n) => String(n).padStart(2, '0');
+
+/** Phone of the business partnerships team (settings.phoneB2B), shown wherever employers are addressed. */
+export function b2bCall(ctx) {
+  const { t, settings } = ctx;
+  if (!settings.phoneB2B) return '';
+  return `<div class="b2b-call">${icon('phone', 'ic ic-lg')}<div><strong>${esc(t('b2b_t'))}</strong><span>${esc(t('b2b_d'))}</span></div>
+    <a class="btn btn-pill btn-orange" href="${telLink(settings.phoneB2B)}">${icon('phone')}<span>${esc(settings.phoneB2B)}</span></a></div>`;
+}
 
 /** Quote request form, shared with the service pages. */
 export function inquirySection(ctx, title, lead) {
@@ -27,6 +35,7 @@ export function inquirySection(ctx, title, lead) {
   return `<section class="band" id="inquiry"><div class="wrap block form-narrow">
   <h2>${esc(title || t('emp_form_t'))}</h2>
   ${title ? `<p>${esc(lead || t('contact_lead'))}</p>` : ''}
+  ${b2bCall(ctx)}
   ${formShell(ctx, { type: 'employer', fieldsHtml: fields, submitLabel: t('emp_submit') })}
 </div></section>`;
 }
@@ -57,7 +66,7 @@ function hero(ctx, e, crumbs) {
     <h1>${esc(e.h1)}</h1>
     <p class="lead">${esc(e.lead)}</p>
     <ul class="emp-chips">${models}</ul>
-    <div class="hero-cta"><a class="btn btn-pill btn-orange" href="#inquiry">${esc(e.cta_talk)} ${icon('arrow')}</a><a class="btn btn-pill btn-outline-blue" href="#models">${esc(e.cta_models)}</a></div>
+    <div class="hero-cta"><a class="btn btn-pill btn-orange" href="#inquiry">${esc(e.cta_talk)} ${icon('arrow')}</a>${ctx.settings.phoneB2B ? `<a class="btn btn-pill btn-outline-blue" href="${telLink(ctx.settings.phoneB2B)}">${icon('phone')}<span>${esc(ctx.settings.phoneB2B)}</span></a>` : ''}</div>
   </div>
   <div class="page-hero-img"><img src="${asset('img/employers/hero-800.webp')}" srcset="${asset('img/employers/hero-800.webp')} 800w, ${asset('img/employers/hero.webp')} 1200w" sizes="(min-width: 1024px) 520px, 100vw" alt="${esc(e.h1)}" width="800" height="533" fetchpriority="high"></div>
 </div></section>`;

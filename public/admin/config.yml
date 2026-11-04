@@ -173,6 +173,7 @@ collections:
           - { label: Firma (pełna nazwa), name: company, widget: string }
           - { label: E-mail, name: email, widget: string }
           - { label: "Telefon (WhatsApp, Viber, połączenia)", name: phone, widget: string }
+          - { label: "Telefon dla firm (oferta dla pracodawców)", name: phoneB2B, widget: string }
           - { label: Telegram (link), name: telegram, widget: string }
           - label: Adres
             name: address

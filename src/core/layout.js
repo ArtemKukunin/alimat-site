@@ -30,7 +30,10 @@ export function organizationLd(settings) {
     image: settings.siteUrl + asset('img/hero-desktop-900.webp'),
     areaServed: { '@type': 'Country', name: 'Poland' },
     knowsLanguage: LANG_CODES,
-    contactPoint: { '@type': 'ContactPoint', contactType: 'recruitment', telephone: settings.phone, email: settings.email, availableLanguage: ['Polish', 'Ukrainian', 'Russian', 'English', 'Spanish', 'Portuguese', 'Romanian'] },
+    contactPoint: [
+      { '@type': 'ContactPoint', contactType: 'recruitment', telephone: settings.phone, email: settings.email, availableLanguage: ['Polish', 'Ukrainian', 'Russian', 'English', 'Spanish', 'Portuguese', 'Romanian'] },
+      ...(settings.phoneB2B ? [{ '@type': 'ContactPoint', contactType: 'sales', telephone: settings.phoneB2B, email: settings.email, availableLanguage: ['Polish', 'English'] }] : []),
+    ],
     address: { '@type': 'PostalAddress', streetAddress: a.street, postalCode: a.postal, addressLocality: a.city, addressCountry: a.country },
     location: settings.offices.map((o) => ({ '@type': 'Place', name: `${settings.brand} ${o.city}`, address: { '@type': 'PostalAddress', streetAddress: o.street, postalCode: o.postal, addressLocality: o.city, addressCountry: 'PL' } })),
     sameAs: Object.values(settings.social),
@@ -196,6 +199,7 @@ function footer(ctx) {
       <h2 class="f-h">${esc(t('nav_contact'))}</h2>
       <ul class="f-list">
         <li><a href="${telLink(settings.phone)}">${esc(settings.phone)}</a></li>
+        ${settings.phoneB2B ? `<li>${esc(t('b2b_short'))}: <a href="${telLink(settings.phoneB2B)}">${esc(settings.phoneB2B)}</a></li>` : ''}
         <li><a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></li>
         ${settings.offices.map((o) => `<li><a href="${esc(o.mapUrl)}" target="_blank" rel="noopener"><address>${esc(o.street)}<br>${esc(o.postal)} ${esc(o.city)}</address></a></li>`).join('')}
       </ul>

@@ -27,6 +27,10 @@ export function renderContact(ctx) {
       <div class="phone-row"><a class="big-link" href="${telLink(settings.phone)}">${esc(settings.phone)}</a><a class="btn btn-pill btn-orange" href="${telLink(settings.phone)}">${icon('phone')}<span>${esc(t('cta_call'))}</span></a></div>
       ${contactButtons(ctx, { call: false })}
     </section>
+    ${settings.phoneB2B ? `<section class="c-card">
+      <h2>${icon('shield')}${esc(t('b2b_t'))}</h2>
+      <div class="phone-row"><a class="big-link" href="${telLink(settings.phoneB2B)}">${esc(settings.phoneB2B)}</a><a class="btn btn-pill btn-outline-blue" href="${telLink(settings.phoneB2B)}">${icon('phone')}<span>${esc(t('cta_call'))}</span></a></div>
+    </section>` : ''}
     <section class="c-card">
       <h2>${icon('mail')}E-mail</h2>
       <p><a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a></p>

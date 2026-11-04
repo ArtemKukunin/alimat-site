@@ -76,7 +76,7 @@ export function renderService(ctx, svc) {
   const others = services.filter((s) => s.id !== svc.id);
   const contact = esc(t('svc_contact'))
     .replace('{email}', `<a href="mailto:${esc(settings.email)}">${esc(settings.email)}</a>`)
-    .replace('{phone}', `<a href="${telLink(settings.phone)}">${esc(settings.phone)}</a>`);
+    .replace('{phone}', `<a href="${telLink(settings.phoneB2B || settings.phone)}">${esc(settings.phoneB2B || settings.phone)}</a>`);
   const body = `<section class="page-hero"><div class="wrap">
   ${breadcrumbs(crumbs)}
   <h1>${esc(tx.name)}</h1>

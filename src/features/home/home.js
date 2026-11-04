@@ -2,7 +2,7 @@ import { existsSync } from 'node:fs';
 import { pageUrl, asset, BASE } from '../../core/i18n.js';
 import { esc } from '../../core/util.js';
 import { icon } from '../../core/icons.js';
-import { layout, contactButtons, officeList } from '../../core/layout.js';
+import { layout, contactButtons, officeList, telLink } from '../../core/layout.js';
 import { reviewsBlock } from '../reviews/reviews.js';
 import { jobSlider } from '../jobs/slider.js';
 import { heroBanner, heroSlides, heroImage } from './heroBanner.js';
@@ -135,7 +135,7 @@ ${cvBanner(ctx)}
 <section class="wrap block-sm">
   <div class="emp-strip">
     ${icon('shield', 'ic ic-lg')}
-    <div><h2>${esc(t('emp_teaser_t'))}</h2><p>${esc(t('emp_teaser_d'))}</p></div>
+    <div><h2>${esc(t('emp_teaser_t'))}</h2><p>${esc(t('emp_teaser_d'))}</p>${settings.phoneB2B ? `<p class="emp-strip-tel">${esc(t('b2b_t'))}: <a href="${telLink(settings.phoneB2B)}">${esc(settings.phoneB2B)}</a></p>` : ''}</div>
     <a class="btn btn-pill btn-outline-blue" href="${pageUrl(lang, 'employers')}">${esc(t('emp_teaser_cta'))} ${icon('arrow')}</a>
   </div>
 </section>`;
