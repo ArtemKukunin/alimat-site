@@ -749,7 +749,7 @@ body.nav-open .main-nav .sub a { font-size: 1rem; padding: 12px; }
 }
 
 /* ── Scroll reveal (classes added by app.js, so content is never hidden without JS) ── */
-html body .rv { opacity: 0; transform: translateY(28px); transition: opacity .7s ease, transform .7s cubic-bezier(.2, .7, .2, 1); transition-delay: calc(var(--rv-i, 0) * 90ms); }
+html body .rv { opacity: 0; transform: translateY(60px); transition: opacity .9s ease, transform .9s cubic-bezier(.2, .7, .2, 1); transition-delay: calc(var(--rv-i, 0) * 90ms); }
 @media (min-width: 1024px) {
   html body .rv-l { transform: translateX(-40px); }
   html body .rv-r { transform: translateX(40px); }
@@ -934,3 +934,5 @@ html body .rv.in { opacity: 1; transform: none; }
   .js-slide:hover .js-more .ic { transform: none; }
 }
 @media (prefers-reduced-motion: reduce) { .js-detail { transition: none !important; } }
+
+.stats strong, .intl-stats strong, .emp-nums strong, .emp-years strong { font-variant-numeric: tabular-nums; }

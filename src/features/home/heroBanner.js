@@ -7,23 +7,32 @@ import { icon } from '../../core/icons.js';
 import { waLink } from '../../core/layout.js';
 import { activeJobs, catText, catUrl, locationLabel } from '../jobs/jobs.js';
 
-/** Categories with a photo set in public/assets/img/hero/<category>-1..4.webp, in display order. */
-export const HERO_CATS = ['production', 'meat', 'logistics', 'kitchen'];
+/**
+ * Banner slides in display order: a photo set in public/assets/img/hero/<photos>-1..4.webp and either a
+ * specific job id (shown while that job is active) or a category (its newest active job).
+ */
+export const HERO = [
+  { photos: 'production', cat: 'production' },
+  { photos: 'poultry', job: 'pracownik-produkcji-w-zakladzie-drobiowym-2' },
+  { photos: 'beef', job: 'pracownik-linii-ubojowej-wolowina' },
+  { photos: 'logistics', cat: 'logistics' },
+  { photos: 'kitchen', cat: 'kitchen' },
+];
 const SLOTS = ['a', 'b', 'c', 'd']; // a, c: portrait 520×600; b, d: landscape 520×300
 const SIZE = { a: [520, 600], b: [520, 300], c: [520, 600], d: [520, 300] };
 
 const newestFirst = (a, b) => String(b.datePosted).localeCompare(String(a.datePosted));
 
-/** The newest active job of every category that has photos. */
 export function heroSlides(jobs) {
   const active = activeJobs(jobs).sort(newestFirst);
-  return HERO_CATS.map((cat) => ({ cat, job: active.find((j) => j.category === cat) })).filter((s) => s.job);
+  return HERO.map((h) => ({ cat: h.photos, job: h.job ? active.find((j) => j.id === h.job) : active.find((j) => j.category === h.cat) }))
+    .filter((s) => s.job);
 }
 
 export const heroImage = (cat, n) => asset(`img/hero/${cat}-${n}.webp`);
 
-function mosaic(ctx, { cat }, i) {
-  const name = catText(ctx, cat).name;
+function mosaic(ctx, { cat, job }, i) {
+  const name = job.text[ctx.lang].title;
   return `<div class="hb-set${i === 0 ? ' is-on' : ''}" data-i="${i}">${SLOTS.map((s, k) => {
     const src = heroImage(cat, k + 1);
     const [w, h] = SIZE[s];
@@ -60,7 +69,7 @@ export function heroBanner(ctx) {
       <h1>${esc(t('hero_h1'))}</h1>
       <span class="dots" aria-hidden="true"><i></i><i></i></span>
       <div class="hb-slides">${slides.map((s, i) => card(ctx, s, i)).join('')}</div>
-      ${slides.length > 1 ? `<div class="hb-nav">${slides.map((s, i) => `<button type="button" class="hb-dot${i === 0 ? ' is-on' : ''}" data-go="${i}" aria-label="${esc(catText(ctx, s.cat).name)}"><span></span></button>`).join('')}
+      ${slides.length > 1 ? `<div class="hb-nav">${slides.map((s, i) => `<button type="button" class="hb-dot${i === 0 ? ' is-on' : ''}" data-go="${i}" aria-label="${esc(s.job.text[lang].title)}"><span></span></button>`).join('')}
         <a class="link-arrow" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))} ${icon('arrow')}</a></div>` : ''}
     </div>
     <div class="hb-media">${slides.map((s, i) => mosaic(ctx, s, i)).join('')}</div>

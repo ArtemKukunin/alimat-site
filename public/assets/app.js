@@ -545,8 +545,9 @@
     var groups = [
       ['.center-title, .block-head, .lead-c, .cv-banner, .emp-strip, .referral, .help-box, .job-slider .js-track', ''],
       ['.intl-stats > li, .intl-lists > div, .review-grid > li, .sections > li, .stats > li, .steps > li, .perks > li, .job-grid > *, .post-grid > *, .offices > li, .ticks > li, .emp-nums > li, .emp-brands > li, .emp-models > *, .emp-flow > li, .emp-inds > li, .emp-refs > li', 'stagger'],
-      ['.why-row:not(.why-row-rev) .why-img, .why-row-rev .why-text, .here-text, .svc-split > :first-child, .emp-split > :first-child', 'rv-l'],
-      ['.why-row:not(.why-row-rev) .why-text, .why-row-rev .why-img, .here-img, .svc-split > :last-child, .emp-split > :last-child', 'rv-r'],
+      ['.why-row, .here', ''], // whole rows rise in, like the original site
+      ['.svc-split > :first-child, .emp-split > :first-child', 'rv-l'],
+      ['.svc-split > :last-child, .emp-split > :last-child', 'rv-r'],
     ];
     var fold = window.innerHeight;
     var io = new IntersectionObserver(function (entries) {
@@ -555,6 +556,7 @@
         var el = en.target;
         io.unobserve(el);
         el.classList.add('in');
+        el.querySelectorAll('[data-count]').forEach(countUp);
         // Drop the helper classes afterwards so hover transitions work normally.
         setTimeout(function () { el.classList.remove('rv', 'rv-l', 'rv-r', 'in'); el.style.removeProperty('--rv-i'); }, 1400);
       });
@@ -573,6 +575,43 @@
     });
   }
 
+  /**
+   * Statistic numbers count up from 0 when they scroll into view (as on the original site).
+   * Keeps the original text's prefix/suffix and digit grouping ("+3 000", "95%", "60+").
+   */
+  function countUp(el) {
+    var text = el.getAttribute('data-count');
+    var m = text.match(/^(\D*)([\d\s .,]*\d)(\D*)$/);
+    if (!m) return;
+    var sep = (m[2].match(/[\s .,]/) || [''])[0];
+    var target = parseInt(m[2].replace(/\D/g, ''), 10);
+    var start = performance.now(), dur = 1800;
+    function fmt(n) { return sep ? String(n).replace(/\B(?=(\d{3})+(?!\d))/g, sep) : String(n); }
+    function tick(now) {
+      var p = Math.min((now - start) / dur, 1);
+      var e = 1 - Math.pow(1 - p, 3);
+      el.textContent = m[1] + fmt(Math.round(target * e)) + m[3];
+      if (p < 1) window.requestAnimationFrame(tick); else el.textContent = text;
+    }
+    window.requestAnimationFrame(tick);
+  }
+  function prepareCounters() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    document.querySelectorAll('.stats strong, .intl-stats strong, .emp-nums strong, .emp-years strong').forEach(function (el) {
+      if (el.getBoundingClientRect().top < window.innerHeight) return; // already visible: leave as is
+      var t = el.textContent.trim();
+      if (!/\d/.test(t)) return;
+      el.setAttribute('data-count', t);
+      el.textContent = t.replace(/\d/g, '0').replace(/^(\D*)0+([\s .,]0+)*/, '$10');
+      var block = el.closest('li, .emp-years') || el;
+      if (!block.classList.contains('rv')) {
+        // not part of a reveal group: start counting when it becomes visible
+        var io = new IntersectionObserver(function (en) { if (en[0].isIntersecting) { io.disconnect(); countUp(el); } }, { threshold: 0.4 });
+        io.observe(el);
+      }
+    });
+  }
+
   function init() {
     rootRedirect();
     rememberLanguage();
@@ -584,6 +623,7 @@
     jobSlider();
     heroBanner();
     reveal();
+    prepareCounters();
     trackClicks();
     cookieBanner();
   }
