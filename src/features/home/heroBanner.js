@@ -12,9 +12,10 @@ import { activeJobs, catText, catUrl, locationLabel } from '../jobs/jobs.js';
  * specific job id (shown while that job is active) or a category (its newest active job).
  */
 export const HERO = [
+  { photos: 'deboning', job: 'specjalista-trybowania-wolowiny-2' },
+  { photos: 'beef', job: 'pracownik-linii-ubojowej-wolowina' },
   { photos: 'production', cat: 'production' },
   { photos: 'poultry', job: 'pracownik-produkcji-w-zakladzie-drobiowym-2' },
-  { photos: 'beef', job: 'pracownik-linii-ubojowej-wolowina' },
   { photos: 'greenhouse', cat: 'agriculture' },
   { photos: 'logistics', cat: 'logistics' },
   { photos: 'kitchen', cat: 'kitchen' },
