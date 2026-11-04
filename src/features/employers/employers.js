@@ -87,7 +87,7 @@ function about(e) {
 </section>`;
 }
 
-function numbers(ctx, e) {
+export function numbers(ctx, e) {
   const { t, settings } = ctx;
   return `<section class="band"><div class="wrap block">
   ${head(e.nums_k, e.nums_t)}
@@ -98,7 +98,7 @@ function numbers(ctx, e) {
 </div></section>`;
 }
 
-function group(e) {
+export function group(e) {
   return `<section class="wrap block">
   ${head(e.group_k, e.group_t, e.group_lead)}
   <ul class="emp-brands">

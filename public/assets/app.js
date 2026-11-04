@@ -544,7 +544,7 @@
     if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var groups = [
       ['.center-title, .block-head, .lead-c, .cv-banner, .emp-strip, .referral, .help-box, .job-slider .js-track', ''],
-      ['.intl-stats > li, .intl-lists > div, .review-grid > li, .sections > li, .stats > li, .steps > li, .perks > li, .job-grid > *, .post-grid > *, .offices > li, .ticks > li, .emp-nums > li, .emp-brands > li, .emp-models > *, .emp-flow > li, .emp-inds > li, .emp-refs > li', 'stagger'],
+      ['.intl-stats > li, .intl-lists > div, .review-grid > li, .sections > li, .stats > li, .steps > li, .perks > li, .job-grid > *, .post-grid > *, .offices > li, .ticks > li, .emp-nums > li, .emp-brands > li, .emp-models > *, .emp-flow > li, .emp-inds > li, .emp-refs > li, .ab-story > li, .ab-values > li, .ab-join > a', 'stagger'],
       ['.why-row, .here', ''], // whole rows rise in, like the original site
       ['.svc-split > :first-child, .emp-split > :first-child', 'rv-l'],
       ['.svc-split > :last-child, .emp-split > :last-child', 'rv-r'],

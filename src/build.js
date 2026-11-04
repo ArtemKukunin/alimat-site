@@ -17,6 +17,7 @@ import { renderEmployers } from './features/employers/employers.js';
 import { renderContact } from './features/contact/contact.js';
 import { loadContent, buildBlog, postsIn, blogPath, legalUrl } from './features/blog/blog.js';
 import { loadReviews, renderReviews } from './features/reviews/reviews.js';
+import { renderAbout } from './features/about/about.js';
 import { loadServices, renderService, serviceSlugs } from './features/services/services.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -34,7 +35,8 @@ export function loadData() {
   const services = loadServices(readJson(path.join(DATA, 'services.json')));
   const reviews = loadReviews(readJson(path.join(DATA, 'reviews.json')));
   const employers = Object.fromEntries(LANG_CODES.map((l) => [l, readJson(path.join(DATA, 'employers', `${l}.json`))]));
-  return { settings, ui, jobs, categories, posts, pages, legacy, services, reviews, employers };
+  const about = Object.fromEntries(LANG_CODES.map((l) => [l, readJson(path.join(DATA, 'about', `${l}.json`))]));
+  return { settings, ui, jobs, categories, posts, pages, legacy, services, reviews, employers, about };
 }
 
 /** File location inside dist for a page URL (drops the sub-path base and preview suffix). */
@@ -42,7 +44,7 @@ const outFile = (url) => path.join(DIST, url.slice(BASE.length).replace(/index\.
 
 const STATIC_PAGES = {
   home: renderHome, jobs: renderJobsList, candidates: renderCandidates,
-  apply: renderApply, employers: renderEmployers, contact: renderContact, reviews: renderReviews,
+  apply: renderApply, employers: renderEmployers, contact: renderContact, reviews: renderReviews, about: renderAbout,
 };
 
 function rootPage(settings, ui) {
@@ -123,7 +125,7 @@ function redirects(jobs, legacy, services) {
     ['/oferta-dla-firm/*', pl('employers')],
     ['/zapytanie-ofertowe/*', `${pl('employers')}#inquiry`],
     ['/kontakt/*', pl('contact')],
-    ['/o-nas/*', pl('contact')],
+    ['/o-nas/*', pl('about')],
     ...jobs.map((j) => [`/oferta/${j.id}/*`, pl('jobs', j.id)]),
     // Duplicate ads on the old site, merged into one page each
     ...Object.entries(legacy.jobAliases || {}).filter(([from]) => !jobs.some((j) => j.id === from)).map(([from, to]) => [`/oferta/${from}/*`, pl('jobs', to)]),
@@ -192,7 +194,7 @@ ${cached.map(([p, h]) => `${p}\n${h}`).join('\n')}
 }
 
 export function build() {
-  const { settings, ui, jobs, categories, posts, pages, legacy, services, reviews, employers } = loadData();
+  const { settings, ui, jobs, categories, posts, pages, legacy, services, reviews, employers, about } = loadData();
   const analytics = loadAnalytics(settings);
   const csp = contentSecurityPolicy(settings, analytics);
   const redirectMap = redirects(jobs, legacy, services);
@@ -208,7 +210,7 @@ export function build() {
   let count = 0;
   const slugOf = (u) => u.replace(/^\/+|\/+$/g, '');
   const makeCtx = (lang) => ({
-    lang, t: translator(ui, lang), settings, jobs, categories, services, reviews, employers: employers[lang], analytics, csp,
+    lang, t: translator(ui, lang), settings, jobs, categories, services, reviews, employers: employers[lang], about: about[lang], analytics, csp,
     blogUrl: blogPath(postsIn(posts, lang).length ? lang : 'pl'),
     privacyUrl: legalUrl(pages, slugOf(settings.privacyUrl), lang),
     cookiesUrl: legalUrl(pages, slugOf(settings.cookiesUrl), lang),

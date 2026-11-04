@@ -117,7 +117,7 @@ function header(ctx, page, langLinks) {
     employers: (ctx.services || []).map((s) => [pageUrl(lang, 'employers', s[lang].slug), s[lang].name]),
     candidates: Object.entries(ctx.categories || {}).map(([, c]) => [pageUrl(lang, 'jobs', c[lang].slug), c[lang].name]),
   };
-  const nav = ['jobs', 'candidates', 'employers', 'contact', 'reviews']
+  const nav = ['jobs', 'candidates', 'employers', 'about', 'reviews', 'contact']
     .map((p) => {
       const cur = p === page ? ' aria-current="page"' : '';
       const sub = (subs[p] || []).map(([href, name]) => `<li><a href="${href}">${esc(name)}</a></li>`).join('');
@@ -192,7 +192,7 @@ function footer(ctx) {
     <div>
       <h2 class="f-h">Alimat Group</h2>
       <ul class="f-list">
-        ${['jobs', 'candidates', 'apply', 'employers', 'contact'].map((p) => `<li><a href="${pageUrl(lang, p)}">${esc(t(p === 'apply' ? 'cta_apply_long' : `nav_${p}`))}</a></li>`).join('')}
+        ${['jobs', 'candidates', 'apply', 'employers', 'about', 'contact'].map((p) => `<li><a href="${pageUrl(lang, p)}">${esc(t(p === 'apply' ? 'cta_apply_long' : `nav_${p}`))}</a></li>`).join('')}
       </ul>
     </div>
     <div>
