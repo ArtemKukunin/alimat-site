@@ -272,39 +272,60 @@
     }
   }
 
-  /** Job slider: arrows, dots, autoplay every 15 s (paused on hover/focus/touch, off with reduced motion). */
+  /**
+   * Job slider: endless loop. The slides are cloned once after the originals, the track glides slowly
+   * (SPEED px/s) and jumps back by exactly one set width when it reaches the clones, so the loop is seamless.
+   * Arrows move one card, dots jump to a job. Pauses on hover, keyboard focus, touch, the quick-apply dialog
+   * and hidden tabs. With reduced motion: no gliding, just arrows/dots/swipe.
+   */
   function jobSlider() {
+    var SPEED = 40; // px per second
     document.querySelectorAll('.job-slider').forEach(function (root) {
       var track = root.querySelector('.js-track');
-      var slides = track.children;
       var dotsBox = root.querySelector('.js-dots');
-      if (!slides.length) return;
-      var paused = false, timer;
+      var originals = Array.prototype.slice.call(track.children);
+      var n = originals.length;
+      if (!n) return;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-      function step() { return slides.length > 1 ? slides[1].offsetLeft - slides[0].offsetLeft : track.clientWidth; }
-      function perView() { return Math.max(1, Math.round(track.clientWidth / step())); }
-      function pages() { return Math.max(1, Math.ceil(slides.length - perView() + 1)); }
-      function current() { return Math.round(track.scrollLeft / step()); }
-      function go(i) {
-        var n = pages();
-        i = (i + n) % n;
-        track.scrollTo({ left: i * step(), behavior: 'smooth' });
+      function step() { return n > 1 ? originals[1].offsetLeft - originals[0].offsetLeft : track.clientWidth; }
+      function setWidth() { return step() * n; }
+      function fits() { return track.scrollWidth <= track.clientWidth + 2 && !root.classList.contains('js-loop'); }
+
+      // Clones for the seamless loop: hidden from screen readers and keyboard, still clickable with the mouse.
+      if (n > 1) {
+        originals.forEach(function (sl) {
+          var c = sl.cloneNode(true);
+          c.setAttribute('aria-hidden', 'true');
+          c.classList.add('js-clone');
+          c.querySelectorAll('[id]').forEach(function (el) { el.id += '-c'; });
+          c.querySelectorAll('[aria-controls]').forEach(function (el) { el.setAttribute('aria-controls', el.getAttribute('aria-controls') + '-c'); });
+          c.querySelectorAll('a, button').forEach(function (el) { el.tabIndex = -1; });
+          track.appendChild(c);
+        });
+        root.classList.add('js-loop');
+      } else {
+        root.classList.add('js-static');
+        return;
       }
-      function renderDots() {
-        var n = pages();
-        if (dotsBox.children.length !== n) {
-          dotsBox.innerHTML = '';
-          for (var i = 0; i < n; i++) {
-            var d = document.createElement('button');
-            d.type = 'button';
-            d.tabIndex = -1;
-            d.addEventListener('click', go.bind(null, i));
-            dotsBox.appendChild(d);
-          }
-        }
-        var c = Math.min(current(), n - 1);
-        Array.prototype.forEach.call(dotsBox.children, function (d, i) { d.classList.toggle('on', i === c); });
-        root.classList.toggle('js-static', n < 2);
+
+      var pos = 0, lastSet = -1, holdUntil = 0;
+      var holds = {};
+      function hold(why, on) { if (on) holds[why] = 1; else delete holds[why]; }
+      function wrap() {
+        var w = setWidth();
+        if (pos >= w) pos -= w;
+        if (pos < 0) pos += w;
+      }
+      function apply() { track.scrollLeft = pos; lastSet = track.scrollLeft; }
+      function current() { return Math.round(track.scrollLeft / step()) % n; }
+
+      function go(i) {
+        // Glide to card i (may be past the set end; wrap afterwards so the motion always goes forward/back naturally).
+        var target = i * step();
+        holdUntil = performance.now() + 700;
+        track.scrollTo({ left: target, behavior: reduce ? 'auto' : 'smooth' });
+        setTimeout(function () { pos = track.scrollLeft; wrap(); apply(); }, reduce ? 0 : 650);
       }
 
       // "Full description": opens the slide-up panel (touch screens, keyboard); hover does it with CSS.
@@ -315,33 +336,71 @@
         if (!b) return;
         var slide = b.closest('.js-slide');
         var open = !slide.classList.contains('is-open');
-        root.querySelectorAll('.js-slide.is-open').forEach(function (s) { s.classList.remove('is-open'); s.querySelector('.js-more').setAttribute('aria-expanded', 'false'); });
+        track.querySelectorAll('.js-slide.is-open').forEach(function (sl) { sl.classList.remove('is-open'); sl.querySelector('.js-more').setAttribute('aria-expanded', 'false'); });
         slide.classList.toggle('is-open', open);
         b.setAttribute('aria-expanded', String(open));
       });
+
+      for (var i = 0; i < n; i++) {
+        var d = document.createElement('button');
+        d.type = 'button';
+        d.tabIndex = -1;
+        d.addEventListener('click', go.bind(null, i));
+        dotsBox.appendChild(d);
+      }
+      function renderDots() {
+        var c = current();
+        Array.prototype.forEach.call(dotsBox.children, function (d, k) { d.classList.toggle('on', k === c); });
+      }
+
       root.querySelectorAll('.js-btn').forEach(function (b) {
-        b.addEventListener('click', function () { go(current() + Number(b.getAttribute('data-dir'))); });
+        b.addEventListener('click', function () {
+          var dir = Number(b.getAttribute('data-dir'));
+          var idx = Math.round(track.scrollLeft / step());
+          if (dir < 0 && idx === 0) { pos = setWidth(); apply(); idx = n; } // step back from the first card into the clones
+          go(idx + dir);
+        });
       });
-      track.addEventListener('scroll', function () { window.requestAnimationFrame(renderDots); }, { passive: true });
-      window.addEventListener('resize', renderDots);
+      track.addEventListener('scroll', function () {
+        // A swipe or wheel by the visitor: follow it, keeping the position inside the loop.
+        if (Math.abs(track.scrollLeft - lastSet) > 2) {
+          pos = track.scrollLeft;
+          if (pos >= setWidth() || pos <= 0) { wrap(); if (performance.now() > holdUntil) apply(); }
+        }
+        window.requestAnimationFrame(renderDots);
+      }, { passive: true });
       renderDots();
 
-      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       if (reduce) return;
-      function pause() { paused = true; }
-      function resume() { paused = false; }
-      root.addEventListener('mouseenter', pause);
-      root.addEventListener('mouseleave', resume);
-      root.addEventListener('focusin', pause);
-      root.addEventListener('focusout', resume);
-      track.addEventListener('touchstart', function () { pause(); clearTimeout(timer); timer = setTimeout(resume, 10000); }, { passive: true });
-      setInterval(function () {
+      root.classList.add('js-auto'); // no scroll-snap while gliding
+      root.addEventListener('mouseenter', function () { hold('hover', true); });
+      root.addEventListener('mouseleave', function () { hold('hover', false); });
+      root.addEventListener('focusin', function () { hold('focus', true); });
+      root.addEventListener('focusout', function () { hold('focus', false); });
+      var touchTimer;
+      track.addEventListener('touchstart', function () {
+        hold('touch', true);
+        root.classList.remove('js-auto');
+        clearTimeout(touchTimer);
+        touchTimer = setTimeout(function () { pos = track.scrollLeft; hold('touch', false); root.classList.add('js-auto'); }, 8000);
+      }, { passive: true });
+
+      var last = performance.now();
+      function frame(now) {
+        var dt = Math.min(now - last, 100) / 1000;
+        last = now;
         var dlg = document.getElementById('lead-pop');
-        if (!paused && !document.hidden && !(dlg && dlg.open)) go(current() + 1);
-      }, 15000);
+        var opened = track.querySelector('.js-slide.is-open');
+        if (!Object.keys(holds).length && !document.hidden && !(dlg && dlg.open) && !opened && now > holdUntil) {
+          pos += SPEED * dt;
+          wrap();
+          apply();
+        }
+        window.requestAnimationFrame(frame);
+      }
+      window.requestAnimationFrame(frame);
     });
   }
-
 
   /** Conversion events for GTM (dataLayer), direct GA4/Ads (gtag) and Meta Pixel (fbq). No-ops when nothing is configured. */
   var META_EVENT = { generate_lead: 'Lead', contact: 'Contact' };
