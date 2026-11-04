@@ -1,0 +1,257 @@
+{
+  "title": "Pracownicy i outsourcing dla firm — model Source-to-Operations | Alimat Group",
+  "desc": "Praca tymczasowa, outsourcing procesów i rekrutacja stała. 15 lat doświadczenia, 52 firmy partnerskie, 3 000+ pracowników rocznie.",
+  "kicker": "Source-to-Operations™",
+  "h1": "Pracownicy i zespoły dla Twojej firmy",
+  "lead": "Zintegrowany model zarządzania personelem i procesami operacyjnymi — od pozyskania pracowników do sprawnie funkcjonujących zespołów.",
+  "cta_talk": "Porozmawiajmy o współpracy",
+  "cta_models": "Modele współpracy",
+  "about_k": "O nas",
+  "about_t": "Poznaj Alimat Group",
+  "about_p1": "Od **15 lat łączymy przedsiębiorstwa z pracownikami z całego świata**, pomagając tworzyć stabilne zespoły, które realnie wspierają skalowanie biznesu.",
+  "about_quote": "Każdą współpracę budujemy na odpowiedzialności, wzajemnym zaufaniu i zrozumieniu indywidualnych potrzeb przedsiębiorstwa.",
+  "about_p2": "Wierzymy, że skuteczna rekrutacja nie kończy się w momencie zatrudnienia. Jej prawdziwa wartość to **sprawnie działające zespoły** w strukturach naszych Partnerów.",
+  "about_p3": "Model **Source-to-Operations** to kompleksowe wsparcie przedsiębiorstw od pozyskania pracowników do sprawnie funkcjonujących zespołów.",
+  "nums_k": "Alimat Group w liczbach",
+  "nums_t": "Liczby, które budują zaufanie",
+  "years": "lat",
+  "years_d": "doświadczenia na rynku",
+  "group_k": "Struktura grupy",
+  "group_t": "Pięć marek. Jeden system operacyjny.",
+  "group_lead": "Każda spółka odpowiada za wyspecjalizowany obszar. Razem pozwalają bezpiecznie przejąć cały proces operacyjny — od pozyskania pracownika po zarządzanie zespołami w przedsiębiorstwie Partnera.",
+  "group_center": "Jeden partner, jeden system — od rekrutacji po codzienną realizację procesów.",
+  "brands": [
+    "Rekrutacja międzynarodowa.",
+    "Outsourcing procesów, zarządzanie zespołami.",
+    "Kadry, płace, księgowość, legalizacja i administracja.",
+    "Zakwaterowanie pracowników, transport pracowniczy.",
+    "Rekrutacja stała, doradztwo HR."
+  ],
+  "models_k": "Modele współpracy",
+  "models_t": "Trzy modele. Jeden cel.",
+  "models_lead": "Współpraca dopasowana do potrzeb, skali i tempa rozwoju przedsiębiorstwa.",
+  "models": [
+    {
+      "t": "Praca tymczasowa",
+      "short": "Elastyczne wsparcie zespołu",
+      "sub": "Elastyczność wtedy, gdy jej potrzebujesz",
+      "p": [
+        "Zapewniamy pracowników w odpowiedzi na sezonowość, zwiększone zapotrzebowanie, nieobecności lub dynamiczne zmiany w organizacji.",
+        "Alimat Group odpowiada za zatrudnienie i obsługę formalną pracowników, natomiast klient, jako pracodawca użytkownik, organizuje ich codzienną pracę i nadzoruje realizację zadań."
+      ],
+      "list": [
+        "szybkie uzupełnienie zespołu",
+        "możliwość dostosowania liczby pracowników",
+        "ograniczenie obciążeń organizacyjnych po stronie klienta"
+      ],
+      "note": "To elastyczne wsparcie, które pomaga zachować ciągłość pracy i sprawnie reagować na potrzeby operacyjne."
+    },
+    {
+      "t": "Outsourcing procesów",
+      "short": "Odpowiedzialność za realizację",
+      "sub": "Odpowiedzialność za rezultat",
+      "p": [
+        "Klient powierza nam realizację całego wybranego procesu lub jego części oraz określa oczekiwany zakres i rezultat. My zapewniamy odpowiednio przygotowany zespół, własnych liderów oraz organizację codziennej pracy.",
+        "Kierownictwo klienta ustala bieżące kwestie z liderami Alimat Group, którzy przekazują zadania zespołowi, nadzorują ich wykonanie i koordynują cały powierzony obszar."
+      ],
+      "list": [
+        "przejęcie całego procesu lub jego części",
+        "zespół zarządzany przez liderów Alimat Group",
+        "jasna komunikacja pomiędzy kierownictwem klienta a naszymi liderami",
+        "elastyczna skala zespołu"
+      ],
+      "split_t": "Podział odpowiedzialności",
+      "client_t": "Klient",
+      "client_d": "Określa potrzeby, zakres i oczekiwany rezultat.",
+      "us_d": "Organizuje zespół, zarządza pracą, odpowiada za realizację oraz ciągłość procesu.",
+      "note": "Klient określa potrzeby i oczekiwany rezultat, my odpowiadamy za organizację, realizację i ciągłość powierzonego procesu."
+    },
+    {
+      "t": "Rekrutacja stała",
+      "short": "Długofalowe wzmocnienie organizacji",
+      "sub": "Kandydat pozyskany dla Twojej organizacji",
+      "p": [
+        "Na podstawie określonego zapotrzebowania pozyskujemy i weryfikujemy odpowiednich kandydatów.",
+        "Po zakończeniu procesu wybrana osoba zostanie zatrudniona bezpośrednio przez klienta."
+      ],
+      "list_t": "Zakres usługi",
+      "list": [
+        "rekrutacja prowadzona pod konkretne stanowisko",
+        "dostęp do kandydatów z rynków międzynarodowych",
+        "selekcja zgodna z wymaganiami organizacji",
+        "bezpośrednie zatrudnienie u klienta"
+      ],
+      "note": "My odpowiadamy za znalezienie właściwego kandydata, klient zyskuje pracownika gotowego do długofalowej współpracy."
+    }
+  ],
+  "model_more": "Szczegóły usługi",
+  "consulting": "Potrzebujesz wsparcia w HR i polityce personalnej? Zobacz doradztwo personalne",
+  "flow_k": "Przebieg współpracy",
+  "flow_t": "Współpraca z Alimat Group w trzech krokach",
+  "flow_lead": "Prosty proces. Partnerskie podejście. Wspólny cel.",
+  "flow": [
+    {
+      "t": "Poznajemy i dopasowujemy",
+      "d": "Poznajemy organizację klienta i wspólnie określamy najlepszy model współpracy.",
+      "items": [
+        [
+          "Pierwszy kontakt",
+          "Ustalamy termin i miejsce spotkania."
+        ],
+        [
+          "Analiza potrzeb",
+          "Poznajemy specyfikę działalności oraz zapotrzebowanie klienta."
+        ],
+        [
+          "Poznanie środowiska pracy",
+          "Odwiedzamy zakład i analizujemy warunki realizacji."
+        ],
+        [
+          "Dobór modelu",
+          "Wybieramy rozwiązanie dopasowane do potrzeb organizacji."
+        ],
+        [
+          "Przygotowanie oferty",
+          "Przedstawiamy zakres, warunki i zasady współpracy."
+        ],
+        [
+          "Podpisanie umowy",
+          "Finalizujemy ustalenia i rozpoczynamy współpracę."
+        ]
+      ]
+    },
+    {
+      "t": "Przygotowujemy",
+      "d": "Realizujemy ustalenia i przygotowujemy pracowników do podjęcia pracy.",
+      "items": [
+        [
+          "Rekrutacja",
+          "Korzystamy z własnej bazy kandydatów oraz prowadzimy rekrutacje na rynkach międzynarodowych."
+        ],
+        [
+          "Weryfikacja",
+          "Sprawdzamy doświadczenie, kompetencje i gotowość do pracy."
+        ],
+        [
+          "Legalizacja",
+          "Koordynujemy formalności związane z legalnym pobytem i pracą."
+        ],
+        [
+          "Zatrudnienie",
+          "Przygotowujemy dokumentację zgodną z modelem współpracy."
+        ],
+        [
+          "Relokacja i logistyka",
+          "Organizujemy przyjazd, zakwaterowanie i transport pracowników, korzystając z własnych rozwiązań lub infrastruktury klienta."
+        ]
+      ]
+    },
+    {
+      "t": "Wdrażamy i wspieramy",
+      "d": "Pomagamy sprawnie rozpocząć współpracę i zapewniamy wsparcie dopasowane do wybranego modelu.",
+      "items": [
+        [
+          "Wdrożenie i przygotowanie",
+          "Przygotowujemy pracowników do podjęcia obowiązków, przeprowadzamy wymagane szkolenia i wspieramy ich wdrożenie w środowisku klienta."
+        ],
+        [
+          "Zarządzanie zespołem*",
+          "Koordynujemy pracę zespołu, dbając o komunikację, organizację i ciągłość realizowanych zadań."
+        ],
+        [
+          "KPI, raportowanie i optymalizacja*",
+          "Monitorujemy ustalone wskaźniki, raportujemy wyniki i wspólnie doskonalimy realizowane procesy."
+        ]
+      ],
+      "foot": "* W zależności od uzgodnionego modelu współpracy."
+    }
+  ],
+  "step": "Krok",
+  "ind_k": "Branże",
+  "ind_t": "Zespoły dopasowane do realiów branży",
+  "ind_lead": "Każdy sektor ma własne potrzeby, tempo pracy i wymagania. Dlatego tworzymy zespoły odpowiadające specyfice środowiska, w którym będą działać.",
+  "inds": {
+    "logistics": [
+      "Logistyka",
+      [
+        "pracownicy magazynowi",
+        "operatorzy wózków widłowych",
+        "osoby kompletujące zamówienia",
+        "pracownicy sortowni",
+        "personel załadunku i rozładunku",
+        "kierowcy"
+      ]
+    ],
+    "production": [
+      "Produkcja przemysłowa",
+      [
+        "pracownicy linii produkcyjnych",
+        "operatorzy maszyn",
+        "monterzy produkcji seryjnej",
+        "pakowacze",
+        "kontrolerzy jakości"
+      ]
+    ],
+    "food": [
+      "Sektor spożywczy",
+      [
+        "pracownicy sortowania i pakowania",
+        "pracownicy przetwórstwa rybnego",
+        "pracownicy uprawy i zbioru",
+        "pracownicy przetwórstwa owoców i warzyw",
+        "operatorzy linii produkcyjnych"
+      ]
+    ],
+    "horeca": [
+      "HoReCa",
+      [
+        "kucharze",
+        "pomoc kuchenna",
+        "kelnerzy",
+        "personel sprzątający",
+        "pracownicy przygotowania posiłków",
+        "obsługa zaplecza hotelowego"
+      ]
+    ],
+    "construction": [
+      "Budownictwo",
+      [
+        "cieśle i zbrojarze",
+        "murarze",
+        "pracownicy ogólnobudowlani",
+        "monterzy instalacji",
+        "pracownicy wykończeniowi"
+      ]
+    ],
+    "welding": [
+      "Montaż przemysłowy i spawalnictwo",
+      [
+        "spawacze",
+        "monterzy konstrukcji stalowych",
+        "ślusarze",
+        "monterzy maszyn i urządzeń",
+        "monterzy rurociągów"
+      ]
+    ]
+  },
+  "refs_k": "Referencje",
+  "refs_t": "Referencje naszych partnerów potwierdzają niezawodność systemu Source-to-Operations™",
+  "refs": {
+    "animex": [
+      "Animex Foods",
+      "Jakość, terminowość i zgodność z wymaganiami bezpieczeństwa żywności."
+    ],
+    "polonia": [
+      "Polonia Beef",
+      "Terminowa i elastyczna realizacja usług oraz dbałość o jakość procesu."
+    ],
+    "konskowola": [
+      "Końskowola Meat",
+      "Współpraca od 2022 roku, niezawodność i elastyczność organizacyjna."
+    ]
+  },
+  "ref_alt": "List referencyjny",
+  "partners_t": "Zaufali nam",
+  "cta_t": "Dopasujmy model współpracy do potrzeb Twojej organizacji",
+  "cta_d": "Outsourcing procesów, praca tymczasowa czy rekrutacja stała? Wspólnie wybierzemy rozwiązanie uwzględniające skalę zapotrzebowania, profil stanowisk, lokalizację oraz sposób organizacji pracy."
+}

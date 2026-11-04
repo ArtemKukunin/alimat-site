@@ -386,6 +386,122 @@
     if (!c.get()) show(false);
   }
 
+  /**
+   * Home hero banner: switches every 5 s. The 5 s timer is the CSS progress bar on the active dot
+   * (animationend → next slide), so pausing is just animation-play-state: hover, keyboard focus,
+   * touch, open quick-apply dialog. With reduced motion the bar never runs → no autoplay.
+   */
+  function heroBanner() {
+    var root = document.querySelector('[data-hb]');
+    if (!root) return;
+    var slides = root.querySelectorAll('.hb-slide');
+    var sets = root.querySelectorAll('.hb-set');
+    var dots = root.querySelectorAll('.hb-dot');
+    var n = slides.length, cur = 0, outTimer;
+    if (n < 2) return;
+
+    function load(i) {
+      sets[(i + n) % n].querySelectorAll('img[data-src]').forEach(function (img) {
+        img.src = img.getAttribute('data-src');
+        img.removeAttribute('data-src');
+      });
+    }
+    function go(i) {
+      i = (i + n) % n;
+      if (i === cur) return;
+      load(i);
+      load(i + 1);
+      var prev = sets[cur];
+      prev.classList.remove('is-on');
+      prev.classList.add('is-out');
+      clearTimeout(outTimer);
+      outTimer = setTimeout(function () { prev.classList.remove('is-out'); }, 650);
+      sets[i].classList.remove('is-out');
+      sets[i].classList.add('is-on');
+      slides[cur].classList.remove('is-on');
+      slides[i].classList.add('is-on');
+      dots[cur].classList.remove('is-on');
+      void dots[i].offsetWidth; // restart the progress animation
+      dots[i].classList.add('is-on');
+      cur = i;
+    }
+    // Next slide's photos load once the page is ready, so a switch never shows empty frames.
+    if (document.readyState === 'complete') load(1);
+    else window.addEventListener('load', function () { load(1); }, { once: true });
+
+    root.addEventListener('animationend', function (e) {
+      if (e.animationName === 'hb-progress' && !root.classList.contains('is-paused')) go(cur + 1);
+    });
+    dots.forEach(function (d) { d.addEventListener('click', function () { go(Number(d.getAttribute('data-go'))); }); });
+
+    var holds = {};
+    function hold(why, on) {
+      if (on) holds[why] = 1; else delete holds[why];
+      root.classList.toggle('is-paused', Object.keys(holds).length > 0);
+    }
+    root.addEventListener('mouseenter', function () { hold('hover', true); });
+    root.addEventListener('mouseleave', function () { hold('hover', false); });
+    root.addEventListener('focusin', function (e) { if (!e.target.classList.contains('hb-dot')) hold('focus', true); });
+    root.addEventListener('focusout', function () { hold('focus', false); });
+    var dlg = document.getElementById('lead-pop');
+    if (dlg) {
+      root.addEventListener('click', function (e) { if (e.target.closest('[data-apply]')) hold('dialog', true); });
+      dlg.addEventListener('close', function () { hold('dialog', false); });
+    }
+    // Touch: swipe to change, and a short pause so the visitor can read.
+    var x0 = null, touchTimer;
+    root.addEventListener('touchstart', function (e) {
+      x0 = e.touches[0].clientX;
+      hold('touch', true);
+      clearTimeout(touchTimer);
+      touchTimer = setTimeout(function () { hold('touch', false); }, 8000);
+    }, { passive: true });
+    root.addEventListener('touchend', function (e) {
+      if (x0 === null) return;
+      var dx = e.changedTouches[0].clientX - x0;
+      x0 = null;
+      if (Math.abs(dx) > 50) go(cur + (dx < 0 ? 1 : -1));
+    }, { passive: true });
+  }
+
+  /**
+   * Scroll reveal like the original site's entrance animations: blocks below the fold fade/slide in
+   * once, children of the same list are staggered. Content already on screen is left untouched.
+   */
+  function reveal() {
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var groups = [
+      ['.center-title, .block-head, .lead-c, .cv-banner, .emp-strip, .referral, .help-box, .job-slider .js-track', ''],
+      ['.intl-stats > li, .intl-lists > div, .review-grid > li, .sections > li, .stats > li, .steps > li, .perks > li, .job-grid > *, .post-grid > *, .offices > li, .ticks > li, .emp-nums > li, .emp-brands > li, .emp-models > *, .emp-flow > li, .emp-inds > li, .emp-refs > li', 'stagger'],
+      ['.why-row:not(.why-row-rev) .why-img, .why-row-rev .why-text, .here-text, .svc-split > :first-child, .emp-split > :first-child', 'rv-l'],
+      ['.why-row:not(.why-row-rev) .why-text, .why-row-rev .why-img, .here-img, .svc-split > :last-child, .emp-split > :last-child', 'rv-r'],
+    ];
+    var fold = window.innerHeight;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var el = en.target;
+        io.unobserve(el);
+        el.classList.add('in');
+        // Drop the helper classes afterwards so hover transitions work normally.
+        setTimeout(function () { el.classList.remove('rv', 'rv-l', 'rv-r', 'in'); el.style.removeProperty('--rv-i'); }, 1400);
+      });
+    }, { rootMargin: '0px 0px -40px 0px', threshold: 0.12 });
+    groups.forEach(function (g) {
+      document.querySelectorAll(g[0]).forEach(function (el) {
+        if (el.classList.contains('rv') || el.closest('.hero, .page-hero, .site-header, .site-footer, dialog, .cc')) return;
+        if (el.getBoundingClientRect().top < fold) return;
+        el.classList.add('rv');
+        if (g[1] === 'stagger') {
+          var i = Array.prototype.indexOf.call(el.parentNode.children, el);
+          el.style.setProperty('--rv-i', String(i % 6));
+        } else if (g[1]) el.classList.add(g[1]);
+        io.observe(el);
+      });
+    });
+  }
+
   function init() {
     rootRedirect();
     rememberLanguage();
@@ -395,6 +511,8 @@
     forms();
     leadPopup();
     jobSlider();
+    heroBanner();
+    reveal();
     trackClicks();
     cookieBanner();
   }

@@ -1,0 +1,257 @@
+{
+  "title": "Personal și outsourcing pentru companii — modelul Source-to-Operations | Alimat Group",
+  "desc": "Muncă temporară, outsourcing de procese și recrutare permanentă. 15 ani de experiență, 52 de parteneri, peste 3 000 de lucrători pe an.",
+  "kicker": "Source-to-Operations™",
+  "h1": "Lucrători și echipe pentru compania ta",
+  "lead": "Un model integrat de gestionare a personalului și a proceselor operaționale — de la atragerea lucrătorilor până la echipe care funcționează eficient.",
+  "cta_talk": "Să discutăm despre colaborare",
+  "cta_models": "Modele de colaborare",
+  "about_k": "Despre noi",
+  "about_t": "Faceți cunoștință cu Alimat Group",
+  "about_p1": "De **15 ani conectăm companii cu lucrători din întreaga lume**, ajutând la crearea unor echipe stabile care susțin cu adevărat creșterea afacerii.",
+  "about_quote": "Construim fiecare colaborare pe responsabilitate, încredere reciprocă și înțelegerea nevoilor individuale ale fiecărei companii.",
+  "about_p2": "Credem că o recrutare eficientă nu se încheie în momentul angajării. Adevărata ei valoare sunt **echipele care funcționează eficient** în structurile Partenerilor noștri.",
+  "about_p3": "Modelul **Source-to-Operations** înseamnă sprijin complet pentru companii: de la atragerea lucrătorilor până la echipe care funcționează eficient.",
+  "nums_k": "Alimat Group în cifre",
+  "nums_t": "Cifre care inspiră încredere",
+  "years": "ani",
+  "years_d": "de experiență pe piață",
+  "group_k": "Structura grupului",
+  "group_t": "Cinci mărci. Un singur sistem operațional.",
+  "group_lead": "Fiecare companie răspunde de un domeniu specializat. Împreună ne permit să preluăm în siguranță întregul proces operațional — de la atragerea lucrătorului până la gestionarea echipelor la Partener.",
+  "group_center": "Un singur partener, un singur sistem — de la recrutare la funcționarea zilnică a proceselor.",
+  "brands": [
+    "Recrutare internațională.",
+    "Outsourcing de procese, gestionarea echipelor.",
+    "Resurse umane, salarizare, contabilitate, legalizare și administrare.",
+    "Cazarea și transportul lucrătorilor.",
+    "Recrutare permanentă, consultanță HR."
+  ],
+  "models_k": "Modele de colaborare",
+  "models_t": "Trei modele. Un singur obiectiv.",
+  "models_lead": "Colaborare adaptată nevoilor, dimensiunii și ritmului de dezvoltare al companiei.",
+  "models": [
+    {
+      "t": "Muncă temporară",
+      "short": "Sprijin flexibil pentru echipă",
+      "sub": "Flexibilitate atunci când ai nevoie",
+      "p": [
+        "Asigurăm lucrători ca răspuns la sezonalitate, cerere crescută, absențe sau schimbări dinamice în organizație.",
+        "Alimat Group răspunde de angajarea și gestionarea formală a lucrătorilor, iar clientul, ca angajator utilizator, organizează munca zilnică și supraveghează îndeplinirea sarcinilor."
+      ],
+      "list": [
+        "completarea rapidă a echipei",
+        "număr de lucrători ajustabil",
+        "mai puțină încărcare organizatorică pentru client"
+      ],
+      "note": "Un sprijin flexibil care ajută la menținerea continuității muncii și la reacția rapidă la nevoile operaționale."
+    },
+    {
+      "t": "Outsourcing de procese",
+      "short": "Responsabilitate pentru execuție",
+      "sub": "Responsabilitate pentru rezultat",
+      "p": [
+        "Clientul ne încredințează realizarea unui întreg proces ales sau a unei părți din el și stabilește domeniul și rezultatul așteptat. Noi asigurăm o echipă pregătită, liderii noștri și organizarea muncii zilnice.",
+        "Conducerea clientului stabilește problemele curente cu liderii Alimat Group, care transmit sarcinile echipei, supraveghează execuția și coordonează întreaga zonă încredințată."
+      ],
+      "list": [
+        "preluarea întregului proces sau a unei părți",
+        "echipă condusă de liderii Alimat Group",
+        "comunicare clară între conducerea clientului și liderii noștri",
+        "dimensiune flexibilă a echipei"
+      ],
+      "split_t": "Împărțirea responsabilităților",
+      "client_t": "Clientul",
+      "client_d": "Stabilește nevoile, domeniul și rezultatul așteptat.",
+      "us_d": "Organizează echipa, gestionează munca și răspunde de execuția și continuitatea procesului.",
+      "note": "Clientul stabilește nevoile și rezultatul așteptat, iar noi răspundem de organizarea, execuția și continuitatea procesului încredințat."
+    },
+    {
+      "t": "Recrutare permanentă",
+      "short": "Consolidarea pe termen lung a organizației",
+      "sub": "Un candidat găsit pentru organizația ta",
+      "p": [
+        "Pe baza nevoii stabilite, atragem și verificăm candidații potriviți.",
+        "La finalul procesului, persoana aleasă este angajată direct de client."
+      ],
+      "list_t": "Domeniul serviciului",
+      "list": [
+        "recrutare pentru un post anume",
+        "acces la candidați de pe piețe internaționale",
+        "selecție conform cerințelor organizației",
+        "angajare directă la client"
+      ],
+      "note": "Noi răspundem de găsirea candidatului potrivit, iar clientul câștigă un angajat pregătit pentru o colaborare pe termen lung."
+    }
+  ],
+  "model_more": "Detalii despre serviciu",
+  "consulting": "Ai nevoie de sprijin în HR și politica de personal? Vezi consultanța de personal",
+  "flow_k": "Cum decurge colaborarea",
+  "flow_t": "Colaborarea cu Alimat Group în trei pași",
+  "flow_lead": "Un proces simplu. O abordare de parteneriat. Un obiectiv comun.",
+  "flow": [
+    {
+      "t": "Cunoaștem și potrivim",
+      "d": "Cunoaștem organizația clientului și stabilim împreună cel mai bun model de colaborare.",
+      "items": [
+        [
+          "Primul contact",
+          "Stabilim data și locul întâlnirii."
+        ],
+        [
+          "Analiza nevoilor",
+          "Cunoaștem specificul activității și necesarul clientului."
+        ],
+        [
+          "Vizita la locul de muncă",
+          "Vizităm fabrica și analizăm condițiile de execuție."
+        ],
+        [
+          "Alegerea modelului",
+          "Alegem soluția potrivită nevoilor organizației."
+        ],
+        [
+          "Pregătirea ofertei",
+          "Prezentăm domeniul, condițiile și regulile colaborării."
+        ],
+        [
+          "Semnarea contractului",
+          "Finalizăm înțelegerile și începem colaborarea."
+        ]
+      ]
+    },
+    {
+      "t": "Pregătim",
+      "d": "Punem în practică înțelegerile și pregătim lucrătorii pentru începerea muncii.",
+      "items": [
+        [
+          "Recrutare",
+          "Folosim propria bază de candidați și recrutăm pe piețe internaționale."
+        ],
+        [
+          "Verificare",
+          "Verificăm experiența, competențele și disponibilitatea de a lucra."
+        ],
+        [
+          "Legalizare",
+          "Coordonăm formalitățile privind șederea și munca legală."
+        ],
+        [
+          "Angajare",
+          "Pregătim documentația conform modelului de colaborare."
+        ],
+        [
+          "Relocare și logistică",
+          "Organizăm sosirea, cazarea și transportul lucrătorilor, cu soluții proprii sau cu infrastructura clientului."
+        ]
+      ]
+    },
+    {
+      "t": "Implementăm și sprijinim",
+      "d": "Ajutăm la pornirea rapidă a colaborării și oferim sprijin adaptat modelului ales.",
+      "items": [
+        [
+          "Integrare și pregătire",
+          "Pregătim lucrătorii pentru sarcini, organizăm instruirile necesare și le sprijinim integrarea la client."
+        ],
+        [
+          "Gestionarea echipei*",
+          "Coordonăm munca echipei, având grijă de comunicare, organizare și continuitatea sarcinilor."
+        ],
+        [
+          "KPI, raportare și optimizare*",
+          "Urmărim indicatorii stabiliți, raportăm rezultatele și îmbunătățim împreună procesele."
+        ]
+      ],
+      "foot": "* În funcție de modelul de colaborare convenit."
+    }
+  ],
+  "step": "Pasul",
+  "ind_k": "Domenii",
+  "ind_t": "Echipe adaptate realităților fiecărui domeniu",
+  "ind_lead": "Fiecare sector are propriile nevoi, ritm de lucru și cerințe. De aceea formăm echipe potrivite mediului în care vor lucra.",
+  "inds": {
+    "logistics": [
+      "Logistică",
+      [
+        "lucrători în depozit",
+        "operatori de stivuitor",
+        "pregătitori de comenzi",
+        "lucrători în centre de sortare",
+        "personal de încărcare și descărcare",
+        "șoferi"
+      ]
+    ],
+    "production": [
+      "Producție industrială",
+      [
+        "lucrători pe linii de producție",
+        "operatori de mașini",
+        "montatori în producția de serie",
+        "ambalatori",
+        "controlori de calitate"
+      ]
+    ],
+    "food": [
+      "Sectorul alimentar",
+      [
+        "lucrători la sortare și ambalare",
+        "lucrători în procesarea peștelui",
+        "lucrători la cultivare și recoltare",
+        "lucrători în procesarea fructelor și legumelor",
+        "operatori de linii de producție"
+      ]
+    ],
+    "horeca": [
+      "HoReCa",
+      [
+        "bucătari",
+        "ajutori de bucătar",
+        "ospătari",
+        "personal de curățenie",
+        "lucrători la prepararea mesei",
+        "personal auxiliar hotelier"
+      ]
+    ],
+    "construction": [
+      "Construcții",
+      [
+        "dulgheri și fierari betoniști",
+        "zidari",
+        "muncitori în construcții",
+        "instalatori",
+        "lucrători la finisaje"
+      ]
+    ],
+    "welding": [
+      "Montaj industrial și sudură",
+      [
+        "sudori",
+        "montatori de structuri metalice",
+        "lăcătuși",
+        "montatori de mașini și echipamente",
+        "montatori de conducte"
+      ]
+    ]
+  },
+  "refs_k": "Referințe",
+  "refs_t": "Referințele partenerilor noștri confirmă fiabilitatea sistemului Source-to-Operations™",
+  "refs": {
+    "animex": [
+      "Animex Foods",
+      "Calitate, punctualitate și respectarea cerințelor de siguranță alimentară."
+    ],
+    "polonia": [
+      "Polonia Beef",
+      "Servicii prestate la timp și flexibil, cu grijă pentru calitatea procesului."
+    ],
+    "konskowola": [
+      "Końskowola Meat",
+      "Colaborare din 2022: fiabilitate și flexibilitate organizațională."
+    ]
+  },
+  "ref_alt": "Scrisoare de recomandare",
+  "partners_t": "Ne acordă încredere",
+  "cta_t": "Să potrivim modelul de colaborare nevoilor organizației tale",
+  "cta_d": "Outsourcing de procese, muncă temporară sau recrutare permanentă? Împreună alegem soluția ținând cont de volumul necesar, profilul posturilor, locație și modul de organizare a muncii."
+}

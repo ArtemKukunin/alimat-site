@@ -291,5 +291,6 @@
   "cc_analytics_d": "— Google Analytics: anonymous visit data.",
   "cc_marketing": "Marketing",
   "cc_marketing_d": "— Google Ads and Meta (Facebook, Instagram): ad targeting and measurement.",
-  "cc_open": "Cookie settings"
+  "cc_open": "Cookie settings",
+  "hb_label": "Featured jobs"
 }

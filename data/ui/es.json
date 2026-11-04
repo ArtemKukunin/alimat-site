@@ -291,5 +291,6 @@
   "cc_analytics_d": "— Google Analytics: datos anónimos de visitas.",
   "cc_marketing": "Marketing",
   "cc_marketing_d": "— Google Ads y Meta (Facebook, Instagram): personalización y medición de anuncios.",
-  "cc_open": "Ajustes de cookies"
+  "cc_open": "Ajustes de cookies",
+  "hb_label": "Ofertas destacadas"
 }

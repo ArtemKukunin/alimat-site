@@ -33,7 +33,8 @@ export function loadData() {
   const legacy = readJson(path.join(DATA, 'legacy.json'));
   const services = loadServices(readJson(path.join(DATA, 'services.json')));
   const reviews = loadReviews(readJson(path.join(DATA, 'reviews.json')));
-  return { settings, ui, jobs, categories, posts, pages, legacy, services, reviews };
+  const employers = Object.fromEntries(LANG_CODES.map((l) => [l, readJson(path.join(DATA, 'employers', `${l}.json`))]));
+  return { settings, ui, jobs, categories, posts, pages, legacy, services, reviews, employers };
 }
 
 /** File location inside dist for a page URL (drops the sub-path base and preview suffix). */
@@ -191,7 +192,7 @@ ${cached.map(([p, h]) => `${p}\n${h}`).join('\n')}
 }
 
 export function build() {
-  const { settings, ui, jobs, categories, posts, pages, legacy, services, reviews } = loadData();
+  const { settings, ui, jobs, categories, posts, pages, legacy, services, reviews, employers } = loadData();
   const analytics = loadAnalytics(settings);
   const csp = contentSecurityPolicy(settings, analytics);
   const redirectMap = redirects(jobs, legacy, services);
@@ -207,7 +208,7 @@ export function build() {
   let count = 0;
   const slugOf = (u) => u.replace(/^\/+|\/+$/g, '');
   const makeCtx = (lang) => ({
-    lang, t: translator(ui, lang), settings, jobs, categories, services, reviews, analytics, csp,
+    lang, t: translator(ui, lang), settings, jobs, categories, services, reviews, employers: employers[lang], analytics, csp,
     blogUrl: blogPath(postsIn(posts, lang).length ? lang : 'pl'),
     privacyUrl: legalUrl(pages, slugOf(settings.privacyUrl), lang),
     cookiesUrl: legalUrl(pages, slugOf(settings.cookiesUrl), lang),

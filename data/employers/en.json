@@ -1,0 +1,257 @@
+{
+  "title": "Staffing and outsourcing for companies — the Source-to-Operations model | Alimat Group",
+  "desc": "Temporary staffing, process outsourcing and permanent recruitment. 15 years of experience, 52 partner companies, 3,000+ workers a year.",
+  "kicker": "Source-to-Operations™",
+  "h1": "Workers and teams for your company",
+  "lead": "An integrated model for managing people and operational processes — from sourcing workers to smoothly running teams.",
+  "cta_talk": "Let's talk about working together",
+  "cta_models": "Cooperation models",
+  "about_k": "About us",
+  "about_t": "Meet Alimat Group",
+  "about_p1": "For **15 years we have been connecting companies with workers from all over the world**, helping to build stable teams that genuinely support business growth.",
+  "about_quote": "We build every partnership on responsibility, mutual trust and an understanding of each company's individual needs.",
+  "about_p2": "We believe effective recruitment does not end at the moment of hiring. Its real value is **well-functioning teams** within our Partners' organisations.",
+  "about_p3": "The **Source-to-Operations** model is end-to-end support for companies, from sourcing workers to smoothly running teams.",
+  "nums_k": "Alimat Group in numbers",
+  "nums_t": "Numbers that build trust",
+  "years": "years",
+  "years_d": "of market experience",
+  "group_k": "Group structure",
+  "group_t": "Five brands. One operating system.",
+  "group_lead": "Each company is responsible for a specialised area. Together they let us safely take over the entire operational process — from sourcing a worker to managing teams at the Partner's site.",
+  "group_center": "One partner, one system — from recruitment to the day-to-day running of processes.",
+  "brands": [
+    "International recruitment.",
+    "Process outsourcing, team management.",
+    "HR, payroll, accounting, legalisation and administration.",
+    "Worker accommodation and staff transport.",
+    "Permanent recruitment, HR consulting."
+  ],
+  "models_k": "Cooperation models",
+  "models_t": "Three models. One goal.",
+  "models_lead": "Cooperation tailored to the needs, scale and pace of growth of your company.",
+  "models": [
+    {
+      "t": "Temporary staffing",
+      "short": "Flexible team support",
+      "sub": "Flexibility when you need it",
+      "p": [
+        "We provide workers in response to seasonality, increased demand, absences or rapid changes in your organisation.",
+        "Alimat Group is responsible for employing the workers and handling all formalities, while the client, as the user employer, organises their daily work and supervises the tasks."
+      ],
+      "list": [
+        "fast team top-up",
+        "headcount adjusted to your needs",
+        "less organisational burden on the client's side"
+      ],
+      "note": "Flexible support that helps keep work continuous and respond quickly to operational needs."
+    },
+    {
+      "t": "Process outsourcing",
+      "short": "Responsibility for delivery",
+      "sub": "Responsibility for the result",
+      "p": [
+        "The client entrusts us with an entire selected process or part of it and defines the expected scope and result. We provide a properly prepared team, our own leaders and the organisation of daily work.",
+        "The client's management agrees day-to-day matters with Alimat Group leaders, who assign tasks to the team, supervise their execution and coordinate the whole outsourced area."
+      ],
+      "list": [
+        "takeover of a whole process or part of it",
+        "team managed by Alimat Group leaders",
+        "clear communication between the client's management and our leaders",
+        "flexible team size"
+      ],
+      "split_t": "Division of responsibility",
+      "client_t": "Client",
+      "client_d": "Defines the needs, scope and expected result.",
+      "us_d": "Organises the team, manages the work and is responsible for delivery and continuity of the process.",
+      "note": "The client defines the needs and the expected result; we are responsible for organising, delivering and keeping the outsourced process running."
+    },
+    {
+      "t": "Permanent recruitment",
+      "short": "Long-term strengthening of your organisation",
+      "sub": "A candidate found for your organisation",
+      "p": [
+        "Based on your defined needs, we source and verify suitable candidates.",
+        "Once the process is complete, the selected person is employed directly by the client."
+      ],
+      "list_t": "Scope of service",
+      "list": [
+        "recruitment for a specific position",
+        "access to candidates from international markets",
+        "selection matched to your organisation's requirements",
+        "direct employment with the client"
+      ],
+      "note": "We are responsible for finding the right candidate; the client gains an employee ready for long-term cooperation."
+    }
+  ],
+  "model_more": "Service details",
+  "consulting": "Need support with HR and personnel policy? See HR consulting",
+  "flow_k": "How we work together",
+  "flow_t": "Working with Alimat Group in three steps",
+  "flow_lead": "A simple process. A partnership approach. A shared goal.",
+  "flow": [
+    {
+      "t": "We get to know you and match",
+      "d": "We get to know the client's organisation and together choose the best cooperation model.",
+      "items": [
+        [
+          "First contact",
+          "We agree on the date and place of a meeting."
+        ],
+        [
+          "Needs analysis",
+          "We learn about the business and the client's staffing needs."
+        ],
+        [
+          "Site visit",
+          "We visit the plant and analyse the working conditions."
+        ],
+        [
+          "Choosing the model",
+          "We select the solution that fits the organisation's needs."
+        ],
+        [
+          "Preparing the offer",
+          "We present the scope, terms and principles of cooperation."
+        ],
+        [
+          "Signing the contract",
+          "We finalise the arrangements and start working together."
+        ]
+      ]
+    },
+    {
+      "t": "We prepare",
+      "d": "We put the arrangements into practice and prepare the workers to start.",
+      "items": [
+        [
+          "Recruitment",
+          "We use our own candidate database and recruit on international markets."
+        ],
+        [
+          "Verification",
+          "We check experience, skills and readiness for work."
+        ],
+        [
+          "Legalisation",
+          "We coordinate the formalities of legal residence and work."
+        ],
+        [
+          "Employment",
+          "We prepare the paperwork in line with the cooperation model."
+        ],
+        [
+          "Relocation and logistics",
+          "We organise arrival, accommodation and transport for the workers, using our own solutions or the client's infrastructure."
+        ]
+      ]
+    },
+    {
+      "t": "We implement and support",
+      "d": "We help get the cooperation started smoothly and provide support matched to the chosen model.",
+      "items": [
+        [
+          "Onboarding and preparation",
+          "We prepare workers for their duties, run the required training and support their onboarding at the client's site."
+        ],
+        [
+          "Team management*",
+          "We coordinate the team's work, taking care of communication, organisation and continuity of tasks."
+        ],
+        [
+          "KPIs, reporting and optimisation*",
+          "We monitor agreed indicators, report results and improve the processes together."
+        ]
+      ],
+      "foot": "* Depending on the agreed cooperation model."
+    }
+  ],
+  "step": "Step",
+  "ind_k": "Industries",
+  "ind_t": "Teams matched to the realities of your industry",
+  "ind_lead": "Every sector has its own needs, pace of work and requirements. That is why we build teams suited to the environment they will work in.",
+  "inds": {
+    "logistics": [
+      "Logistics",
+      [
+        "warehouse workers",
+        "forklift operators",
+        "order pickers",
+        "sorting centre workers",
+        "loading and unloading staff",
+        "drivers"
+      ]
+    ],
+    "production": [
+      "Industrial production",
+      [
+        "production line workers",
+        "machine operators",
+        "series production assemblers",
+        "packers",
+        "quality controllers"
+      ]
+    ],
+    "food": [
+      "Food sector",
+      [
+        "sorting and packing workers",
+        "fish processing workers",
+        "growing and harvesting workers",
+        "fruit and vegetable processing workers",
+        "production line operators"
+      ]
+    ],
+    "horeca": [
+      "HoReCa",
+      [
+        "cooks",
+        "kitchen assistants",
+        "waiters",
+        "cleaning staff",
+        "meal preparation workers",
+        "hotel back-of-house staff"
+      ]
+    ],
+    "construction": [
+      "Construction",
+      [
+        "carpenters and steel fixers",
+        "bricklayers",
+        "general construction workers",
+        "installation fitters",
+        "finishing workers"
+      ]
+    ],
+    "welding": [
+      "Industrial assembly and welding",
+      [
+        "welders",
+        "steel structure fitters",
+        "locksmiths and metalworkers",
+        "machine and equipment fitters",
+        "pipeline fitters"
+      ]
+    ]
+  },
+  "refs_k": "References",
+  "refs_t": "Our partners' references confirm the reliability of the Source-to-Operations™ system",
+  "refs": {
+    "animex": [
+      "Animex Foods",
+      "Quality, punctuality and compliance with food safety requirements."
+    ],
+    "polonia": [
+      "Polonia Beef",
+      "Timely, flexible delivery of services and care for process quality."
+    ],
+    "konskowola": [
+      "Końskowola Meat",
+      "Working together since 2022: reliability and organisational flexibility."
+    ]
+  },
+  "ref_alt": "Reference letter",
+  "partners_t": "They trust us",
+  "cta_t": "Let's match the cooperation model to your organisation's needs",
+  "cta_d": "Process outsourcing, temporary staffing or permanent recruitment? Together we will choose a solution that takes into account the scale of demand, the job profiles, the location and how work is organised."
+}

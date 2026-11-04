@@ -5,6 +5,7 @@ import { icon } from '../../core/icons.js';
 import { layout, contactButtons, officeList } from '../../core/layout.js';
 import { reviewsBlock } from '../reviews/reviews.js';
 import { jobSlider } from '../jobs/slider.js';
+import { heroBanner, heroSlides, heroImage } from './heroBanner.js';
 import { filterOptions, filterSelects, sectionTiles, cvBanner } from '../jobs/jobs.js';
 
 export const PERKS = [
@@ -70,22 +71,7 @@ export function intlBlock(ctx, { heading = 'h2' } = {}) {
 export function renderHome(ctx) {
   const { lang, t, settings, jobs } = ctx;
   const body = `<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-text">
-      <p class="kicker">${esc(t('hero_kicker'))}</p>
-      <h1>${esc(t('hero_h1'))}</h1>
-      ${dots}
-      <p class="lead">${esc(t('hero_lead'))}</p>
-      <div class="hero-cta">
-        <a class="btn btn-pill btn-blue" href="${pageUrl(lang, 'jobs')}">${esc(t('all_jobs'))} ${icon('arrow')}</a>
-        <a class="btn btn-pill btn-outline-blue" href="${pageUrl(lang, 'apply')}">${esc(t('cta_apply_long'))}</a>
-      </div>
-    </div>
-    <picture class="hero-img">
-      <source media="(max-width: 767px)" srcset="${asset('img/hero-mobile.webp')}">
-      <img src="${asset('img/hero-desktop-900.webp')}" srcset="${asset('img/hero-desktop-900.webp')} 900w, ${asset('img/hero-desktop.webp')} 1636w" sizes="(min-width: 1024px) 600px, 100vw" alt="${esc(t('alt_hero'))}" width="900" height="753" fetchpriority="high">
-    </picture>
-  </div>
+  ${heroBanner(ctx)}
   <div class="wrap">
     <form class="search-band" action="${pageUrl(lang, 'jobs')}" method="get" role="search">
       <h2>${esc(t('search_band'))}</h2>
@@ -159,9 +145,6 @@ ${cvBanner(ctx)}
   };
   return layout(ctx, {
     page: 'home', title: t('home_title'), description: t('home_desc'), body, jsonld: [websiteLd],
-    og: { preloadImages: [
-      { src: asset('img/hero-mobile.webp'), media: '(max-width: 767px)' },
-      { src: asset('img/hero-desktop-900.webp'), srcset: `${asset('img/hero-desktop-900.webp')} 900w, ${asset('img/hero-desktop.webp')} 1636w`, sizes: '(min-width: 1024px) 600px, 100vw', media: '(min-width: 768px)' },
-    ] },
+    og: { preloadImage: heroSlides(jobs).length ? { src: heroImage(heroSlides(jobs)[0].cat, 1) } : null },
   });
 }
