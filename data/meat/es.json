@@ -1,0 +1,115 @@
+{
+  "slug": "industria-carnica",
+  "menu": "Industria cárnica",
+  "title": "Personal y outsourcing para plantas cárnicas — vacuno, aves, porcino | Alimat Group",
+  "desc": "Equipos para sacrificio, despiece, envasado y expedición en plantas cárnicas. Más de 600 000 pollos al día y 2 940 000 kg de vacuno al mes. Miembro de UPEMI.",
+  "kicker": "Industria cárnica",
+  "h1": "Una industria. Tres ritmos distintos.",
+  "lead": "Vacuno, aves y porcino: tres áreas que conocemos a fondo. Asumimos tramos concretos del proceso, desde el sacrificio y el despiece hasta el envasado y la carga.",
+  "upemi": "Somos miembros de **UPEMI (Unión de Productores y Empleadores de la Industria Cárnica de Polonia)**, lo que nos mantiene cerca del sector y de sus necesidades reales.",
+  "cta_talk": "Hablemos de su planta",
+  "nums_k": "Escala de los procesos",
+  "nums_t": "Cifras de las plantas de nuestros socios",
+  "nums": [
+    [
+      "600 000+",
+      "pollos al día en procesado y despiece"
+    ],
+    [
+      "2 940 000 kg",
+      "de vacuno despiezado al mes"
+    ],
+    [
+      "15",
+      "años de experiencia en la industria cárnica"
+    ],
+    [
+      "52",
+      "empresas que usan los servicios de Alimat Group"
+    ]
+  ],
+  "sectors": {
+    "beef": "Vacuno",
+    "poultry": "Aves",
+    "pork": "Porcino"
+  },
+  "beef": [
+    {
+      "t": "Aquí empieza el proceso",
+      "d": [
+        "La primera etapa marca el ritmo del resto de la producción.",
+        "Nuestros equipos trabajan en el sacrificio de vacuno, la limpieza de cabezas y el almacén de materia prima, garantizando un proceso fluido hacia las siguientes etapas."
+      ],
+      "tags": []
+    },
+    {
+      "t": "Precisión en cada corte",
+      "d": [
+        "El despiece es una de las etapas más importantes de la producción de vacuno: la precisión de cada corte define la calidad de las piezas, el rendimiento cárnico y el ritmo de trabajo.",
+        "Nuestra larga experiencia nos permite optimizar el despiece y adaptar la organización del trabajo a las especificaciones y al ritmo de cada planta."
+      ],
+      "tags": [
+        "Precisión",
+        "Rendimiento cárnico",
+        "Ritmo de trabajo"
+      ]
+    },
+    {
+      "t": "De la producción a la expedición puntual",
+      "sub": "Envasado y logística interna",
+      "d": [
+        "También nos ocupamos del envasado, el almacenamiento, la preparación de pedidos y la carga.",
+        "Coordinamos cada zona según el plan de producción, los volúmenes, las especificaciones de los clientes y el plan de expediciones, para cumplir los plazos incluso con carga variable."
+      ],
+      "tags": [
+        "Envasado",
+        "Almacenamiento",
+        "Preparación de pedidos",
+        "Carga"
+      ]
+    }
+  ],
+  "poultry_t": "Un equipo sincronizado con la línea",
+  "poultry": [
+    [
+      "Continuidad en cada etapa",
+      "Una línea avícola exige una plantilla equilibrada y operaciones sincronizadas. Trabajamos en colgado, sacrificio, eviscerado y clasificación de menudencias, adaptando el equipo a la velocidad de la línea y al plan de producción."
+    ],
+    [
+      "Despiece a medida",
+      "Bajo la dirección de líderes con experiencia despiezamos filete, alas y cuartos traseros, además de otros productos que necesite la planta."
+    ],
+    [
+      "Más que producción",
+      "Nuestro trabajo no termina en el despiece: también preparamos el producto terminado para su envío y gestionamos las expediciones."
+    ]
+  ],
+  "pork_t": "Apoyo adaptado a cada tramo del proceso",
+  "pork": [
+    [
+      "Sacrificio de porcino",
+      "Ofrecemos tanto apoyo permanente como un equipo adicional en picos de demanda, asumiendo las tareas según la organización de la línea."
+    ],
+    [
+      "Despiece de medias canales",
+      "En el despiece de medias canales de cerdo podemos completar la plantilla existente o asumir un tramo concreto del proceso, según las necesidades de la planta."
+    ],
+    [
+      "Del envasado a la expedición",
+      "El envasado, la preparación del producto para el envío y la gestión de expediciones completan nuestros servicios en porcino."
+    ]
+  ],
+  "pork_note": "Las necesidades de la planta definen no solo el alcance del trabajo, sino también la forma de colaborar.",
+  "models_more": "Ver modelos de colaboración",
+  "mgmt_k": "Dirección",
+  "mgmt_t": "Las personas que marcan el rumbo",
+  "mgmt": [
+    "La experiencia de nuestro equipo garantiza a los socios **seguridad y continuidad** de los procesos que nos confían.",
+    "Cada colaboración empieza escuchando con atención las necesidades de la empresa, para que nuestra experiencia y recursos se conviertan en el **motor de crecimiento** de nuestros Socios."
+  ],
+  "cta_t": "Hablemos de las necesidades de su planta",
+  "cta_d": "¿Sacrificio, despiece, envasado o expedición? Cuéntenos qué tramo del proceso quiere confiarnos y prepararemos una propuesta adaptada al ritmo de su producción.",
+  "teaser_t": "Somos especialistas en la industria cárnica",
+  "teaser_d": "Vacuno, aves y porcino: sacrificio, despiece, envasado y expedición. Más de 600 000 pollos al día y 2 940 000 kg de vacuno al mes.",
+  "teaser_cta": "Oferta para plantas cárnicas"
+}

@@ -1,0 +1,115 @@
+{
+  "slug": "branza-miesna",
+  "menu": "Branża mięsna",
+  "title": "Pracownicy i outsourcing dla zakładów mięsnych — wołowina, drób, wieprzowina | Alimat Group",
+  "desc": "Zespoły do uboju, rozbioru, pakowania i wysyłki w zakładach mięsnych. 600 000+ kurczaków dziennie, 2 940 000 kg wołowiny miesięcznie. Członek UPEMI.",
+  "kicker": "Branża mięsna",
+  "h1": "Jedna branża. Trzy różne rytmy.",
+  "lead": "Wołowina, drób i wieprzowina — trzy obszary, które znamy do szpiku kości. Przejmujemy wybrane odcinki procesu: od uboju, przez rozbiór, po pakowanie i załadunek.",
+  "upemi": "Jesteśmy członkiem **UPEMI (Unia Producentów i Pracodawców Przemysłu Mięsnego)**. Członkostwo pozwala nam pozostawać blisko branży i jej rzeczywistych potrzeb.",
+  "cta_talk": "Porozmawiajmy o Twoim zakładzie",
+  "nums_k": "Skala realizowanych procesów",
+  "nums_t": "Liczby z naszych zakładów partnerskich",
+  "nums": [
+    [
+      "600 000+",
+      "kurczaków dziennie w procesie obróbki i rozbioru"
+    ],
+    [
+      "2 940 000 kg",
+      "rozebranego mięsa wołowego miesięcznie"
+    ],
+    [
+      "15",
+      "lat doświadczenia w branży mięsnej"
+    ],
+    [
+      "52",
+      "przedsiębiorstwa korzystające z usług Alimat Group"
+    ]
+  ],
+  "sectors": {
+    "beef": "Wołowina",
+    "poultry": "Drób",
+    "pork": "Wieprzowina"
+  },
+  "beef": [
+    {
+      "t": "Tu zaczyna się proces",
+      "d": [
+        "Pierwszy etap nadaje rytm dalszej produkcji.",
+        "Nasze zespoły realizują prace przy uboju bydła, czyszczeniu głów oraz obsłudze magazynu surowca, wspierając płynny przebieg procesu i sprawne przejście do kolejnych etapów."
+      ],
+      "tags": []
+    },
+    {
+      "t": "Precyzja w każdym cięciu",
+      "d": [
+        "Rozbiór jest jednym z najważniejszych etapów produkcji wołowiny. To tutaj precyzja każdego cięcia przekłada się na jakość elementów, wydajność surowcową oraz tempo pracy.",
+        "Wieloletnie doświadczenie pozwala nam usprawniać przebieg rozbioru i dopasowywać organizację pracy do specyfikacji oraz rytmu danego zakładu."
+      ],
+      "tags": [
+        "Precyzja",
+        "Wydajność surowcowa",
+        "Tempo pracy"
+      ]
+    },
+    {
+      "t": "Od produkcji do terminowej wysyłki",
+      "sub": "Pakowanie i logistyka wewnętrzna",
+      "d": [
+        "Zakres naszych prac obejmuje również pakowanie, magazynowanie, kompletację wysyłek oraz załadunek.",
+        "Pracę poszczególnych stref koordynujemy w oparciu o harmonogram produkcji, bieżące wolumeny, specyfikacje odbiorców i plan wydań. Pozwala to zachować terminowość kompletacji i załadunków również przy zmiennym obciążeniu operacyjnym."
+      ],
+      "tags": [
+        "Pakowanie",
+        "Magazynowanie",
+        "Kompletacja",
+        "Załadunek"
+      ]
+    }
+  ],
+  "poultry_t": "Zespół zsynchronizowany z rytmem linii",
+  "poultry": [
+    [
+      "Ciągłość na każdym etapie",
+      "Specyfika linii drobiarskiej wymaga właściwego zbilansowania obsady i synchronizacji kolejnych operacji. Realizujemy prace na etapach zawieszania drobiu, uboju, patroszenia i segregacji podrobów, dostosowując zaangażowanie zespołu do wydajności linii oraz bieżącego planu produkcyjnego."
+    ],
+    [
+      "Rozbiór dopasowany do potrzeb",
+      "Pod kierunkiem doświadczonych liderów realizujemy rozbiór obejmujący m.in. filet, skrzydło i elementy nożne, a także inne asortymenty zgodne z potrzebami danego zakładu."
+    ],
+    [
+      "Więcej niż produkcja",
+      "Nasza praca nie kończy się na rozbiorze. Sprawnie realizujemy również przygotowanie gotowego produktu do wysyłki oraz obsługę wydań."
+    ]
+  ],
+  "pork_t": "Wsparcie dopasowane do każdego odcinka procesu",
+  "pork": [
+    [
+      "Ubój trzody chlewnej",
+      "Możemy zapewnić zarówno stałe wsparcie, jak i dodatkowy zespół przy zwiększonym zapotrzebowaniu. Powierzone zadania przejmujemy w sposób dopasowany do organizacji danej linii."
+    ],
+    [
+      "Rozbiór półtusz",
+      "Przy rozbiorze półtusz wieprzowych możemy uzupełnić istniejącą obsadę lub przejąć powierzony odcinek procesu. Zakres współpracy dopasowujemy do aktualnych potrzeb zakładu."
+    ],
+    [
+      "Od pakowania po wysyłkę",
+      "Pakowanie, przygotowanie produktu do wysyłki i obsługa wydań uzupełniają zakres naszych działań przy wieprzowinie."
+    ]
+  ],
+  "pork_note": "Potrzeby zakładu wyznaczają nie tylko zakres powierzonych prac, ale również sposób współpracy.",
+  "models_more": "Zobacz modele współpracy",
+  "mgmt_k": "Zarząd",
+  "mgmt_t": "Ludzie, którzy wyznaczają kierunek",
+  "mgmt": [
+    "Doświadczenie zespołu gwarantuje naszym partnerom **bezpieczeństwo i ciągłość** procesów, które nam powierzają.",
+    "Każdą współpracę rozpoczynamy od uważnego wysłuchania potrzeb przedsiębiorstwa, tak by nasze doświadczenie i zasoby przekuć w **napędową siłę wzrostu** naszych Partnerów."
+  ],
+  "cta_t": "Porozmawiajmy o potrzebach Twojego zakładu",
+  "cta_d": "Ubój, rozbiór, pakowanie czy wysyłka? Opisz, jaki odcinek procesu chcesz powierzyć — przygotujemy propozycję dopasowaną do rytmu Twojej produkcji.",
+  "teaser_t": "Specjalizujemy się w branży mięsnej",
+  "teaser_d": "Wołowina, drób i wieprzowina: ubój, rozbiór, pakowanie i wysyłka. 600 000+ kurczaków dziennie, 2 940 000 kg wołowiny miesięcznie.",
+  "teaser_cta": "Oferta dla zakładów mięsnych"
+}

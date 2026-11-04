@@ -18,6 +18,7 @@ import { renderContact } from './features/contact/contact.js';
 import { loadContent, buildBlog, postsIn, blogPath, legalUrl } from './features/blog/blog.js';
 import { loadReviews, renderReviews } from './features/reviews/reviews.js';
 import { renderAbout } from './features/about/about.js';
+import { renderMeat, meatSlugs } from './features/meat/meat.js';
 import { loadServices, renderService, serviceSlugs } from './features/services/services.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -36,7 +37,8 @@ export function loadData() {
   const reviews = loadReviews(readJson(path.join(DATA, 'reviews.json')));
   const employers = Object.fromEntries(LANG_CODES.map((l) => [l, readJson(path.join(DATA, 'employers', `${l}.json`))]));
   const about = Object.fromEntries(LANG_CODES.map((l) => [l, readJson(path.join(DATA, 'about', `${l}.json`))]));
-  return { settings, ui, jobs, categories, posts, pages, legacy, services, reviews, employers, about };
+  const meat = Object.fromEntries(LANG_CODES.map((l) => [l, readJson(path.join(DATA, 'meat', `${l}.json`))]));
+  return { settings, ui, jobs, categories, posts, pages, legacy, services, reviews, employers, about, meat };
 }
 
 /** File location inside dist for a page URL (drops the sub-path base and preview suffix). */
@@ -194,7 +196,7 @@ ${cached.map(([p, h]) => `${p}\n${h}`).join('\n')}
 }
 
 export function build() {
-  const { settings, ui, jobs, categories, posts, pages, legacy, services, reviews, employers, about } = loadData();
+  const { settings, ui, jobs, categories, posts, pages, legacy, services, reviews, employers, about, meat } = loadData();
   const analytics = loadAnalytics(settings);
   const csp = contentSecurityPolicy(settings, analytics);
   const redirectMap = redirects(jobs, legacy, services);
@@ -210,7 +212,7 @@ export function build() {
   let count = 0;
   const slugOf = (u) => u.replace(/^\/+|\/+$/g, '');
   const makeCtx = (lang) => ({
-    lang, t: translator(ui, lang), settings, jobs, categories, services, reviews, employers: employers[lang], about: about[lang], analytics, csp,
+    lang, t: translator(ui, lang), settings, jobs, categories, services, reviews, employers: employers[lang], about: about[lang], meat: meat[lang], meatSlugs: meatSlugs(meat), analytics, csp,
     blogUrl: blogPath(postsIn(posts, lang).length ? lang : 'pl'),
     privacyUrl: legalUrl(pages, slugOf(settings.privacyUrl), lang),
     cookiesUrl: legalUrl(pages, slugOf(settings.cookiesUrl), lang),
@@ -233,6 +235,8 @@ export function build() {
       writeFile(outFile(pageUrl(lang, 'employers', svc[lang].slug)), renderService(ctx, svc));
       count++;
     }
+    writeFile(outFile(pageUrl(lang, 'employers', meat[lang].slug)), renderMeat(ctx));
+    count++;
   }
   // Blog + legal pages: Polish on the old WordPress URLs, translations under /{lang}/.
   const blog = buildBlog({ posts, pages, jobs, legacyMap, makeCtx });
@@ -245,6 +249,7 @@ export function build() {
   for (const job of jobs.filter((j) => j.active)) indexable.push({ page: 'jobs', sub: job.id, lastmod: job.datePosted });
   indexable.push(...blog.sitemap);
   for (const svc of services) indexable.push({ page: 'employers', sub: serviceSlugs(svc) });
+  indexable.push({ page: 'employers', sub: meatSlugs(meat) });
   // Sections are listed only while they have active jobs (empty ones are noindex).
   for (const cat of Object.keys(categories)) {
     if (jobs.some((j) => j.active && j.category === cat)) {

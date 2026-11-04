@@ -1,0 +1,115 @@
+{
+  "slug": "meat-industry",
+  "menu": "Meat industry",
+  "title": "Staffing and outsourcing for meat plants — beef, poultry, pork | Alimat Group",
+  "desc": "Teams for slaughter, deboning, packing and dispatch in meat processing plants. 600,000+ chickens a day, 2,940,000 kg of beef a month. UPEMI member.",
+  "kicker": "Meat industry",
+  "h1": "One industry. Three different rhythms.",
+  "lead": "Beef, poultry and pork — three areas we know inside out. We take over selected sections of the process: from slaughter and deboning to packing and loading.",
+  "upemi": "We are a member of **UPEMI (the Polish Union of Meat Industry Producers and Employers)**. Membership keeps us close to the industry and its real needs.",
+  "cta_talk": "Let's talk about your plant",
+  "nums_k": "Scale of the processes we run",
+  "nums_t": "Numbers from our partners' plants",
+  "nums": [
+    [
+      "600,000+",
+      "chickens a day in processing and deboning"
+    ],
+    [
+      "2,940,000 kg",
+      "of beef deboned every month"
+    ],
+    [
+      "15",
+      "years of experience in the meat industry"
+    ],
+    [
+      "52",
+      "companies using Alimat Group's services"
+    ]
+  ],
+  "sectors": {
+    "beef": "Beef",
+    "poultry": "Poultry",
+    "pork": "Pork"
+  },
+  "beef": [
+    {
+      "t": "This is where the process starts",
+      "d": [
+        "The first stage sets the pace for the rest of production.",
+        "Our teams work on cattle slaughter, head cleaning and the raw material store, keeping the process running smoothly into the next stages."
+      ],
+      "tags": []
+    },
+    {
+      "t": "Precision in every cut",
+      "d": [
+        "Deboning is one of the most important stages of beef production. This is where the precision of each cut determines the quality of the cuts, the meat yield and the pace of work.",
+        "Years of experience let us streamline deboning and fit the work organisation to each plant's specifications and rhythm."
+      ],
+      "tags": [
+        "Precision",
+        "Meat yield",
+        "Work pace"
+      ]
+    },
+    {
+      "t": "From production to on-time dispatch",
+      "sub": "Packing and internal logistics",
+      "d": [
+        "Our scope also covers packing, storage, order picking and loading.",
+        "We coordinate each zone around the production schedule, current volumes, customer specifications and the dispatch plan, so picking and loading stay on time even when the workload changes."
+      ],
+      "tags": [
+        "Packing",
+        "Storage",
+        "Order picking",
+        "Loading"
+      ]
+    }
+  ],
+  "poultry_t": "A team in sync with the line",
+  "poultry": [
+    [
+      "Continuity at every stage",
+      "A poultry line needs a well-balanced crew and synchronised operations. We work on hanging, slaughter, evisceration and offal sorting, matching the team to the line speed and the current production plan."
+    ],
+    [
+      "Deboning to your needs",
+      "Led by experienced team leaders, we debone fillets, wings and leg cuts, as well as other products the plant requires."
+    ],
+    [
+      "More than production",
+      "Our work doesn't end with deboning. We also prepare the finished product for dispatch and handle shipments."
+    ]
+  ],
+  "pork_t": "Support for every section of the process",
+  "pork": [
+    [
+      "Pig slaughter",
+      "We can provide both permanent support and an additional team at peak demand, taking over tasks in a way that fits how the line is organised."
+    ],
+    [
+      "Half-carcass deboning",
+      "For pork half-carcass deboning we can top up your existing crew or take over an assigned section of the process, sized to the plant's current needs."
+    ],
+    [
+      "From packing to dispatch",
+      "Packing, preparing products for dispatch and handling shipments complete our services in pork."
+    ]
+  ],
+  "pork_note": "A plant's needs determine not only the scope of work it entrusts to us, but also how we work together.",
+  "models_more": "See cooperation models",
+  "mgmt_k": "Management",
+  "mgmt_t": "The people who set the direction",
+  "mgmt": [
+    "Our team's experience gives partners **security and continuity** in the processes they entrust to us.",
+    "Every partnership starts with listening carefully to the company's needs, so that our experience and resources become a **driving force for our Partners' growth**."
+  ],
+  "cta_t": "Let's talk about your plant's needs",
+  "cta_d": "Slaughter, deboning, packing or dispatch? Tell us which section of the process you'd like to entrust to us and we will prepare a proposal that fits your production rhythm.",
+  "teaser_t": "We specialise in the meat industry",
+  "teaser_d": "Beef, poultry and pork: slaughter, deboning, packing and dispatch. 600,000+ chickens a day, 2,940,000 kg of beef a month.",
+  "teaser_cta": "Offer for meat plants"
+}

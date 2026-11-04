@@ -29,7 +29,7 @@
   --white: #fff;
   --ok: #1e8e3e;
   --err: #c62828;
-  --wa: #1a7f45;
+  --wa: #0199DD; /* WhatsApp buttons use the brand blue (no off-brand green) */
   --radius: 24px;
   --shadow: 0 10px 30px rgba(26, 26, 24, .08);
   --wrap: 1240px;
@@ -91,7 +91,7 @@ p { margin: 0 0 1em; }
 .btn-ghost:hover { border-color: var(--blue); }
 .btn-outline { background: #fff; color: var(--ink); border-color: var(--blue); }
 .btn-wa { background: var(--wa); color: #fff; }
-.btn-wa:hover { background: #156a39; }
+.btn-wa:hover { background: #fff; color: var(--blue-dark); border-color: var(--blue); }
 .btn-light { background: #fff; color: var(--ink); }
 .btn[disabled] { opacity: .6; cursor: progress; }
 .link-arrow { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; text-decoration: none; color: var(--blue-a); }
@@ -763,7 +763,7 @@ html body .rv.in { opacity: 1; transform: none; }
 .btn { transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease; }
 .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(0, 112, 173, .25); }
 .btn-orange:hover, .btn-outline-orange:hover, .form .btn-primary:hover, .mobile-bar .btn-primary:hover { box-shadow: 0 8px 18px rgba(194, 65, 12, .28); }
-.btn-wa:hover { box-shadow: 0 8px 18px rgba(21, 106, 57, .28); }
+.btn-wa:hover { box-shadow: 0 8px 18px rgba(1, 153, 221, .28); }
 .btn-outline-light:hover, .btn-light:hover, .btn-ghost:hover { box-shadow: 0 8px 18px rgba(0, 0, 0, .15); }
 .btn:active { transform: translateY(0); box-shadow: none; }
 .btn:focus-visible { outline: 3px solid var(--orange); outline-offset: 2px; }
@@ -1022,15 +1022,23 @@ html body .rv.in { opacity: 1; transform: none; }
 
 /* ── Messenger buttons: each in its brand colour, balanced grid (3 on top, 2 below) ── */
 .contact-btns { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 10px; }
-.contact-btns .btn { grid-column: span 2; color: #fff; border: 0; font-weight: 700; min-height: 48px; }
+.contact-btns .btn { grid-column: span 2; font-weight: 700; min-height: 48px; border: 2px solid transparent; }
 .contact-btns .btn-call, .contact-btns .btn-mail { grid-column: span 3; }
 .contact-btns:not(.no-call):not(.compact) .btn-wa { grid-column: span 2; }
-.contact-btns .btn-wa { background: var(--wa); }
-.contact-btns .btn-tg { background: #1b84c4; }
-.contact-btns .btn-viber { background: #6c55d6; }
-.contact-btns .btn-call { background: var(--orange); }
-.contact-btns .btn-mail { background: var(--blue); }
-.contact-btns .btn:hover { filter: brightness(1.08); color: #fff; }
+/* Brand palette only (book: blue #0199DD, orange #F8660D, ink #1A1A18): filled for the main actions, outlined for the rest */
+.contact-btns .btn-wa { background: var(--blue); border-color: var(--blue); color: #fff; }
+.contact-btns .btn-tg { background: #fff; border-color: var(--blue); color: var(--ink); }
+.contact-btns .btn-viber { background: #fff; border-color: var(--ink); color: var(--ink); }
+.contact-btns .btn-call { background: var(--orange); border-color: var(--orange); color: #fff; }
+.contact-btns .btn-mail { background: #fff; border-color: var(--orange); color: var(--ink); }
+.contact-btns .btn-tg .ic { color: var(--blue); }
+.contact-btns .btn-mail .ic { color: var(--orange); }
+.contact-btns .btn-wa:hover { background: #fff; color: var(--blue-dark); }
+.contact-btns .btn-tg:hover { background: var(--blue); color: #fff; }
+.contact-btns .btn-viber:hover { background: var(--ink); color: #fff; }
+.contact-btns .btn-call:hover { background: #fff; color: var(--orange-dark); }
+.contact-btns .btn-mail:hover { background: var(--orange); color: #fff; }
+.contact-btns .btn:hover .ic { color: inherit; }
 .contact-btns.no-call { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .contact-btns.no-call .btn { grid-column: auto; }
 .contact-btns.compact { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -1056,3 +1064,67 @@ html body .rv.in { opacity: 1; transform: none; }
 @media (max-width: 1023px) { .hb { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 400px) { .contact-btns .btn { padding: 10px 8px; gap: 6px; font-size: .88rem; } }
 @media (max-width: 360px) { .contact-btns:not(.no-call):not(.compact) .btn-call, .contact-btns:not(.no-call):not(.compact) .btn-mail { grid-column: 1 / -1; } }
+.btn-wa { border-color: var(--blue); }
+
+/* ── Meat industry page ── */
+.meat-hero-img { aspect-ratio: 4 / 3 !important; object-position: center 30%; }
+.meat-upemi { display: flex; gap: 16px; align-items: center; margin: 0; padding: 20px 24px; background: #fff; border-radius: 20px; border-left: 5px solid var(--blue); box-shadow: var(--shadow); }
+.meat-upemi .ic-lg { flex: none; width: 56px; height: 56px; padding: 12px; border-radius: 50%; background: var(--blue); color: #fff; }
+.meat-nums { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.meat-nums li { background: #fff; border-radius: 20px; padding: 24px; box-shadow: var(--shadow); display: grid; gap: 6px; }
+.meat-nums strong { font: 900 clamp(1.8rem, 1.3rem + 1.6vw, 2.5rem)/1.05 var(--f-head); color: var(--blue); }
+.meat-nums .meat-big strong { font-size: clamp(2.4rem, 1.6rem + 3vw, 3.8rem); color: var(--orange); }
+.meat-sectors { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.meat-sectors a { display: block; text-decoration: none; text-align: center; background: #fff; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); transition: transform .25s ease, box-shadow .25s ease; }
+.meat-sectors a:hover { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(26, 26, 24, .12); }
+.meat-sector-img { display: block; overflow: hidden; border-bottom: 5px solid var(--blue); }
+.meat-sectors li:nth-child(2) .meat-sector-img { border-bottom-color: var(--orange); }
+.meat-sector-img img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; transition: transform .6s ease; }
+.meat-sectors a:hover img { transform: scale(1.05); }
+.meat-sectors strong { display: block; padding: 14px; font: 900 1.3rem/1.2 var(--f-head); text-transform: uppercase; }
+.meat-tag-beef, .meat-tag-pork { color: var(--blue); }
+.meat-tag-poultry { color: var(--orange); }
+.meat-sector { scroll-margin-top: 90px; }
+.meat-row { margin-bottom: 48px; }
+.meat-photo img { width: 100%; max-width: 460px; margin-inline: auto; display: block; aspect-ratio: 4 / 5; object-fit: cover; border-radius: var(--radius); box-shadow: 14px 14px 0 -4px var(--blue); }
+.emp-split-rev .meat-photo img, #poultry .meat-photo img { box-shadow: -14px 14px 0 -4px var(--orange); }
+.meat-tag { display: inline-block; margin: 0 0 10px; padding: 5px 14px; border-radius: 6px; font-size: .8rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #fff !important; background: var(--blue); }
+.meat-tag-poultry.meat-tag { background: var(--orange); }
+.meat-h { font-size: clamp(1.5rem, 1.1rem + 1.4vw, 2.2rem); text-transform: uppercase; margin-bottom: 14px; }
+.meat-sub { color: var(--orange-a); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; margin: -6px 0 0; }
+.meat-pills { list-style: none; margin: 18px 0 0; padding: 14px 0 0; border-top: 3px solid var(--orange); display: flex; flex-wrap: wrap; gap: 8px 22px; }
+.meat-pills li { font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
+.meat-wide { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+.meat-wide-img img { width: 100%; aspect-ratio: 3 / 1; object-fit: cover; display: block; border-bottom: 4px solid var(--orange); }
+.meat-wide > .emp-split { padding: 26px 26px 6px; align-items: start; }
+.meat-steps { list-style: none; margin: 0; padding: 0 26px 26px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
+.meat-steps li { padding-top: 12px; border-top: 4px solid var(--blue); font-weight: 700; text-transform: uppercase; color: var(--blue-a); letter-spacing: .03em; }
+.meat-steps li:last-child { border-top-color: var(--orange); color: var(--orange-a); }
+.meat-list { list-style: none; margin: 0; padding: 14px 0 0; border-top: 3px solid var(--orange); display: grid; gap: 4px; }
+.meat-list li { display: grid; grid-template-columns: 54px 1fr; gap: 10px; padding: 12px 0; }
+.meat-list li + li { border-top: 1px solid var(--grey-2); }
+.meat-n { font: 900 1.9rem/1 var(--f-head); color: var(--orange); }
+#pork .meat-n { color: var(--blue); }
+#pork .meat-list { border-top-color: var(--blue); }
+.meat-list h4 { margin: 2px 0 6px; font-size: 1.02rem; text-transform: uppercase; letter-spacing: .04em; }
+.meat-list p { margin: 0; }
+.meat-mgmt { list-style: none; margin: 0 auto; padding: 0; max-width: 900px; display: grid; gap: 14px; }
+.meat-mgmt li { display: flex; gap: 18px; align-items: center; background: #fff; border-radius: 20px; padding: 22px 24px; box-shadow: var(--shadow); }
+.meat-mgmt .ic-lg { flex: none; width: 60px; height: 60px; padding: 13px; border-radius: 50%; background: var(--blue); color: #fff; }
+.meat-mgmt li:nth-child(2) .ic-lg { background: var(--orange); }
+.meat-mgmt p { margin: 0; font-size: 1.05rem; }
+.meat-teaser { display: grid; gap: 0; background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); text-decoration: none; color: var(--text); border: 2px solid var(--blue); transition: transform .25s ease, box-shadow .25s ease; }
+.meat-teaser:hover { transform: translateY(-4px); box-shadow: 0 16px 34px rgba(26, 26, 24, .14); }
+.meat-teaser-img img { width: 100%; height: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
+.meat-teaser-text { display: grid; gap: 8px; align-content: center; padding: 24px 26px; }
+.meat-teaser-text .emp-kicker { text-align: left; margin: 0; }
+.meat-teaser-text strong { font: 900 clamp(1.3rem, 1rem + 1vw, 1.7rem)/1.25 var(--f-head); color: var(--ink); }
+.meat-teaser-text em { font-style: normal; font-weight: 700; color: var(--orange-a); display: inline-flex; align-items: center; gap: 6px; }
+@media (min-width: 768px) {
+  .meat-nums { grid-template-columns: repeat(2, 1fr); }
+  .meat-sectors { grid-template-columns: repeat(3, 1fr); }
+  .meat-steps { grid-template-columns: repeat(4, 1fr); }
+  .meat-teaser { grid-template-columns: 1fr 1.6fr; }
+  .meat-teaser-img img { aspect-ratio: auto; }
+}
+@media (min-width: 1024px) { .meat-nums { grid-template-columns: 1.3fr 1.3fr 1fr 1fr; } }

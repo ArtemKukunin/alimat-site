@@ -1,0 +1,115 @@
+{
+  "slug": "industria-carnii",
+  "menu": "Industria cărnii",
+  "title": "Personal și outsourcing pentru fabrici de carne — vită, pasăre, porc | Alimat Group",
+  "desc": "Echipe pentru sacrificare, dezosare, ambalare și expediere în fabrici de carne. Peste 600 000 de pui pe zi și 2 940 000 kg de carne de vită pe lună. Membru UPEMI.",
+  "kicker": "Industria cărnii",
+  "h1": "O singură industrie. Trei ritmuri diferite.",
+  "lead": "Carne de vită, pasăre și porc — trei domenii pe care le cunoaștem în detaliu. Preluăm secțiuni ale procesului, de la sacrificare și dezosare până la ambalare și încărcare.",
+  "upemi": "Suntem membri **UPEMI (Uniunea Producătorilor și Angajatorilor din Industria Cărnii din Polonia)**, ceea ce ne ține aproape de industrie și de nevoile ei reale.",
+  "cta_talk": "Să discutăm despre fabrica ta",
+  "nums_k": "Amploarea proceselor",
+  "nums_t": "Cifre din fabricile partenerilor noștri",
+  "nums": [
+    [
+      "600 000+",
+      "de pui pe zi în procesare și tranșare"
+    ],
+    [
+      "2 940 000 kg",
+      "de carne de vită dezosată pe lună"
+    ],
+    [
+      "15",
+      "ani de experiență în industria cărnii"
+    ],
+    [
+      "52",
+      "de companii folosesc serviciile Alimat Group"
+    ]
+  ],
+  "sectors": {
+    "beef": "Vită",
+    "poultry": "Pasăre",
+    "pork": "Porc"
+  },
+  "beef": [
+    {
+      "t": "Aici începe procesul",
+      "d": [
+        "Prima etapă dă ritmul întregii producții.",
+        "Echipele noastre lucrează la sacrificarea bovinelor, curățarea capetelor și deservirea depozitului de materie primă, asigurând trecerea fluentă la etapele următoare."
+      ],
+      "tags": []
+    },
+    {
+      "t": "Precizie în fiecare tăietură",
+      "d": [
+        "Dezosarea este una dintre cele mai importante etape ale producției de carne de vită: precizia fiecărei tăieturi influențează calitatea pieselor, randamentul și ritmul de lucru.",
+        "Experiența de ani de zile ne permite să eficientizăm dezosarea și să adaptăm organizarea muncii la specificațiile și ritmul fiecărei fabrici."
+      ],
+      "tags": [
+        "Precizie",
+        "Randament",
+        "Ritm de lucru"
+      ]
+    },
+    {
+      "t": "De la producție la expediere la timp",
+      "sub": "Ambalare și logistică internă",
+      "d": [
+        "Ne ocupăm și de ambalare, depozitare, pregătirea comenzilor și încărcare.",
+        "Coordonăm fiecare zonă după planul de producție, volume, specificațiile clienților și planul de expediere, respectând termenele chiar și la încărcare variabilă."
+      ],
+      "tags": [
+        "Ambalare",
+        "Depozitare",
+        "Pregătirea comenzilor",
+        "Încărcare"
+      ]
+    }
+  ],
+  "poultry_t": "O echipă sincronizată cu ritmul liniei",
+  "poultry": [
+    [
+      "Continuitate la fiecare etapă",
+      "O linie de procesare a păsărilor cere o echipă echilibrată și operațiuni sincronizate. Lucrăm la agățare, sacrificare, eviscerare și sortarea organelor, adaptând echipa la viteza liniei și la planul de producție."
+    ],
+    [
+      "Tranșare după nevoile tale",
+      "Sub conducerea unor lideri cu experiență tranșăm piept, aripi și pulpe, precum și alte sortimente de care are nevoie fabrica."
+    ],
+    [
+      "Mai mult decât producție",
+      "Munca noastră nu se oprește la tranșare: pregătim și produsul finit pentru expediere și gestionăm livrările."
+    ]
+  ],
+  "pork_t": "Sprijin adaptat fiecărei secțiuni a procesului",
+  "pork": [
+    [
+      "Sacrificarea porcilor",
+      "Putem asigura atât sprijin permanent, cât și o echipă suplimentară la cerere crescută, preluând sarcinile după organizarea liniei."
+    ],
+    [
+      "Tranșarea semicarcaselor",
+      "La tranșarea semicarcaselor de porc putem completa echipa existentă sau prelua o secțiune a procesului, după nevoile actuale ale fabricii."
+    ],
+    [
+      "De la ambalare la expediere",
+      "Ambalarea, pregătirea produsului pentru expediere și gestionarea livrărilor completează serviciile noastre la carnea de porc."
+    ]
+  ],
+  "pork_note": "Nevoile fabricii stabilesc nu doar volumul lucrărilor, ci și modul de colaborare.",
+  "models_more": "Vezi modelele de colaborare",
+  "mgmt_k": "Conducere",
+  "mgmt_t": "Oamenii care stabilesc direcția",
+  "mgmt": [
+    "Experiența echipei le garantează partenerilor **siguranța și continuitatea** proceselor pe care ni le încredințează.",
+    "Fiecare colaborare începe prin ascultarea atentă a nevoilor companiei, pentru ca experiența și resursele noastre să devină **forța motrice a creșterii** Partenerilor noștri."
+  ],
+  "cta_t": "Să vorbim despre nevoile fabricii tale",
+  "cta_d": "Sacrificare, dezosare, ambalare sau expediere? Spune-ne ce secțiune a procesului vrei să ne încredințezi și pregătim o propunere potrivită ritmului producției tale.",
+  "teaser_t": "Suntem specializați în industria cărnii",
+  "teaser_d": "Vită, pasăre și porc: sacrificare, dezosare, ambalare și expediere. Peste 600 000 de pui pe zi și 2 940 000 kg de vită pe lună.",
+  "teaser_cta": "Ofertă pentru fabrici de carne"
+}

@@ -624,7 +624,7 @@
         setTimeout(countUp.bind(null, en.target), 250); // start once the block has risen in
       });
     }, { threshold: 0.5 });
-    document.querySelectorAll('.stats strong, .intl-stats strong, .emp-nums strong, .emp-years strong').forEach(function (el) {
+    document.querySelectorAll('.stats strong, .intl-stats strong, .emp-nums strong, .emp-years strong, .meat-nums strong').forEach(function (el) {
       if (el.getBoundingClientRect().bottom < 0) return;
       var t = el.textContent.trim();
       if (!/\d/.test(t)) return;

@@ -1,0 +1,115 @@
+{
+  "slug": "industria-da-carne",
+  "menu": "Indústria da carne",
+  "title": "Pessoal e outsourcing para fábricas de carne — bovino, aves, suíno | Alimat Group",
+  "desc": "Equipas para abate, desossa, embalagem e expedição em fábricas de carne. Mais de 600 000 frangos por dia e 2 940 000 kg de bovino por mês. Membro da UPEMI.",
+  "kicker": "Indústria da carne",
+  "h1": "Uma indústria. Três ritmos diferentes.",
+  "lead": "Bovino, aves e suíno — três áreas que conhecemos a fundo. Assumimos secções do processo, desde o abate e a desossa até à embalagem e à carga.",
+  "upemi": "Somos membros da **UPEMI (União de Produtores e Empregadores da Indústria da Carne da Polónia)**, o que nos mantém próximos do setor e das suas necessidades reais.",
+  "cta_talk": "Vamos falar da sua fábrica",
+  "nums_k": "Escala dos processos",
+  "nums_t": "Números das fábricas dos nossos parceiros",
+  "nums": [
+    [
+      "600 000+",
+      "frangos por dia em processamento e desossa"
+    ],
+    [
+      "2 940 000 kg",
+      "de carne de bovino desossada por mês"
+    ],
+    [
+      "15",
+      "anos de experiência na indústria da carne"
+    ],
+    [
+      "52",
+      "empresas que usam os serviços da Alimat Group"
+    ]
+  ],
+  "sectors": {
+    "beef": "Bovino",
+    "poultry": "Aves",
+    "pork": "Suíno"
+  },
+  "beef": [
+    {
+      "t": "Aqui começa o processo",
+      "d": [
+        "A primeira etapa define o ritmo do resto da produção.",
+        "As nossas equipas trabalham no abate de bovinos, na limpeza de cabeças e no armazém de matéria-prima, garantindo uma passagem fluida às etapas seguintes."
+      ],
+      "tags": []
+    },
+    {
+      "t": "Precisão em cada corte",
+      "d": [
+        "A desossa é uma das etapas mais importantes da produção de bovino: a precisão de cada corte determina a qualidade das peças, o rendimento e o ritmo de trabalho.",
+        "A longa experiência permite-nos otimizar a desossa e ajustar a organização do trabalho às especificações e ao ritmo de cada fábrica."
+      ],
+      "tags": [
+        "Precisão",
+        "Rendimento",
+        "Ritmo de trabalho"
+      ]
+    },
+    {
+      "t": "Da produção à expedição a tempo",
+      "sub": "Embalagem e logística interna",
+      "d": [
+        "Tratamos também da embalagem, armazenagem, preparação de encomendas e carga.",
+        "Coordenamos cada zona com base no plano de produção, nos volumes, nas especificações dos clientes e no plano de expedições, cumprindo prazos mesmo com carga variável."
+      ],
+      "tags": [
+        "Embalagem",
+        "Armazenagem",
+        "Preparação de encomendas",
+        "Carga"
+      ]
+    }
+  ],
+  "poultry_t": "Uma equipa sincronizada com a linha",
+  "poultry": [
+    [
+      "Continuidade em cada etapa",
+      "Uma linha de aves exige uma equipa equilibrada e operações sincronizadas. Trabalhamos na pendura, abate, evisceração e triagem de miudezas, ajustando a equipa à velocidade da linha e ao plano de produção."
+    ],
+    [
+      "Desmancha à medida",
+      "Sob a orientação de líderes experientes, desmanchamos peito, asas e pernas, além de outros produtos de que a fábrica precise."
+    ],
+    [
+      "Mais do que produção",
+      "O nosso trabalho não acaba na desmancha: preparamos também o produto acabado para envio e tratamos das expedições."
+    ]
+  ],
+  "pork_t": "Apoio ajustado a cada secção do processo",
+  "pork": [
+    [
+      "Abate de suínos",
+      "Garantimos tanto apoio permanente como uma equipa adicional em picos de procura, assumindo as tarefas de acordo com a organização da linha."
+    ],
+    [
+      "Desmancha de meias-carcaças",
+      "Na desmancha de meias-carcaças de suíno podemos reforçar a equipa existente ou assumir uma secção do processo, conforme as necessidades da fábrica."
+    ],
+    [
+      "Da embalagem à expedição",
+      "A embalagem, a preparação do produto para envio e a gestão de expedições completam os nossos serviços no suíno."
+    ]
+  ],
+  "pork_note": "As necessidades da fábrica definem não só o âmbito do trabalho, mas também a forma de cooperação.",
+  "models_more": "Ver modelos de cooperação",
+  "mgmt_k": "Direção",
+  "mgmt_t": "As pessoas que definem o rumo",
+  "mgmt": [
+    "A experiência da equipa garante aos parceiros **segurança e continuidade** dos processos que nos confiam.",
+    "Cada cooperação começa por ouvir com atenção as necessidades da empresa, para que a nossa experiência e recursos se tornem a **força motriz do crescimento** dos nossos Parceiros."
+  ],
+  "cta_t": "Vamos falar das necessidades da sua fábrica",
+  "cta_d": "Abate, desossa, embalagem ou expedição? Diga-nos que secção do processo quer confiar-nos e preparamos uma proposta ajustada ao ritmo da sua produção.",
+  "teaser_t": "Somos especialistas na indústria da carne",
+  "teaser_d": "Bovino, aves e suíno: abate, desossa, embalagem e expedição. Mais de 600 000 frangos por dia e 2 940 000 kg de bovino por mês.",
+  "teaser_cta": "Oferta para fábricas de carne"
+}

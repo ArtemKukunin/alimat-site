@@ -22,6 +22,15 @@ export function b2bCall(ctx) {
     <a class="btn btn-pill btn-orange" href="${telLink(settings.phoneB2B)}">${icon('phone')}<span>${esc(settings.phoneB2B)}</span></a></div>`;
 }
 
+/** Link card to the meat-industry page (data/meat). */
+function meatTeaser(ctx) {
+  const { lang, meat: m } = ctx;
+  return `<section class="wrap block-sm"><a class="meat-teaser" href="${pageUrl(lang, 'employers', m.slug)}">
+    <span class="meat-teaser-img"><img src="${asset('img/meat/beef.webp')}" alt="" width="640" height="480" loading="lazy" decoding="async"></span>
+    <span class="meat-teaser-text"><span class="emp-kicker">${esc(m.kicker)}</span><strong>${esc(m.teaser_t)}</strong><span>${esc(m.teaser_d)}</span><em>${esc(m.teaser_cta)} ${icon('arrow')}</em></span>
+  </a></section>`;
+}
+
 /** Quote request form, shared with the service pages. */
 export function inquirySection(ctx, title, lead) {
   const { t } = ctx;
@@ -182,6 +191,7 @@ export function renderEmployers(ctx) {
   const body = `${hero(ctx, e, crumbs)}
 ${about(e)}
 ${numbers(ctx, e)}
+${ctx.meat ? meatTeaser(ctx) : ''}
 ${group(e)}
 ${models(ctx, e)}
 ${flow(e)}

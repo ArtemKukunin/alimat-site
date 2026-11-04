@@ -114,7 +114,10 @@ ${ld}
 function header(ctx, page, langLinks) {
   const { lang, t, settings } = ctx;
   const subs = {
-    employers: (ctx.services || []).map((s) => [pageUrl(lang, 'employers', s[lang].slug), s[lang].name]),
+    employers: [
+      ...(ctx.meat ? [[pageUrl(lang, 'employers', ctx.meat.slug), ctx.meat.menu]] : []),
+      ...(ctx.services || []).map((s) => [pageUrl(lang, 'employers', s[lang].slug), s[lang].name]),
+    ],
     candidates: Object.entries(ctx.categories || {}).map(([, c]) => [pageUrl(lang, 'jobs', c[lang].slug), c[lang].name]),
   };
   const nav = ['jobs', 'candidates', 'employers', 'about', 'reviews', 'contact']
